@@ -1,0 +1,37 @@
+---
+layout: post
+title: The Xcode Organizer Doesn't Show Me All My Crash Logs. Help!
+date: '2011-02-10T10:00:00-05:00'
+tags:
+- iOS
+- mobile
+- iPhone
+- iPad
+- mobile development
+- crash logs
+- XCode organizer
+- iOS Simulator
+- apps
+- Device logs
+- Xcode 3.2.6
+- iTunes
+- EXC_BAD_ACCESS
+- submission
+- gilt
+- gilttech
+- gilt mobile
+tumblr_url: http://tech.gilt.com/post/3216586408/the-xcode-organizer-doesnt-show-me-all-my-crash
+---
+When you’re developing an iPhone or iPad application, running the app on the device is essential to understanding whether your code is working correctly. Although the iOS Simulator is very useful for testing functionality and user interface interactions, it doesn’t provide a very good simulation of the memory constraints your app will face on actual devices. As a result, applications that run fine in the simulator may be unexpectedly terminated by the operating system when run on devices.
+Often, but not always, crashes that happen only on the device are due to memory warnings that are not being handled correctly by your application. Unfortunately, if your application terminates unexpectedly on the device, you’re not always given a clear indication of the cause.
+One tool for diagnosing such problems is the Xcode Organizer. The left-hand sidebar of the Organizer window contains a list of the various devices that have been hooked up to your computer over time. While a development-enabled device is connected to your computer, the Organizer window will show a green dot next to the device name, and the if you select a connected device in the “Devices” list, you will see a number of tabs at the top of the main part of the window.
+The “Device Logs” tab should show any crash logs recoded on the device for the applications you’re developing. On my installation of Xcode, however, crash logs don’t always appear there, making it difficult to determine with any surety the cause of a given crash. (I’m not sure why certain logs are omitted from the Organizer; I just know that in my experience, they don’t always show up. I’m currently running Xcode 3.2.6.)
+Fortunately, there is a work-around. If you sync a device through iTunes, it turns out that new crash logs are copied from the device to a location within your home directory. You can find the crash logs for your device(s) within:
+
+~/Library/Logs/CrashReporter/MobileDevice
+
+Inside that directory, you’ll see a directory for each device that (1) has been synced through iTunes, and (2) had crash logs to copy at the time it was synced. (The name of the directory will be taken from the name of the device.)
+If a given application crashed due to an exception such as EXC_BAD_ACCESS, you should see a log file containing the name of the application’s executable followed by a timestamp indicating the time of the crash. The contents of the log file will give you more information about the nature of the problem.
+When the operating system terminates applications due to low memory conditions, it will create a log file starting with the name “LowMemory-” followed by a timestamp. The file will list any application(s) terminated and give clues about the memory usage of each.
+Even when running an application on the device within the debugger, console output isn’t always clear about the reason that an app was terminated. In those cases, the Xcode Organizer seems like the right place to look, but you might not find all the expected logs there. Syncing your device with iTunes and digging into the log files copied to your local filesystem is sometimes the only way to get the clues you need to diagnose certain types of unexpected terminations.
+Evan Coyne Maloney Senior Software Engineer, Mobile Team Gilt Groupe

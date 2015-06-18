@@ -1,0 +1,66 @@
+---
+layout: post
+title: How gilt.com/give came to be
+date: '2012-11-14T12:24:27-05:00'
+tags: []
+tumblr_url: http://tech.gilt.com/post/35711763311/how-gilt-com-give-came-to-be
+---
+When Sandy hit New York, many of us were directly impacted in some way. After the first week, power had been restored in our main office and in most of our homes. Our focus started to shift from covering basic needs to finding a way to help the New York region rebuild. Eventually we decided to build gilt.com/give - with a focus on driving donations to the affected region and foot traffic to businesses that really need help. The idea behind ‘give’ is simple: make a donation and get a voucher for up to 50% off at any participating business.
+The initial brainstormings started on Saturday afternoon following the hurricane, and by Sunday night we had a strong group of Gilt employees across the company that wanted to be part of gilt.com/give. It was quite a big effort— we had to build the applications, find partners, vet local businesses, and spread the word. Last week, in 6 days, we built something we’re actually quite proud of; it was a week-long, company-wide hackathon— with most nights ending after 3 in the morning.
+We wanted to share a bit of what we actually built: the tech stack behind gilt.com/give. One of the main architectural initiatives at Gilt is something we call LOSA - Lots of Small Applications. Generally, we prefer having many single purpose applications to a few monolithic application and believe this micro services approach has the right set of tradeoffs to help us scale the Gilt Tech org. One nice benefit of LOSA is that it was pretty clear how we would build gilt.com/give— just a set of new small applications!
+Choosing a good name is tough and this was no exception. We had a pretty lively debate on what to call this app: is it a program? A charity? A benefit? Would we ever reuse any of the software we were about to build? Ultimately we settled on ‘effort’ as the internal name for the software applications - an effort can be a ‘relief effort’ which mapped nicely to what we were doing, but was general enough that we might be able to apply this to different problems.
+So what did we build?
+web-effort: a Scala/play web application rendering the templates, css, and javascript, built on top of Gilt services and our internal UI build tools for managing and deploying assets
+svc-effort: a server providing a restful interface to key resources
+an order processing library (turning a donation into a Gilt order so it can actually be processed)
+PostgreSQL database: a new database instance and schema
+Internally, when you donate, we map the charity you selected to an offer on Gilt City - which is how we can accurately track every dollar and generate a nice voucher for each donation.
+Building the app was amazing. Most pieces were inside a single SBT multimodule build; once you’ve written code with SBT and ~compile there is honestly no going back. All Scala— and for some folks on the team this was their first time learning Scala.
+We use gerrit for code review, and one of the best features of a week long hackathon was really the process of development and code review. Basically, we all worked individually or in small teams on the different applications and features of effort. Each change was pushed to Gerrit. Every couple hours, we would pause then, as a group, review each individual change. This was maybe the best way for all of us to share with each other how the system worked. I personally learned an incredible amount about Scala, functional programming, and HTML5. By the end, I had even contributed a small CSS change with the help of the team!
+Once deployed to production, we ran a quick load test and were pleasantly surprised - this stack is fast and scales nicely.
+Simple load test of play serving a simple page (single node w/ no external service calls) - almost 10k RPS on a single node!
+ab -k -n 10000 -c 50 ''http://web1:9510/give/faq'' # external url: http://www.gilt.com/give/faq
+
+Requests per second:    8387.52 [#/sec] (mean)
+Percentage of the requests served within a certain time (ms)
+  50%      4
+  66%      4
+  75%      5
+  80%      6
+  90%      9
+  95%     12
+  98%     18
+  99%     25
+ 100%    183 (longest request)
+
+2. Load test of the a key endpoint in the service (single node) - lookup up a business by guid, including the round trip to PostgreSQL - single node, 3k RPS
+ab -k -n 10000 -c 50 ''http://svc6:9500/effort/1.0/businesses/dc0f2d11-1742-4244-978b-f2856f408315''
+
+Requests per second:    3036.97 [#/sec] (mean)
+Percentage of the requests served within a certain time (ms)
+  50%     10
+  66%     16
+  75%     21
+  80%     25
+  90%     36
+  95%     47
+  98%     59
+  99%     68
+ 100%    138 (longest request)
+
+3. And a full request - load balancer, to web cluster, to service cluster, to PostgreSQL and back:
+ab -k -n 10000 -c 50 ''http://www.gilt.com/give/businesses''
+
+Requests per second:    2007.42 [#/sec] (mean)
+Percentage of the requests served within a certain time (ms)
+  50%     22
+  66%     24
+  75%     26
+  80%     27
+  90%     31
+  95%     35
+  98%     44
+  99%     65
+ 100%    388 (longest request)
+
+In all, was honestly a whirlwind week— but a lot of fun and really proud of the great software produced, how well the pieces came together, and how it all just worked in production. We hope gilt.com/give plays a small part in helping the region rebuild after Sandy.

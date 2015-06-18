@@ -1,0 +1,11 @@
+---
+layout: post
+title: the 27 day beer challenge is underway when we
+date: '2013-06-21T14:19:39-04:00'
+tags: []
+tumblr_url: http://tech.gilt.com/post/53530994443/the-27-day-beer-challenge-is-underway-when-we
+---
+The 27 day beer challenge is underway!
+When we launched gilt.com back in 2007, every product and sale photo we took was stored on a shared NFS mount point. We’re now creating terabytes of data each month and it’s finally time to move our images to s3. We’re also changing how we create and manage our image sizing and crops - moving away from image magick and integrating with http://www.imgix.com/ - an amazing new startup doing image manipulation in the GPU.
+Our internal goal is to build the new image management services, update our internal image tooling, and migrate all our images to s3 in 27 days. To keep track of progress - we have 27 unique bottles of great beer from all over the world (note only a portion visible in photo above). At the end of each day, we share a beer to mark our progress.
+When the beer is gone, our images will be stored in s3 and served by imgix… And along the way, the 27 beer challenge has provided a really fun way to end each day in the office!

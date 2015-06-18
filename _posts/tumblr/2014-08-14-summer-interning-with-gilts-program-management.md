@@ -1,0 +1,26 @@
+---
+layout: post
+title: Summer-Interning with Gilt's Program Management Organization
+date: '2014-08-14T17:04:00-04:00'
+tags:
+- Gilt
+- Gilt Groupe
+- Gilt Tech
+- gilttech
+- Heather Fleming
+- Samantha Sabo
+- internship
+- PMO
+- summer at Gilt
+- Program management
+- University of Delaware
+tumblr_url: http://tech.gilt.com/post/94755663379/summer-interning-with-gilts-program-management
+---
+
+
+Hello! My name is Samantha Sabo and I’m a senior at the University of Delaware, pursuing degrees in both Marketing and Operations Management. This summer I had the pleasure of spending 10 weeks interning with Gilt’s Program Management Organization (PMO) in NYC. I’ve learned an incredible amount about Program Management, its methodologies and its history, but most valuable have been the personal development opportunities provided by my mentor and team members.
+As a college student, I am frequently asked, “What is your dream job?” Before this summer, answering this question was an uncomfortable experience. (Sometimes deciding what to eat for lunch is difficult enough—and now you want to know what I want to do for the rest of my life??) I can now confidently say that my dream is to become a program manager. In fact, I can’t wait for someone to ask me what my dream job is, so I can talk about Program Management and my time as a Gilt intern.  I am drawn to Program Management as it provides the opportunity to work with multiple teams on diverse initiatives that help companies to achieve their goals.
+On my first day at Gilt, I was as nervous and apprehensive as any intern might be upon entering such a posh office and meeting my mentor, PMO Senior Director Heather Fleming.  But Heather and the team instantly involved me in their work, and soon I felt like a team member, not like “the intern.” I sat in on sprint planning meetings and retrospectives, joined the team for social events, company softball games and team lunches, and observed how the program managers do their jobs. Every day I learned something new or developed a new skill.
+I was constantly pushed to perform tasks that took me outside my comfort zone. I have the biggest phobia about public speaking, so sharing “the three things I learned this week” at our weekly PMO meetings was torture. At first, I was anxious about speaking in front of the group, but by my final week presenting became a lot easier and I was almost comfortable doing it.
+Everyone I’ve met at Gilt says their favorite part of their job is “the people.” I feel the same. It is because of the support and guidance of my mentor and the PMO team that I transformed from the timid, unsure intern into a confident, goal-driven young woman.
+It is hard to believe that my internship is ending. My ten weeks at Gilt flew by as each day brought excitement and education that I will carry into my future.  I will always take with me the value of working with a high-functioning team, the importance of mentoring, the idea of “paying it forward,” and the value of knowing who you are–whether you’re an introvert, extrovert, planner or thinker.

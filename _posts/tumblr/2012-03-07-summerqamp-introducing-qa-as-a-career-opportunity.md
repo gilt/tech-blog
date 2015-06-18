@@ -1,0 +1,20 @@
+---
+layout: post
+title: 'SummerQAmp: introducing QA as a career opportunity'
+date: '2012-03-07T16:21:04-05:00'
+tags:
+- SummerQAmp
+- Quality Assurance
+- QA
+tumblr_url: http://tech.gilt.com/post/18915833538/summerqamp-introducing-qa-as-a-career-opportunity
+---
+The tech team at Gilt is excited to launch SummerQAmp (summer-kamp) with Bon Jovi, the White House, GroupMe and Onswipe.  This is a great initiative that is launching as a part of the White House’s Summer Jobs+ program to introduce Quality Assurance as a career path to youth in the U.S.
+
+QA @ Gilt
+Our Quality Assurance team is made up of individuals that are programmers with Computer Science degrees to others that started out in our Customer Support team without a technology degree.
+We love to automate tests but we also understand the value of manual testing.  One thing that is common among the team members is that they are passionate about what they do and know the products they are testing better than anyone.  We also work with a great offshore team and they are led by our QA team in the U.S.  We see the value of outsourcing as a way to extend our business hours, not to replace jobs in the U.S.  There is nothing better than having an engineers and testers working side-by-side.
+
+Our SummerQAmp Goal
+By helping launch this program and participating in it, we hope to teach the values of Quality Assurance and demonstrate that it can be a career or a gateway to other areas within technology.  Although, we really hope their passion for breaking things will keep them wanting to test.
+We also hope with this program that we can give people that may not know how to get started or the have financial means to get started in technology a chance to gain exposure to the skills necessary to be successful in a technology career.
+Get involved by signing your company up at http://www.summerqamp.org.
