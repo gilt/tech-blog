@@ -16,3 +16,7 @@ Gilt’s Ninja Team is known for making beautiful things to look at, so it isn�
 Every Friday at 5 PM, from now until the snow falls, you’ll find the Ninjas gathered in a conference room, wearing serene looks on their faces and transforming piles of luxurious yarn into warm and fuzzy accessories:
 
 Programming in Scala isn’t the only useful skill we teach our interns, as Michael Vecchio (yellow tie) is discovering:
+
+
+
+

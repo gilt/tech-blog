@@ -29,3 +29,4 @@ About the course: This one-day, eight-hour class will cover Hadoop basics and be
 About the instructor: Based in San Francisco, Sameer is a big data consultant, speaker and trainer who has expertise in Hadoop and a variety of NoSQL technologies. He has worked at Hortonworks–where he was a systems architect and taught Hadoop classes for developers–as well as Accenture and Symantec. Follow him on Twitter here.
 Fill out the form below to submit your contact info. (You must be age 18 or older to attend.) Please note that submitting this form does not guarantee you a seat–but we’ll do our best. We’ll also keep your contact info on file to let you know about future classes!
 APPLICATION CLOSED
+

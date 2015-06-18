@@ -23,3 +23,5 @@ As part of our efforts to make the entire Gilt website responsive, the first maj
 
 Overall, we’ve managed to save 33px of space, align with our mobile app’s look and feel, and highlight what’s truly important to our customers–discounts!
 If you have any feedback regarding the navigation or anything else Gilt product/UX-related, drop us a line at productfeedback@gilt.com!
+
+

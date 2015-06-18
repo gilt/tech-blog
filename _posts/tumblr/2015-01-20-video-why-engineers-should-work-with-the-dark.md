@@ -31,3 +31,4 @@ tumblr_url: http://tech.gilt.com/post/108665617184/video-why-engineers-should-wo
 ---
 
 On Thursday, Gilt’s Director of Program Management Justin Riservato, Director of Product Andrew Chen, Senior Business Systems Manager Susan Thomas, and Senior Program Manager Myron Miller presented “Get Stuff Done Faster: Why Engineers Should Work with the ‘Dark Side’ of Tech. They shared the differences between program managers, business analysts and product managers, and demonstrated how they make Gilt engineers’ work lives easier and more fulfilling. Watch the video above to relive the magic! Then check out their slidedeck below:
+

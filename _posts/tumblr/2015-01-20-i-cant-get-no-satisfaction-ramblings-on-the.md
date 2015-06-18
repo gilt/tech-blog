@@ -43,3 +43,4 @@ You also need to start NOW and continuously deliver on those needs in the form 
 “Working software” in life is a means by which the need is satisfied.  This could be anything from eating well, getting enough rest, to treating yourself with the same kindness and respect you give your friends.
 The key is to first really understand what your needs are — what will it take to be satisfied?
 And finally, admitting that you am a work-in-progress.  There is no “done”.
+

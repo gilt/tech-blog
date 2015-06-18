@@ -24,3 +24,8 @@ At Gilt, we are obsessed with our site’s performance. We use a variety of tool
 Today we launched an open-source Google Chrome Extension to help everyone see a site’s performance in a non-invasive and clear way. It’s called Web Performance API Timing and is available for download for free. In addition, the code that drives the extension is available on my GitHub page.
 The extension takes advantage of the browser’s native Performance Timing API to show the event’s respective time and the percentage of the total load time. When you hover over each event, you will see how this timing was calculated.
 We hope it’s a useful tool for you as you become more and more obsessed with your website’s or someone else site’s performance. Please let us know what you think!
+
+
+
+
+

@@ -14,3 +14,4 @@ tumblr_url: http://tech.gilt.com/post/50572518804/c-level-engineering-symmetry
 
 
 C Level Engineering Symmetry
+

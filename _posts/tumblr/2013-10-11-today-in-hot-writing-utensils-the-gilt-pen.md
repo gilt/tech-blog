@@ -17,3 +17,4 @@ And yet when I give them a Gilt pen, they seem just as impressed as if I had pre
 When I run into a past pen recipient, they frequently update me on how their pen is doing. “Love that pen!” they tell me enthusiastically, usually with a big smile. They say that it’s become their go-to pen. Many people ask for another one in preparation for that inevitable day when their beloved Gilt pen runs out of ink. Others ask for a pen to give to their friend or spouse. They want to spread the magic–the magic of the Gilt pen.
 Do you own a Gilt pen? What have you written with it? Charts for mapping out your next big-data project? Statistical analyses? Rent checks? A love letter? Poems? Feel free to drop me a line at lapple at gilt dot com to share your stories.
 Photo by @wookiehangover, who tweets: “Even @Gilt’s pens make me feel under-dressed”
+

@@ -21,15 +21,15 @@ Here’s the query we ultimately put together:
 select key_column_usage.column_name
   from information_schema.table_constraints
   join information_schema.key_column_usage
-{% highlight python %}
-  and key_column_usage.table_schema = table_constraints.table_schema
-{% endhighlight %}
+       on key_column_usage.table_name = table_constraints.table_name
+      and key_column_usage.table_schema = table_constraints.table_schema
+      and key_column_usage.constraint_name = table_constraints.constraint_name
  where table_constraints.constraint_type = ''PRIMARY KEY''
    and table_constraints.table_schema = ?
    and table_constraints.table_name = ?
  order by coalesce(key_column_usage.position_in_unique_constraint, 0),
-{% highlight python %}
-{% endhighlight %}
+          coalesce(key_column_usage.ordinal_position, 0),
+          key_column_usage.column_name
 
 As an example, given the following table:
 create table users (

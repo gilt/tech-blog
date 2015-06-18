@@ -22,16 +22,16 @@ Send payloads in the body
 You can send string, Reader or interface{} in the body. The first two will be sent as text. The last one will be marshaled to JSON, if possible:
 
 type Item struct {
-{% highlight python %}
-{% endhighlight %}
+    Id int
+    Name string
 }
 
 item := Item{ Id: 1111, Name: "foobar" }
 
 res, err := goreq.Request{ 
-{% highlight python %}
-Uri: "http://www.google.com", 
-{% endhighlight %}
+    Method: "POST", 
+    Uri: "http://www.google.com", 
+    Body: item,
 }.Do()
 
 
@@ -39,11 +39,11 @@ Specify request headers
 The request headers that you probably use most often are Host, Content-Type, Accept and User-Agent. This is why Jon and Marcos decided to make it super-easy to set these headers:
 
 res, err := Request{
-{% highlight python %}
-Host: "foobar.com",
-Accept: "application/json",
-ContentType: "application/json",
-{% endhighlight %}
+    Uri: "http://www.google.com",
+    Host: "foobar.com",
+    Accept: "application/json",
+    ContentType: "application/json",
+    UserAgent: "goreq",
 }.Do()
 
 
@@ -66,8 +66,8 @@ goreq.SetConnectionTimeout(100 * time.Millisecond)
 And specify the request timeout doing:
 
 res, err := goreq.Request{ 
-{% highlight python %}
-{% endhighlight %}
+    Uri: "http://www.google.com",
+    Timeout: 500 * time.Millisecond, 
 }.Do()
 
 
@@ -80,9 +80,9 @@ fmt.Printlm(err.Error())
 To easily figure out whether the error was a timeout error, you can either ask the error or return it:
 
 if serr, ok := err.(*goreq.Error); ok {
-{% highlight python %}
-    ...
-{% endhighlight %}
+    if serr.Timeout() {
+        ...
+    }
 }
 return err
 
@@ -99,8 +99,8 @@ Receive JSON
 GoReq will help you to receive and un-marshal JSON.
 
 type Item struct {
-{% highlight python %}
-{% endhighlight %}
+    Id int
+    Name string
 }
 
 var item Item

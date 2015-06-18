@@ -115,3 +115,4 @@ The MBSingleton protocol and our super-easy way to make singletons
 
 
 The MBServiceManager class and how we use it to manage shared runtime services that we don’t necessarily want running all the time
+

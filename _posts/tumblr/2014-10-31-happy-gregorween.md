@@ -42,3 +42,4 @@ Two Greg Perez’s
 
 Uh, make that three Gregor Heines in NYC, if you count Brushes the Giraffe’s half-hearted effort (no metal shirt).
 This isn’t the first time we’ve created a holiday for someone on the #gilttech team (none of us will ever forget “Dress Like Nathan Day”). So if you take away a message from this otherwise self-indulgent post, it’s that making up holidays for your coworkers is a fun (if a bit strange) way to celebrate their talents, skills and other contributions to your team culture!
+

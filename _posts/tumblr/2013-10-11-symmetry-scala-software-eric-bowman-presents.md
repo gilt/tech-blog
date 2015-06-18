@@ -23,3 +23,4 @@ The concept of symmetry is pervasive across many fields: art, architecture, math
 In this talk, we’ll explore the meaning and significance of symmetry beyond its superficial, primarily visual characteristics, and connect it to the practice of writing software. In particular, we’ll take a look at the Scala programming language, which manifests a profound degree of internal design symmetry.  We’ll also look at how that symmetry facilitates writing programs that are compact, elegant, and minimal. Finally, examine the importance of breaking symmetry, and introduce some new ideas around refactoring and conservation principles.
 
 The event begins at 6:30 PM; to RSVP (and you should!), just go here.
+

@@ -25,3 +25,4 @@ LinkedIn engineer Mike Pigott chats with Tim Kirk.
 Gilt Lead Software Engineer Yoni Goldberg talks Scala with Michael Hamrah of Getty Images.
 
 Revealed Context Lead Developer Randy Baek introduces himself to the group.
+

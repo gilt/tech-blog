@@ -48,11 +48,11 @@ package com.giltgroupe.repository.page.foo
  */
 object Foo extends FooActions with FooAssertions{
  def doSomethings
-{% highlight python %}
- clickSomething
-   triggerSomething
-   selectSomething
-{% endhighlight %}
+     (implicit eventType: EventType, driver: WebDriver): Foo.type = {
+     clickSomething
+       triggerSomething
+       selectSomething
+    this
   }
 }
 
@@ -63,11 +63,11 @@ package com.giltgroupe.repository.page.foo
  */
 case class Foo(foo: String) extends FooActions with FooAssertions{
  def doSomethings(foo: String)
-{% highlight python %}
- clickSomething(foo)
-   triggerSomething
-   selectSomething
-{% endhighlight %}
+     (implicit eventType: EventType, driver: WebDriver): Foo.type = {
+     clickSomething(foo)
+       triggerSomething
+       selectSomething
+    this
   }
 }
 Here, the PageObject Foo can extend Actions. It can also be mixed with Assertions and even Rich Actions.
@@ -84,24 +84,24 @@ private[foo] trait FooActions extends BrowserAction {
   def locators = FooLocators  
 
   def clickSomething(foo: String)
-{% highlight python %}
- click(locators.myDefLocator(foo))
-{% endhighlight %}
+     (implicit eventType: EventType, driver: WebDriver): Foo.type = {
+     click(locators.myDefLocator(foo))
+    this
   }
 
  def goFooUrl(url: String)
-{% highlight python %}
-{% endhighlight %}
+    (implicit driver: WebDriver): Foo.type = {
+       go to url
  }
 
 And here is a Rich Action:
 
   def doSomethings(foo: String)
-{% highlight python %}
- clickSomething(foo)
-   triggerSomething
-   selectSomething
-{% endhighlight %}
+     (implicit eventType: EventType, driver: WebDriver): Foo.type = {
+     clickSomething(foo)
+       triggerSomething
+       selectSomething
+    Foo
   }
 
 The Gilt engineering team has been discussing the value of rich vs. simple action terminology. We haven’t yet decided if locating the rich actions in the PageObject is valid, or if rich and simple actions should just be actions because they all live inside the Actions trait.
@@ -114,12 +114,12 @@ Gilt’s Selenium automation is built around the ScalaTest Framework. The WebBro
    * @param eventType : Native or Synthetic.
    */
   def click(query: WebBrowser#Query)(implicit eventType: EventType, driver: WebDriver) {
-{% highlight python %}
-eventType match {
-  case Native => query.webElement.click()
-  case Synthetic => JQueryHelper.click(query)
-}
-{% endhighlight %}
+    WaitTool.waitForElementClickable(query)
+    eventType match {
+      case Native => query.webElement.click()
+      case Synthetic => JQueryHelper.click(query)
+    }
+    JQueryHelper.pageIsLoadedAndAjaxIsCompleted()
   }
 The click action is based on the implicit event type passed to it by the test, and waits for an element to become clickable before it carries out the action.
 The code above shows a simple action, which performs a mouse click on the page on the element. This is subsequently passed as an argument to the function click. There is an implicit, EventType, which defines how the browser should behave–either Native or Synthetic.
@@ -137,46 +137,46 @@ With WaitTool, upon entry into an action we can wait for expected conditions to 
    */
 
   def waitForElementClickable(query: WebBrowser#Query,
-{% highlight python %}
-                         (implicit driver: WebDriver): Option[WebElement] = {
-try {
-  driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS)
-  val element = {
-    val wait = new WebDriverWait(driver, timeOutInSeconds)
-    wait.until(ExpectedConditions.elementToBeClickable(query.by))
-  }
-  driver.manage().timeouts().implicitlyWait(DefaultWaitTimeForElement, 
-                                            TimeUnit.SECONDS)
-  Some(element)
-} catch {
-  case e: Exception => None
-{% endhighlight %}
+                              timeOutInSeconds: Int = DefaultWaitTimeForElement)
+                             (implicit driver: WebDriver): Option[WebElement] = {
+    try {
+      driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS)
+      val element = {
+        val wait = new WebDriverWait(driver, timeOutInSeconds)
+        wait.until(ExpectedConditions.elementToBeClickable(query.by))
+      }
+      driver.manage().timeouts().implicitlyWait(DefaultWaitTimeForElement, 
+                                                TimeUnit.SECONDS)
+      Some(element)
+    } catch {
+      case e: Exception => None
+    }
   }
 To ensure we can exit the action correctly we then wait for the DOM or page to be loaded, and for all Ajax calls and other actions to be completed, before returning control to the caller or carrying out the next called Selenium action. This enables us to instantly and easily see how our work flow is naturally progressing. Without such a library, test cases look muddy, unclear and unreadable.
   /**
    * Ensure the page is loaded and AJAX calls are completed using jQuery.
    */
   def pageIsLoadedAndAjaxIsCompleted()(implicit driver: WebDriver) {
-{% highlight python %}
-    withClue("Ajax calls may not have completed within time specified") {
-        executeScript("return jQuery.active")
-         .asInstanceOf[Long] shouldBe (0)
+    eventually {
+        withClue("Ajax calls may not have completed within time specified") {
+            executeScript("return jQuery.active")
+             .asInstanceOf[Long] shouldBe (0)
+        }
     }
-{% endhighlight %}
 
-{% highlight python %}
-    withClue("Document ready state was not [complete] within time 
-              specified by eventually clause.") {
-          executeScript("return document.readyState")
-          .asInstanceOf[String] shouldEqual ("complete")
+    eventually {
+        withClue("Document ready state was not [complete] within time 
+                  specified by eventually clause.") {
+              executeScript("return document.readyState")
+              .asInstanceOf[String] shouldEqual ("complete")
+        }
     }
-{% endhighlight %}
   }
 Locators
 Locators should be objects, not traits. As objects, locators are naturally namespaced and give compile-time checking. You can’t mix in two locator traits and, without knowing it, have selectors overridden. e.g., FooLocators.myLazyLocator. Selectors that require parameters are defs; otherwise, they are lazy vals.
 object FooLocators extends WebBrowser {
-{% highlight python %}
-{% endhighlight %}
+    lazy val myLazyLocator: Query = cssSelector("[data-gilt-test=’foo’]")
+    def myDefLocator(foo: String): Query = cssSelector(s"[data-gilt-test=’$foo’]")
 }
 Assertions
 Assertions are generally located with tests, but commonly used assertions can be implemented as an assertions trait in the PageObject.
@@ -185,12 +185,12 @@ trait CartAssertions extends WebBrowser with Checkpoints with Matchers {
 
   def assertSomething()(implicit eventType: EventType, driver: WebDriver): Foo.type ={
   
-{% highlight python %}
-  cp {  assertSomething  should be(something) }
-{% endhighlight %}
+      val cp = new Checkpoint    
+      cp {  assertSomething  should be(something) }
+      cp {  assertAnotherThing  should be(anotehrThing) }
 
-{% highlight python %}
-{% endhighlight %}
+      cp.reportAll
+    Foo
   }
 ScalaTest offers a really useful feature called checkpoints, which enables multiple assertions to be performed within a test. Any failures are accumulated and reported together at the end of the test.
 Using PageObjects in Tests
@@ -203,14 +203,14 @@ Now with our newly created Foo PageObject we can write tests like this:
 class MyFooTest extends FunSpecTestBase {
 describe("Test using Foo PageObject") {
   it("should test stuff") {
-{% highlight python %}
-    fixture =>
-        Foo
-     .goFooUrl(fixture.url)
-     .doSomethings(fixture.foo)
-     .assertSomething
-    }
-{% endhighlight %}
+         withFixture() { 
+        fixture =>
+            Foo
+         .goFooUrl(fixture.url)
+         .doSomethings(fixture.foo)
+         .assertSomething
+        }
+      }
    }
 }
 We can also include additional PageObjects in tests:
@@ -222,19 +222,19 @@ We can also include additional PageObjects in tests:
 class MyFooTest extends FunSpecTestBase {
 describe("Test using Foo PageObject") {
   it("should test stuff") {
-{% highlight python %}
-    fixture =>
-        Foo
-     .goFooUrl(fixture.url)
-     .doSomethings(fixture.foo)
-{% endhighlight %}
+         withFixture() { 
+        fixture =>
+            Foo
+         .goFooUrl(fixture.url)
+         .doSomethings(fixture.foo)
+         .assertSomething
 
-{% highlight python %}
-     .clickSomeStuff
-     .assertSomeStuff
+        Foo2         
+         .clickSomeStuff
+         .assertSomeStuff
+        }
+      }
     }
-  }
-{% endhighlight %}
  }
 And if Foo has an action getFoo2, with a return type of Foo2, we can chain actions together:
 
@@ -246,18 +246,18 @@ And if Foo has an action getFoo2, with a return type of Foo2, we can chain actio
 class MyFooTest extends FunSpecTestBase {
 describe("Test using Foo PageObject") {
   it("should test stuff") {
-{% highlight python %}
-    fixture =>
-        Foo
-     .goFooUrl(fixture.url)
-     .doSomethings(fixture.foo)
-     .assertSomething
-     .getFoo2        
-     .clickSomeStuff
-     .assertSomeStuff
+         withFixture() { 
+        fixture =>
+            Foo
+         .goFooUrl(fixture.url)
+         .doSomethings(fixture.foo)
+         .assertSomething
+         .getFoo2        
+         .clickSomeStuff
+         .assertSomeStuff
+        }
+      }
     }
-  }
-{% endhighlight %}
  }
 
 Take, for example, Gilt’s Sale Listing page:
@@ -286,38 +286,38 @@ abstract class QuickAddToCartTestOnSaleListing extends FunSpecTestBase
   protected def skuFilter(sku: Sku): Boolean
 
   describe("Sale listing") {
-{% highlight python %}
-  withActiveSku(filter = skuFilter, lock = true) { sku =>
-      Given(s"a sku[$sku.getSkuId]")
-      val sale = getSale(sku)
-      val productLook = sku.getProductLook
-      And(s"its sale[$sale.getSaleId]")
-      Then("go to the sale listing")
-      SaleListing
-        .goToSaleListing(sale.getRelativeUrl
-            .asScala
-            .getOrElse(cancel("Sale did not have a relativeUrl")))
-         //SaleListing action which returns a ListingLook PageObject. 
-{% endhighlight %}
+    it("should add available sku to cart using quick add") {
+      withActiveSku(filter = skuFilter, lock = true) { sku =>
+          Given(s"a sku[$sku.getSkuId]")
+          val sale = getSale(sku)
+          val productLook = sku.getProductLook
+          And(s"its sale[$sale.getSaleId]")
+          Then("go to the sale listing")
+          SaleListing
+            .goToSaleListing(sale.getRelativeUrl
+                .asScala
+                .getOrElse(cancel("Sale did not have a relativeUrl")))
+             //SaleListing action which returns a ListingLook PageObject. 
+            .getListingLook(productLook.getProductLookId)
 
-{% highlight python %}
-{% endhighlight %}
+             //ListingLook rich action which selects a size and click add to cart. 
+            .triggerQuickAdd
 
-{% highlight python %}
-{% endhighlight %}
+             //QuickAdd action which returns a Cart.
+            .addToCart(sku.getSize.asScala.map(_.getLabel.toLowerCase))
 
-{% highlight python %}
-{% endhighlight %}
+             //Cart action which returns a CartItem.
+            .getCartItem(sku.getSkuId)
 
-{% highlight python %}
-        .assertCartItem(sku.getProductLook.getProduct.getName,          
-{% endhighlight %}
+             //CarItem Assertion
+            .assertCartItem(sku.getProductLook.getProduct.getName,          
+                            sku.getProductLook.getProduct.getBrand.getName)
 
-{% highlight python %}
-        .assertCartEmpty
-        .assertContinueShoppingIsDisplayedWhenCartIsEmpty
-  }
-{% endhighlight %}
+          Cart.clearCart()
+            .assertCartEmpty
+            .assertContinueShoppingIsDisplayedWhenCartIsEmpty
+      }
+    }
   } 
 Because the test steps are located in an abstract class, we can reuse the code to create brand-new tests and check other functionalities, based on the SKU and its attributes (which are passed into the test via the fixture).
 
@@ -331,29 +331,29 @@ extends QuickAddToCartTestOnSaleListing
   
    //Use filters to find a specific sku to test with.
    override def skuFilter(sku: Sku): Boolean = 
-{% highlight python %}
-           SkuFilters.hasSizeAttribute(sku) &&
-{% endhighlight %}
+               SkuFilters.hasSearchBaseFilters(sku) &&                           
+               SkuFilters.hasSizeAttribute(sku) &&
+               isOnFirstPageLoad(sku)
 }
 
 Let’s dig deeper:
 
-{% highlight python %}
-{% endhighlight %}
+            //ListingLook rich action which selects a size and click add to cart.
+            .triggerQuickAdd
 
-{% highlight python %}
-{% endhighlight %}
+             //QuickAdd action which returns a Cart.
+            .addToCart(sku.getSize.asScala.map(_.getLabel.toLowerCase))
 
-{% highlight python %}
-{% endhighlight %}
+             //Cart action which returns a CartItem.
+            .getCartItem(sku.getSkuId)
 
 .triggerQuickAdd. This action is a ListingLook Simple Action that performs a mouseEnter on a productName element Listing Look and returns a QuickAdd PageObject.
 def locators = ListingLookLocators
 def triggerQuickAdd()
 (implicit eventType: EventType, driver: WebDriver): QuickAdd = {
-{% highlight python %}
-  mouseEnter(locators.productName(this.productLookId))
-{% endhighlight %}
+        
+      mouseEnter(locators.productName(this.productLookId))
+    QuickAdd(productLookId)
   }
 .mouseEnter
 /**
@@ -363,16 +363,16 @@ def triggerQuickAdd()
    * @param eventType : Native or Synthetic
    */
   def mouseEnter(query: WebBrowser#Query)
-{% highlight python %}
-  WaitTool.waitForElementIsDisplayed(query)
-  eventType match {
-      case Native => {
-             val builder = new Actions(driver)
-             builder.moveToElement(query.webElement).build().perform()
-      }
-      case Synthetic => JQueryHelper.mouseEnter(query)
-}
-{% endhighlight %}
+     (implicit eventType: EventType, driver: WebDriver) {
+      WaitTool.waitForElementIsDisplayed(query)
+      eventType match {
+          case Native => {
+                 val builder = new Actions(driver)
+                 builder.moveToElement(query.webElement).build().perform()
+          }
+          case Synthetic => JQueryHelper.mouseEnter(query)
+    }
+    JQueryHelper.pageIsLoadedAndAjaxIsCompleted()
   }
 
 This action is located in our commons-selenium library and will execute a Selenium action or a jQuery action based on the eventType. This action is wrapped to perform:
@@ -384,16 +384,16 @@ This action is located in our commons-selenium library and will execute a Seleni
    * asserting that the cart opens successfully.
    */
   def addToCart(sizeOpt: Option[String])
-{% highlight python %}
-selectSize(sizeOpt)
-clickAddToCartButton()
-{% endhighlight %}
+      (implicit eventType: EventType, driver: WebDriver): Cart.type = {
+    selectSize(sizeOpt)
+    clickAddToCartButton()
+    Cart.waitForCartDisplayed()
   }
 .getCartItem(sku.getSkuId) is a Cart action that returns a CartItem PageObject based on the skuId. .assertCartItemDisplayed() and ensures that the CartItem is actually in the cart:
 
   def getCartItem(skuId: Long)
-{% highlight python %}
-{% endhighlight %}
+     (implicit eventType: EventType, driver: WebDriver): CartItem = {
+    CartItem(skuId).assertCartItemDisplayed()
   }
 
 A CartItem is a function of the Cart, so it is a PageObject, as you can have n items on a cart.

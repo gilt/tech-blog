@@ -38,3 +38,4 @@ After finding the actual bug, my concern switched to figuring out why the unit t
 In fact, with this code the test suite won’t even build because CREATOR’s return value is type checked at compile time, rather than casting from Bundle’s getParcelable() at runtime.
 I would recommend writing that unit test anytime you are creating a Parcelable object.
 Republished from Kevin’s blog.
+

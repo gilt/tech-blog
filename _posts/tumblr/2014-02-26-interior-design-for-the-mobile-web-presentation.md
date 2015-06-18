@@ -25,3 +25,5 @@ Last night Gilt and the NYC CSS/UX meetup group welcomed more than 100 engineers
 “With Web Components, [each component] is like an item in an apartment–you design the best individual pieces that you can so that they are reusable, embeddable and shareable,” Greg explained, showing this bit of code:
 Check out the full presentation here.
 Thanks to all of our attendees for coming!
+
+

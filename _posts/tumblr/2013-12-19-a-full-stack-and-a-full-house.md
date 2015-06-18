@@ -31,3 +31,4 @@ We were happy to see Customer.io founder John Allison again. Once upon a time, J
 
 “So what is Docker”? James Turnbull–author, open source advocate, and Docker’s new VP of Services–brought the audience up to speed on one of the most exciting technologies of 2013.
 Thanks to Full-Stack Engineering organizer Mike Boufford for producing such a fantastic event, and to everyone who joined us! We hope to see you next month.
+

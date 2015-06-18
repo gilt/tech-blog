@@ -29,3 +29,4 @@ Here’s Gaslight Co-Founder and Developer Chris Nelson at the Gilt podium, lead
 
 In addition to lectures, the day included hands-on exercises and a quick tour of the Gilt office.
 Thanks to Chris for coming all the way from Cincinnati, Ohio to teach yesterday! And thank to everyone who attended the class–we had a great time learning alongside all of you!
+

@@ -35,3 +35,4 @@ sugars: turbinado, honey, refined, brown, powdered (don’t overdo it, though)
 place settings
 a roomful of awesome people to share the experience with
 Feel free to send photos of your high tea experiences to lapple at gilt dot com. Cheerio!
+

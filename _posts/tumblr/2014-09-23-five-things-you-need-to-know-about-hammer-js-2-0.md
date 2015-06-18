@@ -29,66 +29,66 @@ These are the top five things I think everyone should know about Hammer 2.0 and 
 1. Multiple Hammer Instances
 In Hammer 1.x, the Hammer creators advised you to create a single Hammer instance on the page. This instance would most likely be bound to the body, so all touch events would be listened for. As events happened on the page, the Hammer instance would act as a publisher and notify subscribers about touch events. The Hammer instance could be subscribed to different touch events.
 
-{% highlight javascript %}
-
-armAndHammer.on(‘hold’, handleHoldEvent(ev));
-{% endhighlight %}
+    var armAndHammer = new Hammer(bodyElement, options);
+    
+    armAndHammer.on(‘hold’, handleHoldEvent(ev));
+    
 
 In Hammer 2.0, you can (and are advised to) create multiple Hammer instances on the page and bind them to the specific DOM elements where they are needed. The new API feels much more like jQuery event-binding and much less like pup-sub. 
 
-{% highlight javascript %}
-
-// or
-
-var armAndHammer = new Hammer(el, options);
-{% endhighlight %}
+    var armAndHammer = new Hammer.Manager(el, options);
+    
+    // or
+    
+    var armAndHammer = new Hammer(el, options);
+    
 
 Initially, I was apprehensive about the new API approach. The pup-sub model was lightweight and easy to conceptualize, but the approach came at a cost. In Hammer.js 1.x, the Hammer instance notified the subscriber about every touch event on the page, and the subscriber was responsible for filtering touch events to ensure that the element that had been touched/tapped/etc. was indeed the element they wanted to act on.
 
-{% highlight javascript %}
-
-    if (ev.target === holdEl ) {
+    armAndHammer.on(‘hold’, function (ev) {
     
-        handleHoldEvent(ev);
-    }
-});
-{% endhighlight %}
+        if (ev.target === holdEl ) {
+        
+            handleHoldEvent(ev);
+        }
+    });
+    
 Using Hammer 2.0, each Hammer instance is bound where the event happens and ensures the correct touch event happens on the correct element.
 2. The Manager
 In Hammer 2.0, each Hammer instance is called a Manager. A Manager can be instantiated by calling either
 
-{% highlight python %}
-{% endhighlight %}
+    var armAndHammer = new Hammer.Manager(el, options);
+    
 
 or
 
-{% highlight python %}
-{% endhighlight %}
+    var armAndHammer = new Hammer(el, options);
+    
 
 The single Hammer instance in Hammer 1.x can also be considered a Manager. In 1.x, the single Hammer Manager automatically listened to every Hammer touch event and broadcast every event it received, whether or not the developer wanted it to–or whether it was even necessary. For example, even if there were no subscribers to the pinch event, Hammer would calculate and publish any and all pinch events. If you were not specifically listening to this event, you would see no true effects on the page as no functions would be called via pub-sub. That being said, calculating touch events is not a simple JavaScript operation and it was unnecessary for the single Hammer Manager to listen for unused touch events.
 In 2.0, each Hammer instance is called a Manager. In 2.0 Managers bind to specific elements and are only responsible for the events associated with those elements. To phrase it another way: Rather than assume you are interested in all touch events for a specific element the Hammer instance is bound to, Hammer 2.0 enables developers to create empty Managers that listen to zero events and then specify which touch events this Manager should listen for.
 
-{% highlight python %}
-var armAndHammer = new Hammer.Manager(el, options); 
-{% endhighlight %}
+    // empty Hammer instance
+    var armAndHammer = new Hammer.Manager(el, options); 
+    
 
 Hammer 2.0 also allows users to create a Manager with a default set of events by skipping the Hammer.Manager constrictor and instead using the Hammer constructor:
 
-{% highlight python %}
-{% endhighlight %}
+    var armAndHammer = new Hammer(el, options);
+    
 
 Although adding touch events to the Manager is more complex (because the developer is responsible for adding the touch events they are interested in), it gives the developer more specificity for their touch events. Additionally, this setup becomes much more testable because you know what the setup of the Manager will be on page load. 
 3. Recognizer
 As I mentioned above, in Hammer 1.x the Manager knows about, listens for, and publishes all touch events. In 2.0, Managers start out empty, and the developer adds events to the Manager using objects called Recognizers. Recognizers are essentially objects that are responsible for groups of touch events in the same mutual category. For example, the swipe Recognizer listens for swipe, swipeleft, swiperight, swipeup, and swipedown events.
 For each touch event you are interested in, you create a new instance of a Recognizer and add it to the Manager. Once the Recognizer is added, the Manager can listen for events from that Recognizer.
 
-{% highlight javascript %}
-
-// the Recognizer has been added to the Manager 
-// and we can listen for pan events
-
-armAndHammer.on(''pan'', handlePanEvent(ev));
-{% endhighlight %}
+    armAndHammer.add(new Hammer.Pan({event: ''pan''});
+    
+    // the Recognizer has been added to the Manager 
+    // and we can listen for pan events
+    
+    armAndHammer.on(''pan'', handlePanEvent(ev));
+        
 
 In 1.x, the single Hammer instance essentially came with all Recognizers included. The benefits of adding Recognizers yourself are two-fold:
 
@@ -98,10 +98,10 @@ First, each Hammer instance is lighter and responsible for a subset of touch eve
 Second, touch events can easily be customized. In Hammer 1.x, the options for events such as “hold event threshold” (time a user has to hold down before a hold event is fired) was set on the single Hammer instance, meaning every hold event had to be the same. In 2.0 developers can set the event options in the Recognizer, thus making touch events as customized as you wish them to be.
 
 
-{% endhighlight %}
+    var myPanRecognizer = new Hammer.Pan({ direction: Hammer.DIRECTION_VERTICLE, threshold: 0 });
 
-{% highlight python %}
-{% endhighlight %}
+    armAndHammer.add( myPanRecognizer );
+    
 
 4. Upgrade Path
 The simplest upgrade path from 1.x to 2.0 can take as little as one hour. More complex upgrade paths utilizing some of Hammer’s new API features can take longer. When I upgraded from 1.1 to 2.0, it took me about four hours to upgrade a project that used six different touch events.

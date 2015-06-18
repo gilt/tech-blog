@@ -19,3 +19,4 @@ tumblr_url: http://tech.gilt.com/post/5843723231/gilt-tech-talks-mike-taylor-on-
 Yesterday we were lucky enough to have Opera’s Mike Taylor delivering a Gilt technical talk on the HTML5 Web Messaging Specification. Mike illustrates how messaging makes communication within and between web applications possible and discusses message events and the postMessage() and MessageChannel() APIs.
 
 You can see the slides from the talk below.
+

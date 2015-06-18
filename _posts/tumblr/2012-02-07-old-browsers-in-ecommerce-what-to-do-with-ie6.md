@@ -101,9 +101,9 @@ prop_results <-
 
 Final Results:
 
-{% endhighlight %}
+     Test Visitor Conversion Rate:  3.136% (1154/36794)
   Control Visitor Conversion Rate:  3.7% (1749/47275)
-{% endhighlight %}
+         Test Lift over Control %:  -15.224 %
 Test Lift 95% Confidence Interval:  [-21.947% to -8.501%]
 
 
@@ -141,14 +141,14 @@ Here is a decomposition of what the prop.test() is doing in R, borrowed from the
   model_coef <- (estimate[1] - estimate[2]) / estimate[2]
 
   prop_results <-
-{% highlight python %}
-  test_value = test_rate,
-  ctrl_value = ctrl_rate,
-  test_lift = model_coef,
-  conf_int_low = conf.int[1]/estimate[2],
-  conf_int_hi = conf.int[2]/estimate[2],
-  row.names = NULL
-{% endhighlight %}
+    data.frame(
+      test_value = test_rate,
+      ctrl_value = ctrl_rate,
+      test_lift = model_coef,
+      conf_int_low = conf.int[1]/estimate[2],
+      conf_int_hi = conf.int[2]/estimate[2],
+      row.names = NULL
+    )
 
 > prop_results
   test_value ctrl_value  test_lift conf_int_low conf_int_hi

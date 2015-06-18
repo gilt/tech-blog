@@ -27,3 +27,4 @@ Keep watching this space for upcoming announcements about free tech courses at G
 Lead Application Support Engineer Adam Straussner is all about Gilt Tech pride.
 
 So is Lead QA Engineer Dave Singh, who brought his Gilt-branded notebook.
+

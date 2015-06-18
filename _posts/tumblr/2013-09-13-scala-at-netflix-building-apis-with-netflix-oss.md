@@ -14,3 +14,4 @@ tumblr_url: http://tech.gilt.com/post/61130434838/scala-at-netflix-building-apis
 Scala at Netflix - Building APIs with Netflix OSSmpandit:
 
 My talk from Scala at Netflix - 9/9/2013, Scala Bay Meetup.
+

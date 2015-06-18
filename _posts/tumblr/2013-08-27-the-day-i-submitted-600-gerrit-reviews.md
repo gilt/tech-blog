@@ -15,30 +15,30 @@ With a system composed of hundreds of small services, applications, database sch
 This is where Gerrit comes in: it becomes possible to run scripts against all of our repositories that propose a change of this sort then submit it to the owners of the repository to review. It would be irresponsible to blindly make such automated changes to all of our systems, and one individual can’t realistically review every single repository–but by distributing the burden of the reviews out to the people most familiar with the system in question, we solve both of these problems.
 Of course, there’s one prerequisite to doing this type of thing, which is that you need to know who the right people are to review changes to a given repository. We have a standard for this: a reviewers.yml file in the repository containing the information, and a Gerrit hook that adds reviewers to all new patch sets based on the contents. Now we just need to bootstrap these files with a guess at the right people. To do this, I ran the following shell script a couple days ago (for simplicity, I’ve elided a few unimportant details):
 for project in `gg-gerrit-ls-projects`; do
-{% highlight python %}
-{% endhighlight %}
+    gg-gerrit-clone $project || continue
+    cd $project
 
-{% endhighlight %}
+    yml="reviewers.yml"
 
-{% highlight python %}
-{% endhighlight %}
+    if [ ! -f $yml ] ; then
+        reviewers=`git log -n 20 --pretty=tformat:%aE | sort | uniq -c | sort -nr | head -n 3 | awk ''{print $2}''`
 
-{% highlight python %}
-    echo "master:" >> $yml
-    for r in $reviewers; do
-        echo "  - $r" >> $yml
-{% endhighlight %}
-
-{% endhighlight %}
-
-{% endhighlight %}
-
-{% highlight python %}
-            gg-gerrit-set-reviewer --add --name $r --project $project --changeid $changeid
+        touch $yml
+        echo "master:" >> $yml
+        for r in $reviewers; do
+            echo "  - $r" >> $yml
         done
+
+        if git add $yml && git commit -m "autopopulate reviewers.yml" && git push origin HEAD:refs/for/master ; then
+
+            changeid=`git show | grep Change-Id | head -n1 | cut -d: -f2`
+
+            for r in $reviewers; do
+                gg-gerrit-set-reviewer --add --name $r --project $project --changeid $changeid
+            done
+        fi
     fi
-fi
-{% endhighlight %}
+    cd ..
 done
 
 This runs through all of our projects, checks to see if the reviewers file exists, and, if it doesn’t already, the script makes a guess that the top three authors from the past 20 commits are a reasonable set of reviewers. It then submits that as a patch set to Gerrit, and adds that same set of people as reviewers. (For the curious, the gg-gerrit-* commands are wrapper scripts to the Gerrit CLI.)

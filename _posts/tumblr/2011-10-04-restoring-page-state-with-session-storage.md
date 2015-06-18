@@ -21,35 +21,35 @@ The session storage pageToken object after a few page views might look something
 {
   "PT131741761614767":
   {
-{% endhighlight %}
+    "rotatorStatus":"3"
   },
 
   "PT1317417630680593":
   {
-{% endhighlight %}
+    "rotatorStatus":"1"
   },
 
   "PT131741766597481":
   {
-{% highlight python %}
-"filterState":
-{
-  "key":"color",
-  "value":"Black",
-  "offset":518.4000244140625,
-  "top":0
-},
-"swayzeScrollPosition":503,
-"lastQuery":
-{
-  "category":"clothing",
-  "subcategory":"denim",
-  "start":0,
-  "count":24,
-  "occasion_pnb":"drinks-with-friends",
-  "color":"Black"
-},
-{% endhighlight %}
+    "initialUrl":"http://www.parkandbond.com/clothing/denim",
+    "filterState":
+    {
+      "key":"color",
+      "value":"Black",
+      "offset":518.4000244140625,
+      "top":0
+    },
+    "swayzeScrollPosition":503,
+    "lastQuery":
+    {
+      "category":"clothing",
+      "subcategory":"denim",
+      "start":0,
+      "count":24,
+      "occasion_pnb":"drinks-with-friends",
+      "color":"Black"
+    },
+    "lastUrl":"http://www.parkandbond.com/clothing/denim"
   }
 }
 

@@ -32,20 +32,20 @@ Since go test is not currently extensive, you will have to hook Goblin to it. Ju
 package foobar
 
 import (
-{% highlight python %}
-{% endhighlight %}
+    "testing"
+    . "github.com/franela/goblin"
 )
 
 func Test(t *testing.T) {
   g := Goblin(t)
   g.Describe("Numbers", func() {
-{% highlight python %}
-      g.Assert(1+1).Equal(2)
-  })
-  g.It("Should match equal numbers", func() {
-      g.Assert(2).Equal(4)
-  })
-{% endhighlight %}
+      g.It("Should add two numbers ", func() {
+          g.Assert(1+1).Equal(2)
+      })
+      g.It("Should match equal numbers", func() {
+          g.Assert(2).Equal(4)
+      })
+      g.It("Should substract two numbers")
   })
 }
 
@@ -59,22 +59,22 @@ Gomega is a nice assertion framework, but it doesn’t provide a nice way to hoo
 package foobar
 
 import (
-{% highlight python %}
-. "github.com/franela/goblin"
-{% endhighlight %}
+    "testing"
+    . "github.com/franela/goblin"
+    . "github.com/onsi/gomega"
 )
 
 func Test(t *testing.T) {
-{% endhighlight %}
+    g := Goblin(t)
 
-{% highlight python %}
-{% endhighlight %}
+    //special hook for gomega
+    RegisterFailHandler(func(m string, _ ...int) { g.Fail(m) })
 
-{% highlight python %}
-  g.It("lslslslsls", func() {
-    Expect(1).To(Equal(10))
-  })
-{% endhighlight %}
+    g.Describe("lala", func() {
+      g.It("lslslslsls", func() {
+        Expect(1).To(Equal(10))
+      })
+    })
 }
 
 

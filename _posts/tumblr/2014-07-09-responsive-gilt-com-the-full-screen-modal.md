@@ -39,3 +39,4 @@ position: fixed
            this prevents the body from scrolling behind the open modal
 Add a button/action in the open content modal which closes the content and returns the user to the full page
 Special Ops believes that the best mobile user experiences permit users to focus on a page’s core content without being distracted by other features. With the full-screen modal, we abstracted away all the complexity of the filtering into a separate user experience and gave the abstracted feature the full-screen ‘real estate’ it deserves. Everything the user sees–a product, a list of products, etc.–is built around this simplified experience. Now that this pattern is well understood, we plan on continuing to use it in our future responsive design efforts.
+

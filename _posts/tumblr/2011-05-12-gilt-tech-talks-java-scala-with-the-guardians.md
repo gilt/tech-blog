@@ -17,3 +17,4 @@ tumblr_url: http://tech.gilt.com/post/5429489376/gilt-tech-talks-java-scala-with
 Graham Tackley of the Guardian.co.uk was kind enough to deliver the latest in our series of technical talks. Graham discusses the Guardian’s transition from Java to Scala, highlighting both the advantages and difficulties of the migration.
 
 You can see the slides from the talk below.
+

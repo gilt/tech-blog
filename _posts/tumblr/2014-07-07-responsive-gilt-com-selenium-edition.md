@@ -35,16 +35,16 @@ Example
 To help you ensure that a page responds correctly to the appropriate viewport of the screen or device, here is a very basic test. It uses Selenium with ScalaTest and a dash of jQuery (there are many ways to test, but this is my preferred way):
 describe("When resizing the browser to 479px and navigating to product listing page") {
   it("should fit all the elements within the 479px limit") {
-{% highlight python %}
-{% endhighlight %}
+    val expectedPageWidth = 479
+    resizeWindow(width = expectedPageWidth, height = 800)
  
-{% endhighlight %}
+    webDriver.navigate().to("http://www.gilt.com/sale/men")
  
-{% highlight python %}
-val actualPageWidth = webDriver.asInstanceOf[JavascriptExecutor]
-{% endhighlight %}
+    // Using scrollWidth instead of width(), to get the true width of the html container
+    val actualPageWidth = webDriver.asInstanceOf[JavascriptExecutor]
+      .executeScript("return $(''html'')[0].scrollWidth;").asInstanceOf[Long]
  
-{% endhighlight %}
+    actualPageWidth.toInt should be <= expectedPageWidth
   }
 }
 

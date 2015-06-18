@@ -25,3 +25,6 @@ Deep spoke about parallelizing webservice calls from our Data Warehouse cluster 
 To our delight Gilt was also prominently featured in a skit on the main screen during the conference’s kickoff. 
 What remains of Foreigner played a concert. (Deep had no idea who they were) Malcolm Gladwell and John Cleese also spoke.
 Overall the conference was a great for the team to generate new ideas, appreciate how technically advanced we are, and get perspective on capital ‘E’ enterprise data volumes. 
+
+
+

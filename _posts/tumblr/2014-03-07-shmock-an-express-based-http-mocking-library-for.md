@@ -79,7 +79,7 @@ var handler = mock.get("/foo").reply(200);
 ...
 handler.wait(function(err) {
   if(err) {
-{% endhighlight %}
+    // A default timeout of 2 seconds has passed and still the expectation hasn''t been bet
   }
 });
 

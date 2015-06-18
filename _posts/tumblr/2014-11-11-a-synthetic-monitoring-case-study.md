@@ -58,8 +58,8 @@ As much as we’d like to tell ourselves otherwise, most users are not going to 
 This way, the image URI is in the rendered HTML. Of course, since none of the images have src attributes, I didn’t have any images showing on page load. The next step: activate the visible ones immediately after the template renders and is injected. (In the code below, the pageSize variable was created using window.matchMedia and was equal to the number of carousel items showing at each screen resolution.)
 target.find(''img[data-gilt-src]'').each(function (i) {
   if (i < pageSize) {
-{% highlight javascript %}
-{% endhighlight %}
+    $(this).attr(''src'', $(this).attr(''data-gilt-src''));
+    $(this).removeAttr(''data-gilt-src'');
   }
 });
 
@@ -67,8 +67,8 @@ The images also were missing their quality parameter. We use a service provided 
 Finally, I just needed a little bit of JavaScript to load additional images when the user interacts with the carousel. I was able to use our carousel’s API to do this (element is already in scope as the carousel container):
 carousel.subscribe(''elementSwitched'', function (data) {
   element.find(''img[data-gilt-src]'').each(function (i) {
-{% highlight javascript %}
-{% endhighlight %}
+    $(this).attr(''src'', $(this).attr(''data-gilt-src''));
+    $(this).removeAttr(''data-gilt-src'');
   });
 }
 Loading all of the images at this point makes sense no matter how many carousel pages there are. By the time the user is interacting with the carousel, it’s a fairly safe assumption that the page is done loading and that there isn’t too much other HTTP traffic.

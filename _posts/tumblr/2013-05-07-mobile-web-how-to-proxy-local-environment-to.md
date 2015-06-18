@@ -41,3 +41,4 @@ In the menu options that appear, you will see configuration settings similar to 
 
 
 And, that’s about it. On your device, open localhost:1234 or whatever in a browser and then Charles Proxy will ask you to allow or deny. You can now start coding on your machine and refreshing on your iOS device. You’re done.
+

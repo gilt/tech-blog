@@ -50,21 +50,21 @@ Use inline def’s and val’s to name intermediate results.
 Compare the following two pieces of code (sorry for the lousy formatting):
 
 accounts.filter(_.getUserId == userId)
-{% highlight python %}
-.map( tx =>
-  CurrencyConvertors.getConvertorFrom(tx.getCurrency)
-    .amountInUSD(tx.getAmount)
-{% endhighlight %}
+    .flatMap(_.getDeposits)
+    .map( tx =>
+      CurrencyConvertors.getConvertorFrom(tx.getCurrency)
+        .amountInUSD(tx.getAmount)
+    ).sum
 
 
 vs.
 
 val usersDeposits = accounts.filter(_.getUserId == userId)
-{% endhighlight %}
+      .flatMap(_.getDeposits)
 
 def convertAmountToUSD(tx: Transaction) =
-{% highlight python %}
-{% endhighlight %}
+      CurrencyConvertors.getConvertorFrom(tx.getCurrency)
+          .amountInUSD(tx.getAmount)
 
 usersDeposits map convertAmountToUSD sum
 

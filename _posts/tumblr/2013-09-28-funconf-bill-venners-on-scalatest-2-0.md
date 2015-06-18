@@ -13,3 +13,6 @@ tumblr_url: http://tech.gilt.com/post/62481606328/funconf-bill-venners-on-scalat
 Apropos of Lukasz’s post from earlier today: this new video featuring ScalaTest creator Bill Venners, published earlier today…
 
 functionally:
+
+
+

@@ -38,16 +38,16 @@ public class CustomInstrumentedHandler extends InstrumentedHandler {
   // constructor omitted for blog readability
   @Override
   public void handle(String target, Request request, HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws IOException, ServletException {
-{% highlight javascript %}
-try {
-  super.handle(target, request, httpRequest, httpResponse);
-} finally {
-  if (continuation.isInitial()) {
-    long count = request.getResponse().getContentCount();
-    bytesResponse.update(count);
-    bytesTransferred.mark(count);
-  }
-{% endhighlight %}
+    final AsyncContinuation continuation = request.getAsyncContinuation();
+    try {
+      super.handle(target, request, httpRequest, httpResponse);
+    } finally {
+      if (continuation.isInitial()) {
+        long count = request.getResponse().getContentCount();
+        bytesResponse.update(count);
+        bytesTransferred.mark(count);
+      }
+    }
   }
 }
 The clients effort would be a bit more challenging however. In our JVM-based services we end using a menagerie of HTTP clients: AsyncHTTPClient with Netty 3.x provider, Apache HttpComponents 4.x, Apache Commons HTTPClient 3.x, and the venerable JDK HttpURLConnection.
@@ -59,7 +59,7 @@ AsyncHTTPClient can be done easily using a RequestFilter and an AsyncHandler. Th
   private final Histogram bytesResponses;
   // ... initialization omitted for readability
   public FilterContext filter(FilterContext ctx) throws FilterException { 
-{% endhighlight %}
+    return new FilterContext.FilterContextBuilder(ctx) .asyncHandler(new MetricsAsyncHandler(ctx.getRequest(), ctx.getAsyncHandler())) .build(); 
   } 
 
  public class MetricsAsyncHandler implements AsyncHandler {
@@ -67,16 +67,16 @@ AsyncHTTPClient can be done easily using a RequestFilter and an AsyncHandler. Th
   private long totalBytesTransferred = 0;
   // ... initialization omitted for readability
   public STATE onBodyPartReceived(HttpResponseBodyPart bodyPart) throws Exception {
-{% highlight javascript %}
-totalBytesTransferred += bytes;
-metrics.bytesTransferred.mark(bytes);
-{% endhighlight %}
+    long bytes = bodyPart.getBodyPartBytes().length;
+    totalBytesTransferred += bytes;
+    metrics.bytesTransferred.mark(bytes);
+    return delegate.onBodyPartReceived(bodyPart);
   }
 
   public T onCompleted() throws Exception {
-{% highlight javascript %}
-metrics.bytesResponses.update(totalBytesTransferred);
-{% endhighlight %}
+    T o = delegate.onCompleted();
+    metrics.bytesResponses.update(totalBytesTransferred);
+    return o;
   }
  }
 }

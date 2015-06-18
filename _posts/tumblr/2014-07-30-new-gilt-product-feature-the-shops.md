@@ -32,3 +32,4 @@ Home décor ideas and advice
 Must-have’s for your babies and children–including everything from Easter attire to comfy onesies for newborns 
 
 We launched The Shops as part of our mission to provide ever more consistent and dependable destinations for our members. Let us know what you think of this and other new features by emailing us at productfeedback@gilt.com!
+

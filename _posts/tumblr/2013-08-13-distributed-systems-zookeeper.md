@@ -45,26 +45,26 @@ val config = new ClusterConfig().setHosts("zookeeper.gilt.com:2181").
 
 val listener = new ClusterListener {
   def onJoin(client: ZooKeeperClient) = {
-{% endhighlight %}
+    println("Connected to ZooKeeper as %s".format(nodeId))
   }
   
   def onLeave() = {
-{% endhighlight %}
+    println("Disconnected to ZooKeeper")
   }
 
   def startWork(workUnit: String) = {
-{% highlight python %}
-  def run() = println("Workin'' on %s".format(workUnit))
-}
-
-{% endhighlight %}
+    val task = new TimerTask {
+      def run() = println("Workin'' on %s".format(workUnit))
+    }
+    
+    val future = pool.scheduleAtFixedRate(task, 0, 1, TimeUnit.SECONDS)
 	
-{% endhighlight %}
+    futures.put(workUnit, future)
   }
 
   def shutdownWork(workUnit: String) {
-{% highlight python %}
-{% endhighlight %}
+    futures.get(workUnit).cancel(true)
+    println("Stopped working on %s".format(workUnit))
   }
 }
 

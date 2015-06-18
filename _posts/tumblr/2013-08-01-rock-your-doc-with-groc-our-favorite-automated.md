@@ -53,8 +53,8 @@ grunt.registerTask ''doc'', ''Generate documentation'', ->
   done = this.async()
   grunt.log.writeln(''Generating Documentation...'')
   require(''child_process'').spawn(''./node_modules/.bin/groc'', [''lib/*.js'', ''README.md'']).on ''exit'', ->
-{% highlight python %}
-{% endhighlight %}
+    grunt.log.writeln(''...done!'')
+    done()
 
 Let’s integrate doc into our build task:
 grunt.registerTask ''build'', [''test'', ''clean:build'', ''doc'', ''concat'', ''replace'', ''uglify'']
