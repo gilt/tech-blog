@@ -1,0 +1,45 @@
+---
+layout: post
+title: Five Questions You Must Ask Your PCI Auditor Before You Hire Them
+date: '2011-03-04T11:12:00-05:00'
+tags:
+- security
+- PCI compliance
+- payment card industry data security standard
+- qualified security assessor
+- QSAs
+- hiring a QSA
+- PCI audit
+- Aleksandr Yampolskiy
+tumblr_url: http://tech.gilt.com/post/3638463510/five-questions-you-must-ask-your-pci-auditor
+---
+<p class="MsoNormal"><strong><u><span>Cautionary Tale Told By My Friend</span></u></strong></p>
+<p class="MsoNormal"><span>The QSA walked into the conference room, sat down and took out a thick beige folder labeled “PCI.&ldquo; She looked uneasy as she started going down the list of questions from top-to-bottom:</span></p>
+<p class="MsoNormal"><span> </span><span>- “Umm okay, requirement 8.1. Identify all users with a unique user name … Do you do that?” she asked.</span></p>
+<p class="MsoNormal"><span> </span><span>- “Yes, we do. However in a few cases we have to use generic accounts in our legacy systems. Access to these generic accounts is restricted and carefully audited.”</span></p>
+<p class="MsoNormal"><span>- “That’s no good. You have to re-architect your legacy systems,&rdquo; she replied.</span></p>
+<p class="MsoNormal"><span>She took out a gum and started chewing, staring intently while waiting for the response. </span></p>
+<p class="MsoNormal"><span>At that point my friend (and a fellow CISO at an online retailer) paused and nervously sipped his tea. The next day he called the QSA’s manager and she was taken off the project. He had to search for a new QSA.</span></p>
+<p class="MsoNormal"><strong><u><span>What is PCI?</span></u></strong></p>
+<p class="MsoNormal"><span>The PCI DSS (payment card industry data security standard) was created by a consortium of credit card companies to enforce a set of minimum security standards. If your company accepts credit cards as a form of payment, then it must comply with the PCI standard. Companies who are Level 1 merchants (processing over 6 million Visa transactions annually) must undergo an onsite data security assessment by a QSA (qualified security assessor) who signs off on their PCI compliance status. </span></p>
+<p class="MsoNormal"><span>Unfortunately, many organizations view PCI compliance as a “necessary evil” and aim to get it over with as quickly as possible. They will hire the first QSA that comes along who is going to check off the boxes in the PCI questionnaire and give a stamp of approval. Many smaller companies who are not Level 1 merchants are eager not to hire a QSA to save money since they are not obligated to do so. These are all crucial mistakes. You want to use PCI compliance to tighten the security in your company, and you don’t want a QSA to let you off easy. You want your QSA to be knowledgeable, fair and impartial.</span></p>
+<p class="MsoNormal"><span> </span></p>
+<p class="MsoNormal"><span> </span><strong><u><span>The Five Questions You Need To Ask</span></u></strong></p>
+<p class="MsoNormal"><span>Before hiring a QSA, make sure you obtain as much information as possible about him. So before letting him come in and grill you, turn the tables around and interview your QSA.</span></p>
+<p class="MsoNormal"><span>We now list the five questions that you can’t hire your QSA without asking:</span></p>
+<p class="MsoNormal"><span> </span><strong><span>1. Can you show me your CV?</span></strong></p>
+<p class="MsoNormal"><span>A good QSA needs to have sufficient security and technical skills to effectively perform the audit. Just understanding the PCI DSS specification is not enough. The best QSAs will have a background in Information Security and experience working as a penetration tester, risk analyst or a CISO. This background will enable them to make tough judgment calls, assess if your firewall configurations are correct, and understand if your compensating controls are sufficient.<span>  </span>Note that you can verify the QSA’s standing at the following link: <a href="http://bit.ly/bomYyZ" target="_blank">http://bit.ly/bomYyZ</a> . </span><span>Also, you can use this link <span><a href="https://www.pcisecuritystandards.org/pdfs/pci_qsa_list.pdf" target="_blank">https://www.pcisecuritystandards.org/pdfs/pci_qsa_list.pdf</a> to check QSA </span>companies which have at least one QSA who failed to perform an adequate PCI DSS assessment<span>.</span></span><span> </span></p>
+<p class="MsoNormal"><span> </span><strong><span>2. What types of companies have you provided assessments for?</span></strong></p>
+<p class="MsoNormal"><span>Make sure that the QSA you hire has performed PCI audits of companies in your line of business and knows the challenges that they face.<span>   </span>If you are in an e-commerce business, selling luxury goods online, and the QSA has only dealt with large financial services firms, he may not be the right guy for the job.</span></p>
+<p class="MsoNormal"><span>3. <strong>What is your stance on compensating controls?</strong></span></p>
+<p class="MsoNormal"><span>The goal here is to eliminate QSAs who read the requirements verbatim. The only requirement written in stone is requirement 3.2 (Do not store sensitive authentication data subsequent to authorization).<span>   </span>All other requirements need to convey intent. <span> </span>For example, it’s perfectly ok to use a compensating control if you can’t assign a unique ID to every user (requirement 8.2) as long as you document and monitor all generic, shared IDs. A good QSA will understand that, while a bad one will force you to waste valuable time re-architecting your system without making it secure just to meet the requirement verbatim. When you interview a QSA, don’t be afraid to dig in further - give a concrete scenario where your company had to use a compensating control and see how the QSA reacts. <span> </span></span></p>
+<p class="MsoNormal"><span>4<strong>. How much do you charge, and what are the deliverables at the end of the engagement?</strong></span></p>
+<p class="MsoNormal"><span>The best QSAs are usually employed by the best QSA companies and they do not come cheap. Be wary of selecting a security vendor, who also happens to do PCI audits on the side, just to save a few bucks. A simple PCI audit which lasts a few weeks onsite will cost you $20K-$30K. More extensive PCI audits will cost on the order of $100K.<span>  </span>So if you have allocated low budget towards a PCI audit, you are setting yourself up for failure.</span></p>
+<p class="MsoNormal"><span>There are two types of services which QSAs usually offer:</span></p>
+<p class="MsoNormal"><span><span>-<span>       </span></span></span><strong><span>Gap analysis (a.k.a a PCI preparedness exam):</span></strong><span> A QSA will assess how prepared you are for the PCI audit. He will advise you on what remains to be done, and what controls you may need to change to pass the audit. The results of a gap analysis are not reported.</span><span> </span></p>
+<p class="MsoNormal"><span><span>-<span>       </span></span></span><strong><span>PCI audit:</span></strong><span> This is the real thing, where a QSA will request documentation, interview appropriate personnel, and assess your controls. At the end of the audit, you should expect to receive an IROC (initial report on compliance). You will have roughly 4 months to remediate any found gaps, after which you will receive a final ROC (report on compliance). </span></p>
+<p class="MsoNormal"><span> 5<strong>. Will you be available throughout the year in case we have any questions?</strong></span></p>
+<p class="MsoNormal"><span>PCI compliance represents a point in time and not a permanent state of being. You will have to maintain PCI compliance throughout the year and naturally questions may arise. You want to stay in touch with your QSA auditor, maintain a good relationship, and hopefully hire him to come back the following year.<span>  </span>So if your QSA tells you that he is planning a two-year vacation to Hawaii or that you need to route all questions through his company’s support line, run away!</span></p>
+<p class="MsoNormal"><span> </span><span> </span> </p>
+<p><span><em><em><span><strong>Aleksandr Yampolskiy, Ph.D.</strong> is a Director of Security and Compliance at Gilt Groupe, where he is responsible for risk management, PCI compliance, secure coding, IT infrastructure security, and security awareness and training.</span></em></em></span></p>
+<p><em><span> </span></em></p>

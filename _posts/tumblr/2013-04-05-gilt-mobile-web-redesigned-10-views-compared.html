@@ -1,0 +1,53 @@
+---
+layout: post
+title: Gilt Mobile Web Redesigned - 10 Views Compared
+date: '2013-04-05T15:54:00-04:00'
+tags:
+- mobile
+- gilt
+- gilttech
+- ios
+- web development
+- UX
+- user experience
+- Gregory Mazurek
+- redesigns
+- apps
+- Gilt mobile web
+tumblr_url: http://tech.gilt.com/post/47211899408/gilt-mobile-web-redesigned-10-views-compared
+---
+<p>Over the last three months, we overhauled the front end (JSP, HTML, Handlebars, LESS/CSS, JavaScript, Zepto) for Gilt&rsquo;s mobile web experience (<a href="http://m.gilt.com" target="_blank">http://m.gilt.com</a>). The redesign was inspired by learnings acquired from our iPhone App and the design is meant to replicate a lot of those features.</p>
+<p>Here are 10 side by side comparisons with notes inline and at the bottom. Let us know what you think!</p>
+<p><img alt="image" src="http://media.tumblr.com/82e9b41a804cac5b423c676fa4468fdd/tumblr_inline_mksr1hcIHr1qz4rgp.png"/></p>
+<p>In the previous design, there was an assumption that the Gilt shopper uses the mobile experience quickly and wants to see as many sales as possible in a short amount of space and time. But according to our iPhone App results, our users want to see larger pictures. Having two sales on the first view compared to four has resulted in increased sales, largely due to our amazing imagery.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/62bb161b50103424115779b504550eb7/tumblr_inline_mksr1lpiRe1qz4rgp.png"/></p>
+<p>We dropped the black background on the product details because most of our imagery adopted a white background.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/e1dff40ac378c0bf72d707176dba0693/tumblr_inline_mksr1pHRab1qz4rgp.png"/></p>
+<p>A nice feature of the redesign is that the add to cart button is visible on the bottom while scrolling on the product detail page. If you are shopping on m.gilt.com and want to purchase an item, you should have the add to cart accessible at all times. But, this doesn&rsquo;t always work on all devices.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/fbdb2823d0345bb85325760b669b86d0/tumblr_inline_mksr1uK8d31qz4rgp.png"/></p>
+<p>We created a more streamlined view for our sign in and registration pages by simplifying the experience.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/e35bf7f89023b573a20e31283d81ead7/tumblr_inline_mksr1xF64e1qz4rgp.png"/></p>
+<p>Our cart page features a similar button to what existed on the product detail page. Again, we are trying to make it as easy as possible to shop on a mobile device.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/85f325ed5984a9a5fca7bed66904b379/tumblr_inline_mksr20ZVdU1qz4rgp.png"/></p>
+<p>The checkout experience mimics the iPhone App experience while trying to keep a style that is more generic so that it looks great on Android as well.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/79b952f7ab996e0215b72c749598a2b5/tumblr_inline_mksr249mtb1qz4rgp.png"/></p>
+<p>While scrolling to the bottom of the checkout page, the submit order button stays fixed. In our older version, the user had to scroll to the button to checkout.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/71693ce3d675a15a0c967f0764f47a75/tumblr_inline_mksr27mHsG1qz4rgp.png"/></p>
+<p>We are reusing elements in our account page that we used in the checkout flow.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/6f7c7b995b64c42fd1b9e1efe4a4bd76/tumblr_inline_mksr2acsxT1qz4rgp.png"/></p>
+<p>Our footer introduces more spacing as well as elements that were previously found in the checkout and account flow.</p>
+
+<p><img alt="image" src="http://media.tumblr.com/e8cfec1bea3ab7841b22421ae7e3b86a/tumblr_inline_mksr2dgS7E1qz4rgp.png"/></p>
+<p>We have an amazing customer service team.</p>
+
+<p>Here are 5 learnings from redesigning the Gilt Mobile Web experience.<br/><br/><strong>1. Visual Components:</strong> Abstract away visual components that can be reused throughout the mobile experience. For example, the buttons in the footer are also used in the account page as well as in checkout. We only need to supply text and an optional image to create one.<br/><br/><strong>2. Cross-Browser Compatibility:</strong> Handle browser-specific issues like fixed-positioning on a per-device basis. The fixed &ldquo;submit button&rdquo; appears at the bottom of the screen on the product detail page, cart, and checkout page for modern browsers. But for early versions of Android, for example, the buttons appear inline.<br/><br/><strong>3. Iterating:</strong> Gilt Mobile Web is a complete experience in that it includes everything from the sales listing page through account and checkout. When trying to roll releases out to production, we searched for places where the old and new designs could coexist for a limited period of time. With this strategy, we didn&rsquo;t have to redesign everything at once.<br/><br/><strong>4. Cross-Device Compatibility:</strong> We tested m.gilt.com against several android and apple devices (as well as ie6 and ie7) to make sure it looked good on many different screen sizes. In many instances, DOM element sizes are determined as a percentage of the viewable screen. But since the majority of our users are accessing us from Safari on iPhone, development starts on the iOS Simulator.<br/><br/><strong>5. If it doesn&rsquo;t work, roll it back:</strong> I deployed our second phase to production and immediately upon doing so realized that &ldquo;sold out&rdquo; hover states were not&hellip; hovering. It was something that we missed and instead of making a quick fix, we rolled it back and spent a little more time testing. We pushed to production again a few days later with bug fixes in place and confidence that the experience was stable. Sometimes, we can&rsquo;t catch it all on staging environments.</p>
+
+<p></p>

@@ -1,0 +1,47 @@
+---
+layout: post
+title: Some Sugar for Your sbt Dependency Graph
+date: '2014-06-09T13:28:00-04:00'
+tags:
+- Gilt
+- Gilt Tech
+- gilttech
+- Gilt Groupe
+- sbt
+- Scala
+- dependency graphs
+- sbt-dependency-graph-sugar
+- Akka
+- Play Framework
+- microservices
+- micro-services
+- libraries
+- open source
+- OS
+- transitive dependencies
+- Eric Bowman
+- Dublin
+- Johannes Rudolph
+- sbt-dependency-graph
+- plugin
+tumblr_url: http://tech.gilt.com/post/88288577524/some-sugar-for-your-sbt-dependency-graph
+---
+<p><span>Since 2012 the Gilt engineering team has been using sbt to build and deploy microservices and webapps&ndash;from our newest Scala microservices to our most ancient Java applications. Microservices tend to have common functionality across the fleet, from </span><a href="http://www.playframework.com/" target="_blank"><span>Play Framework</span></a><span> and </span><a href="http://akka.io/" target="_blank"><span>Akka</span></a><span>, to our own </span><a href="https://github.com/gilt/gfc-avro" target="_blank"><span>internal libraries</span></a><span>. </span></p>
+<p><span>Dependencies (and their complex </span><a href="http://en.wikipedia.org/wiki/Transitive_dependency" target="_blank"><span>transitive dependencies</span></a><span>) have always been challenging to understand and manage. Not surprisingly, the open source community has produced some tools to make it easier. One open source tool we’ve relied on for managing dependencies is Johannes Rudolph’s awesome </span><a href="https://github.com/jrudolph/sbt-dependency-graph" target="_blank"><span>sbt-dependency-graph</span></a><span> plugin. </span></p>
+<p><span>Like Maven’s </span><a href="http://maven.apache.org/plugins/maven-dependency-plugin/tree-mojo.html" target="_blank"><span>dependency plugin</span></a><span> before it, sbt-dependency-graph produces an ASCII-art representation of an application’s dependency graph, making it easier to understand and spot problems. Unlike Maven, though, sbt-dependency-graph can generate different machine-readable graph formats, which enables composing interesting behavior on top of it. </span></p>
+<p><span>Most of the time, developers just want to </span><span>see</span><span> the dependency graph, and sbt-dependency-graph’s default visual output comes up short. By leveraging the machine-readable formats, we can generate even more powerful visualizations. To that end, the Gilt team has created </span><a href="http://github.com/gilt/sbt-dependency-graph-sugar" target="_blank"><span>sbt-dependency-graph-sugar</span></a><span>: an open-source plugin that provides some sbt-dependency-graph “sugar” to simplify understanding and managing dependencies. </span></p>
+<p><span>If you’re working on a Mac with graphviz installed, sbt-dependency-graph-sugar “just works” to convert the dependency graph to an SVG file and automatically open it on Safari:</span></p>
+<p><span><img alt="image" height="468px;" src="https://lh3.googleusercontent.com/ZiGr41TFyWXkzJ5NoJ84qWe6M4l14Hj360yMD4-vRzDis5sAGSkXTQsxaazk_14wZjkJIIUcOOaRrwBdaHdQRkpO9qKkvP3k1EEO3G-B7bH9aq7YuPlqrgZDk4sPgGZOjA" width="624px;"/></span></p>
+
+<p><span>To use sbt-dependency-graph-sugar with sbt 0.13.x, you can add it as a plugin to a particular project by putting this line in a </span><span><code>.sbt</code></span><span> file in the </span><span>project</span><span> subdirectory:</span></p>
+<blockquote>
+<p><span><code>addSbtPlugin("com.gilt" % "sbt-dependency-graph-sugar" % "0.7.4")</code></span></p>
+</blockquote>
+<p><span>Or you can make it magically available to all your sbt projects by putting that line in a </span><span><code>.sbt</code></span><span> file in</span><span><code> ~/.sbt/0.13/plugins/</code></span><span>.</span></p>
+<p><span>Once it’s installed, you can view the dependency graph for an application and its subprojects by running:</span></p>
+<blockquote>
+<p><span><code>dependencySvgView</code></span></p>
+</blockquote>
+<p><span>This will compute the dependency graph, convert it to svg, and open it with Safari.</span></p>
+<p><span>You can also customize the plugin to open files with Chrome and other applications.</span></p>
+<p><span>We’re hoping to contribute this feature to sbt-dependency-graph after we gain some traction, so give it try, give us feedback and stay tuned for updates. For now, enjoy!</span></p>

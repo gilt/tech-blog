@@ -1,0 +1,38 @@
+---
+layout: post
+title: 'Meet a Gilt Micro-Service #1: svc-inventory-request'
+date: '2014-03-26T12:13:00-04:00'
+tags:
+- Gilt
+- Gilt Tech
+- Gilt Groupe
+- micro-services
+- Robert Brazier
+- svc-inventory-request
+- Scala
+- Typesafe
+- Scala 2.10.3
+- Back Office
+- Slick
+- JSON
+- software engineering
+- case classes
+- ActiveRecord
+- microservices
+tumblr_url: http://tech.gilt.com/post/80785545576/meet-a-gilt-micro-service-1
+---
+<p><span><img alt="image" src="https://31.media.tumblr.com/ff140070177d600e08bec313384d9ac1/tumblr_inline_n31wt64AfW1s17bu5.jpg"/></span></p>
+<p><em>svc-inventory-request helps us handle our modelling photography</em></p>
+<p id="docs-internal-guid-eadc03b0-ff1b-02ce-4534-0912f86e6568"><span>Hi, everyone! This is the start of a (hopefully) regular series in which we take a closer look at Gilt <a href="http://tech.gilt.com/search/micro-services" target="_blank">micro-services</a>: the hundreds of services that together make up our distributed, Scala-built micro-services architecture. For each installment, I’ll pull a random repo from Gerrit and interview a Gilt technologist about the relevant micro-service. Together we’ll learn more about what micro-services are and what they do, and uncover some of the funny and interesting histories behind some of the code we’ve written over the years.</span></p>
+<p><span>First up for review is </span><strong>svc-inventory-request:</strong><span> an inventory-related microservice created by Gilt Software Engineer, Back Office team member and <a href="http://tech.gilt.com/2014/02/07/fancy-cheese-friday" target="_blank">fancy-cheese</a> aficionado Robert Brazier. Let’s get right to it!</span></p>
+<p><strong>What is svc-inventory-request, and what does it do?<br/></strong><span>svc-inventory-request handles lists of fashion modeling shots and other miscellaneous pull requests for inventory. In part, it acts as a proxy to a second, distribution-oriented micro-service related to internal inventory transfers. “It seems to do so little, but there’s so much code for it,” Rob told us (with a sigh).</span></p>
+<p><strong>When was it born?<br/></strong>T<span>he primary work began in May 2012 and lasted through that summer. It was the first Scala project that Rob worked on!</span></p>
+<p><strong>Any funny or interesting facts, cool power programmer moves or stupid code tricks?<br/></strong><span>svc-inventory-request was one of the first times Rob crossed paths with Scala’s 22-parameter limit on case classes. While writing it, he discovered a Scala language bug! He submitted it to <a href="http://typesafe.com/" target="_blank">Typesafe</a> and recently learned that it was fixed in <a href="http://www.scala-lang.org/news/2013/10/01/release-notes-v2.10.3.html" target="_blank">2.10.3</a>.</span></p>
+<p><span>Back in 2012, the Gilt Back Office team was still in Rails mode, and everyone knew about (and loved?) ActiveRecord. Rob asked around to see if a similar tool existed for Scala, but everyone warned him away from the ORM options available to him at the time. Rob wrote his own mini-ORM into svc-inventory-request! Similarly, there was still a lot of contention around how to handle JSON serialization/deserialization. Rob wrote that as well.  ”So much terrible,” Rob recalls. If he were to do it all over again, he’d use <a href="http://slick.typesafe.com/" target="_blank">Slick</a>: “It looks really nice for the database stuff.” </span></p>
+<p><strong>What’s svc-inventory-request up to these days?<br/></strong><span>Rob says it’s mostly in maintenance mode. The Back Office team is working on several new micro-services that will subsume a lot of svc-inventory-request’s workflow. Our PR team and other non-tech departments still use the micro-service fairly regularly, though.</span></p>
+<p><strong>Any last words?<br/></strong><span>Rob: “Don’t write your own ORM.”</span></p>
+<p><strong>Stats:</strong></p>
+<ul><li><span>First committer: Rob Brazier</span></li>
+<li><span>Top committers: Rob Brazier, Kevin Hyland, Anthony Manfredi</span></li>
+<li><span>Number of commits (as of March 2014): 196</span></li>
+</ul><p><span>That’s it for now! See you next time, when we take a look at <strong>lib-googledrive</strong>.<br/></span></p>

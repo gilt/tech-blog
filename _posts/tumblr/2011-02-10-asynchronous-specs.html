@@ -1,0 +1,59 @@
+---
+layout: post
+title: Asynchronous Specs
+date: '2011-02-10T17:00:00-05:00'
+tags:
+- frontend
+- JavaScript
+- TDD
+- TestSwarm
+- JavaScript testing framework
+- Asynchronous Specs
+- Gilt
+- gilttech
+- asynchronous behavior
+- Kevan Davis
+- ASpec
+- RSpec
+- submission
+tumblr_url: http://tech.gilt.com/post/3221966724/asynchronous-specs
+---
+<p>While working on <a href="http://tech.gilt.com/2011/02/09/test-swarm" target="_blank">TestSwarm</a>, we ran into the problem that none of the JavaScript testing frameworks out there had really solved the problem of how to test asynchronous behavior without requiring the test writer to do something different from how (s)he would test non-asynchronous behavior.</p>
+
+<p>e.g. Testing these two lines should be done the same way:</p>
+
+<pre><code>callThisImmediately(function () {});
+callThisIn5Seconds(function() {});
+</code></pre>
+
+<p>Every other testing framework we looked at required using something like wait() and resume(), or mock timers, or completely ignored the problem.</p>
+
+<p>So…I decided to write my own testing framework, with testing asynchronous behaviors (like AJAX requests, animations, countdowns, timeouts, etc.) in mind from the very beginning. Since we also have a lot of Rubyists here, we wanted the syntax to be as close to RSpec as possible.</p>
+
+<p>Thus was born <strong>ASpec</strong>:</p>
+
+<p><img alt="ASpec" src="http://media.tumblr.com/tumblr_lgf7vgo9fD1qzxg4t.png"/></p>
+
+<p>For the most part this was fairly straightforward, but there were two itty bitty little problems. The first was of course… how does ASpec know that there is asynchronous behavior? And two, what should it do about it?</p>
+
+<p>We solved the first one using a little regex and <code>Function.prototype.toString()</code>. Simply put, ASpec counts the number of <code>expects</code> in an <code>it</code> block before it executes that it block. when an <code>expect</code> gets executed, we count that too. When we exit the <code>it</code> block, if the two numbers aren’t the same, well, chances are that there was asynchronous behavior. Either that or unreachable code, conditional statements, or a good old runtime error.</p>
+
+<p>As for the 2nd problem, we solved that too. If we have any pending <code>expects</code>, everything after that gets put into a queue, and is executed after the pending <code>expect</code> is done. Or times out.</p>
+
+<p>When everything is done, we wind up with a nice little report that TestSwarm can take a screenshot of:</p>
+
+<p><img alt="ASpec Test Runner" src="http://media.tumblr.com/tumblr_lgf7wmXlRZ1qzxg4t.png"/></p>
+
+<p>Well, that’s okay (sorry about the purple), but if I’m testing something, I’d rather not have to leave the command line in order to do so. Not to mention, I’d like to have a way to test all my specs at once. And of course, I’d like to be able to test everything before I commit.</p>
+
+<p>Therefore, we created a little rake task: <code>rake spec</code>. If you’re a Rubyist, it probably sounds familiar.</p>
+
+<p>Our version of <code>rake spec</code> even produces output similar to the <a href="http://rspec.info/" target="_blank">RSpec</a> version:</p>
+
+<p><img alt="ASpec rake tasks" src="http://media.tumblr.com/tumblr_lgf7x6ikaS1qzxg4t.png"/></p>
+
+<p>If you peek under the hood, what you’ll see is a couple simple-minded tcp servers, and the Mac OSX <code>open</code> command (with the <code>--background</code> flag).</p>
+
+<p>And of course, since we want to be able to test in different browsers, we can run <code>rake spec:firefox</code>, <code>rake spec:chrome</code> and <code>rake spec:safari</code>. Sorry, IE.</p>
+
+<p><strong>Kevan Davis</strong>, Gilt Groupe</p>

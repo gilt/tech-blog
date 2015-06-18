@@ -1,0 +1,182 @@
+---
+layout: post
+title: Making Architecture Work in Microservice Organizations
+date: '2014-11-14T14:42:00-05:00'
+tags:
+- Gilt
+- Gilt Groupe
+- Gilt Tech
+- gilttech
+- microservices
+- micro-services
+- architecture
+- software development
+- Architecture Board
+- Architecture Council
+- microservice architecture
+- Scala
+- Node.js
+- technology management
+- open source
+- Andrew Harmel-Law
+- JVM
+tumblr_url: http://tech.gilt.com/post/102628539834/making-architecture-work-in-microservice
+---
+<p><span><img alt="image" src="https://31.media.tumblr.com/81538dc6ce80d95e1cbae7c26e4d6cee/tumblr_inline_nf1xiezmlx1s17bu5.png" width="800"/></span></p>
+
+<p id="docs-internal-guid-0a16ad7a-afbd-2ed7-6511-086cb163854f"><span>Gilt today has an expansive microservice architecture, with many decentralized engineering teams working autonomously to build and deploy services to production. There are many benefits to this sort of structure, but there are also many challenges. One of those challenges is ensuring consistency of architecture across dozens of teams and hundreds of services.</span></p>
+<p><span>We continuously evaluate our internal practices, and recently have made a few significant changes to how architecture works at Gilt.</span></p>
+<p><span>One of the biggest changes is that we no longer have an official “architecture” team. Instead, we have made “architecture” an “ingredient” on each of our teams, recognizing that the majority of architectural decisions are in fact made by the engineers on each team. We&rsquo;ve also created a small group of engineers to serve on an “architecture board” whose broad purpose is to ensure the sharing of best practices, and to identify the very few standards we need to govern&ndash; mainly where technology crosses team boundaries (e.g. how software built by one team talks with software built by another team).</span></p>
+<p><span>In the broadest sense, we apply learnings from how the open source community and the Internet work to how teams interact with one another.</span></p>
+<p><span>One of the tools we use to help all Gilt architects share best practices is the Architecture Council: a quarterly meeting designed to highlight key issues and bring people together to brainstorm and solve hard problems.</span></p>
+<p><span>Some of the most pressing questions discussed at our November council: </span></p>
+<ul><li><span>What does it mean to be an “architect”? </span></li>
+<li><span>At what level can Gilt engineers make independent technology choices? </span></li>
+<li><span>How do we see our work with Node.js evolving over time? </span></li>
+<li><span>And what are the limits of having a microservice architecture?</span></li>
+</ul><h2>The Benefits and Challenges of Microservice Architectures</h2>
+<p><span>If you’re unfamiliar with the particulars of microservice architectures, the writings of Martin </span><a href="http://martinfowler.com/articles/microservices.html" target="_blank"><span>Martin Fowler</span></a><span> and Adrian Cockcroft’s </span><a href="http://www.infoq.com/author/Adrian-Cockcroft" target="_blank"><span>ongoing work exploring microservices</span></a><span> are great resources. Despite growing in popularity </span><a href="https://qconsf.com/track/scalable-microservice-architectures" target="_blank"><span>as a discussion topic</span></a><span>&ndash;enough to earn </span><a href="https://qconsf.com/track/scalable-microservice-architectures" target="_blank"><span>their own conference track</span></a><span> and </span><a href="http://highscalability.com/blog/2014/7/28/the-great-microservices-vs-monolithic-apps-twitter-melee.html" target="_blank"><span>inspire heated, blogged-about Twitter debates among knowledgeable technologists</span></a><span>&ndash;microservice architectures have been adopted by very few companies. Among this few are Gilt, Amazon, Netflix and LinkedIn. </span></p>
+<p><span>“The Microservices architectural style is still definitely in the honeymoon period,” writes Andrew Harmel-Law in </span><a href="http://highscalability.com/blog/2014/10/27/microservices-in-production-the-good-the-bad-the-it-works.html" target="_blank"><span>his recent post</span></a><span> on the positives and negatives of microservices. Later in his post, he adds: “We’re finding that despite all the noise in this space very few folks out there are actually </span><span>doing</span><span> this, and even fewer doing it in a public manner.” </span></p>
+<p><span>Our experience at Gilt is that the pros of microservices outweigh the cons. As we’ve shared previously in </span><a href="http://tech.gilt.com/2014/04/18/gilt-featured-at-this-weekends-lambdaconf" target="_blank"><span>conference talks</span></a><span> and </span><a href="http://tech.gilt.com/2014/03/10/gilts-architecture-summit-bigger-and-better-than-ever" target="_blank"><span>blog posts</span></a><span>, Gilt adopted a microservices approach to architecture during a time of explosive growth for our business. After starting out as a monolithic Rails app in 2007 (the year Gilt was founded), Gilt transitioned to the JVM in 2009 (using Java) and began building out its microservice architecture with about 10 “macroservices.” In 2011 we transitioned to Scala. In 2014, we introduced Node JS; today we have upwards of 300 microservices in production. </span></p>
+<p><span>Adopting a micro-services architecture has enabled our engineers to write simpler code and speed up release cycles from days to minutes, while making production deploys safer. It has also reinforced our culture of team autonomy, decentralization and end-to-end ownership of quality. Every way we measure, teams are releasing major features more frequently than ever before, and almost always with absolutely minimal risk.</span></p>
+<p><span>That said, there are challenges to maintaining a microservice architecture. As the number of our services and applications continues to increase, conscientious management becomes ever more important. Monitoring performance of specific microservices isn’t straightforward. Proper alerting is both critical and entirely different, with very few options available to trigger high quality alerts across hundreds of applications. And when the number of microservices exceeds the number of engineers on your team, how will the engineers manage the ongoing maintenance and ownership of those apps?</span></p>
+<p><span>Now that we’ve talked about microservices, let’s get into the Architecture Council and Board.</span></p>
+<h2>Why We’ve Created the Council</h2>
+<p><span></span><span></span><span>Until recently, Gilt had a designated Architecture team whose members&ndash;working in Dublin, NYC, and remotely&ndash;handled most of the major aspects of architecture. While this structure worked fairly well for a number of years, there was tension between a centralized architecture team and a decentralized micro-services organization. The reality is that with so many independent applications, it is the engineers on each team that make significant architectural decisions on a regular basis - and that we needed to evolve our structure to better embrace this struture.</span></p>
+<h2>Some of the Council’s Specific Objectives:</h2>
+<ul><li>
+<p><span>Make it easier to brainstorm solutions to problems and to share results</span></p>
+</li>
+<li>
+<p><span>Highlight best practices across all our teams</span></p>
+</li>
+<li>
+<p><span>Minimize duplication of effort across Gilt</span></p>
+</li>
+<li>
+<p><span>Define standards for inter team communication</span></p>
+</li>
+<li>
+<p><span>Assist teams in solving hard technical problems in simple, scalable ways</span></p>
+</li>
+<li>
+<p><span>Assess specific technologies - already at Gilt or not yet in use at Gilt</span></p>
+</li>
+</ul><p><span>Heading up the Council’s work and direction is the Architecture Board.</span></p>
+<h1>The Architecture Board: How It Works</h1>
+<h2>The Board</h2>
+<ul><li>
+<p><span>The Architecture Board includes four members and a chair, each of whom serve 24-month terms. Each board member continues to work on an engineering team as their primary activity. The Board reports to the CTO.</span></p>
+</li>
+<li>
+<p><span>Members can serve no more than two consecutive terms.</span></p>
+</li>
+</ul><ul><li>
+<p><span>Members devote 25% of their time to Board responsibilities</span></p>
+</li>
+<li>
+<p><span>Members work with the rest of the engineering teams on hard problems</span></p>
+</li>
+<li>
+<p><span>The board ensure that all standards are actively reviewed for modification / cancellation on a set interval (from one to two years)</span></p>
+</li>
+<li>
+<p><span>Primary duties:</span></p>
+</li>
+<li>
+<p><span>Convenes quarterly meeting for all architects to discuss proposed standards, share best practices on reviewing key RFCs, conduct in-person design reviews, etc. </span></p>
+</li>
+<li>
+<p><span>Makes it easier to brainstorm solutions to problems and to share results</span></p>
+</li>
+<li>
+<p><span>Highlights best practices across all our teams</span></p>
+</li>
+<li>
+<p><span>Minimizes duplication of efforts across Gilt</span></p>
+</li>
+<li>
+<p><span>Defines standards for inter-team communication</span></p>
+</li>
+<li>
+<p><span>Assists teams in solving hard technical problems in simple, scalable ways</span></p>
+</li>
+<li>
+<p><span>Assesses specific technologies both already in use at Gilt and not in use yet</span></p>
+</li>
+</ul><h2>The Board Chair</h2>
+<ul><li>
+<p><span>Convenes board meetings as necessary (at least 2x/month)</span></p>
+</li>
+<li>
+<p><span>Drives transparency, sharing agenda and minutes from each board meeting with all of tech; a directory of the board’s past decisions; and a published internal metric for how decisions are made</span></p>
+</li>
+</ul><h2><span>Selecting and Replacing Board Members</span></h2>
+<ul><li>
+<p><span>The board’s terms are set up so that one member rotates out every six months, and a new member joins</span></p>
+</li>
+<li>
+<p><span>To serve on the board, an engineer has to have served as an “engineering architect” for at least 12 months (doesn’t have to be consecutive)</span></p>
+</li>
+</ul><ul><li>
+<p><span>Engineers who have served on the board during the previous 12 months are ineligible.</span></p>
+</li>
+<li>
+<p><span>The board will solicit nominees at their monthly/bimonthly meetings</span></p>
+</li>
+<li>
+<p><span>Incoming board members serve as observers during the month before their official term begins</span></p>
+</li>
+<li>
+<p><span>New members ideally receive unanimous board consent (includes CTO)</span></p>
+</li>
+<li>
+<p><span>When the chair rotates off the board, the board will decide its own chair</span></p>
+</li>
+</ul><h2><span>How the Board Makes Decisions</span></h2>
+<p><span>The goal is for the board and the CTO to agree unanimously on proposals. If there’s disagreement:</span></p>
+<ul><li>
+<p><span>The board will vote, and if a majority approves the proposal, it passes for CTO review</span></p>
+</li>
+<li>
+<p><span>If there is a tie, the chair will decide whether or not the recommendation moves forward</span></p>
+</li>
+<li>
+<p><span>The CTO is the benevolent dictator for life and reserves sole discretion to approve or reject a proposal </span></p>
+</li>
+</ul><p><span>In some cases the board must do some exploratory work before making a decision on a proposal. These situations and the timelines for exploration can be identified through the normal decision-making process. If the exploratory period ends and the board still doesn’t make a decision, the CTO also reserves the right to make the decision or to extend the time period.</span></p>
+<h2>What We Discussed and Decided</h2>
+<p><span>One of the goals of each quarterly architecture council is to agree on 2-3 key initiatives to focus on until the next council meeting. This time around, the group agreed to:</span></p>
+<ul><li>
+<p><span>Enhance the Security of our PostgreSQL Databases.  </span><span>We now have more than 50 unique PostgreSQL databases across multiple servers, both in our data centers and in the cloud. We agreed to invest time to increase the overall security and management of these databases.</span></p>
+</li>
+<li>
+<p><span>Adopt Commons 6</span><span>, the latest internal library providing the API to most of Gilt’s core ecommerce libraries and services. Commons 6 is a major release for us&ndash;replacing a Java- with a Scala-centric API, while maintaining upgradeability for older services written in Java.</span></p>
+</li>
+</ul><p><span>We also broke up into smaller groups to discuss some of the key aspects of our tech culture: microservices, team ownership of end-to-end quality, and independent introduction of new technologies at Gilt. We’ve already covered microservices above, so here are some highlights of those other breakout discussions.</span></p>
+<p><span>Team ownership of software:</span></p>
+<ul><li>
+<p><span>The Council discussed how to define ownership, some processes to transfer ownership, and ways to match initiatives and projects to owners. We hope to formalize this work in February.</span></p>
+</li>
+</ul><p><span>How independent technology choices can be made at Gilt:</span></p>
+<ul><li>
+<p><span>We value having the ability to pick the best technology for a given domain, even if it is not widely used across all of Gilt (e.g. R for data scientists)</span></p>
+</li>
+<li>
+<p><span>Critical pieces of infrastructure should not be built using experimental technologies</span></p>
+</li>
+<li>
+<p><span>Individuals wanting to introduce a new technology should do so by convincing their peers in their department. Departments at Gilt are big enough to take on the long-term maintenance of that technology. It’s great that this can be a department-level decision and not a global Gilt decision</span></p>
+</li>
+</ul><p><span>Using Node.js as a</span><span> platform for web applications:</span></p>
+<ul><li>
+<p><span>The checkout team at Gilt is rewriting our checkout application in Node&ndash;and loving it!</span></p>
+</li>
+<li>
+<p><span>Node empowers front-end engineering, and improves our tech culture by allowing for greater participation in the broader front-end community.</span></p>
+</li>
+<li>
+<p><span>Simplifies library consumption, enabling thinner web apps. Expand usage to smaller</span><span><br/></span><span> satellite apps that do not receive a lot of traffic.</span></p>
+</li>
+</ul><h2>Conclusion</h2>
+<p><span>Our hope with this and future Architecture Council posts is to contribute our experiences and ideas to the ongoing conversation about microservice architectures and help answer some questions about how tech teams can successfully manage them. It’s been our experience that microservice architectures really enables teams to make the best choices for their domains. Stay tuned for more on this topic&ndash;there’s much more to learn and discover.</span></p>

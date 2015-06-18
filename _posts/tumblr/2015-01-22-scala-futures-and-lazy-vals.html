@@ -1,0 +1,22 @@
+---
+layout: post
+title: Scala, Futures and "Lazy" Vals
+date: '2015-01-22T18:23:00-05:00'
+tags:
+- Gilt
+- Gilt Groupe
+- Gilt Tech
+- gilttech
+- Andrey Kartashov
+- Scala
+- lazy vals
+- ForkJoinPool
+- Jessica Kerr
+- FJP
+- Scala 2.10
+tumblr_url: http://tech.gilt.com/post/108863944789/scala-futures-and-lazy-vals
+---
+<p><img alt="image" src="https://31.media.tumblr.com/9c704e6868cd90aeb01abe908acd0f28/tumblr_inline_nilkgrUs1B1s17bu5.png" width="800"/></p>
+<p><em>Image via <a href="https://www.flickr.com/photos/hmk/2742398590/in/photolist-5bkvyj-7T1KbP-7YUB5d-85pamg-fhtqqR-cYv8q9-bwrWEN-7K8ERd-8U4E9e-9a6B49-tM5nv-o7zyud-oX9cDf-hC8SBj-jWJf-doAo8n-6CbdfG-o7F7QD-o9yAVK-bxciU-936fG4-9dmEez-34oiRs-fA6mge-o9seiR-o7xYEy-o7zvLN-o7nP7c-o5CK3C-nQbRp3-o7F7wn-7HrJBS-6umch4-eYhuSS-bfhiE2-o7nMjz-eh7p-6DtZLr-o9segX-o7nKQT-a1XCcx-23zDZ-q4eSEm-o7nNc6-o9scNX-o7y1Nw-f84h4g-6VoDK2-2svyz6-9zruQE" target="_blank">H. Michael Karshis</a>. <br/></em></p>
+<p>When <a href="http://stackoverflow.com/questions/17642275/how-are-lazy-val-class-variables-implemented-in-scala-2-10" target="_blank">implementing &ldquo;lazy val&rdquo; class variables</a> in Scala 2.10, keep in mind that lazy vals hide some plain-old synchronized block behind a nice-looking syntax. At Gilt, more and more of our stuff is <a href="http://tech.gilt.com/2015/01/05/some-quick-tips-for-using-scala-futures" target="_blank">Future</a>-based, and increasingly more of it executes in Scala&rsquo;s shared <a href="http://blog.jessitron.com/2014/02/scala-global-executioncontext-makes.html" target="_blank">ForkJoinPool</a> under the assumption that it &ldquo;behaves.&rdquo; Sometimes these worlds collide, however, and &ldquo;lazy val&rdquo;-guarded calls (which are synchronized blocks in disguise) end up being thrown into global FJP. And worse, they may some times be highly-contended.</p>
+<p>There are good reasons to use Futures and async IO, and good reasons to use lazy vals. You just need to be very, very careful if and when you end up mixing the two, because they are a bit tricky to understand at best and may lock up your system at worst.<br/><br/> Of course, the easy position to take is, &ldquo; just don&rsquo;t do it! &rdquo;:) <br/><br/> The rule of thumb: If code that initializes your lazy val is non-blocking and very fast, it&rsquo;s most likely OK and could be good way to defer creation of heavy objects (like thread pools). OTOH, if your lazy val is initialized from a Future, or the result of some remote service call(s), that can easily turn out to be problematic when &lsquo;normal&rsquo; code that tries to de-reference those values ends up (unwittingly) making a blocking call inside a (perhaps shared) FJP. Think twice if that&rsquo;s where you find yourself&ndash;there are often better alternatives. <em><strong>&ndash;Content (and most words) by Andrey Kartashov, Gilt Principal Software Engineer</strong></em></p>

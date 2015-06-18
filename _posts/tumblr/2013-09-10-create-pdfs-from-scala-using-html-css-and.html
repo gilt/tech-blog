@@ -1,0 +1,27 @@
+---
+layout: post
+title: Create PDFs from Scala Using HTML, CSS and JavaScript
+date: '2013-09-10T14:31:00-04:00'
+tags:
+- sPDF
+- wkhtmltopdf
+- CSS
+- JavaScript
+- open source
+- Scala
+- Federico Feroldi
+- PDFs
+- libraries
+- HTML
+- Cloudify
+- PDFkit
+tumblr_url: http://tech.gilt.com/post/60858935846/create-pdfs-from-scala-using-html-css-and
+---
+<p>Gilt Senior Software Engineer Federico Feroldi just released <a href="https://github.com/cloudify/sPDF" target="_blank"><strong>sPDF</strong></a> (pronounced <em>speedy-f</em>): a Scala library that makes it super-easy to create complex PDFs from HTML, CSS and JavaScript. On the backend sPDF uses <a href="http://github.com/antialize/wkhtmltopdf" target="_blank">wkhtmltopdf</a>, which renders HTML using Webkit.</p>
+<p>In creating sPDF, Federico was heavily inspired by Ruby&rsquo;s <a href="https://github.com/pdfkit/pdfkit" target="_blank">PdfKit</a> gem, which also uses HTML, CSS and wkhtmlopdf to create PDFs. </p>
+<p>sPDF&rsquo;s main features include:</p>
+<ul><li>full support of <code>wkhtmltopdf</code> extended parameters (see the source of the <code>PdfConfig</code> trait)</li>
+<li>can read HTML from several sources: <code>java.io.File</code>, <code>java.io.InputStream</code>, <code>java.net.URL</code>, <code>scala.xml.Elem</code>, and <code>String</code></li>
+<li>can write PDFs to <code>File</code> and <code>OutputStream</code></li>
+</ul><p>The source HTML can reference to images and stylesheet files as long as the URLs point to the absolute path of the source file. It&rsquo;s also possible to embed JavaScript code in the pages: <code>wkhtmltopdf</code> will wait for the document-ready event before generating the PDF.</p>
+<p>This is Federico&rsquo;s second open source Scala library. His other recent project, <a href="http://tech.gilt.com/2013/07/18/lucene-scala" target="_blank">Lucene Sugar</a>, provides a more concise syntax for the Lucene API in the Scala language. Let him know what you think of both projects by contacting him via <a href="https://github.com/cloudify" target="_blank">his GitHub page</a>.</p>

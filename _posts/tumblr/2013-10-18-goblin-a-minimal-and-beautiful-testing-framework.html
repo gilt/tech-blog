@@ -1,0 +1,83 @@
+---
+layout: post
+title: 'Goblin: A Minimal and Beautiful Testing Framework for the Go Language'
+date: '2013-10-18T15:48:00-04:00'
+tags:
+- Node.js
+- open source
+- testing
+- frameworks
+- Gomega
+- goblin
+- go
+- golang
+- Jonathan Leibiusky
+- Goblin
+tumblr_url: http://tech.gilt.com/post/64409561192/goblin-a-minimal-and-beautiful-testing-framework
+---
+<p><img alt="image" src="http://media.tumblr.com/4682d40b70f9da0113a948f47e7c47f4/tumblr_inline_muvgzbZMDW1spue4h.jpg"/></p>
+<p>Inspired by the flexibility and simplicity of Node&rsquo;s Mocha, but frustrated by the rigorousness of the Go way of testing, my friend <a href="https://twitter.com/marcosnils" target="_blank"><span class="profile-field">Marcos Nils</span></a> and <a href="https://twitter.com/xetorthio" target="_blank">I</a> set out to create a new tool to write self-describing and comprehensive code. The result (and just in time for Halloween): <strong><a href="https://github.com/franela/goblin" target="_blank">Goblin</a></strong>.</p>
+<h2>What do I get with Goblin?</h2>
+<ul><li>Preserve the exact same syntax and behavior as Node.js&rsquo;s Mocha</li>
+<li>Nest as many <code>Describe</code> and <code>It</code> blocks as you want</li>
+<li>Use <code>Before</code>, <code>BeforeEach</code>, <code>After</code> and <code>AfterEach</code> for setup and teardown your tests</li>
+<li>No need to remember confusing parameters in <code>Describe</code> and <code>It</code> blocks</li>
+<li>Use a declarative and expressive language to write your tests</li>
+<li>Plug different assertion libraries (<a href="https://github.com/onsi/gomega" target="_blank">Gomega</a> supported so far)</li>
+<li>Skip your tests the same way as you would do in Mocha</li>
+<li>Two-line setup is all you need to get up and running</li>
+</ul><h2><a class="anchor" href="https://github.com/franela/goblin#how-do-i-use-it" id="how-do-i-use-it" name="how-do-i-use-it" target="_blank"></a>How do I use it?</h2>
+<p>Since <code>go test</code> is not currently extensive, you will have to hook Goblin to it. Just add a single test method in your test file, and all your goblin tests will be implemented inside this function.</p>
+<div class="highlight highlight-go">
+<pre><span class="kn">package</span> <span class="nx">foobar</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">"testing"</span>
+    <span class="p">.</span> <span class="s">"github.com/franela/goblin"</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">Test</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">g</span> <span class="o">:=</span> <span class="nx">Goblin</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">Describe</span><span class="p">(</span><span class="s">"Numbers"</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">g</span><span class="p">.</span><span class="nx">It</span><span class="p">(</span><span class="s">"Should add two numbers "</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+          <span class="nx">g</span><span class="p">.</span><span class="nx">Assert</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="p">).</span><span class="nx">Equal</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="nx">g</span><span class="p">.</span><span class="nx">It</span><span class="p">(</span><span class="s">"Should match equal numbers"</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+          <span class="nx">g</span><span class="p">.</span><span class="nx">Assert</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="nx">Equal</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+      <span class="p">})</span>
+      <span class="nx">g</span><span class="p">.</span><span class="nx">It</span><span class="p">(</span><span class="s">"Should substract two numbers"</span><span class="p">)</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+</pre>
+</div>
+<p>Output will look something like this:</p>
+<p><a href="https://github.com/marcosnils/goblin/blob/master/goblin_output.png?raw=true" target="_blank"><img alt="" src="https://github.com/marcosnils/goblin/blob/master/goblin_output.png?raw=true"/></a></p>
+<p>Nice and easy, right?</p>
+<h2><a class="anchor" href="https://github.com/franela/goblin#how-do-i-use-it-with-gomega" id="how-do-i-use-it-with-gomega" name="how-do-i-use-it-with-gomega" target="_blank"></a>How do I use Goblin with Gomega?</h2>
+<p>Gomega is a nice assertion framework, but it doesn&rsquo;t provide a nice way to hook it to testing frameworks. It should just panic instead of requiring a fail function. There is an issue about that <a href="https://github.com/onsi/gomega/issues/5" target="_blank">here</a>. While this problem is being discussed and hopefully fixed, you can use Gomega with Goblin. How to do it:</p>
+<div class="highlight highlight-go">
+<pre><span class="kn">package</span> <span class="nx">foobar</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">"testing"</span>
+    <span class="p">.</span> <span class="s">"github.com/franela/goblin"</span>
+    <span class="p">.</span> <span class="s">"github.com/onsi/gomega"</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">Test</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">g</span> <span class="o">:=</span> <span class="nx">Goblin</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span>
+
+    <span class="c1">//special hook for gomega</span>
+    <span class="nx">RegisterFailHandler</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">m</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">_</span> <span class="o">...</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span> <span class="nx">g</span><span class="p">.</span><span class="nx">Fail</span><span class="p">(</span><span class="nx">m</span><span class="p">)</span> <span class="p">})</span>
+
+    <span class="nx">g</span><span class="p">.</span><span class="nx">Describe</span><span class="p">(</span><span class="s">"lala"</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">g</span><span class="p">.</span><span class="nx">It</span><span class="p">(</span><span class="s">"lslslslsls"</span><span class="p">,</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">Expect</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">To</span><span class="p">(</span><span class="nx">Equal</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+      <span class="p">})</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+</pre>
+</div>
+<h2><a class="anchor" href="https://github.com/franela/goblin#todo" id="todo" name="todo" target="_blank"></a>What&rsquo;s next for Goblin?</h2>
+<p>Marcos and I will soon address the <a href="https://github.com/franela/goblin/issues" target="_blank">issues</a> still pending with Goblin. Meantime, feel free to contribute and send us your pull requests (with tests, please).</p>
+<p><em>Special thanks to <a href="https://github.com/leandroreox" target="_blank">Leandro Reox</a> (Leitan) for designing the Goblin logo.</em></p>

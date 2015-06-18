@@ -1,0 +1,104 @@
+---
+layout: post
+title: Java has log4j...Objective-C has CocoaLumberjack...and now Swift has CleanroomLogger
+date: '2015-05-08T17:44:05-04:00'
+tags:
+- swiftlang
+- swift
+- ios
+- xcode
+- log4j
+- cocoalumberjack
+- opensource
+- github
+- gilt
+- gilttech
+- mobile
+- giltmobile
+- apple
+- iphone
+- ipad
+- programming
+- development
+- open-source
+tumblr_url: http://tech.gilt.com/post/118471923164/java-has-log4j-objective-c-has
+---
+<p>Gilt Tech is proud to announce the release of <a href="https://github.com/emaloney/CleanroomLogger#cleanroomlogger" target="_blank">CleanroomLogger</a> 1.0, an open-source logging API for iOS.
+
+</p><p>CleanroomLogger provides a simple, lightweight and performant logging API written in Swift that will be readily understood by anyone familiar with other logging packages like CocoaLumberjack and log4j.
+
+</p><h1>CleanroomLogger Highlights</h1>
+
+<p>CleanroomLogger provides these key features:
+
+</p><ul><li>Classify log messages according to one of five <i>severity levels</i>: <b>verbose</b>, <b>debug</b>, <b>info</b>, <b>warning</b> and <b>error</b>
+</li><li>See the source file and line number of each log message recorded
+</li><li>Silently ignore messages below a given severity threshold
+</li><li>Far more respectful of the calling thread than <code>NSLog()</code>
+</li><li>A <code>trace()</code> function that can be used to trace an application&rsquo;s code paths by logging the location of its caller
+</li><li>Configurable log behavior that puts the application developer in control of embedded code
+</li><li>Extension points that allow custom implementations for (1) log message formatting, (2) message filtering logic, and (3) the recording of log messages to an underlying facility.
+</li></ul><h2>Message logging</h2>
+
+<p>Each message sent to the log is associated with a <i>severity</i> value indicating the relative importance of the message.
+
+</p><p>You would send an informational message as follows:
+
+</p><pre>
+Log.info?.message("The user has added \(count) items to the cart")
+</pre>
+
+<p>If a condition occurs that itself isn&rsquo;t an error, but that might signal future trouble, you might issue a <i>warning</i>:
+
+</p><pre>
+Log.warning?.message("We're running low on space!!!")
+</pre>
+
+<p>Finally, when things hit the fan, you&rsquo;ve got:
+
+</p><pre>
+Log.error?.message("Oh my, this is extremely embarrassing")
+</pre>
+
+<p>Each log message is recorded with the file and line that issued it, so you can very quickly figure out what code was responsible for a given message.
+
+</p><h2>Execution tracing</h2>
+
+<p>As you&rsquo;re developing and testing your code, you might want to understand the flow of execution your code takes. You can add <code>trace()</code> calls to various points in your code:
+
+</p><pre>
+Log.debug?.trace()
+</pre>
+
+<p>The code above would print out the file and line number containing the <code>trace()</code> call, as well as the name of the calling function. The output looks like:
+
+</p><pre>
+ModularTable.swift:364 — tableView(_:cellForRowAtIndexPath:)
+</pre>
+
+<h2>Logging arbitrary values</h2>
+
+<p>Sometimes life hands you an <code>NSError</code>. Why bother constructing a <i>new</i> message? The <code>NSError</code> <i>is</i> the message:
+
+</p><pre>
+Log.error?.value(err)
+</pre>
+
+<p>This function accepts <code>Any?</code>, meaning it&rsquo;ll handle anything you throw at it.
+
+</p><h2>Extensibility
+
+</h2><p>CleanroomLogger&rsquo;s extension points allow you to fully customize all aspects of logging without having to worry about the <i>mechanics</i> of how a logging engine is implemented.
+
+</p><p>The ability to provide one or more custom <code>LogRecorder</code> implementations is particularly powerful. You could implement your own <code>LogRecorder</code> to do things like:
+
+</p><ul><li>Write messages to a file or set of (potentially rotating) files
+</li><li>Store messages with a <i>warning</i> or <i>error</i> severity in a database for subsequent diagnostic evaluation
+</li><li>Send messages with an <i>error</i> severity to a network endpoint to enable rapid response to codebase instability
+</li></ul><p>And because more than one <code>LogRecorder</code> can be used at a time, you can multiplex your log messages to multiple destinations without writing any additional code.
+
+</p><h1>About CleanroomLogger</h1>
+
+<p>CleanroomLogger is part of <a href="https://github.com/gilt/Cleanroom" target="_blank">the Cleanroom project</a> a set of open-source Swift projects launched as &ldquo;an experiment in re-imagining Gilt&rsquo;s iOS codebase in a legacy-free incarnation that embraces the latest Apple technology.&rdquo;
+
+</p><p><a href="https://github.com/emaloney/CleanroomLogger" target="_blank">The source code for CleanroomLogger is available on GitHub</a>, and may be used, modified and redistributed freely under <a href="https://github.com/emaloney/CleanroomLogger/blob/master/LICENSE" target="_blank">the MIT license</a>. </p>

@@ -1,0 +1,58 @@
+---
+layout: post
+title: 'Infiniti Cars and Fashion Stars: Making Adaptive Product Pages at Gilt'
+date: '2013-10-17T13:39:00-04:00'
+tags:
+- Infiniti
+- Gilt
+- technology
+- responsive web design
+- adaptive design
+- JavaScript
+- HTML
+- CSS
+- Infiniti Q50
+- zac posen
+- thom browne
+tumblr_url: http://tech.gilt.com/post/64309453146/infiniti-cars-and-fashion-stars-making-adaptive
+---
+<p>In December Gilt will sell two exclusive models of the Infiniti Q50, each designed by heavyweight fashion designers Zac Posen and Thom Browne. For <a href="http://techcrunch.com/2012/03/12/need-a-new-car-gilts-selling-a-2013-infiniti-jx-for-half-price-today/" target="_blank">past car sales</a> we’ve used our standard product detail page, which includes multiple views of the product on sale, a short product description, and a list of materials used to make the product. One challenge for us in building attractive car sales pages is that we have to include all of the terms and conditions copy. As the graphic below shows, posting a lengthy block of legalese does nothing to convey the excitement that a high-ticket, beautifully designed car ought to generate!</p>
+<p><img alt="image" src="http://media.tumblr.com/f6b49680cdfdcd01b54d3c7342b66b59/tumblr_inline_mus0vxt1JT1spq91n.jpg"/></p>
+<p>For the upcoming Infiniti sale, my team and I were responsible for developing a new type of product detail page that would showcase these one-of-a-kind cars. Not only that, we aimed to produce the first Gilt feature that reflected the brave new world of Mobile First: An initiative to optimize pages so that they work equally well on a phone, a tablet, or a laptop/desktop. The<span> end result had to fit our standard criteria for designing pages: It should be equally usable, functional, and visually appealing across devices.</span></p>
+<p>We also wanted to create a page that we could quickly duplicate and reconfigure for future product sales. Lastly, we wanted to make it possible for our in-house merchandising team to build these pages with full autonomy and limited tech support.</p>
+<p>Our solution: the <strong>Showcase Detail Page (SDP), </strong>which meets all of our  goals and displays the car in an exciting way.</p>
+<p><strong>Mobile First: Provide Multi-device support</strong></p>
+<p>Gilt currently serves mobile pages through <a href="http://m.gilt.com" target="_blank">http://m.gilt.com</a>, using a codebase that&rsquo;s different from our web codebase. In the past this separation allowed us to quickly serve minimalistic pages to our mobile users, but technological advancements and our push towards unification are making this less necessary. Because of the codebase separation, many new features seldom make it onto the mobile platform, and our mobile users are redirected to the full website version. We don&rsquo;t want our fastest-growing segment of users to miss out on the new experiences we create, or be forced to pinch and squeeze their way across the page.</p>
+<p>Enter SDP, which allows us to experiment with keeping the code in a single, centralized repository and serve and style it in various ways according to the user’s device type. Serving features from one location will make it easier to release features across devices. Additionally, the page will be formatted according to the user’s device, which will enhance our mobile customer’s site experience.</p>
+<p>In trendy tech lingo, the SDP page demonstrates more of an “adaptive” design rather than a “responsive” design because it changes content as well as formatting based on device. My team decided not to use media queries for the device-based formatting. Instead, we opted for server-side detection to serve slightly different templates and to place a master-class name to key off of for CSS. More specifically:</p>
+<ul><li>The server looks at the browser’s user agent string and uses regex to identify the device as being mobile, tablet or desktop by comparing it against a list of known devices.</li>
+<li>The server then places a ‘master’ class on the html element: size-mobile, size-tablet, size-desktop.  </li>
+</ul><p>We use LESS to create an organized and easy to understand stylesheet. For instance, the styles for one of the components, “showcase-title-component,&ldquo; has the following format:</p>
+<pre>//default
+.showcase-title {...}
+
+//mobile
+.mobile-showcase-title {...}
+
+//tablet
+.tablet-showcase-title {...}
+
+//desktop
+.desktop-showcase-title {...}
+
+// Use the master class to set styles according to device
+.size-mobile { .mobile-showcase-title; }
+.size-tablet { .tablet-showcase-title; }
+.size-desktop { .desktop-showcase-title; }</pre>
+<p><strong>Easy to duplicate and reconfigure</strong></p>
+<p>One of the benefits of our adaptive design is the flexibility it allows. For the Infiniti SDP, our team developed a page builder system devised of renderable &quot;components&rdquo; that can be served to an app. The components are slightly different for Mobile vs. Desktop to tailor the experience for both device types. Each component has an associated server-side Handlebars template, LESS file, and JavaScript file. The template is then delivered to the repo as a renderable to be outputted using yet another server-side Handlebars template. </p>
+<p>With this set-up, our merch team can use an admin tool to enter data, drag components that should be visible onto the SDP, and reorder the components according to device type.</p>
+<p><strong>Lessons:</strong></p>
+<ul><li>
+<p>We couldn’t possibly test for every device on the market, so we focused on most of the popular, modern devices.</p>
+</li>
+<li>
+<p>It is easy to diverge the mobile and desktop templates too much by over-tailoring them, so we kept the variations minimal and only implemented them when they made sense. For example, for mobile we removed the product image from the product component and instead added it to the photo gallery component to preserve screen real estate in a smart way.</p>
+</li>
+<li>Trade secret: sometimes you just have to fudge it. I bet you didn’t realize that on mobile, the Gilt header is just a screenshot of the actual Gilt mobile header! Another team is currently working on code to render the actual mobile header, but for now this works.</li>
+</ul><p>See the Infiniti Showcase Detail Page live in action (using all of your devices, of course) <strong><a href="http://www.gilt.com/infiniti" target="_blank">here</a></strong>. Sale starts on December 12, 2013 at noon!</p>

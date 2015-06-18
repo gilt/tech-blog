@@ -1,0 +1,39 @@
+---
+layout: post
+title: Continuous Integration for JavaScript with TestSwarm
+date: '2011-02-09T15:06:00-05:00'
+tags:
+- TDD
+- continuous integration
+- javascript
+- frontend
+tumblr_url: http://tech.gilt.com/post/3202534088/test-swarm
+---
+<p>We like the principles of <a href="http://en.wikipedia.org/wiki/Test-driven_development" target="_blank">Test Driven Development</a> (or some variation thereof). But we also have an increasingly large JavaScript library, and JavaScript testing is hard.</p>
+
+<p>There are tools like <a href="http://seleniumhq.org/" target="_blank">Selenium</a> that offer a full testing suite and there are tools like <a href="https://github.com/brynary/webrat" target="_blank">Webrat</a> that simulate a browser for application acceptance testing, but those tools still don&rsquo;t solve the &ldquo;JavaScript testing is hard&rdquo; problem. That problem is <em>browsers</em>.</p>
+
+<p>John Resig and team <a href="http://ejohn.org/blog/javascript-testing-does-not-scale/" target="_blank">ran into this problem</a> while developing jQuery:</p>
+
+<blockquote>
+  <p>The end result is that we need to run 10 separate test suites in 12 separate browsers before and after every single commit to jQuery core. <strong>Cross-Browser JavaScript testing does not scale.</strong></p>
+</blockquote>
+
+<p>That blog post really defined the problem. We Front End Engineers needed some Continuous Integration love: An automated way of testing our JS libraries across multiple browser environments.</p>
+
+<p>Resig also came up with a solution to the problem, and we&rsquo;ve recently rolled it out here at Gilt: <a href="https://github.com/jeresig/testswarm/wiki" target="_blank">TestSwarm</a>.</p>
+
+<blockquote>
+  <p>TestSwarm provides distributed continuous integration testing for JavaScript.</p>
+</blockquote>
+
+<p>Users (on various browsers) connect to the server and run the test runner. The runner will wait for new suites to come in from a git hook.
+<img src="http://media.tumblr.com/tumblr_lgd6lz3NSm1qzxg4t.png" alt=""/></p>
+
+<p>The results are recorded for each commit and hopefully everything is green.
+<img src="http://media.tumblr.com/tumblr_lgd6ms3Kn21qzxg4t.png" alt=""/></p>
+
+<p>And now we have to begin the hardest part of this task: beginning a TDD practice and making sure our JavaScript has full test coverage.</p>
+
+<p><strong>Mark Wunsch</strong>
+Gilt Groupe</p>

@@ -1,0 +1,42 @@
+---
+layout: post
+title: 'Introspy: An Open-Source Mobile Security Tool to Help You Save Time and Avoid
+  Anguish'
+date: '2013-12-13T16:04:00-05:00'
+tags:
+- Introspy
+- infosec
+- information security
+- open source
+- iSEC Partners
+- Sam Kassoumeh
+- security
+- mobile security
+- tools
+- Mobile First
+- mobile development
+- Cryptome
+- Tom Daniels
+- Alban Diquet
+tumblr_url: http://tech.gilt.com/post/69907870380/introspy-an-open-source-mobile-security-tool-to
+---
+<p><span><span></span>This past June, mobile revenue surpassed 40% of Gilt’s total revenue for the first time since our founding in 2007. In 2014, we expect mobile revenues to grow even more, which has influenced us to adopt a “<a href="http://mobilegovwiki.howto.gov/Mobile+First" target="_blank">Mobile First</a>” approach to development. On the user experience side, Mobile First means creating intuitive and innovative ways to use the mobile framework&ndash;for example, iOS push notifications&ndash;to help solve traditional notification problems and ultimately make life easier for customers. For me and other engineers on Gilt’s security team, Mobile First means continuing to ensure our mobile platform is functionally secure by looking </span><span>deeper into run-time behavior, traffic analysis, local storage, and caching of our mobile apps</span><span>.  </span></p>
+<p><span>Though mobile development is a booming market, until recently the range of security tools available to perform deep security assessments has remained limited. To date, the assessment process has been very arduous and mostly manual. Security teams have needed to employ a sometimes hodge-podge variety of traditional tools and assessment methodologies&ndash;for example, proxying mobile traffic through an interceptor tool to capture and inspect network traffic contents&ndash;and combine them with detailed manual code reviews. This method works but is time-consuming, because it requires installation and configuration of a plethora of fragmented assessment tools on a iOS device.</span></p>
+<p><span>However, our security team has recently benefited greatly from some new open source tools aimed to simplify things&ndash;namely <a href="http://isecpartners.github.io/introspy/" target="_blank">Introspy</a></span><span>, a security profiler for iOS. With Introspy, we’ve been able to save time and augment automation to the current application analysis process. </span></p>
+<p><span>We learned about Introspy via Twitter. Several of our security-conscious acquaintances began tweeting about it, but one tweet in particular from Cryptome caught our attention:</span></p>
+<p><span><span><br/><span></span><img alt="image" height="99px;" src="https://lh6.googleusercontent.com/N9JUpAjAl7xmbcUneLhtB-9zkYy9jS2LMJS9Qjf-jC2tATZj4CVfpGYf7iPeGh1aI5tDr3J9ijTSxcsBLM2ogtPo9Kpw5l0pj2GRa-YiAttBWUiI4GwSGGY4Rw" width="379px;"/><span></span><br/><span></span></span></span></p>
+<p><span>Developed by Tom Daniels and Alban Diquet, and fully backed by iSEC Partners, Introspy </span><span>was born out of necessity. “The amount of mobile (specifically iOS) work I was doing about a year and a half ago was ever increasing,” Tom recently told me via email, “and anytime we were doing blackbox assessments or unusually complex projects I never felt like I had the appropriate tools to do the job.” Performing even minor tasks required substantial time and effort. After building some one-off MobileSubstrate tweaks, Daniels pitched the idea of Introspy to Diquet, who expressed the same frustration with the lack of tools. “Thanks to iSEC, we were able to get the time and resources we needed and just built it,” Tom says.</span></p>
+<h2><span>How Introspy works</span></h2>
+<p><span>As a prerequisite to installation, you need a jailbroken iOS device. In a nutshell, jailbreaking your iOS device removes all limitations implemented by the manufacturer, allowing root-level access of your device and installation of many unauthorized applications, themes, and plugins (you may notice a UI hack or two in our iOS screenshots below). As this goes to press/blog, a device with iOS 6.1.2 or lower is required. Our team used an iPad and iPhone, both running iOS 6.1.2. </span></p>
+<p><span>Introspy is comprised of</span><span> two separate components: an </span><span>iOS tracer</span><span> and an </span><span>analyzer.  </span><span>Both components can be downloaded from the <a href="https://github.com/iSECPartners/introspy" target="_blank">iSEC GitHub repo</a></span><span> </span><span>and installed to the jailbroken iOS device directly from the command line.  </span><span>Once the tracer is installed, the user can select which iOS apps to monitor thought the iOS GUI. The tracer will hook into the security-sensitive iOS API calls of the apps you choose, checking for sensitive calls relating to security (data storage, cryptography, user privacy, etc).  </span></p>
+<p><span><span><br/><span></span><img alt="image" height="295px;" src="https://lh5.googleusercontent.com/BaiNq8EV3gbXq46DZJGVIgtWepvJ3bnoV9JIzbNnJ75h5bEgDEZCHeSqb4O91AgF5piA-7k8VMTx_PJ9411T53PNIiv582djSUWR1PCkxKv-BQCmEDxlYG_7lQ" width="197px;"/><img alt="image" height="295px;" src="https://lh6.googleusercontent.com/5eAvRTykevPbz4eSFB6JYgYyIwUVDbq3jf5WwdHwRqajTd-gt8uDrkQggIiM7cREfNse6xE4nuNHDE7P0gVCwIKys25Bwd7XIxWotWE73XLd3aevHbUDfbvJ-g" width="197px;"/><span></span><br/><span></span></span></span></p>
+<p><span>As you begin using the app, the details of each </span><span>call are all recorded and persisted in a SQLite database on the device. For the Gilt app, we performed every possible action on both iPhone and iPad apps, paying special attention to the output of critical actions such as logging in, adding a credit card, and making a purchase.  </span></p>
+<p><span>The database results are fed into the </span><span>analyzer</span><span> portion of the app, which generates an interactive HTML report displaying all recorded API calls and any potential vulnerabilities or security misconfigurations. If necessary, the reports can be saved locally and distributed to relevant stakeholders. If you prefer command-line interaction (we do), you can use the command line tool to view the tracer’s results directly, circumventing the UI.</span></p>
+<h2><span>Pro-Tip!: Comparative Security<br/></span></h2>
+<p><span>We also performed some comparative security analysis between the Gilt apps and other popular iOS apps like Amazon and GMail to gain perspective approach to mobile </span><span>security configurations</span><span>. We confirmed that the Gilt app has a </span><span>security best-practice configuration quite similar to the other apps we investigated, which gave </span><span>us some additional affirmation that we’re doing things right! </span><span></span></p>
+<h2><span>The Future of Introspy</span></h2>
+
+<p><span>Daniels says he and Diquet plan to plan to keep Introspy updated “at least … in terms of which APIs it’s capable of hooking.” So keep an eye out for some iOS7 relevant additions, such as the abstractions to the URL loading system (NSURLSessions) and the new JavaScript to Objective-C bridge (JavaScriptCore).</span></p>
+<h2><span>Conclusion</span></h2>
+<p><span>If you’re looking for a good place to start with mobile penetration testing, Introspy is great app (and 100% free and open source!).  Assuming you’re working with a jailbroken device (if not, jailbreaking can be a fun and rewarding exercise to explore), many key security elements can be investigated by doing not much more effort than simply using your app and exploring the results.</span></p>
+<p><span id="docs-internal-guid-35b737ac-eda9-f253-f8ed-73ba625131ee"><br/><span></span></span></p>

@@ -1,0 +1,101 @@
+---
+layout: post
+title: Introducing Gumshoe
+date: '2015-06-16T10:17:48-04:00'
+tags:
+- gumshoe
+- google analytics
+- gilt
+- events
+- event tracking
+- andrew powell
+tumblr_url: http://tech.gilt.com/post/121673461239/introducing-gumshoe
+---
+<p>An analytics and event tracking sleuth.</p>
+
+<p>In late 2014 Gilt received word that a core feature of Google Analytics (henceforth known as GA) would be removed in the next iteration of the platform. The ability to redirect collected data and events to a secondary endpoint had grown critical to our the analization of user behavior, patterns, and effectiveness of our user experience, as well as sales forecasting and predictive modeling. Our two most viable options for retaining this ability were to implement another tracking platform from a different vendor or create and implement our own, tailored to our specific needs.</p>
+
+<h1><a href="https://github.com/gilt/Gumshoe" target="_blank"><strong><a href="https://github.com/gilt/Gumshoe" target="_blank">https://github.com/gilt/Gumshoe</a></strong></a></h1>
+
+<p>After taking a hard look at the heavy hitters of the analytics platform sphere it was decided that we&rsquo;d take the divergent route and roll our own analytics and event tracking library. We won&rsquo;t go into detail on why we passed on big players like Snowplow, Omniture, CoreMetrics, et al. Rather, we&rsquo;ll focus on Gumshoe and its merits.</p>
+
+<h2>What Did We Need?</h2>
+
+<p>To anyone in development, marketing, or data sciences on the web, our list of needs will sound quite familiar.</p>
+
+<p>First and foremost we required parity with GA&rsquo;s base page data. The industry has come to be reliant and has standardized on the kind of data that GA collects for various reporting, including vital year-over-year reporting. So no shockers there.</p>
+
+<p>As performance-minded developers we also had a low page footprint in mind.</p>
+
+<p>We desperately needed organized event names and data. One major shortcoming of GA was the lack of enforcement of any kind of standard in event naming and data. Arbitrary event names and varying event data formats produced migraines the size of Mount Fuji for our Data Scientists. It wasn&rsquo;t uncommon to have the same target event with several different names, in different applications, with different data in different delimited formats.</p>
+
+<p>Related to the variance in event data, we were looking for a high degree of data integrity and confidence.</p>
+
+<p>And last but not least, a low delivery failure or miss rate for the data collection.</p>
+
+<h2>Rolling Our Own</h2>
+
+<p>Events are events are events. In Gumshoe, everything is an event. There&rsquo;s no disambiguation between page views, virtual page views, or custom user events. Everything is an event, and it&rsquo;s a core tenant of Gumshoe.</p>
+
+<p>Right off the bat, parity with GA was key. We started by breaking down the data that GA collected from each page view, and moved forward from there. A basic Gumshoe event consists of the following:</p>
+
+<pre><code>pageData
+eventName
+eventData
+</code></pre>
+
+<p><strong><code>pageData</code></strong> consists of the GA parity data.<br/><strong><code>eventName</code></strong> is self-explanatory; the name of the event we&rsquo;re passing.<br/><strong><code>eventData</code></strong> is custom data passed by the consumer which should be associated with an event.</p>
+
+<p>Wunderbar! We had the recipe for sending a page view event. But how do we set this up so that others can easily send these events to where ever they&rsquo;d like? Enter the transport.</p>
+
+<p>Transports are the mechanism(s) by which consumers instruct Gumshoe on how it should send the data for each event. One can configure Gumshoe to send to multiple transports, or a single transport, it&rsquo;s your choice. A brief example from the repository:</p>
+
+<pre><code>(function (root) {
+
+  var gumshoe = root.gumshoe;
+
+  gumshoe.transport({
+
+    name: 'example-transport',
+
+    send: function (data) {
+      console.log('Gumshoe: Test Transport: Sending...');
+      console.log(data);
+    },
+
+    map: function (data) {
+      return {
+        customData: {
+          someData: true
+        },
+        ipAddress: '192.168.1.1'
+      };
+    }
+
+  });
+
+})(this);
+</code></pre>
+
+<p>The <code>send</code> method is responsible for actually sending the data. Gumshoe bundles the <a href="https://github.com/gilt/reqwest" target="_blank">https://github.com/gilt/reqwest</a> library, which any transports can freely use. At Gilt we use reqwest.js to send the data to our backend event stack, which we&rsquo;ll cover in subsequent blog posts.</p>
+
+<p>The <code>map</code> method allows consumers to extend the data which Gumshoe is sending through the transport. At Gilt we use this method to attach a <code>giltData</code> object that is sent along side <code>pageData</code> and contains vital Gilt-specific data for every single event that we send.</p>
+
+<h2>Using Gumshoe</h2>
+
+<p>Once you&rsquo;ve got Gumshoe included on your page and you&rsquo;ve specified a transport, you&rsquo;ll need to initialize the library. It&rsquo;s as simple as specifying the transport:</p>
+
+<pre><code>// tell gumshoe to use our transport  
+window.gumshoe({ transport: 'example-transport' });  
+</code></pre>
+
+<p>And sending an event:</p>
+
+<pre><code>window.gumshoe.send('page.view', {});  
+</code></pre>
+
+<h2>What&rsquo;s Next</h2>
+
+<p>In forthcoming posts we&rsquo;ll be talking more about the other goals we listed, specifically how we internally solved event organization, event naming standardization, data integrity, and the remainder of the stack that takes over once Gumshoe has delivered the payload.</p>
+
+<p>We&rsquo;ve been using Gumshoe on gilt.com for some time now, and have been running constant parity comparisons against GA and we&rsquo;re very happy with the results thus far. However, we&rsquo;d be bonkers to claim that Gumshoe is perfect. We&rsquo;ve tailored Gumshoe to be extensible but so far it&rsquo;s only been targeted for use at Gilt. We&rsquo;d love feedback from the community at large. And if you feel you might be able to use Gumshoe, but find it lacking, we&rsquo;d love to talk about how it can be improved.</p>

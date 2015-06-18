@@ -1,0 +1,40 @@
+---
+layout: post
+title: Some Quick Tips for Using Scala Futures
+date: '2015-01-05T13:27:00-05:00'
+tags:
+- Gilt
+- Gilt Groupe
+- Gilt Tech
+- gilttech
+- John Kenny
+- Scala
+- Scala Futures
+- software engineering
+- how-to
+- Guava ListenableFutures
+- futures
+- blocking
+- APIs
+- reactive applications
+- ".get()"
+- Await API
+- Play Framework
+tumblr_url: http://tech.gilt.com/post/107232340014/some-quick-tips-for-using-scala-futures
+---
+<p><span><img alt="image" src="https://31.media.tumblr.com/7caac1a5f7d1d3fb1a0c3b30395039e1/tumblr_inline_nhpuyzVH7n1s17bu5.png" width="800"/></span></p>
+<p id="docs-internal-guid-c53ce096-bb50-4751-0846-391603088dd0"><span>The Gilt engineering team has been transitioning to the latest version of our in-house library&ndash;a move that involves migrating from Guava </span><a href="https://code.google.com/p/guava-libraries/wiki/ListenableFutureExplained" target="_blank"><span>ListenableFutures</span></a><span> to Scala </span><a href="http://docs.scala-lang.org/overviews/core/futures.html" target="_blank"><span>Futures</span></a><span>. Futures are a key building block of reactive applications, and offer a really nice API for writing fast, efficient, non-blocking code. However, using them requires some skills that are a bit outside the scope of “traditional” programming.</span><span> </span></p>
+<p><span>For all of you who are new to Scala, or not-so-new but unfamiliar with futures, I thought it was worth sharing some thoughts on important things to watch out for when working with them.</span></p>
+<h3>Your code should be non-blocking</h3>
+<p><span>The easy <code>.get()</code> option, which is available on ListenableFuture, is not available on Scala Future. Instead, you are required to use the deliberately less elegant Await API. This is actually a good thing, as it gives you plenty of time to reconsider the fact that you’re blocking, while you’re typing it out :) Blocking is strongly discouraged, as it defeats the whole purpose of futures&ndash;and there is almost always a better, more efficient way to write the code in a non-blocking way.</span></p>
+<p><span>Having said all that, there may be times when you have no choice but to block. If you find yourself in this situation, you need to think carefully about which threads you are holding onto while you are blocking. For example, if you’re writing a </span><a href="https://www.playframework.com" target="_blank"><span>Play</span></a><span> application and decide to block the main request thread, then your application will very quickly run out of threads, and throughput will slow to a trickle. This is because the thread you are blocking on is from a very small thread pool that Play makes available for handling incoming requests.</span></p>
+<p><span>One case where blocking may be acceptable, or even desired, is a background thread&ndash;perhaps one that is refreshing a cache. In this case, you can create a fixed-size thread pool for handling the cache refresh and block on this. Since the use of the thread pool is isolated, there is no harm holding onto threads while you wait for a Future to resolve.</span></p>
+<h3>Which execution context you use matters</h3>
+<p><span>More and more APIs require an execution context to be passed either implicitly or explicitly. For example, the Scala <code>Future.onComplete</code> function is defined as:</span></p>
+<pre><code>def onComplete[U](f: Try[T] =&gt; U)(implicit executor: ExecutionContext): Unit</code></pre>
+<p><span>The callback function (f) is executed on a thread from the passed-in execution context. It&rsquo;s very important to consider what type of operations are executed in f.</span></p>
+<p><span>For CPU-bound (i.e. non-blocking) operations, you can follow the guidance of the Scala compiler error that you get when you forget to provide the context&ndash;namely, importing </span><code>scala.concurrent.ExecutionContext.Implicits.global</code><span>. Alternatively, it may be desirable to use a &ldquo;same thread&rdquo; execution context.&ndash;i.e., the callback executes on the same thread that completes the Future, rather than forcing a hand-off to another thread.</span></p>
+<p><span>For I/O-bound (i.e. blocking) operations, you should consider providing a different context. The global context by default has only N threads, where N is the number of processors available to the JVM. If you call <code>Await.result</code> on one of the global execution context threads, it will create another thread to compensate. (Its main goal in life is to keep the CPU busy&ndash;check out </span><a href="http://blog.jessitron.com/2014/02/scala-global-executioncontext-makes.html" target="_blank"><span>this post</span></a><span> for more info.) However, if you’re doing a lot of blocking it’s better to create your own context with an appropriately-sized Executor and leave the global context available to everybody else for what it was intended for&ndash;small CPU-bound tasks.</span></p>
+<h3>What happens if a Future fails?</h3>
+<p><span>Futures will fail for a variety of reasons: timeouts calling a service, deserialization exceptions, etc. You need to think about what the behaviour should be when this happens. For comprehensions and the operators map, flatMap and foreach may be nice to use, but they can also lull you into a false sense of security. And since Scala doesn’t have checked exceptions, you won’t get any help from the compiler. Somebody is going to have to deal with the exception at some point. Luckily a Scala Future has really nice APIs like <code>.recover</code>, <code>.recoverWith</code> and <code>.onFailure</code> for handling exceptions and providing fallback behavior.</span></p>
+<p><span>Futures are a really powerful tool for building fast, efficient, non-blocking applications. The APIs are elegant and simple to use. However, behind the simple APIs lies a world of complexity. It’s important to think carefully about how you are using futures and get a good understanding of the basic concepts behind them.</span></p>

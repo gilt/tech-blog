@@ -1,0 +1,125 @@
+---
+layout: post
+title: Five Simple Lisp Tips Guaranteed to Boost Your Productivity
+date: '2014-07-03T10:57:00-04:00'
+tags:
+- clojure
+- vim
+- lisp
+- Gilt
+- Gilt Groupe
+- Gilt Tech
+- gilttech
+- Scott Thompson
+- functional programming
+- how-to
+- productivity
+- function-call
+- try-catch
+- Lisp syntax
+- Emacs
+- Rainbow Parentheses
+- ParEdit
+- abstract syntax tree
+- try-catch-finally
+- brackets
+- barfing
+- slurping
+tumblr_url: http://tech.gilt.com/post/90661198239/five-simple-lisp-tips-guaranteed-to-boost-your
+---
+<p><span><span><img alt="image" height="597" src="https://31.media.tumblr.com/33addd3b4f2d7d4949627a414871c915/tumblr_inline_n857iu8hUU1s17bu5.png" width="800"/></span></span></p>
+<p><span id="docs-internal-guid-411095e4-fca1-dc7c-4312-3a452649d85c"><span>Lisp is an interesting language. Its emphasis on functional programming and properties such as </span><a href="http://en.wikipedia.org/wiki/Homoiconicity" target="_blank"><span>homoiconicity</span></a><span> make it quite different from other languages. Although it’s not suited for all developers, those who have experienced building large applications in other languages may appreciate the simplicity that Lisp provides.</span></span></p>
+<p><span>When I ask other developers for their thoughts on Lisp, the most common response I receive is, “Why are there so many brackets?” As it turns out, Lisp’s brackets establish some consistency across the language that allows for some neat code-writing tricks. So neat, in fact, that they can make coding a Zen-like experience. Read these tips and you’ll soon be able to make onlookers wonder how you’re able to make code fly around the screen so quickly and elegantly&ndash;and with just a few keystrokes. </span></p>
+<h3>Lisp Refresher</h3>
+<p><span>For those of you who aren’t quite clear on Lisp syntax, here are a few basic things to know:</span></p>
+<ul><li><span>Everything is a list</span></li>
+<li><span>The first element in every list is the “function call position”</span><span></span></li>
+</ul><p><span>That’s it! Easy, right? Let me show you a few examples written in Clojure (a</span><span><a href="http://en.wikipedia.org/wiki/Dialect_%28computing%29" target="_blank"> dialect</a> of Lisp) to make things more concrete. First, a standard “Hello World” example:</span></p>
+<pre><code>
+(println "Hello World")
+</code></pre>
+<p><span><span id="docs-internal-guid-411095e4-fca7-0f5b-e9e0-fb7b69a7d0aa"><span>In Clojure, you create lists by using rounded parentheses. The first element in this list is <code>println,</code> so we are calling a function called <code>println</code> with a single argument “Hello World”.</span></span></span></p>
+<p><span>Next, we create a new function called <code>inc</code>:</span></p>
+<pre><code>
+(defn inc
+  "Define a fn that increments a number by 1"
+  [x] (+ x 1))
+</code></pre>
+<p><span> The first element (the one in function-call position) calls a special function called <span><code>defn</code></span> that allows us to create a new function. The other arguments are:</span></p>
+<ul><li><span>The name of the function we want to define&ndash;in this case, <span><span><code>inc</code></span></span></span></li>
+<li><span>A string comment that we can use as a human-readable description of what our function does</span></li>
+<li><span><span><span><span><code><span><span><span><code>[x]</code></span></span></span></code></span></span></span></span><span> is a vector of the arguments that our new function will receive</span></li>
+<li><span>The body of our function</span></li>
+</ul><p><span id="docs-internal-guid-411095e4-fcab-b381-4f55-d67f6b953d6b"><span>In this final example, we create a try-catch statement:</span></span></p>
+<pre><code>
+(try
+  (/ 1 0)
+  (catch ArithmeticException e (println "Kaboom!"))
+  (finally (println "We’ve recovered!")))
+</code></pre>
+<p><span><span><span id="docs-internal-guid-411095e4-fcab-f87f-22f1-204f5430ad67"><span>We can start to see from this example how lists can be nested to provide richer programming capabilities. This nesting actually results in a tree structure (which in compilers is referred to as an ‘abstract syntax tree’) that provides the basis for some interesting coding workflows.</span></span></span></span></p>
+<h3>The Structure of Lisp</h3>
+<p><span id="docs-internal-guid-411095e4-fcac-d8a2-0f1b-046596b17b67"><span>To illustrate what this abstract syntax tree looks like, let’s draw the try-catch example as a tree:</span></span><span><span id="docs-internal-guid-411095e4-fcad-17f5-ca47-2761d40b278b"><br/><img alt="image" height="279px;" src="https://lh3.googleusercontent.com/SOj1WX9Bx-rnpeYRHP_BY7VaW2rWJCBWxiQoP8PGTYDtSMgRN4cgVrWhHpsojE-QVgwMFXuty8uepczZ3kDUDibIlrjafsew8axiW_4EyIa9i_hz7xQK9js8hsWCO32oZA" width="624px;"/></span>I’ve omitted the “finally” block to keep the illustration compact, but it should be clear now how we can visualize Lisp code as a tree. The workflow tips in this article revolve around making edits to this tree: navigating to parent nodes, moving a branch, removing levels, etc.</span></p>
+<p><em>***I’ll provide these tips specifically for <strong>Vim</strong>, but there are equivalents in Emacs as well if you prefer that.***</em></p>
+<p><span>Without further ado!</span></p>
+<h3>Tip #1: Give your brackets some color </h3>
+<p><span><img alt="image" height="299px;" src="https://lh5.googleusercontent.com/7ndra0CPa5V8adj7d4SyLGBGKp8pAdP7veqp-sfQUqr3kO71bH5A3Dscw_6-bTVD1g_mH6DW50ABoN91WOwqQtDnTHZJOvHXR9dfGcjZ5yDGTiKkhBY9h7nDe6ykpsjElQ" width="960px;"/></span></p>
+<p><span>‘</span><a href="https://github.com/kien/rainbow_parentheses.vim" target="_blank"><span>Rainbow Parentheses</span></a><span>’ is a plugin for text editors that will change the color of your brackets depending on their depth in a list. This enables you to visually recognize the start and close of a particular list. Once we can visualize this, it becomes much easier to jump between depth levels.</span></p>
+<p><span>In the above gif, the cursor starts inside the <span><span><span><code>println</code></span></span></span> then makes jumps upward to each parent node in the tree (<span><span><span><code>println</code></span></span></span> -&gt; <span><span><span><code>catch</code></span></span></span> -&gt; <span><span><span><code>try</code></span></span></span>). These jumps can be performed with the </span><a href="http://www.vim.org/scripts/script.php?script_id=3998" target="_blank"><span>ParEdit</span></a><span> plugin while in normal mode by pressing <span><span><span><code>"("</code></span></span></span>.<span><span> <br/></span></span></span></p>
+<h3>Tip #2: Keep your parens balanced</h3>
+<p><span><img alt="image" height="299px;" src="https://lh3.googleusercontent.com/yWsr2qEb5E9nxBsPPHFqL7kepm_W_e5ES3QQyXtMAdPmFD82y5ScoR8w-LmUokWtjd7PtSYnxFYnZ2k9leFBOvlq8Rs_9TSUpK_biDXC5ttdWzKmgyMOLVPomkUp6cJ9Mg" width="960px;"/></span></p>
+<p><span>There’s nothing worse in Lisp than having unbalanced parentheses&ndash;especially if you have blocks of code that include several levels of nesting. Finding which block is missing a closing bracket can become a nightmare. Fortunately, ParEdit can prevent us from having this problem.</span></p>
+<p><span>Say we have a try-catch-finally block and wish to delete the ‘finally’ clause. In Vim, we can easily remove this entire line when in normal mode by pressing ‘dd’. The problem is that if we do this, we will make our parentheses unbalanced by deleting the closing bracket of the <span><span><span><code>try</code></span></span></span> block (in the above gif, the closing red bracket).</span></p>
+<p><span>The ParEdit plugin solves this by forcing our brackets to always remain balanced. With paredit enabled we can perform ‘dd’ to delete the line and delete everything except for any brackets necessary to maintain balance. </span></p>
+<h3>Tip #3: Learn motions. Master the brackets!</h3>
+<p><span><img alt="image" height="303px;" src="https://lh4.googleusercontent.com/L1YKvylGnz_ghJzVh9lVygmHagSiYAdfzQIZohChvAt87Z4WX6z2JER7wzOTh-J1MUoS1S3B7Z4vJ7pMO6MJTYjZTMm2MU45RA6D0OSDCveMt85JIKrlGrwSff8KZAow8g" width="960px;"/></span></p>
+<p><span>Vim provides motions right out of the box, with no additional plugins needed. The handiest motions for dealing with parentheses are &ldquo;select in&rdquo; and &ldquo;select all.&rdquo; <span><span><span></span></span></span>These can perform actions on an entire list in just a few keystrokes. For example, say in our try-catch block we want to return positive infinity instead of print a message. Place the cursor inside the <span><span><span><code>println</code></span></span></span> list, issue a &ldquo;select all,&rdquo; and hit &ldquo;c&rdquo; for &ldquo;change.&rdquo; This will replace the entire <span><span><span><span><code>println</code></span></span></span></span> list in just three keystrokes.</span></p>
+<p><span>Note that &ldquo;select in&rdquo; will select everything inside the parentheses, while &ldquo;select all&rdquo; will select everything inside the parentheses (including the parentheses themselves). This command will work with round brackets, curly brackets, square brackets and even quotations, making it useful in other non-Lisp languages as well.<span><span> <br/></span></span></span></p>
+<p><span>Here’s a cheat sheet for using these commands:</span></p>
+<ul><li><span>viw - select in word</span></li>
+<li><span>vi( - select in round bracket</span></li>
+<li><span>vi{ - select in curly bracket</span></li>
+<li><span>vi[ - select in square bracket</span></li>
+<li><span>vi” - select in quote</span></li>
+</ul><ul><li><span>ciw - change in word</span></li>
+<li><span>ci( - change in round bracket</span></li>
+<li><span>ci{ - change in curly bracket</span></li>
+<li><span>ci[ - change in square bracket</span></li>
+<li><span>ci” - change in quote</span></li>
+</ul><ul><li><span><span><span> </span></span>va( - select all round bracket</span></li>
+<li><span>va{ - select all curly bracket</span></li>
+<li><span>va[ - select all square bracket</span></li>
+<li><span>va” - select all quote</span></li>
+</ul><ul><li><span><span><span> </span></span>ca( - change all round bracket</span></li>
+<li><span>ca{ - change all curly bracket</span></li>
+<li><span>ca[ - change all square bracket</span></li>
+<li><span>ca” - change all quote</span></li>
+</ul><h3>Tip #4: Nest with ease!</h3>
+<p><span><img alt="image" height="296px;" src="https://lh6.googleusercontent.com/eJIDP-9t8PrMIvdqM7nae2AaczymznMV4opPliNjMtG7GYZzOsSfMgERtA43Bp0d2z8Zzxim0mCpjFdnlPuMkjo12q_cBkjjqgMa-kFk-PF9zijK5Eu_qzRHpZIb9NAGtg" width="960px;"/></span></p>
+<p><span>Say we want to assign the result of our try-catch statement to a variable name. This can be done in four easy steps:</span></p>
+<ol><li>
+<p><span>Place your cursor on either the opening or closing bracket of the try block (one of the red brackets)</span></p>
+</li>
+<li>
+<p><span>Hit &ldquo;v%&rdquo; to select everything up to and including the matching bracket</span></p>
+</li>
+<li>
+<p><span>Using the ParEdit plugin hit &lt;Leader&gt;w( to wrap the select text in another set of parentheses</span></p>
+</li>
+<li>
+<p><span>Inside the new parentheses, write the code to make the assignment</span></p>
+</li>
+<li>
+<p><span>(Optional) In the gif I have done an optional fifth step to re-indent the code by selecting the block and pressing the equal sign. &ldquo;=&rdquo; is a standard </span><a href="http://vim.wikia.com/wiki/Fix_indentation" target="_blank"><span>Vim command to re-indent</span></a><span>.</span></p>
+</li>
+</ol><h3>Tip #5: Barf and Slurp!</h3>
+<p><span><img alt="image" height="299px;" src="https://lh6.googleusercontent.com/uGpQ5yaEXBMrHq8FAqD1Eh4laAlo-cRqQosAfab-hTw2oMzB2_MOTUSrlZ4n6a3T_qeCdySaFvjrEszpPkV9wdpy6R7qNCo1ZnxPFrTo8s9eETnWBchDTsYBorxGNUE6CQ" width="960px;"/></span></p>
+<p><span><span><span> </span></span>Barfing and slurping are terms used in the ParEdit plugin. These operations depend on the location of your cursor. Barfing will eject (“barf”) either the first or last element of the list where your cursor is placed. Slurping is the opposite: A slurp will find the first element to either the left or right of the list where your cursor is and slurp that element into the list.</span></p>
+<p><span>In our try-catch example, say we create a new function called <span><span><span><span><code>my-function</code></span></span></span></span>. We then want to move the try-catch block inside this function so that we can call it later. Naively, we could select the try-catch block, then cut and paste it into the function body. Alternatively, in two keystrokes we can slurp the entire try-catch block into the function body! We can perform the opposite operation by then barfing the try-catch back out. </span></p>
+<p><span>The concept might take a few minutes to sink in, but once you understand these operations you will be able to push code around like a pro.</span></p>
+<h3>Vim Plugins</h3>
+<p><span>Here are links for the vim plugins I used in the above demos:</span></p>
+<ul><li><a href="https://github.com/guns/vim-clojure-static" target="_blank"><span>Vim Clojure</span></a></li>
+<li><a href="https://github.com/kien/rainbow_parentheses.vim" target="_blank"><span>Rainbow Parentheses</span></a></li>
+<li><a href="https://github.com/vim-scripts/paredit.vim" target="_blank"><span><span id="docs-internal-guid-411095e4-fcae-5c1b-f93f-c577cd1895db"><span>ParEdit</span></span></span></a></li>
+</ul><p><em>(Lambda bird formation photo by <a href="https://www.flickr.com/photos/sigfridlundberg/6659222587/" target="_blank">Sigfrid Lundberg)</a></em></p>

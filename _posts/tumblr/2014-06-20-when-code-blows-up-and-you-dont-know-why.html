@@ -1,0 +1,39 @@
+---
+layout: post
+title: When Code Blows up and You Don't Know Why
+date: '2014-06-20T13:23:00-04:00'
+tags:
+- Kevan Davis
+- Gilt
+- Gilt Groupe
+- gilttech
+- front-end engineering
+- software engineering
+- programming
+- when.js
+tumblr_url: http://tech.gilt.com/post/89374025384/when-code-blows-up-and-you-dont-know-why
+---
+<p>Rather frequently, our code has an error, but we don’t know about it because no error is logged in the console. We quite often don’t find out until we fall flat on our faces while trying to use the site.</p>
+
+<p>There are several potential culprits (require, when, and underscore come to mind as serial offenders), but I’d like to take a moment to talk about <a href="https://github.com/cujojs/when" target="_blank">when.js</a> in particular, and “one simple trick” that will make all your errors visible.</p>
+
+<p>when.js is understandably paranoid about one promise callback blowing up and preventing others from firing, and so they wrap every call to any callback in a try catch. A quick scan of when.js will find <em><strong>five</strong></em> try catch blocks: One each for resolved/rejected/progressing, and two for a couple of internal functions. Fortunately, the authors of when.js were also aware that this could swallow error messages, so they put in place a very simple (and deceptively subtle, unfortunately) mechanism for surfacing these errors. Simply put, it returns a new rejected promise.</p>
+
+<p>Easy, eh? The deceptive part is that you can’t use the second param (<code>onReject</code>) callback of <code>.then(fn, fn)</code>; you have to explicitly call <code>.otherwise(fn);</code>. I suspect this is either because of some internal queue that gets short circuited, or more likely, that it’s a separate promise entirely, which implies that you can have greater control over “normal” errors vs. “bad” errors.</p>
+
+<p>Here’s a code sample:</p>
+
+<pre><code>myPromise.then(function (data) {
+  // this is the resolved callback
+  doSomethingThatWillBlowUp(data);
+}, function (error) {
+  // this is the rejected callback, btw, NOT the on error callback
+  handleNormalError(error)
+}).otherwise(function (error) {
+  // THIS is the error callback
+  console.error(error);
+  // better alternative, if you have an instance of Logger:
+  log.error(error);
+});</code></pre>
+
+<p>All you have to do to get error reporting is to append that .otherwise(…) to the end of your promise chain!</p>

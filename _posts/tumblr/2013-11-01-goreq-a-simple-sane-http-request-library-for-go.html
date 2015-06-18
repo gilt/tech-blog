@@ -1,0 +1,111 @@
+---
+layout: post
+title: 'GoReq: A Simple, Sane HTTP Request Library for Go'
+date: '2013-11-01T17:39:00-04:00'
+tags:
+- Golang
+- Jonathan Leibiusky
+- Goblin
+- GoReq
+- Go programming language
+- open source
+- HTTP request
+- JSON
+- APIs
+tumblr_url: http://tech.gilt.com/post/65724312210/goreq-a-simple-sane-http-request-library-for-go
+---
+<p><img alt="image" src="http://media.tumblr.com/eac58a8e78fb1fcaf276df89aa0ff37c/tumblr_inline_mvltn2y0n51s17bu5.png"/></p>
+
+<p><strong><a href="http://golang.org/" target="_blank">Go</a></strong> has very nice native libraries that allows you to do lots of cool things. But sometimes those libraries are too low-level, which means that to do something simple&ndash;for example, make an HTTP request&ndash;takes way too much time. Even something like adding a timeout to a request can require writing several lines of code.</p>
+<p>To make things easier for other Go enthusiasts, Gilt Principal Systems Engineer <a href="https://twitter.com/xetorthio" target="_blank">Jonathan Leibiusky</a> and his friend <a href="https://twitter.com/marcosnils" target="_blank"><span class="profile-field">Marcos Nils</span></a> (the same duo behind the <strong><a href="http://tech.gilt.com/2013/10/18/goblin-a-minimal-and-beautiful-testing-framework-for" target="_blank">Goblin</a></strong> testing framework) created <strong><a href="https://github.com/franela/goreq" target="_blank">GoReq</a></strong>: a simple and sane HTTP request library for Go. With GoReq, you can make all your requests in a very simple and comprehensive way. You can also:</p>
+<h2>Send payloads in the body</h2>
+<p>You can send <code>string</code>, <code>Reader</code> or <code>interface{}</code> in the body. The first two will be sent as text. The last one will be marshaled to JSON, if possible:</p>
+<div class="highlight highlight-go">
+<pre><span class="kd">type</span> <span class="nx">Item</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">Id</span> <span class="kt">int</span>
+    <span class="nx">Name</span> <span class="kt">string</span>
+<span class="p">}</span>
+
+<span class="nx">item</span> <span class="o">:=</span> <span class="nx">Item</span><span class="p">{</span> <span class="nx">Id</span><span class="p">:</span> <span class="mi">1111</span><span class="p">,</span> <span class="nx">Name</span><span class="p">:</span> <span class="s">"foobar"</span> <span class="p">}</span>
+
+<span class="nx">res</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">goreq</span><span class="p">.</span><span class="nx">Request</span><span class="p">{</span> 
+    <span class="nx">Method</span><span class="p">:</span> <span class="s">"POST"</span><span class="p">,</span> 
+    <span class="nx">Uri</span><span class="p">:</span> <span class="s">"http://www.google.com"</span><span class="p">,</span> 
+    <span class="nx">Body</span><span class="p">:</span> <span class="nx">item</span><span class="p">,</span>
+<span class="p">}.</span><span class="nx">Do</span><span class="p">()</span>
+</pre>
+</div>
+<h2><a class="anchor" href="https://github.com/franela/goreq#specifiying-request-headers" id="specifiying-request-headers" name="specifiying-request-headers" target="_blank"></a>Specify request headers</h2>
+<p>The request headers that you probably use most often are <code>Host</code>, <code>Content-Type</code>, <code>Accept</code> and <code>User-Agent</code>. This is why Jon and Marcos decided to make it super-easy to set these headers:</p>
+<div class="highlight highlight-go">
+<pre><span class="nx">res</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">Request</span><span class="p">{</span>
+    <span class="nx">Uri</span><span class="p">:</span> <span class="s">"http://www.google.com"</span><span class="p">,</span>
+    <span class="nx">Host</span><span class="p">:</span> <span class="s">"foobar.com"</span><span class="p">,</span>
+    <span class="nx">Accept</span><span class="p">:</span> <span class="s">"application/json"</span><span class="p">,</span>
+    <span class="nx">ContentType</span><span class="p">:</span> <span class="s">"application/json"</span><span class="p">,</span>
+    <span class="nx">UserAgent</span><span class="p">:</span> <span class="s">"goreq"</span><span class="p">,</span>
+<span class="p">}.</span><span class="nx">Do</span><span class="p">()</span>
+</pre>
+</div>
+<p>However, sometimes you need to set other headers. With GoReq, you can:</p>
+<div class="highlight highlight-go">
+<pre><span class="nx">req</span> <span class="o">:=</span> <span class="nx">Request</span><span class="p">{</span> <span class="nx">Uri</span><span class="p">:</span> <span class="s">"http://www.google.com"</span> <span class="p">}</span>
+
+<span class="nx">req</span><span class="p">.</span><span class="nx">AddHeader</span><span class="p">(</span><span class="s">"X-Custom"</span><span class="p">,</span> <span class="s">"somevalue"</span><span class="p">)</span>
+
+<span class="nx">req</span><span class="p">.</span><span class="nx">Do</span><span class="p">()</span>
+</pre>
+</div>
+<h2><a class="anchor" href="https://github.com/franela/goreq#setting-timeouts" id="setting-timeouts" name="setting-timeouts" target="_blank"></a>Set Timeouts</h2>
+<p>GoReq supports two kinds of timeouts: A general connection timeout and a request specific one. By default, the connection timeout is one second. There is no default for request timeout, which means it will wait forever.</p>
+<p>With GoReq, you can change the connection timeout by doing this:</p>
+<div class="highlight highlight-go">
+<pre><span class="nx">goreq</span><span class="p">.</span><span class="nx">SetConnectionTimeout</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Millisecond</span><span class="p">)</span>
+</pre>
+</div>
+<p>And specify the request timeout doing:</p>
+<div class="highlight highlight-go">
+<pre><span class="nx">res</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">goreq</span><span class="p">.</span><span class="nx">Request</span><span class="p">{</span> 
+    <span class="nx">Uri</span><span class="p">:</span> <span class="s">"http://www.google.com"</span><span class="p">,</span>
+    <span class="nx">Timeout</span><span class="p">:</span> <span class="mi">500</span> <span class="o">*</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Millisecond</span><span class="p">,</span> 
+<span class="p">}.</span><span class="nx">Do</span><span class="p">()</span>
+</pre>
+</div>
+<h2><a class="anchor" href="https://github.com/franela/goreq#using-the-response-and-error" id="using-the-response-and-error" name="using-the-response-and-error" target="_blank"></a>Use the Response and Error</h2>
+<p>GoReq will always return two values: a <code>Response</code> and an <code>Error</code>. If <code>Error</code> is not <code>nil</code>, it means that an error occurred while you were making  the request and you shouldn&rsquo;t use the <code>Response</code> in any way. You can check what happened by getting the error message:</p>
+<div class="highlight highlight-go">
+<pre><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printlm</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">Error</span><span class="p">())</span>
+</pre>
+</div>
+<p>To easily figure out whether the error was a timeout error, you can either ask the error or return it:</p>
+<div class="highlight highlight-go">
+<pre><span class="k">if</span> <span class="nx">serr</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">err</span><span class="p">.(</span><span class="o">*</span><span class="nx">goreq</span><span class="p">.</span><span class="nx">Error</span><span class="p">);</span> <span class="nx">ok</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="nx">serr</span><span class="p">.</span><span class="nx">Timeout</span><span class="p">()</span> <span class="p">{</span>
+        <span class="o">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="nx">err</span>
+</pre>
+</div>
+<p>If you don&rsquo;t get an error, you can safely use the <code>Response</code>:</p>
+<div class="highlight highlight-go">
+<pre><span class="nx">res</span><span class="p">.</span><span class="nx">StatusCode</span> <span class="c1">//return the status code of the response</span>
+<span class="nx">res</span><span class="p">.</span><span class="nx">Body</span> <span class="c1">// gives you access to the body</span>
+<span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">AsString</span><span class="p">()</span> <span class="c1">// will return the body as a string</span>
+<span class="nx">res</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Get</span><span class="p">(</span><span class="s">"Content-Type"</span><span class="p">)</span> <span class="c1">// gives you access to all the response headers</span>
+</pre>
+</div>
+<h2><a class="anchor" href="https://github.com/franela/goreq#receiving-json" id="receiving-json" name="receiving-json" target="_blank"></a>Receive JSON</h2>
+<p>GoReq will help you to receive and un-marshal JSON.</p>
+<div class="highlight highlight-go">
+<pre><span class="kd">type</span> <span class="nx">Item</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">Id</span> <span class="kt">int</span>
+    <span class="nx">Name</span> <span class="kt">string</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">item</span> <span class="nx">Item</span>
+
+<span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">FromJsonTo</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span>
+</pre>
+</div>
+<p>Interested in contributing? Feel free to send Jon and Marcos your pull requests.</p>

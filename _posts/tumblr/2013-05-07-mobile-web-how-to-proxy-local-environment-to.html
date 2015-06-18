@@ -1,0 +1,45 @@
+---
+layout: post
+title: 'Mobile Web How To: Proxy Local Environment To Devices'
+date: '2013-05-07T17:54:00-04:00'
+tags:
+- gilttech
+- mobile
+- ios
+- android
+- Charles proxy
+- gilt
+- mobile development
+- localhost
+- computer_ip_address_here
+- MODIFY NETWORK CONFIG
+- Gregory Mazurek
+tumblr_url: http://tech.gilt.com/post/49882407629/mobile-web-how-to-proxy-local-environment-to
+---
+<p>When you develop a front end experience for the full screen, the feedback loop between code and test is relatively fast. You code. You refresh your browser. Repeat. When you develop a front end experience for mobile devices, this can become a little cumbersome because the feedback loop can sometimes feel much slower. There are emulators for your machine and browser sizing/user-agent strategies that you can employ to make your development process more efficient. But in the end, you&rsquo;re going to want to test on your devices.</p>
+<p>In this post, I&rsquo;ll explain how you can proxy your local development (localhost) to both your Android and iOS devices. When you do this, you&rsquo;ll be able to code, refresh, repeat a lot faster and more efficiently.</p>
+<p><strong>Charles Proxy</strong></p>
+<p>To get started, you need a strategy to manage your HTTP proxy. I use and recommend using Charles Proxy (<a href="http://www.charlesproxy.com/" target="_blank">http://www.charlesproxy.com/</a>) but there are certainly other alternatives. Charles Proxy is very powerful but I won&rsquo;t be going into much detail about it here. Instead, we want to set up a port that we can HTTP proxy to.</p>
+<p>If you click on PROXY, then PROXY SETTINGS, you&rsquo;ll see a menu where you can enter in a port that you would like to proxy to. I&rsquo;ve chosen 8888.</p>
+<p><img alt="image" src="http://media.tumblr.com/f14ba4e1da5ef53b2e7b1892c4866bad/tumblr_inline_mmg6oyxbAu1qz4rgp.png"/></p>
+
+<p>Charles Proxy is going to look for incoming connections on this port. When you connect iOS or Android to this port, you will see that Charles Proxy will ask you to allow or deny this connection attempt:</p>
+<p><img alt="image" src="http://media.tumblr.com/d11e4560a6fc9c4310532610183684ff/tumblr_inline_mmg6qt8tD01qz4rgp.png"/></p>
+
+<p>Now, let&rsquo;s connect our devices.</p>
+<p><strong>iOS</strong></p>
+<p><strong><br/></strong>In iOS, navigate to your WiFi menu and then tap into your connected WiFi. At the bottom of this screen, tap on MANUAL under HTTP Proxy. Where you see computer_ip_address_here, enter your computer&rsquo;s ip address and where you see 8888, enter the port that you set up on Charles Proxy.</p>
+<p><img alt="image" src="http://media.tumblr.com/a6bf4a34721657bb998671b661675709/tumblr_inline_mmg6t2fEiX1qz4rgp.png"/></p>
+
+<p><strong><br/></strong>That&rsquo;s about it. On your device, open localhost:1234 or whatever in a browser and then Charles Proxy will ask you to allow or deny. You can now start coding on your machine and refreshing on your iOS device. You&rsquo;re done.</p>
+<p><strong>Android</strong></p>
+<p><strong><br/></strong>On Android, tap SETTINGS and then Wi-Fi. Next, tap and hold on the WiFi network that you are currently connected to. On the following menu, tap on MODIFY NETWORK CONFIG.</p>
+<p><img alt="image" src="http://media.tumblr.com/0d5b31fc2f2e18adfee99654ef567501/tumblr_inline_mmg76bKA8Z1qz4rgp.png"/></p>
+<p>You next see a menu to manage your network config. Scroll to the bottom of this modal and tap on SHOW ADVANCED OPTIONS.</p>
+<p><img alt="image" src="http://media.tumblr.com/916800fbdfb2c180b8341c9b8a435e8d/tumblr_inline_mmg77lvWnt1qz4rgp.png"/></p>
+<p>In the menu options that appear, you will see configuration settings similar to those found in iOS. Where you see computer_ip_address_here, enter your computer&rsquo;s ip address. Where you see 8888, select the port you set up with Charles Proxy.</p>
+<p><img alt="image" src="http://media.tumblr.com/38c9d740003a5f162c946657f6d1e525/tumblr_inline_mmg79j8KqQ1qz4rgp.png"/></p>
+
+<p>And, that&rsquo;s about it. On your device, open localhost:1234 or whatever in a browser and then Charles Proxy will ask you to allow or deny. You can now start coding on your machine and refreshing on your iOS device. You&rsquo;re done.</p>
+
+<p></p>

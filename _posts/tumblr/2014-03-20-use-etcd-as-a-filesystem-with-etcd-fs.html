@@ -1,0 +1,53 @@
+---
+layout: post
+title: Use ETCD as a Filesystem With ETCD-FS!
+date: '2014-03-20T20:50:00-04:00'
+tags:
+- Jonathan Leibiusky
+- open source
+- ETCD
+- ETCD-FS
+- Go
+- Golang
+- open source projects
+- Apache ZooKeeper
+- ZooKeeper
+- Filesystem in Userspace
+- FUSE
+- CoreOS
+- Han-Wen Nienhuys
+- go-fuse
+- go-etc
+tumblr_url: http://tech.gilt.com/post/80215354220/use-etcd-as-a-filesystem-with-etcd-fs
+---
+<p>Gilt Principal Systems Engineer <a href="http://tech.gilt.com/search/jonathan+leibiusky" target="_blank">Jonathan Leibiusky</a> is a fan of <a href="https://github.com/coreos/etcd" target="_blank">ETCD</a><span data-name="coreos">: CoreOS</span>&rsquo;s extremely powerful, highly-available key value store for shared configuration and service discovery, inspired by Apache ZooKeeper* and written in Go. Jon thought it would be great if ETCD could also be used as a filesystem. Companies that have already deployed apps that read a configuration file from a local filesystem might want to load these config files to something like ETCD and ensure a consistent view across a cluster of nodes. Given that the Filesystem API is super-stable, widely known and supported, and simple, using ETCD in this manner would make a lot of sense.</p>
+<p>With this in mind, Jon has created <a href="https://github.com/xetorthio/etcd-fs" target="_blank">ETCD-FS</a>, which allows you to mount ETCD as a FUSE filesystem. In other words, every existing application can basically start using ETCD as regular files and directories without lots of effort. Implemented in Go, ETCD-FS uses Han-Wen Nienhuys&rsquo;s <a href="https://github.com/hanwen/go-fuse" target="_blank">go-fuse</a> module and CoreOS&rsquo;s <a href="https://github.com/coreos/go-etcd" target="_blank">go-etcd</a> module and works like this:</p>
+<ul><li>Every file maps to a key in ETCD</li>
+<li>Every directory maps to a directory in ETCD</li>
+<li>The content of every file maps to the value of the key in ETCD</li>
+</ul><p><strong>How to Install ETCD-FS:</strong></p>
+<p>Clone the project and build it:</p>
+<div>
+<pre>make build
+</pre>
+</div>
+<p>This generates an executable file <code>etcdfs</code>. You can mount ETCD as a filesystem by running <code>etcdfs MOUNT_PATH ETCD_ENDPOINT</code>. For example:</p>
+<div>
+<pre>./etcds /tmp/foobar http://localhost:4001
+</pre>
+</div>
+<p>Then you can access <code>/tmp/foobar</code> and use etcd as a filesystem.</p>
+<p>To unmount it:</p>
+<div>
+<pre>fusermount -u /tmp/foobar<br/><br/></pre>
+</div>
+<div>
+<p><strong>What ETCD-FS Supports:</strong></p>
+<p>Basic filesystem operations, such as:</p>
+<ul><li>Reading/Writing files</li>
+<li>Creating/Deleting files</li>
+<li>Creating/Deleting directories</li>
+</ul><p><strong>What&rsquo;s Next for ETCD-FS</strong></p>
+<p>Jon would like to enable users to mount a filesystem to a specific ETCD node (not necessarily or always the root). Less than a week old, ETCD-FS is a work in progress&ndash;but Jon <a href="http://tech.gilt.com/2014/03/19/jons-latest-open-source-project-go-supertest-http" target="_blank">creates quickly</a>, so expect this project to become more and more exciting in short order!</p>
+<p><em>* ETCD differs from ZooKeeper in that it&rsquo;s based on the <a href="http://raftconsensus.github.io/" target="_blank">Raft Consensus Algorithm</a>; ZooKeeper has its own consensus algorithm, called <a href="https://cwiki.apache.org/confluence/display/ZOOKEEPER/Zab+vs.+Paxos" target="_blank">Zab</a>.)</em></p>
+</div>

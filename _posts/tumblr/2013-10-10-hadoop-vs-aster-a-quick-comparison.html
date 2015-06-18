@@ -1,0 +1,47 @@
+---
+layout: post
+title: 'Hadoop vs. Aster: A Quick Comparison'
+date: '2013-10-10T16:40:00-04:00'
+tags:
+- hadoop
+- aster
+- data-warehousing
+- amardeep singh
+- Gilt
+- big data
+- Hortonworks
+- hive
+- HDFS
+- open source
+- SQL
+tumblr_url: http://tech.gilt.com/post/63670026423/hadoop-vs-aster-a-quick-comparison
+---
+<p>If you’ve got more data than money, you’re probably checking out open source data analytics platforms. But how well do these no- or low-cost alternatives perform in comparison to their more expensive, licensed counterparts? Curious about the answer, I recently conducted an experiment to determine the feasibility of using Hadoop instead of <a href="http://www.asterdata.com/" target="_blank">Aster</a>, the licensed analytics platform the Gilt data team uses to store and manage our vast data resources. The TL; DR result: Hadoop performs well in comparison for some use cases.</p>
+<h3>Methodology and setup</h3>
+<p><span>In planning my experiment, I didn’t set out to make an extensive evaluation of either Aster or Hadoop&ndash;rather, I wanted to quickly explore how to stand up a Hadoop cluster, then compare it to Aster. I could have made a variety of different optimizations on both platforms during testing, but I wanted to limit the scope of my evaluation to complete it within a reasonable amount of time.</span></p>
+<p><span>Our data team had an eight-node Aster cluster available for testing, and Hortonworks’ documentation recommended setting up clusters in multiples of three to support the default replication factor of three, so my test involved eight Aster nodes vs. nine Hadoop nodes. The exact setup: </span></p>
+<ul><li>
+<p><span>Aster 5.0.2 on eight nodes, with a replication factor of two</span></p>
+</li>
+<li>
+<p><span>Hortonworks 2.0 Community Preview distribution on nine nodes, with a default replication factor of three</span></p>
+</li>
+<li>
+<p><span></span><span>Hive 0.11</span></p>
+</li>
+</ul><h3>What I evaluated, and why</h3>
+<p><span>For test data, I used two months of raw, Gilt clickstream data&ndash;approximately 900 million rows (~120GB compressed on disk). To test Aster, I used an unindexed, row storage table. To test Hadoop, I chose two table formats: raw gzip compressed files logically partitioned by month, and an Optimized Row Columnar (ORC) table with compression [</span><a href="http://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.0.0.2/ds_Hive/orcfile.html" target="_blank"><span>ORC Format</span></a><span>]. The load times between Aster and Hadoop column store were comparable.</span></p>
+<p><span>A few notes:</span></p>
+<ul><li>
+<p><span>The load into Aster includes time to decompress gzipped files</span></p>
+</li>
+<li>
+<p><span>The load into the Hadoop column store table was done using the raw Hadoop table, so the actual load time includes the loading of the raw Hadoop table.</span></p>
+</li>
+</ul><p><span>To compare the results of performance tests using Aster, Hadoop with raw data, and Hadoop with column store data, I used identical data sets in all tests; ran the tests at times when there was no other activity on the cluster; and made some basic query optimizations as described in the documentation for Hive. Once again, lower was better.</span><span></span></p>
+<p><span>Regarding the query performance of progressively larger data-sets on Hadoop and Aster, I performed the test using a single-column table with an increasing number of rows&ndash; first one row, then 10K, 1 million, 1 billion, 10 billion, and 20 billion&ndash;and at times when there was no other activity on the cluster. Comparable performance once again.</span></p>
+<p><span>After running this evaluation, I&rsquo;ve concluded that HDFS can be useful for storing raw data (log files, etc.) or archival of older transformed data. But the day-to-day activities in the data warehouse space (SQL, analysis, etc.) should remain in Aster. HDFS is not a perfect substitution: For example, I’ve also noted that Hive requires some effort and patience to get it working; it’s unstable when using with embedded metastores. And sometimes it throws exceptions for which I wasn’t able to find resolutions: for example, “java.sql.SQLException: Error retrieving next row,” and&ndash;when selecting from ORC tables&ndash;“java.lang.OutOfMemoryError: Java heap space error.” (Using MySQL to store metadata seemed to improve Hive’s stability.)  </span></p>
+<p><span>Other problems: Orphaned/Zombie jobs could be problematic&ndash;you need to manually intervene to kill those jobs. You need to be careful when designing table structures, because that is the biggest factor in performance of queries (storage format, compression, clustering, partitioning, skew, serde). Finally, Hadoop’s concurrency sucks: The first query/job receives the bulk of your resources. (The documentation says that significant improvements were made in the resource manager, known as YARN, but sometimes jobs/queries are blocked until a running job/query completes.)</span></p>
+<h3>Running your own test</h3>
+<p><span><span>There are still many unexplored options for optimizing for performance. If you can identify some real-world use cases, then you can optimize Hive with logical partitioning, physical partitioning (clustering), sorted data storage, and indexing. Similarly, you can also optimize Aster to use column stores, logical partitioning, physical partitioning, indexing, etc. </span></span></p>
+<p><em>Interested in our work with big data? <strong><a href="http://www.gilt.com/careers/job/r1123/" target="_blank">Apply for our machine learning &amp; recommendations opportunities</a>.</strong> </em></p>

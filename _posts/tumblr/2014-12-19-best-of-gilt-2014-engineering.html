@@ -1,0 +1,74 @@
+---
+layout: post
+title: 'Best of Gilt 2014: Engineering'
+date: '2014-12-19T13:54:00-05:00'
+tags:
+- Gilt
+- Gilt Groupe
+- Gilt Tech
+- gilttech
+- software engineering
+- Best of 2014
+- open source
+- opensource
+- Architecture Summit
+- Android-Proguard-Snippets
+- Gilt GitHub page
+- Mockingbird
+- sbt-dependency-graph-sugar
+- Scala
+- Play Framework
+- apidoc
+- Amazon Web Services
+- AWS
+- Anthony Manfredi
+- CAVE
+- Val Dumitrescu
+- Pawel Raszewski
+- InfluxDB
+- Amazon Kinesis
+- RDS
+- A/B testing
+- Young Moon
+- Erik Lumer
+- GitHub
+- bestof2014
+tumblr_url: http://tech.gilt.com/post/105622760239/best-of-gilt-2014-engineering
+---
+<p>Over the next few days we&rsquo;ll be recapping some of the #gilttech team&rsquo;s favorite and most significant tech developments of 2014. To kick things off, here are some of the highlights of our engineering work this year.</p>
+<h3>We Upped Our Commitment to Open Source</h3>
+<p><span>At our </span><a href="http://tech.gilt.com/2014/03/10/gilts-architecture-summit-bigger-and-better-than" target="_blank"><span>Architecture Summit in February</span></a><span>, our engineering team coalesced around the goals of incorporating more open source tools into our work and increasing our contributions to the OS community. Since then we’ve added dozens of new projects to </span><a href="http://code.gilt.com/#_=_" target="_blank"><span>our team GitHub page</span></a><span> (you’ll learn about several of them in more detail below), </span><a href="https://github.com/gilt/standards-open-source" target="_blank"><span>revised our OS guidelines</span></a><span> to simplify the release process for our engineers, and formed a working group to strengthen our OS culture internally. Several of our team’s OS projects&ndash;</span><a href="http://tech.gilt.com/2014/12/12/new-in-gilt-tech-open-source" target="_blank"><span>Android-Proguard-Snippets</span></a><span>, </span><a href="https://github.com/gilt/MBToolbox" target="_blank"><span>Mockingbird</span></a><span> (iOS), and </span><a href="http://tech.gilt.com/2014/06/09/some-sugar-for-your-sbt-dependency-graph" target="_blank"><span>sbt-dependency-graph-sugar</span></a><span> (Scala)&ndash;have generated lots of excitement in their respective communities, which we appreciate.</span></p>
+<h3>apidoc</h3>
+<p><span>Built by the Gilt engineering team, </span><a href="http://apidoc.me/doc/" target="_blank"><span>apidoc</span></a><span> is a lovingly crafted open source project that enables you to build beautiful documentation for REST services. With apidoc, you can download native client libraries with no (or almost no) dependencies. Its intuitive JSON format is easy to navigate, which makes it fun to use. </span><a href="http://apidoc.me/doc/todo" target="_blank"><span>Check out the apidoc to-do list</span></a><span> and contribute to this project, which you’ll hear more about in 2015.</span></p>
+<h3>AWS at Gilt</h3>
+<p><span>This year we started using AWS in order to reduce the effort spent managing physical hardware. Now our engineers can get a server with a simple click of a button. AWS aligns with our goal to make software engineering as simple, scalable and empowering as possible. “AWS enabled me to set up a fault-tolerant Elasticsearch cluster in a single afternoon,” says Senior Software Engineer Anthony Manfredi.</span></p>
+<h3>CAVE</h3>
+<p><iframe frameborder="0" height="485" marginheight="0" marginwidth="0" scrolling="no" src="//www.slideshare.net/slideshow/embed_code/39469824" width="595"> </iframe></p>
+<p><span>Begun in earnest this year, CAVE stands for &ldquo;continuous audit vault enterprise.&rdquo; Not sure what that means? Here&rsquo;s another description: CAVE is an open-source managed service for monitoring infrastructure, platform, and application metrics. Largely the work of Gilt Senior Software Engineer <a href="http://tech.gilt.com/search/val+dumitrescu" target="_blank">Val Dumitrescu</a> and Software Engineer <a href="http://tech.gilt.com/search/pawel+raszewski" target="_blank">Pawel Raszewski</a>, and built in Scala, CAVE combines InfluxDB, Kinesis, Amazon RDS, and other great technologies to provide visibility into your system’s performance and operational levels. Learn more about it by reviewing the above slideshow</span><span>.</span></p>
+<h3>Gilt’s Custom A/B Testing Platform</h3>
+<p id="docs-internal-guid-20e6957c-63c2-436b-ab57-259449325b71"><span>A/B testing is core to Gilt’s product development methodology. It informs our decision-making and gives us insight into what’s working and what’s not. The A/B testing system we used to use wasn’t able to scale as we grew&ndash;it essentially limited our platform to 64 test variants max. This created a situation in which we began to work on way more products than that platform could handle. To remedy this, Gilt Lead Software Engineer Young Moon and VP of Personalization Erik Lumer worked together to build a completely new platform that allows for a nearly limitless number of concurrent tests for our product development purposes. </span></p>
+<h3>We Went Responsive</h3>
+<p><span><img alt="image" src="https://31.media.tumblr.com/3dd35d1daa17cac3c63dbe5ddc9578b6/tumblr_inline_nguf3uHGvG1s17bu5.png" width="800"/></span></p>
+
+<p><span>The <a href="http://tech.gilt.com/search/Special+Operations" target="_blank">Special Operations</a> Team led the charge in </span><a href="http://tech.gilt.com/search/responsive+design" target="_blank"><span>responsivizing Gilt’s website</span></a><span> to mobile devices&ndash;then generated massive amounts of interest in their work via tech talks, articles and social media outreach. Check out their blog posts on </span><a href="http://tech.gilt.com/2014/07/02/responsive-gilt-com-block-vs-in-selector-media" target="_blank"><span>writing in-selector CSS media-queries instead of blocks</span></a><span>, </span><a href="http://tech.gilt.com/2014/07/07/responsive-gilt-com-selenium-edition" target="_blank"><span>using Selenium-automated tests for responsive pages</span></a><span>, and </span><a href="http://tech.gilt.com/2014/07/09/responsive-gilt-com-the-full-screen-modal" target="_blank"><span>the full-screen modal</span></a><span>.</span></p>
+<h3>GitHub</h3>
+<p><span>This year we began to shift away from having an internal continuous integration setup infrastructure toward leveraging the open source tooling built around GitHub. Moving in this direction allows us to experiment with third-party software and open source tools that integrate with GitHub, such as Travis CI and Circle CI.</span></p>
+<h3>Estimated Delivery Windows</h3>
+<p><span>Over the summer, our <a href="http://tech.gilt.com/search/pmo" target="_blank">Program Management Organization</a> and <a href="http://tech.gilt.com/search/back+office" target="_blank">Back Office</a> team huddled in a room to dissect Gilt’s architecture around product delivery windows. Their goals: perfecting the service that estimates how much time it takes for a customer to receive their Gilt purchase; make it easier to deploy changes to this service to production; and simplify our delivery window calculation. Their results: Better engineering around this core Gilt function, and better results for our customers.</span></p>
+<h3>Docker</h3>
+<p><iframe frameborder="0" height="360" src="//www.youtube.com/embed/GaHzdqFithc" width="640"></iframe></p>
+<p><span>“A thing must produce a Docker image to be deployed somewhere” became a standard for our engineering team this year. Adopting Docker has empowered our engineering team to experiment with new technologies quickly and easily, giving us the freedom to take more risks and diversify our stack without inducing headaches. One example: Our team has instrumented Play Framework in our tooling, but some of our engineers have recently begun building apps in Node.js. Without Docker, we wouldn’t be able to add these Node apps without plumbing the concept of Node throughout our infrastructure; now, a Node app is just another Docker image. Docker has also enabled our migration to Amazon Web Services. Throughout the year we shared our excitement about Docker with the larger tech community by hosting (crowded!) meetups in </span><a href="http://tech.gilt.com/2014/04/30/video-and-photos-from-last-nights-awesome-docker" target="_blank"><span>NYC</span></a><span> and </span><a href="http://tech.gilt.com/2014/07/10/a-great-turnout-at-last-nights-docker-dublin" target="_blank"><span>Dublin</span></a><span>, sharing our story at the first-ever </span><a href="http://tech.gilt.com/2014/07/02/immutable-infrastructure-with-docker-and-ec2" target="_blank"><span>DockerCon</span></a><span> in San Francisco and wearing our </span><a href="http://tech.gilt.com/2014/10/22/thanks-docker" target="_blank"><span>Docker swag</span></a><span> with pride.</span></p>
+<h3>HighJump</h3>
+<p><span>Our distro engineering and applications support teams engineered the launch of this new warehouse management system in June. HighJump gives us the ability to lower our software CPU costs, manage inventory more efficiently, establish functional parity across all of our distributions centers (i.e., the places where we store and ship out inventory) and generate a global view of our physical inventory within our WMS. </span></p>
+<h3>Avro, gfc-avro, and BlueSteel</h3>
+<p><span><img alt="image" src="https://31.media.tumblr.com/8ed2ff355aa6e62840ed2706d830e8bf/tumblr_inline_ngue07Y3ED1s17bu5.png"/></span></p>
+<p><em>Image by <a href="https://www.flickr.com/photos/weeping-willow/9130669622/in/photolist-eUR4Yj-nrdFfh-4pDGTt-4pHKZb-596Vda-iiaHm4-nezfkW-naPJJB-tzFUk-ow1dgx-tQBer-7ZwCDe-c1QTnE-nukkFn-eUpgwP-7Xzfpk-co3RYN-n1e8ZP-7Yi5sP-gnMixW-sKcCB-co8UZW-9N1Ggm-iLTTYb-co8Xv7-dZjeSG-ccNZ5h-deX8e-mwAVz1-81EGSD-ardV5a-bVkDLB-bVkDQT-ccGUfm-gEsk44-ggJuTm-mY3H8L-bVkyGt-ccGNxY-co3r3W-ccGQtw-ekB4Wr-juVqrG-ecu81M-i8t6mK-2GmuoB-4udRzN-bVkA4g-bVkAkB-bVkBwa" target="_blank">Weeping-Willow Photography</a>.</em></p>
+<p><span>The Gilt engineering team (especially Principal Data Engineer </span><a href="http://tech.gilt.com/search/michael+hansen" target="_blank"><span>Michael Hansen</span></a><span>) has been using the open source data serialization framework Apache Avro along with Kafka and HDFS to manage our real-time (or near real-time) data capturing. For projects based on Scala, the Avro framework is not as friendly to use as you might hope. To address this, we created </span><a href="https://github.com/gilt/gfc-avro" target="_blank"><span>gfc-avro</span></a><span>: An Avro library in Scala base on Scala pickling. gfc-avro supports the conversion of case classes to Avro records or schema definitions. On the mobile site, Senior Software Engineer Matt Isaacs has been working on </span><a href="https://github.com/gilt/BlueSteel" target="_blank"><span>BlueSteel</span></a><span>: an Avro encoding/decoding library for Swift. Both gfc-avro and BlueSteel are looking for contributors&ndash;ping Matt if you want to get involved.</span></p>
+<h3>Product Look Link</h3>
+<p><span>In October, we launched a new feature that enables Gilt’s stylist to link accessories and other clothing included in each photo. This will allow us to showcase completely shoppable looks.</span></p>
+<h3>We Play-ed Hard</h3>
+<p><iframe frameborder="0" height="480" src="//www.youtube.com/embed/WliXLG2Yo5k" width="640"></iframe><span>Our engineers made substantial progress in rolling out <a href="https://playframework.com/" target="_blank">Play Framework</a> across all parts of our website. Part of our work building a <a href="http://tech.gilt.com/search/microservices" target="_blank">microservices</a> architecture has involved breaking up all of our pages from one monolithic app into smaller Play apps, each owned by different teams. As Scala users, we’ve become very familiar with Play and love working with it&ndash;it’s contributed greatly to our Developer Happiness KPI. With Play, site releases and eliminating dependencies is easy, and the framework scales very well for tech organizations like ours that like to move fast. Check out Senior Software Engineer </span><span>Giancarlo Silvestrin’s Typesafe webinar</span><span> on Play (above) to learn more about our work.</span></p>
+<h3>We Built a Native Android App</h3>
+<p><span>We released our very first native <a href="http://tech.gilt.com/search/android" target="_blank">Android</a> app to our millions of users in November, after establishing an Android team. We’ve seen the growth of Android over time and we wanted to give those users a much better customer experience. Our Android engineers have taken a heavily test-driven approach to building the application, laying a solid foundation for future expansion. They also took advantage of the many great open source tools available to Android devs, such as </span><a href="http://developer.android.com/training/volley/index.html" target="_blank"><span>Volley</span></a><span>, </span><a href="http://jakewharton.github.io/butterknife/" target="_blank"><span>Butter Knife</span></a><span>, and </span><a href="http://www.joda.org/joda-time/" target="_blank"><span>Joda-Time</span></a><span>. Customers can expect to see many new features next year, and our team will be releasing several open source libraries in early 2015.</span></p>
+<h3>Photo Shoot App</h3>
+<p><span>In February, we launched a new Photo Shoot application that eliminated much of the manual process for styling and shooting product looks. By putting the process into our system, we were able to completely eliminate a lot of the manual work involved in styling, shooting, and processing images. This gives our stylists and creative talent more time to do what they do best: create compelling photography to sell our products.</span></p>

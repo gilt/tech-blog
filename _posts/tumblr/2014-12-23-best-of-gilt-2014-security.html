@@ -1,0 +1,45 @@
+---
+layout: post
+title: 'Best of Gilt 2014: Security'
+date: '2014-12-23T17:29:00-05:00'
+tags:
+- Gilt
+- Gilt Groupe
+- Gilt Tech
+- gilttech
+- Chip Durland
+- security
+- CloudFlare
+- DDoS
+- ransom note
+- DDoS attacks
+- TTLs
+- phishing
+- phish
+- masquerading
+- Verisign
+- Prolexic
+- OpenSSL
+- Mike Hendren
+- Phishing Frenzy
+- bestof2014
+tumblr_url: http://tech.gilt.com/post/105997682729/best-of-gilt-2014-security
+---
+<p><span><span><img alt="image" src="https://31.media.tumblr.com/d6bbe664eddaeb39126c2509c1d2b35b/tumblr_inline_nh23r3uW6L1s17bu5.png" width="800"/></span></span></p>
+
+<p><em>Photo of dangerous hacker by Mike Hendren <a href="http://www.flickr.com/photos/thrumikesviewfinder/6771208003/in/photolist-bjmdez-RBbbj-RBaPJ-33bmPq-hyEL2p-q776tA-h7zJGB-4oeckP-dWBQ6g-aw66J8-diU6je-fG8Mib-bkA1Lm-paZaXs-bWU33u-8WeWSp-6CC58N-9SPCzf-6CC55q-6XS7PU-dipTch-a89UgM-4XbwhY-5fV2aB-nurBWm-2he9dV-aSoKyH-bF6kV9-hPhLHZ-dipToE-av6N1N-58caSN-4Zi6vh-6xUyUb-chqjK5-43gZh-2rA2L-5pgFU9-dB4SDX-2hdLSz-bkA1WE-hywsso-o1rPRH-4GUsTW-dTmqBD-bkA1UQ-byuUnB-byuUFD-qqdrPC-j6baQm" target="_blank">at Creative Commons</a>.</em></p>
+<p><span><span></span>2014 was a wild ride in the security world. We saw everything from crazy vulnerabilities in very popular software (looking at you, </span><a href="https://www.openssl.org/" target="_blank"><span>OpenSSL</span></a><span>) to massive DDoS attacks against&hellip;well, everyone. Being an e-commerce company with nine million members, Gilt is always facing attacks from hackers and fraudsters alike. Here are three things that we learned in 2014 that helped us stay in the saddle, security-wise:</span></p>
+<h3>1. Prepare for the DDoS</h3>
+<p><span>Sending a </span><a href="http://www.usatoday.com/story/news/nation/2014/05/14/ransom-ware-computer-dark-web-criminal/8843633/" target="_blank"><span>ransom note</span></a><span> to extort money from top tech companies, then following up with DDoS attacks on companies who refused to comply, was a very common tactic used by hackers this year. </span><a href="http://techcrunch.com/2014/04/21/say-media-owned-blogging-platform-typepad-enters-day-5-of-on-and-off-ddos-attacks/" target="_blank"><span>Meetup, SAY Media, Vimeo and other major companies</span></a><span> all suffered headaches caused by hackers who deployed this strategy. And the size of DDoS attacks has grown larger than ever, as </span><a href="https://www.verisigninc.com/assets/report-ddos-trends-Q22014.pdf" target="_blank"><span>Verisign</span></a><span> and </span><a href="http://www.prolexic.com/kcresources/attack-report/attack_report_q214/Prolexic-Q22014-Global-Attack-Report-A4.pdf" target="_blank"><span>Prolexic</span></a><span> (two leading Internet security firms) both report.</span></p>
+<p><span>The best way to counter these attacks is to get some sort of DDoS protection in place. Gilt jumped on board with </span><a href="https://www.cloudflare.com/" target="_blank"><span>CloudFlare</span></a><span>, a company whose specialty is blocking DDoS attacks. CloudFlare has been experiencing something of a business windfall in recent years thanks to the spike in attacks&ndash;as </span><a href="http://www.cnbc.com/id/102278567#." target="_blank"><span>CNBC reports</span></a><span>, the company plans to build a new data center per week in the coming year&ndash;and we’ve had a great experience working with them.</span></p>
+<p><span>A word to the wise: Lower your DNS TTLs. If you need to get behind a service like Cloudflare, having lower-than-average TTLs will help you to move traffic over to your new DDoS-protected IPs more quickly. Otherwise, your traffic will be stuck hitting the old IPs until the ISPs’ DNS cache refreshes.<span> <br/></span></span></p>
+<h3>2. Have solid plans/policies in place</h3>
+<p><span>Everyone uses their plans and policies for more than &ldquo;compliance,&rdquo; right? </span></p>
+<p><span>Right????</span></p>
+<p><span>With all of the breaches and leaked-credential attacks on companies worldwide, we’ve seen an increase in </span><a href="http://en.wikipedia.org/wiki/Brute-force_attack#Credential_recycling" target="_blank"><span>credential brute-force attacks</span></a><span>. In these, attackers gain access to batches of user:password combos, then try them all until he finds one that works. The first question that everyone asks when such an attack occurs is, “What do we do?” How prepared your company is to respond can mean the difference between successfully mitigating an attack and having to ask your security team, “Wait&ndash;how many accounts has the attacker accessed?” </span></p>
+<p><span>Speed in incident response is key. Plan for security issues and develop policies for acting quickly should they befall your company. Make sure everyone knows their role and works quickly to close the issue.</span></p>
+<h3>3. Be alert to new kinds of phishing attacks</h3>
+<p><span>Security buffs (and attackers) all know that phishing 1) works well and 2) is the easy way into a network. One increasingly common phishing tactic involves attackers </span><a href="http://www.bankinfosecurity.com/interviews/david-pollino-i-2397/op-1" target="_blank"><span>impersonating C-level executives</span></a><span> in order to get employees to quickly carry out ad-hoc tasks, such as wire-transferring money to a fraudulent account. At Gilt, we’ve combated this by establishing a rule to prepend &ldquo;Potential Phishing Attempt!&rdquo; to subject lines for specific emails that appear to come from a Gilt email account, but are actually spoofed. The check compares the Sender with the SPF record, and prepends the phishing subject line to any email subject that violates the rule.</span></p>
+<h3>4. Train your users</h3>
+<p><span>As with most things in life, the best way to get better at doing something (like avoiding phishing emails) is through practice. To this end, we&rsquo;ve started using </span><a href="http://www.phishingfrenzy.com/" target="_blank"><span>Phishing Frenzy</span></a><span>, an open source phishing framework, to phish our own user base and train them to better spot real phishing attacks. </span></p>
+<p><span>Attackers are getting more and more sophisticated all the time. Luckily, so are security engineers. With that, we wish you a safe and secure holiday and a phish-free 2015.</span></p>

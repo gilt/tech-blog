@@ -1,0 +1,58 @@
+---
+layout: post
+title: Restoring Page State with Session Storage
+date: '2011-10-04T16:07:09-04:00'
+tags: []
+tumblr_url: http://tech.gilt.com/post/11030244495/restoring-page-state-with-session-storage
+---
+<p>Managing the back button on the web is hard, especially remembering the previous page&rsquo;s state when the back button is used. Fragment identifiers can be a solution, and there are some <a href="http://benalman.com/projects/jquery-bbq-plugin/" target="_blank">great plugin</a>s out there which use that method. However, there&rsquo;s only one URL fragment, so identifiers need to be carefully namespaced to avoid collisions and the fragment in the URL becomes detritus that affects bookmarking, along with looking unpleasant and confusing to the user.</p>
+<p>On Gilt&rsquo;s new site, <a href="http://www.parkandbond.com" target="_blank">Park &amp; Bond</a>, I wanted to stay away from fragment identifiers (/products/denim#color=blue), in keeping with Gilt&rsquo;s commitment to forward-thinking front end engineering practices. We believe in progressive enhancement at Gilt, and I was able to make use of HTML5 <code>sessionStorage</code> to provide a better experience for our customers.</p>
+<p>Though there is no way to know for absolutely certain, one way to know if a user has hit the back button is to configure caching correctly on the server, and then determine whether the browser is using cached HTML or a new page request. The <a href="http://www.ietf.org/rfc/rfc2616.txt" target="_blank">HTTP 1.1 specification, section 13.13</a>, states that a &ldquo;history mechanism is meant to show exactly what the user saw at the time when the resource was retrieved.&rdquo; Chrome and IE, and usually Firefox, behave basically the same in using cached HTML where it makes sense, and re-executing JavaScript. Firefox sometimes shows the last state of the page without executing script, so in that case it&rsquo;s not necessary to do anything.</p>
+<p>If a unique page token is added to the HTML of each page view, it is possible both to store information unique to that token and to use its value to determine whether the page has been viewed before. I use a data attribute on the HTML element to store this server-generated token.</p>
+<p>I built a small JavaScript object called <code><a href="http://www.parkandbond.com/javascripts/gilt/page_token.js" target="_blank">Gilt.pageToken</a></code> to provide an API for storing values on a page token key using <code>sessionStorage</code>. Using the session, there&rsquo;s little risk of overloading the browser&rsquo;s storage limits and no way we will restore things we don&rsquo;t want to restore if the user comes back the next day in a different browser tab. The API is simple:</p>
+<pre><code>Gilt.pageToken.get('key');<br/>
+Gilt.pageToken.set('key', value);</code></pre>
+<p>The value can be anything; it is transformed into a <code>sessionStorage</code> string with <code>JSON.stringify()</code>.</p>
+<p>So, how is this useful?</p>
+<p>The <a href="http://www.parkandbond.com/clothing/all-clothing" target="_blank">product listing page on Park &amp; Bond</a> allows continual scrolling, making additional ajax requests as the user goes down the page. If a user clicks on a product, goes to its detail page, and then goes back to the listing page, the user expects the page to restore its previous state, including any active facets and the scrolled-to additional products. However, the browser&rsquo;s HTML cache will not have this information, since the page load included only the first set of products and facets.</p>
+<p>So, when the user clicks a product, <code>Gilt.pageToken</code> is used to store the scroll position (as a vertical offset integer) and the query object that holds the facets which were active at the time of the click. When the user hits back, <code>Gilt.pageToken</code> looks up those values by the current page token key. If that key exists in <code>sessionStorage</code> and has values, those values are used to restore the page state.</p>
+<p>The session storage <code>pageToken</code> object after a few page views might look something like this:</p>
+<pre><code>
+{
+  "PT131741761614767":
+  {
+    "rotatorStatus":"3"
+  },
+
+  "PT1317417630680593":
+  {
+    "rotatorStatus":"1"
+  },
+
+  "PT131741766597481":
+  {
+    "initialUrl":"http://www.parkandbond.com/clothing/denim",
+    "filterState":
+    {
+      "key":"color",
+      "value":"Black",
+      "offset":518.4000244140625,
+      "top":0
+    },
+    "swayzeScrollPosition":503,
+    "lastQuery":
+    {
+      "category":"clothing",
+      "subcategory":"denim",
+      "start":0,
+      "count":24,
+      "occasion_pnb":"drinks-with-friends",
+      "color":"Black"
+    },
+    "lastUrl":"http://www.parkandbond.com/clothing/denim"
+  }
+}
+</code></pre>
+<p>Of course, this depends on browsers behaving as expected and choosing not to re-request HTML when the user hits the back button. Currently Chrome and IE (without the developer request-every-view setting and with cache-control headers configured correctly) follow this behavior. Firefox in some cases follows this behavior and in other cases restores the page state from memory, choosing not to execute any JS at all, so the page already &ldquo;remembers&rdquo; its filters and has all the products loaded. IE7 does not support sessionStorage at all, so it misses out on this functionality, but all modern browsers are able to fully restore the state. </p>
+<p>We also make use of this in the <a href="http://www.parkandbond.com/the-intersection/FEATURES/boots" target="_blank">product slideshow</a>, so users can go to the detail page for any of the products and not lose their place when they return to the slideshow page via the back button.</p>
+<p>We will keep watching browsers to make sure they follow the spec and this solution continues to be functional. It&rsquo;s a workaround, one that requires cooperation from the server and browsers with reference to page caching, but one that dramatically improves the user experience without using fragment identifiers in the URL.</p>

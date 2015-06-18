@@ -1,0 +1,40 @@
+---
+layout: post
+title: up and running with play2
+date: '2013-04-18T17:02:54-04:00'
+tags:
+- PlayFramework
+- Scala
+- heroku
+- "λ"
+tumblr_url: http://tech.gilt.com/post/48301645551/up-and-running-with-play2
+---
+<img src="/tumblr_files/tumblr_mlgshlEV5H1qgexq2o1_1280.jpg"/><br/><h1>Up &amp; Running with Play 2</h1>
+
+<p>Last night, Gilt hosted the second <a href="http://www.meetup.com/Play-NYC/" target="_blank">Play NYC</a> meetup, after nearly a year since the first. This meetup was dedicated to introducing people to the Play Framework.</p>
+
+<p>I gave a presentation that briefly touched on the reasons why Gilt chose the Play Framework for some of its recent projects and then jumped right into code. Over the course of the talk, I walked through constructing a Play app with Scala connecting to <a href="https://dev.gilt.com/" target="_blank">Gilt&rsquo;s API</a>. Starting with some functional tests, we covered:</p>
+
+<ul><li>routing, </li>
+<li>controllers, </li>
+<li>Play Actions, </li>
+<li>making a request to a web service,</li>
+<li>Play&rsquo;s configuration</li>
+<li><a href="http://docs.scala-lang.org/overviews/core/futures.html" target="_blank">Futures</a> and asynchronous behavior, </li>
+<li>unmarshaling JSON,</li>
+<li><a href="http://www.playframework.com/documentation/2.1.1/ScalaTemplates" target="_blank">Play&rsquo;s templating language</a>,</li>
+<li>compiling Assets,</li>
+</ul><p>And finally, and most importantly, deploying our application to production (with Heroku). Along the way we touched on some tenets of functional programming<sup id="fnref:p48301645551-1"><a href="#fn:p48301645551-1" rel="footnote" target="_blank">1</a></sup> and Scala&rsquo;s powerful <code>for</code> comprehensions.  We covered a lot of ground and in the end only ended up with one route: listing active sales by store.</p>
+
+<p>The slides for the talk are available <a href="https://speakerdeck.com/mwunsch/play2-up-and-running" target="_blank">on SpeakerDeck</a>, the application built is <a href="http://play-gilt.herokuapp.com/women" target="_blank">currently running in production</a>, and the application code is <a href="https://github.com/play-nyc/play-gilt" target="_blank">available on GitHub</a> for anyone to fork and experiment on.</p>
+
+<p>I had a blast. Our next meetup isn&rsquo;t scheduled yet, but we definitely won&rsquo;t allow such a long delay between meetups again. <a href="http://www.meetup.com/Play-NYC/" target="_blank">Join the group</a> to be the first to hear about upcoming events. Thank you to everybody who came out. I am looking forward to the next one.</p>
+
+<p>&ndash; Mark</p>
+
+<div class="footnotes">
+<hr><ol><li id="fn:p48301645551-1">
+<p><a href="http://en.wikipedia.org/wiki/Monad_(functional_programming)" target="_blank">&ldquo;What&rsquo;s a monad?&rdquo;</a> <a href="#fnref:p48301645551-1" rev="footnote" target="_blank">↩</a></p>
+</li>
+
+</ol></div>

@@ -1,0 +1,55 @@
+---
+layout: post
+title: Gilt releases Mockingbird Data Environment open-source project for iOS
+date: '2015-02-04T11:06:00-05:00'
+tags:
+- gilt
+- gilttech
+- Apple
+- iOS
+- iPhone
+- iPad
+- tech
+- engineering
+- software engineering
+- open source
+- giltmobile
+- Gilt Mobile
+- Evan Maloney
+- Mockingbird
+- Mockingbird Data Environment
+tumblr_url: http://tech.gilt.com/post/110074817289/gilt-releases-mockingbird-data-environment
+---
+<p>For more than 5 years, Gilt&rsquo;s Mobile team has been developing and using a platform that lets its iOS applications adapt to server-side changes long after they&rsquo;ve been released.
+
+</p><p>This platform has been the backbone of an application that has served millions of users, handled hundreds of millions in sales, and has been consistently highly-rated in the App Store and repeatedly featured in Apple keynotes.
+
+</p><p>Today, we&rsquo;re excited to reveal the official open-source release of this platform: announcing <a href="https://github.com/emaloney/MBDataEnvironment#mockingbird-data-environment" target="_blank">the Mockingbird Data Environment</a> 1.0!
+
+</p><p>From <a href="https://github.com/emaloney/MBDataEnvironment#about-the-mockingbird-data-environment" target="_blank">the project&rsquo;s description</a> on GitHub:
+
+</p><blockquote>
+<p>It is a common scenario for iOS app publishers to have a population of users running old application versions. Often, users are stuck on old versions because the current version requires a release of iOS more recent than their hardware will support. Such users won&rsquo;t be running your latest app version until they buy a new device, assuming they ever do.
+
+</p><p>For some types of apps, this isn&rsquo;t a big problem. But for apps that must communicate with network-based services, having a wide variety of old versions out in the wild makes it difficult to evolve and maintain your services.
+
+</p><p>Eventually, you will be faced with accepting one of these tradeoffs:
+
+</p><ul><li>Do you drop support for old versions, knowing that there&rsquo;s a risk of severing valuable relationships with some of your users?
+
+</li><li>Do you take on the expense and difficulty of maintaining and operating a growing number of legacy backend services over time?
+
+</li><li>Or do you resign yourself to never evolving your backend systems—or doing it much more slowly than you&rsquo;d like?
+</li></ul><p>The purpose of the Mockingbird Data Environment is to free you from having to make these compromises.
+
+</p></blockquote>
+
+<p>To experiment with the Mockingbird Data Environment in your own iOS project, use <a href="https://github.com/emaloney/MBDataEnvironment#integrating-with-your-project" target="_blank">CocoaPods</a> and add the following line to your <code>Podfile</code>:
+
+</p><pre>
+pod 'MBDataEnvironment'
+</pre>
+
+<p>Then, run <code>pod install</code> from within the directory containing your project&rsquo;s <code>Podfile</code>.
+
+</p><p>The Mockingbird Data Environment is available for use under <a href="https://github.com/emaloney/MBDataEnvironment/blob/master/LICENSE" target="_blank">the MIT license</a>. </p>

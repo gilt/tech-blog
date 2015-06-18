@@ -1,0 +1,74 @@
+---
+layout: post
+title: Gilt's JavaScript Templating Architecture
+date: '2011-02-15T10:02:00-05:00'
+tags:
+- frontend
+- javascript
+- templating
+- gilt
+- gilttech
+- Eric Shepherd
+- Handlebars
+- Gilt.Template
+- Dust
+- architecture
+- submission
+tumblr_url: http://tech.gilt.com/post/3309612608/gilt-template
+---
+<p>Templating is a powerful way of separating concerns on the front end. It’s a natural fit for Gilt’s platform, since much of our content comes to the front end from services that return JSON. Sometimes that JSON is rendered in JSPs with JSTL, but sometimes it’s better to render it with JavaScript.</p>
+
+<p>Until recently, most JavaScript HTML rendering involved messy string concatenation, lots of looping, and an unholy marriage of logic and content in the same file. However, new templating engines, such as <a href="https://github.com/wycats/handlebars.js" target="_blank">Handlebars</a>, allow multiple logic-less templates to be created for the same content, with clean, easy-to-read syntax. Compare:</p>
+
+<p>
+<script src="https://gist.github.com/826338.js" type="text/javascript"></script></p>
+
+<p>But which template engine to use? There are many currently vying for prominence. I didn’t want to hitch our wagon to any one engine, since many different pieces of Gilt code need to make templating calls and none of us knows the future, so I decided to create a middle-tier API that would accept any templating engine as a plugin. This is generally a good way to approach front end architecture, as it’s all too easy to scatter third-party dependencies throughout a large codebase, leading to difficult maintenance and requiring significant restructuring if the third-party code ever needs to be changed.</p>
+
+<p><strong>What It Is</strong></p>
+
+<p>There are three components in addition to the implementation code:</p>
+
+<ul><li><code>Gilt.Template</code>, which exposes <code>render()</code>, <code>register()</code>, <code>plugin.add()</code> and <code>plugin.get()</code> methods</li>
+<li>a template file saved using a directory and file naming convention</li>
+<li>the chosen rendering engine code</li>
+</ul><p><strong>How It Works</strong></p>
+
+<ol><li>Templates are stored in a <code>Gilt.Template</code> private cache, by a unique combination of name, engine, and version. Name is typically the type of feed or data that is being rendered, such as a wait list, a single product feed, or a cart. Version indicates which view of the data is required (“default” is the canonical view, and views can exist for third-party sites or other areas on the Gilt site such as a modal window or a specific page). Engine indicates which third-party rendering to use, with Handlebars as the default if none is specified.</li>
+<li>For flexibility, all rendering is asynchronous. The <code>render()</code> method does not actually write any markup; instead, it supplies the rendered markup to a passed callback function. This allows the template file or rendering engine to be lazy loaded at the time of invocation, rather than be already present on the page, and it recognizes that often the rendered template is needed for purposes other than writing immediately into an element on a page.</li>
+<li>Each template engine is an equal citizen, registered as a plugin with <code>Gilt.Template</code>. <a href="https://github.com/wycats/handlebars.js" target="_blank">Handlebars</a> and <a href="http://akdubya.github.com/dustjs/" target="_blank">Dust</a> are built-in, as we use both of them on the Gilt site; however, any additional template engine can be registered and used. Each plugin must provide a <code>render()</code> method, and optionally can provide a <code>register()</code> method (used, for example, in Dust compilation). When the implementation code calls <code>Gilt.Template.render()</code>, that method delegates to the plugin’s <code>render()</code> method.</li>
+<li>If the template is not available in <code>Gilt.Template</code>&rsquo;s cache, it triggers an asynchronous load of the template file, looking by a naming convention of <code>/templates/&lt;type&gt;/&lt;version&gt;.&lt;engine&gt;.js</code>. For example, a template that handles the default view of a wait list feed using Handlebars would be stored at <code>/templates/wait_list/default.handlebars.js</code>. This convention allows for multiple views of the same data feed. <code>Gilt.Template.render()</code> takes an optional argument for an ajax service to use, with jQuery used by default. This allows for the possibility of use with a different base library, since this is the only point of third-party dependency.</li>
+</ol><p><strong>How To Use</strong></p>
+
+<p>So, the three steps required to use the system are:</p>
+
+<ol><li>
+<p>Add a plugin using <code>Gilt.Template.plugin.add()</code> with the specific code required to interact with the chosen third-party templating engine. Handlebars support is built-in and, for reference, looks like this:</p>
+<p>
+<script src="https://gist.github.com/826350.js" type="text/javascript">// <![CDATA[
+
+// ]]></script></p>
+</li>
+<li>
+<p>Register a template with <code>Gilt.Template.register()</code>, indicating a unique combination of name, engine, and version. This could be done prior to calling <code>render()</code>; if not, <code>render()</code> will lazy load this template file, thereby calling <code>register()</code>:</p>
+<p>
+<script src="https://gist.github.com/826353.js" type="text/javascript">// <![CDATA[
+
+// ]]></script></p>
+</li>
+<li>
+<p>Call <code>Gilt.Template.render()</code>, passing it the unique name, engine, and version to render, along with a callback to be provided with HTML. The <code>render()</code> method will load the plugin and call <code>register()</code> first if the template is unavailable. The following code is probably in the callback of an ajax request function:</p>
+<p>
+<script src="https://gist.github.com/826355.js" type="text/javascript">// <![CDATA[
+
+// ]]></script></p>
+</li>
+</ol><p><strong>tl;dr;</strong></p>
+
+<p>In summary, <code>Gilt.Template</code>:</p>
+
+<ul><li>allows for template storage by engine, version and name;</li>
+<li>provides flexibility by providing rendered markup to a callback function;</li>
+<li>treats all templating engines equally; and</li>
+<li>speeds up page load by asynchronously loading template files.</li>
+</ul><p>Templates have helped us to separate our content data from its views on the site, and our middle-tier architecture has provided a consistent API and eliminated the need for third-party calls in the Gilt codebase.</p>

@@ -1,0 +1,43 @@
+---
+layout: post
+title: 'Responsive Gilt.com: The Full-Screen Modal'
+date: '2014-07-09T12:43:00-04:00'
+tags:
+- Gilt
+- Gilt Tech
+- Gilt Groupe
+- gilttech
+- responsive design
+- Kyle Dorman
+- Gilt.com
+- Gilt iPhone app
+- full-screen modal
+- filtering
+- CSS
+- Less.js
+- responsive design series
+- Special Operations
+tumblr_url: http://tech.gilt.com/post/91263242344/responsive-gilt-com-the-full-screen-modal
+---
+<p><span>In making Gilt.com responsive to the mobile device, the Special Ops team identified several responsive patterns that we relied upon to “responsivize” our site layout. Identifying these patterns early on helped us to more confidently make subsequent responsive-related decisions. For our fourth responsive-related blog post, I would like to share how we discovered and implemented one of our favorite design patterns that we identified: the full-screen modal.</span></p>
+<p><span>The Gilt iPhone app was the primary source of responsive design inspiration for our team. One of our iPhone app’s strongest design elements is its full-screen view for filtering, which differs greatly from the filtering layout on Gilt.com where filtering exists as a set of dropdowns on the sale page and a sticky sidebar on the search page.</span><span id="docs-internal-guid-51027906-1b7d-bdd2-3af9-64b93b898ac7"><br/><span></span></span></p>
+<p><span><span>The app’s filtering:</span></span></p>
+<p><span id="docs-internal-guid-51027906-1bcb-1959-f93e-78a58dbf03e2"><span><img alt="image.png" height="357px;" src="https://lh5.googleusercontent.com/aVZoTBlr0KssajTxQGfz4DFs-X4LCszuv671KOpGiLudSfDC-kizLoOyX9QRPzTP4MwlXfiMIE2yHr_eWsvSGlUgz_lM_UmnD3C2vBH1DqYImN4unGuyIi2ryyOWRwJPZg" width="238px;"/></span></span></p>
+<p><span id="docs-internal-guid-51027906-1b7e-42dc-19f9-dc61376efe78"><span>Gilt.com’s filtering:</span></span></p>
+<p><span id="docs-internal-guid-51027906-1bcb-37b3-56c6-0048302b7a68"><span><img alt="Screen Shot 2014-07-08 at 5.08.21 PM.png" height="347px;" src="https://lh6.googleusercontent.com/Jz2UIBq0MMsH7gE5qWx4tvobn7PniZ_foxl_IV52FkCqU-U_gHKqJbTiF13FumZgT3nIb1nZetknVs81-fsAsy7am5iPDSLyllKIKuMHp7PvLyQwAqAIlXzZjd0qGgvIGA" width="350px;"/></span></span></p>
+<p><span>The full Gilt site’s filtering style fits well on both PC and tablet-sized screens, but is too large for mobile devices. This is one of the reasons our current mobile site (m.gilt.com) does not give users the filtering feature. With this in mind, our team emulated the Gilt iPhone app’s design by creating a full-screen view for filtering on mobile-sized screens. This pattern uses almost exclusively CSS (we use <a href="http://lesscss.org/" target="_blank">less.js</a>) and therefore doesn’t add significant size to the pages’ payload.</span></p>
+<p><span>Full-screen modal was simple to implement, so we decided to apply it in other places on the site&ndash;for example, in a product’s size chart. </span><a href="http://jsbin.com/dizor/6" target="_blank"><span>Here’s a JS Bin</span></a><span> that demonstrates our implementation.</span></p>
+<p><span>On narrow screens (a mobile device in landscape, for example) and tiny screens (a mobile device in portrait):</span></p>
+<ul><li><span> <span id="docs-internal-guid-51027906-1b7f-4ee1-fb7c-69b57d86b3af"><span>Set the content’s wrapper element to</span></span></span></li>
+</ul><pre><code>position: fixed
+display: none</code></pre>
+<p><span><span id="docs-internal-guid-51027906-1b80-7b5b-7655-53c1dc641f32"><span>          by default, and set it to fit the entire screen</span></span></span></p>
+<ul><li><span>Add a call to action that’s visible only on narrow and tiny screens, and that, when clicked/touched, adds the class ‘content-open’ to either the content’s parent or to the content itself</span></li>
+<li><span>Add CSS to display the content when the ‘content-open’ class is added</span></li>
+<li><span>Add a no-scroll class to the body when the button is clicked that sets the whole page to</span></li>
+</ul><pre><code>position: fixed</code></pre>
+<p><span><span id="docs-internal-guid-51027906-1b81-8e60-61b2-5da3bccb002e"><span>           this prevents the body from scrolling behind the open modal</span></span></span></p>
+<ul><li><span>Add a button/action in the open content modal which closes the content and returns the user to the full page</span></li>
+</ul><p><span id="docs-internal-guid-51027906-1b82-00b5-4a77-16f256e475b1"><span>Special Ops believes that the best mobile user experiences permit users to focus on a page’s core content without being distracted by other features. With the full-screen modal, we abstracted away all the complexity of the filtering into a separate user experience and gave the abstracted feature the full-screen ‘real estate’ it deserves. Everything the user sees&ndash;a product, a list of products, etc.&ndash;is built around this simplified experience. Now that this pattern is well understood, we plan on continuing to use it in our future responsive design efforts.</span></span></p>
+<p><span><span id="docs-internal-guid-51027906-1b82-12c5-09bb-852d5ef3c399"><span><img alt="Screen Shot 2014-07-06 at 11.07.35 AM.png" height="399px;" src="https://lh6.googleusercontent.com/bRDDdgnCZAXp0ZQB7XFIC8lA7rPHe26eoNx95sYgzEMAUUGp2vqsjOjmpV2izCtccUe0kV8yzWPxJeDwWUeK5fV97kGA5AJET2Liho6Z127yBF3IALhjUS8rrMemz3jHMA" width="233px;"/></span></span></span></p>
+<p><span id="docs-internal-guid-51027906-1b82-2984-9705-987b770db60b"><span><img alt="Screen Shot 2014-07-06 at 11.07.45 AM.png" height="409px;" src="https://lh5.googleusercontent.com/j-UodeYjLoO4TOtp5NegbMbYn2ojLQIeBEucbHjlNur2IbNozu39svRYC-tVSeSEgqmXdOwvQIdLQ3GAbvX9cKv2IoNQLPCXkRk_RtBDDrlBEsfTXKfmmx5pRsh3uk38AA" width="231px;"/></span></span></p>

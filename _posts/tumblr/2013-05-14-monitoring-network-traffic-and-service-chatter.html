@@ -1,0 +1,106 @@
+---
+layout: post
+title: Monitoring Network Traffic and Service Chatter with Boundary
+date: '2013-05-14T12:32:00-04:00'
+tags:
+- jvm
+- monitoring
+- network
+- metrics
+- boundary
+- gilt
+- gilttech
+- ordasity
+- case studies
+- Jetty
+- RabbitMQ
+- Apache ZooKeeper
+- Coda Hale
+- AsyncHTTPClient
+- RequestFilter
+- java.lang.Instrument
+- Cliff Moon
+- PostgreSQL
+tumblr_url: http://tech.gilt.com/post/50426747760/monitoring-network-traffic-and-service-chatter
+---
+<p>We recently published a <a href="http://boundary.com/blog/2013/05/09/gilt-groupe-keeps-fashion-hot-with-boundary/" target="_blank">case study</a> with <a href="http://boundary.com" target="_blank">Boundary</a> regarding how we, at <a href="http://www.gilt.com/" target="_blank">Gilt Groupe</a>, are using their product and I wanted to give some additional details concerning our decision process, what we were looking for, what we looked at and why we decided that going to Boundary was the best choice for us moving forward.</p>
+<p>Gilt Groupe’s architecture is now very much a case of micro-service architecture. We have hundreds of JVM-based HTTP services interacting with each others or with backend systems such as PostgreSQL, MongoDB, RabbitMQ, Kafka, Zookeeper, and many more third-party solutions over various data interchange formats and protocols.</p>
+<p>A few months ago, we felt we needed to get more insight into the detailed amount of traffic that was going in and out of every service or backend system. When various teams are working on new features that require more communication patterns and data exchange, it starts to be difficult to do capacity planning when you don’t know where you are.</p>
+<p>Moreover, in our experience, we have seen that most features generally go from a normal usage pattern for months to a sudden very large adoption by our business operations. The amount of data can suddenly grow 1 to 2 orders of magnitude, which does not generally go without its own set of challenges.</p>
+<p>To get better insight into the amount of data exchanged, we started the effort to monitor the data transferred out of our HTTP services (we use Jetty) using the excellent <a href="http://metrics.codahale.com/" target="_blank">Metrics</a> library from Coda Hale. This can be trivially done extending the existing Metrics <a href="http://metrics.codahale.com/maven/apidocs/com/yammer/metrics/jetty/InstrumentedHandler.html" target="_blank">InstrumentedHandler</a> for Jetty:</p>
+<pre><code>
+public class CustomInstrumentedHandler extends InstrumentedHandler { 
+
+  private final Meter bytesTransferred = Metrics.newMeter(handler.getClass(), "bytes-transferred", "responses", TimeUnit.SECONDS);
+  
+  private final Histogram bytesResponse = Metrics.newHistogram(handler.getClass(), "bytes-responses"); 
+  
+  // constructor omitted for blog readability
+  @Override
+  public void handle(String target, Request request, HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws IOException, ServletException {
+    final AsyncContinuation continuation = request.getAsyncContinuation();
+    try {
+      super.handle(target, request, httpRequest, httpResponse);
+    } finally {
+      if (continuation.isInitial()) {
+        long count = request.getResponse().getContentCount();
+        bytesResponse.update(count);
+        bytesTransferred.mark(count);
+      }
+    }
+  }
+}</code></pre>
+<p>The clients effort would be a bit more challenging however. In our JVM-based services we end using a menagerie of HTTP clients: <a href="https://github.com/AsyncHttpClient/async-http-client" target="_blank">AsyncHTTPClient</a> with Netty 3.x provider, <a href="http://hc.apache.org/" target="_blank">Apache HttpComponents</a> 4.x, <a href="http://hc.apache.org/httpclient-3.x/" target="_blank">Apache Commons HTTPClient</a> 3.x, and the venerable JDK <a href="http://docs.oracle.com/javase/6/docs/api/java/net/HttpURLConnection.html%20" target="_blank">HttpURLConnection</a>.</p>
+<p>This is the reality of having to deal with various third-party integration, it makes things more complicated than we would like to, but it can be a bit annoying to rewrite or extend some existing SDKs to try to use one and only one HTTP client across the platform (especially when non-extensible, or worse, closed-source).</p>
+<p>The immediate problem faced is effectively how to instrument *all* those clients.</p>
+<p>AsyncHTTPClient can be done easily using a RequestFilter and an AsyncHandler. The code would be something similar to the snippet below. There is not much overhead of doing it as you just need to count chunk size as they the HttpResponseBodyPart objects are received.</p>
+<pre><code> public class InstrumentedAsyncHttpClientRequestFilter implements RequestFilter { 
+  private final Meter bytesTransferred;
+  private final Histogram bytesResponses;
+<br/>  // ... initialization omitted for readability<br/>
+  public FilterContext filter(FilterContext ctx) throws FilterException { 
+    return new FilterContext.FilterContextBuilder(ctx) .asyncHandler(new MetricsAsyncHandler(ctx.getRequest(), ctx.getAsyncHandler())) .build(); 
+  } 
+
+ public class MetricsAsyncHandler implements AsyncHandler {
+  private AsyncHandler delegate;
+  private long totalBytesTransferred = 0;
+<br/>  // ... initialization omitted for readability<br/>
+  public STATE onBodyPartReceived(HttpResponseBodyPart bodyPart) throws Exception {
+    long bytes = bodyPart.getBodyPartBytes().length;
+    totalBytesTransferred += bytes;
+    metrics.bytesTransferred.mark(bytes);
+    return delegate.onBodyPartReceived(bodyPart);
+  }
+
+  public T onCompleted() throws Exception {
+    T o = delegate.onCompleted();
+    metrics.bytesResponses.update(totalBytesTransferred);
+    return o;
+  }
+ }
+}</code></pre>
+<p>Note that we tend to give a name to each service client which would map to a Metrics scope, which makes it useful to distinguish metrics between each client (some services use a dozen of clients).</p>
+<p>For all the others clients, it is a bit more intrusive to be practical. And it doesn’t address how to monitor the traffic in/out going directly through the Socket api like for Zookeeper, Play Framework (Netty server), MongoDB and JDBC drivers, etc&hellip;</p>
+<p>Another solution would be to write a JVM Java Agent via the <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/instrument/package-summary.html" target="_blank">java.lang.Instrument</a> API to instrument some well known libraries (NewRelic uses a similar technique, but doesn’t track traffic). While it may looked like the less intrusive solution, it is also a fairly significant undertaking to develop instrumentations for several third-party libraries which you have to maintain over time.</p>
+<p>Also, knowing we were looking with an interested eye to add systems such as Riak, Redis and possibly some various asynchronous drivers and having to deal with multiple versions of Scala&hellip; this was a cool project to work on technically, but maybe not excessively practical.</p>
+<p>What we needed was something similar to <a href="https://github.com/deployfu/nethogs" target="_blank">nethogs</a> minus the text interface. A tool capable of grouping the bandwidth by process, but ideally it would have some features also found in <a href="http://www.wireshark.org/" target="_blank">Wireshark</a>.</p>
+<p>We did not find anything matching those requirements.</p>
+<p>Until a week or two later. We had <a href="https://github.com/cliffmoon" target="_blank">Cliff Moon</a>, Co-Founder and CTO of <a href="http://boundary.com/" target="_blank">Boundary</a>, visiting our New-York office to present Boundary and do a Tech Talk on Distributed Systems (which we <a href="http://tech.gilt.com/2012/12/06/thanks-to-cliff-moon-moonpolysoft-for-stopping-by" target="_blank">blogged about</a>).</p>
+<p>We installed Boundary on some our servers to get a better idea. This was truly a revelation. The installation was painless with just a single command and as soon as the agent was up, it started to report data to the dashboard within the next second.</p>
+<p><img alt="image" src="http://media.tumblr.com/a7a243af28da4390d5771c199ecc93ff/tumblr_inline_mmspm3uKix1qz4rgp.png"/></p>
+
+<p>Each of the line represent the traffic volume happening on a given port/protocol across all nodes at a 1 second resolution. Traffic can easily be broken down. For example you have the ability to group servers, either manually or dynamically using pattern matching which makes it easy to segment your front-end from your backend machines and see traffic flowing between those groups (this is where a descriptive naming policy for your machines comes handy).</p>
+<p>You can further segment your traffic by port / protocol. For example TCP 5432 would be the traffic to/from PostgreSQL. You can then easily analyze the traffic that is going from your backend machines (or a subset of those) to your PostgreSQL. Same thing could be done to know the chatter around our messaging infrastructure on RabbitMQ.</p>
+<p>A lot more details on how all of this can be done is visible on a Youtube video &rsquo;<a href="https://www.youtube.com/watch?v=5RSlJ-KrVjw&amp;list=UUCfsqk2CNoHOeUbLPkHl-JQ" target="_blank">Isolate your traffic with filters and conversations</a>&rsquo;.</p>
+<p>There is a shortcoming currently for us where we are effectively losing a bit of visibility in our conversations. For instance, traffic to our services is always going through a set of dedicated service load balancers. For example we reach to it via a canonical url such as http://svc-product and the load balancer will balance between node1:7501, node2:7501, node3:7501. It means traffic from the caller to/from the load balancer happens on port 80 while the traffic to/from the load balancer to the callee is on port 7501.</p>
+<pre><code>caller ← port 80 → svc-lb ← port 7501 → callee 
+</code></pre>
+<p>Which means that the traffic flowing on port 80 is basically the aggregate of all service traffic and that we cannot see the traffic directly from caller to callee, but only the aggregate from caller to svc-lb and from svc-lb to callee.</p>
+<p>This is something that may be alleviated a bit in the future as we are thinking about removing the load balancer and having applications doing the load balancing themselves using information from Zookeeper.</p>
+<p>Boundary settings on the dashboard can be driven entirely from their <a href="https://app.boundary.com/docs" target="_blank">REST API</a>, which provides the added convenience of being able to integrate with your own configuration management system such as Puppet or Chef and a set of backend applications which may contain metadata about your environment.</p>
+<p>The REST API is useful to define application aliases which gives names to a protocol:port (eg: ‘svc-product’ for TCP 7501), send deployment events or integrate with other systems (it can subscribe to NewRelic events via RSS).</p>
+<p>We have only scratched the surface of Boundary so far and we are very excited about the direction it is taking and what is being developed. It has already proved extremely useful in identifying traffic volume and patterns occurring between services and databases. Something that would have required a lot more tedious investigative work can basically be done now in a few minutes and with much more flexibility than we could initially imagine and with no direct investment.</p>
+<p>I hope that this (long) blog post will be helpful to some people who are facing the same challenges of not having enough visibility in their network traffic. If however you know of any interesting tool in that space, feel free to drop a note.</p>
+<p>On a slightly unrelated note, we are also users of a nice library from Boundary called <a href="https://github.com/boundary/ordasity" target="_blank">Ordasity</a>. It is a great way to distribute workload across nodes via Zookeeper. It was brought to our attention during <a href="https://twitter.com/cscotta" target="_blank">Scott Andreas</a>’s tech talk at Gilt Groupe (another one !), and it might be the topic of another blog post.</p>
+<p>&ndash; stephane</p>

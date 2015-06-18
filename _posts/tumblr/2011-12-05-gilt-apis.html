@@ -1,0 +1,22 @@
+---
+layout: post
+title: Gilt APIs
+date: '2011-12-05T06:48:00-05:00'
+tags: []
+tumblr_url: http://tech.gilt.com/post/13776099274/gilt-apis
+---
+<div>
+<p>Over the next few months, Gilt will be exposing its data model via a new suite of public APIs. We&rsquo;re excited to make our data available to a broader audience of hackers, and we can&rsquo;t wait to see what people do with it.</p>
+<p>Our first API is a set of Atom Pub feeds, which let you see our active and upcoming sales, either en masse, or store by store.</p>
+<p>For example, <a href="https://api.gilt.com/v1/sales/active.atom" target="_blank">https://api.gilt.com/v1/sales/active.atom</a> shows all the active sales on gilt.com, or you can hit <a href="https://api.gilt.com/v1/sales/upcoming.atom" target="_blank">https://api.gilt.com/v1/sales/upcoming.atom</a> to see what sales are coming soon.</p>
+<p>You can see just the active or upcoming sales for some of our stores as well, for example:</p>
+<ul><li><a href="https://api.gilt.com/v1/sales/men/active.atom" target="_blank">https://api.gilt.com/v1/sales/men/active.atom</a></li>
+<li><a href="https://api.gilt.com/v1/sales/women/active.atom" target="_blank">https://api.gilt.com/v1/sales/women/active.atom</a></li>
+<li><a href="https://api.gilt.com/v1/sales/kids/active.atom" target="_blank">https://api.gilt.com/v1/sales/kids/active.atom</a></li>
+<li><a href="https://api.gilt.com/v1/sales/home/active.atom" target="_blank">https://api.gilt.com/v1/sales/home/active.atom</a></li>
+</ul><p>All our available feeds can be concisely written using a regex:</p>
+<pre><a href="https://api.gilt.com/v1/sales" target="_blank">https://api.gilt.com/v1/sales</a>(/men|/women|/kids|/home)?/(active|upcoming).atom</pre>
+<p>We&rsquo;ll be rolling out more details soon; this is our first toe in the water.</p>
+<p>Enjoy!</p>
+<p>- Gilt API Team</p>
+</div>

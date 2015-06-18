@@ -1,0 +1,38 @@
+---
+layout: post
+title: 'Meet Groc 0.6.0: an Updated Version of Our Favorite Frontend Documentation
+  Generator'
+date: '2013-09-19T14:33:00-04:00'
+tags:
+- Groc
+- frontend
+- automated documentation
+- tools
+- Jeremy Ashkenas
+- Docco
+- Grunt
+- Donald Knuth
+- open source
+- Ian MacLeod
+- literate programming
+- Kevan Davis
+- Eric Shepherd
+tumblr_url: http://tech.gilt.com/post/61686385959/meet-groc-0-6-0-an-updated-version-of-our
+---
+<p>After reading Gilt Senior Software Engineer Kevan Davis&rsquo; post on <a href="http://tech.gilt.com/2013/08/01/rock-your-doc-with-groc-our-favorite-automated" target="_blank">Groc</a>, a fork of Jeremy Ashkenas&rsquo; <a href="http://jashkenas.github.io/docco/" target="_blank">Docco</a> documentation generator, some of you emailed to ask us how to enable block comments. <span class="il">W</span>e reached out to Groc creator Ian MacLeod to see if we could all work together on publishing a new version. Ian accepted our proposal, and added Kevan and Lead Software Engineer Eric Shepherd to the Groc project. <a href="https://github.com/nevir/groc" target="_blank"><strong>Click here</strong></a> to check out the latest version, Groc 0.6.0. (Thanks, Ian!)</p>
+<p>In updating Groc, we collaborated with several other people (most notably Stephan Jorek) and did about two dozen pull requests&ndash;bringing in block comments, doc tags (both mentioned in our previous post), code folding (a new feature), and, of course, a slew of bug fixes and tweaks and polish. Going forward, we will publish regularly&ndash;using <a href="http://semver.org/" target="_blank">Semantic Versioning</a> as a guide for our version numbers.</p>
+<p>To get some perspective on Groc and its origins, I asked Ian why he created it. &ldquo;Initially, I was just looking for some additional functionality for <a href="https://github.com/jashkenas/docco" target="_blank">Docco</a>&ndash;specifically, better support for projects organized into multiple directories,&rdquo; he explained. &ldquo;However, <a href="https://github.com/jashkenas/docco/pull/49" target="_blank">those changes</a> added quite a bit of complexity to Docco, and Jeremy preferred to keep Docco simple. So I went my own way (a fresh start allowed me to be more free structuring my own tool, and was also a great excuse to explore some of my other side ideas).&rdquo;</p>
+<p>In the documentation for Groc, Ian discusses <a href="http://en.wikipedia.org/wiki/Literate_programming" target="_blank">literate programming</a> as the methodology he chose when developing his project. Over the course of building Groc, he says, &ldquo;my opinion about literate programming changed drastically.  With Docco as my introduction to it, I viewed literate programming purely as an interleaving of comments with source.&rdquo; As an author of a &ldquo;literate programming tool,&rdquo; he thought it wise to study up on the subject, and &ldquo;devoured&rdquo; Donald Knuth&rsquo;s <em><a href="http://www.amazon.com/dp/0937073806" target="_blank">Literate Programming</a></em>. His conclusion: &ldquo;Wow, what an over-complex and dated mess it is!&rdquo;</p>
+<p>Ian explains:</p>
+<blockquote>
+<div>As defined by Knuth, literate programming is about writing documentation that can be transformed into code.  After all, his motivation was to be able to publish his projects as <em>books</em><em>.</em>  His <a href="http://en.wikipedia.org/wiki/WEB" target="_blank">literate programming tools</a> were effectively meta-programming tools: your documentation defined macros and snippets of source; <span>tangle</span> would read that and spit out generated source, while <span>weave</span> would take the same input and spit out generated documentation. I very quickly formed the opinion that the &lsquo;pure&rsquo; literate programming approach was not very compatible with current trends and projects.  However, the <em>spirit</em> of literate programming is eminently applicable to code from any era: <em>Source code should be written such that it is easily understood by and organized for humans.</em>  Most code you see today is written for the machine first, human second. In practice, this means you apply a few methodologies (that differ from traditional source writing):</div>
+</blockquote>
+<blockquote>
+<ul><li><em>Source code should be grouped by concept, much as you&rsquo;d group content for a reference book.</em> This applies at many levels (file and directory organization, sections within a file, method grouping within a class, etc).</li>
+</ul><ul><li>For example, the file structure of a Rails project is the antithesis of logical grouping.  Files for each concept are strewn throughout the project (<em>very</em> consistent naming, and easy for a machine; but not always friendly to the human).  LP can mean more work for tools.</li>
+</ul><ul><li>Or, within a class definition: it is common to see methods grouped by their visibility; whereas it is often <em>much</em> clearer to the human if public methods and the private helpers they call are grouped more closely together.</li>
+</ul><ul><li><em>Source should have a narrative.</em></li>
+</ul><ul><li>When method documentation talks about optional behavior; those comments should be located <em>with the code that implements that optional behavior</em>. In practice, this often means heavily reorganizing conditional logic and adopting a flat style (avoid nested conditionals).</li>
+</ul><ul><li>Similarly, the file/directory organization should try to minimize the amount of seeking that someone needs to perform in order to understand the source. They should be able to, ideally, read straight through the files in some order.</li>
+</ul></blockquote>
+<p>As for the inspiration for Groc, Ian recalls having a &ldquo;very long&rdquo; brainstorming session of names that seemed similar to Docco (it being the inspiration), but different enough to not confuse people. &ldquo;At some point I combined 'doc&rsquo; and 'grok,&rsquo; and it stuck as a fantastic name: you want to grok your source and documentation, after all.&quot; </p>

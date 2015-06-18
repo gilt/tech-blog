@@ -1,0 +1,240 @@
+---
+layout: post
+title: 'Old Browsers in eCommerce: What to do with IE6?'
+date: '2012-02-07T21:34:00-05:00'
+tags: []
+tumblr_url: http://tech.gilt.com/post/17243913074/old-browsers-in-ecommerce-what-to-do-with-ie6
+---
+<p>In a humanitarian effort to improve developer quality of life, we at Gilt recently stopped supporting Internet Explorer 6. This means we no longer use, develop or <a href="http://i.imgur.com/yMkRc.png" target="_blank">test for the browser</a>. Given the <a href="http://www.ie6countdown.com/" target="_blank">small and shrinking population of IE6 users</a> and the <a href="http://windowsteamblog.com/ie/b/ie/archive/2011/12/15/ie-to-start-automatic-upgrades-across-windows-xp-windows-vista-and-windows-7.aspx" target="_blank">auto-upgrades planned for this year</a>, we felt that it is worth our developers&rsquo; happiness (and sanity) to abandon support efforts. Our FEET (Front End Engineering Team) are certainly happy to let go of &rsquo;[if IE 6]&rsquo; conditional comment hackery and other ugly shoehorning techniques.</p>
+<p>We found ourselves wondering&hellip; <strong>Would IE6 users have a better shopping experience if we redirected them to the minimalistic <a href="http://m.gilt.com" target="_blank">mobile version of gilt.com</a>? Could the simple no frills layout designed for mobile devices just might be an improvement over the fully-featured yet unsupported site for IE6 users?</strong> Let&rsquo;s walk through the exercise of answering this question, from data collection to results summarization.</p>
+<p><strong>Split Testing</strong></p>
+<p>Most often the best way to answer a question is with an experiment. In the context of Gilt and e-commerce, we find split testing to be an effective method for assessing the effect of changes (treatments) to the user shopping experience, be it the reorganization of a sale page or a modification to our checkout flow. Controlled split tests allow us to gauge the impact on our KPIs with statistical confidence, relying less on opinion and more on evidence-based reasoning.</p>
+<p>The idea is to separate a representative subset of the user-base to expose the change to and assess the effects of the change on this smaller group before making the decision to roll out to all visitors. This &lsquo;test&rsquo; subset should be paired with a mutually exclusive 'control&rsquo; subset. Both subsets should be randomly sampled such that they are characteristically the same as each other. We may or may not choose to limit the testing to a segment of our users. For instance, we may want to limit the test to NY members, in which case our 'test&rsquo; and 'control&rsquo; groups should only be chosen from members in the NY population. </p>
+<p><strong>Comparing Conversion Rates</strong></p>
+<p>If the redirect has any notable effect on the user experience, it should show in the proportion of buyers-to-visitors, a.k.a. 'visitor conversion rate&rsquo;. Conversion rates are proportions and from a statistical point of view are quite easy to work with. We will be comparing the conversion rate of a 'Test&rsquo; group that sees the mobile site to a 'Control&rsquo; group that sees the regular site. For sake of brevity, I will not go into detail about the nuances of measuring our numerous other site metrics (revenue, dwell time, drop-off&hellip; etc.) and test scenarios (multi-variate, overlapping, longitudinal&hellip; etc.).</p>
+<p>On a high-level, we want to accomplish the following steps:</p>
+<ol><li>Segment out our IE6 visitors - our 'IE6 base&rsquo;.</li>
+<li>Randomly sample a representative test group from the IE6 base and redirect them to m.gilt.com.</li>
+<li>Measure the difference in 'visitor conversion&rsquo; between the test group and the remainder of the IE6 base (control).</li>
+</ol><p>Test or control group membership is tracked via a randomly assigned 'partition&rsquo; number (integer) that is issued on first visit in a cookie and persisted thereafter in our operational database. We can then redirect IE6 users to m.gilt.com based on the partition they have and whether the user-agent string indicates they are running IE6. The mobile version of our site is very lean and lacks javascript tagging for tracking site interactions. As a result, we will need to fall back to some good old ad-hoc data munging from our server logs and match up against our OLTP database to piece together the conversion rates per group.</p>
+<p>We can segment out IE6 visits quite easily by checking the GET request user-agent string in our server logs. The string should contain 'MSIE 6.0&rsquo;.</p>
+<p>Example user-agent string: &rsquo;<em class="t"><em class="t"><em class="t">Mozilla</em>/<em class="t">4</em></em>.<em class="t">0</em></em><span> (</span><em class="t">compatible</em><span>; </span><em class="t a"><em class="t">MSIE</em> <em class="t"><em class="t">6</em>.<em class="t">0</em></em></em><span>; </span><em class="t">Windows</em><span> </span><em class="t">NT</em><span> </span><em class="t"><em class="t">5</em>.<em class="t">1</em></em><span>)&rsquo;.</span> </p>
+<p>Splunk is a great tool for efficiently parsing and aggregating statistics from log files. We can use it find unique IE6 visitors by day (our IE6 base group) with the following query:</p>
+<p>Splunk query 1 (output filename: all_ie6_users.csv):</p>
+<pre>host="olb*" guid "compatible; MSIE 6.0" | stats count by guid, date_mday, date_month
+</pre>
+<p>Half of these users belong to our test group and were randomly sectioned out and redirected to mobile. For this test we added logging to allow us to find those visitors from the test group that were redirected with the search string 'IE6 mobile redirect&rsquo;.</p>
+<p>Splunk query 2 (output filename: test_ie6_users.csv):</p>
+<pre>host="olb*" guid "IE6 mobile redirect" | stats count by guid, date_mday, date_month
+</pre>
+<p><em>Note: &ldquo;olb*&rdquo; limits the search to our public facing load balancers that are taking care of the redirection and 'guid&rsquo; is a unique identifier for each user.</em></p>
+<p>The flat-files returned by Splunk are structured like so:</p>
+<pre> guid             | month_day |  month   |  count  
+------------------+-----------+----------+---------
+ 00e020bc-ccc8... |         3 | december |      35
+ 00ea4710-5be5... |         2 | december |      12
+ 0123d860-34aa... |         1 | december |       8
+</pre>
+<p>The results of these queries tell us who belongs in our test and control groups and when they visited. Users from Query 2 are 'Test&rsquo; and users from Query 1 that were not also in Query 2 are 'Control&rsquo;. At this point I will move these files into temporary tables on a copy of our Postgres transactional database.</p>
+<pre>create temp table all_ie6_users (guid varchar(500), month_day integer, month varchar(50), count integer); 
+\copy all_ie6_users from all_ie6_users.csv with delimiter ',' csv header 
+create temp table test_ie6_users (guid varchar(500), month_day integer, month varchar(50), count integer);
+\copy test_ie6_users from test_ie6_users.csv with delimiter ',' csv header
+</pre>
+<p>These two tables can be combined to produce one recordset, with a label for 'Test&rsquo; or 'Control&rsquo; and a standard date timestamp.</p>
+<pre>create temp table labeled_ie6_users as
+select
+  date(all_ie6_users.month || ' ' || all_ie6_users.month_day || ', 2011') as day_timestamp,
+  (case when test_ie6_users.guid is null then 'Control' else 'Test' end) as test_group,
+  all_ie6_users.guid
+from all_ie6_users left join test_ie6_users
+  on all_ie6_users.guid = test_ie6_users.guid
+  and all_ie6_users.month_day = test_ie6_users.month_day
+  and all_ie6_users.month = test_ie6_users.month;
+
+select * from labeled_ie6_users limit 3;
+ test_group |    day_timestamp    | guid             
+------------+---------------------+------------------
+ Test       | 2011-12-01 00:00:00 | 00e020bc-ccc8... 
+ Control    | 2011-12-02 00:00:00 | 00ea4710-5be5... 
+ Control    | 2011-12-02 00:00:00 | 0123d860-34aa... 
+</pre>
+<p>Our ingredients in place, we can now calculate conversion rates per group by cross-referencing the guids and dates with our transaction records and counting unique buyers and visitors per day. These daily counts are then aggregated into a final 'Daily Visitor Conversion Rate&rsquo; per test group. <em>Note, a visitor/buyer is only counted once per day even if they visit/purchase multiple times, a bit of precision lost because we lack mobile site page view data.</em></p>
+<pre> test_group | buyers | visitors | conversion_rate
+------------+--------+----------+-------------------
+ Test       | 1154   | 36794    | .03136381
+ Control    | 1749   | 47275    | .0369963
+
+Basis Point Difference: (.03136381 - .0369963) = -0.00563249
+% Lift, Test over Control: -0.00563249/.0369963 = -0.1522447 = -15.22%
+</pre>
+<p>The &rsquo;% Lift&rsquo; value is what we really care about. It tells us that 15.22% fewer daily visitors from the test group made a purchase relative to the control group.</p>
+<p><strong>Do we trust that this difference has anything to do with the redirect treatment? How do we know that it is not just random noise?</strong></p>
+<p>We can calculate a '95% confidence interval&rsquo; to quantify a range where the 'real&rsquo; difference in conversion is likely to be. A confidence interval provides us with a lower and upper bound on where we would expect the difference in conversion rate to fall if we continued the test indefinitely. The more evidence (data) we have, the narrower the confidence interval. The width of the interval is a function of the size of our sample (# visitors) and the magnitude of the absolute difference between our test and control proportions (Lift %). With a larger sample and/or absolute difference, we get a tighter range. For example, a 10% difference between two samples of 10M observations will have a much narrower interval than a 1% difference between two samples of 100 observations.</p>
+<p><strong>Calculating a 95% Confidence Interval</strong></p>
+<p><a href="http://www.rproject.org" target="_blank">R is an open source statistical computing language</a> (technically a dialect of S-Plus) with a robust collection of libraries. Below is some R code for producing confidence limits around the difference of two proportions. We make use of the handy <a href="http://stat.ethz.ch/R-manual/R-patched/library/stats/html/prop.test.html" target="_blank">prop.test()</a> (Proportions Test) function for the heavy lifting in our calculation.</p>
+<pre>test_numerator &lt;- 1154
+test_denominator &lt;- 36794
+ctrl_numerator &lt;- 1749
+ctrl_denominator &lt;- 47275
+test_rate = test_numerator/test_denominator
+ctrl_rate = ctrl_numerator/ctrl_denominator
+
+
+model &lt;- prop.test(x=c(as.numeric(test_numerator),as.numeric(ctrl_numerator)), n=c(as.numeric(test_denominator),as.numeric(ctrl_denominator)), conf.level = .95, correct=F)
+
+model_coef &lt;- (model$estimate[1] - model$estimate[2]) / model$estimate[2]
+
+prop_results &lt;-
+  data.frame(
+   test_value = test_rate,
+   ctrl_value = ctrl_rate,
+   test_lift = model_coef,
+   conf_int_low = model$conf.int[1]/model$estimate[2],
+   conf_int_hi = model$conf.int[2]/model$estimate[2],
+   row.names = NULL
+ )
+
+&gt; prop_results
+  test_value ctrl_value  test_lift conf_int_low conf_int_hi
+1 0.03136381  0.0369963 -0.1522447   -0.2194746 -0.08501468
+</pre>
+<p><strong>Final Results:</strong></p>
+<pre><strong>
+     Test Visitor Conversion Rate:  3.136% (1154/36794)
+  Control Visitor Conversion Rate:  3.7% (1749/47275)
+         Test Lift over Control %:  -15.224 %
+Test Lift 95% Confidence Interval:  [-21.947% to -8.501%]
+</strong>
+<p><img src="http://media.tumblr.com/tumblr_lyu2zziFx81r6iuv3.png"/></p>
+</pre>
+<p>Based on the results, we can be fairly certain that IE6 users redirected to our mobile site buy less often. 8.5% - 22% fewer visitors make a purchase if pointed to the mobile site. In stats lingo, our result is 'significant&rsquo; at 95% confidence because 0 is not between -.22 and -.085. In other words, we are 95% confident that the difference between test and control is not positive. If you remember p-values from statistics 101, a 95% confidence interval that does not include 0 is equivalent to a p-value &lt; 0.05. Not only can we say the effect is significantly negative but we can also speak to just how negative the effect is, which is lacking in the typical <a href="http://theoryandscience.icaap.org/content/vol4.1/02_denis.html" target="_blank">NHST approach</a> to testing which gives you a yes/no indication of difference rather than a magnitude.</p>
+<p>Keep in mind, there&rsquo;s no free lunch and intepretting results can be tricky. A counterintuitive result may leave you with more unanswered questions than you started with and 'significant&rsquo; does not necessarily mean 'important&rsquo; if the magnitude is trivial. Nonetheless, doing the work of interpreting the data is a worthwhile learning experience and a robust split testing methodology is an invaluable tool for decision making. When working in teams, everyone has an opinion but as the statistician W. Edwards Deming is often quoted, “In God we trust; all others must bring data.”</p>
+<p>Read on for more detail on how the proportions test works with sample code&hellip;</p>
+<!-- more -->
+<p>Now you may be wondering what exactly is going on behind the scenes for the prop.test() function to produce our confidence interval. The calculation is fairly straightforward and can be implemented in virtually any language capable of simple math.</p>
+<p>Components:</p>
+<ol><li>Z-score = 1.96 for 95% confidence (if significance is being calculated repeatedly, you will want to correct for multiple comparisons with something like a <a href="http://en.wikipedia.org/wiki/Bonferroni_correction" target="_blank">Bonferroni correction</a>) </li>
+<li>Test Numerator = #buyers from the test group</li>
+<li>Test Denominator = #visitors from the test group</li>
+<li>Control Numerator = #buyers from the control group</li>
+<li>Control Denominator = #visitors from the control group</li>
+</ol><p>Here is a decomposition of what the prop.test() is doing in R, borrowed from the source code and simplified for our use case:</p>
+<pre>  test_numerator &lt;- 1154
+  test_denominator &lt;- 36794
+  ctrl_numerator &lt;- 1749
+  ctrl_denominator &lt;- 47275
+  test_rate = test_numerator/test_denominator
+  ctrl_rate = ctrl_numerator/ctrl_denominator
+
+  x=c(as.numeric(test_numerator),as.numeric(ctrl_numerator))
+  n=c(as.numeric(test_denominator),as.numeric(ctrl_denominator))
+  conf.level = .95
+  zscore = qnorm((1 + conf.level)/2)
+
+  estimate &lt;- x/n
+
+  DELTA &lt;- estimate[1L] - estimate[2L]
+  WIDTH &lt;- zscore * sqrt(sum(estimate * (1 - estimate)/n)) + 0 * sum(1/n)
+  conf.int &lt;- c(max(DELTA - WIDTH, -1), min(DELTA + WIDTH, 1))
+
+  model_coef &lt;- (estimate[1] - estimate[2]) / estimate[2]
+
+  prop_results &lt;-
+    data.frame(
+      test_value = test_rate,
+      ctrl_value = ctrl_rate,
+      test_lift = model_coef,
+      conf_int_low = conf.int[1]/estimate[2],
+      conf_int_hi = conf.int[2]/estimate[2],
+      row.names = NULL
+    )
+
+&gt; prop_results
+  test_value ctrl_value  test_lift conf_int_low conf_int_hi
+1 0.03136381  0.0369963 -0.1522447   -0.2194746 -0.08501468
+</pre>
+<p>Ported to Java (using Apache Commons Math):</p>
+<pre>import org.apache.commons.math.MathException;
+import org.apache.commons.math.distribution.NormalDistribution;
+import org.apache.commons.math.distribution.NormalDistributionImpl;
+...
+
+long test_numerator = 1154;
+long test_denominator = 36794;
+long ctrl_numerator = 1749;
+long ctrl_denominator = 47275;
+
+double confidence = .95;
+
+double test_rate = new Long(test_numerator).doubleValue()/ new Long(test_denominator).doubleValue();
+double test_std = test_rate*(1-test_rate)/ new Long(test_denominator).doubleValue();
+
+double ctrl_rate = new Long(ctrl_numerator).doubleValue()/ new Long(ctrl_denominator).doubleValue();
+double ctrl_std = ctrl_rate*(1-ctrl_rate)/ctrl_denominator;
+
+double delta = test_rate - ctrl_rate;
+double test_lift = delta/ctrl_rate;
+double conf_plus_one = confidence + 1;
+
+try {
+	NormalDistribution n = new NormalDistributionImpl();
+	double qwidth = n.inverseCumulativeProbability(conf_plus_one/2);
+	double width = qwidth*Math.sqrt(ctrl_std+test_std);
+	double conf_int_low = Math.max(delta - width,-1)/ctrl_rate;
+	double conf_int_hi = Math.min(delta + width,1)/ctrl_rate;
+
+} catch (IllegalArgumentException e) {
+	e.printStackTrace();
+} catch (MathException e) {
+	e.printStackTrace();
+}
+
+...
+</pre>
+<p>And Postgres SQL (not for the faint of heart!):</p>
+<pre>\set test_numerator 1154::float<!-- br-->
+\set test_denominator 36794::float<!-- br-->
+\set ctrl_numerator 1749::float<!-- br-->
+\set ctrl_denominator 47275::float<!-- br-->
+<!-- br-->
+select<!-- br-->
+  :test_numerator/:test_denominator as test_value,<!-- br-->
+  :ctrl_numerator/:ctrl_denominator as ctrl_value,<!-- br-->
+  ((:test_numerator/:test_denominator) - (:ctrl_numerator/:ctrl_denominator))/<!-- br-->
+  (:ctrl_numerator/:ctrl_denominator) as test_lift,<!-- br-->
+  greatest(<!-- br-->
+    (:test_numerator/:test_denominator) - (:ctrl_numerator/:ctrl_denominator)<!-- br-->
+      - (<!-- br-->
+        -- z-score for 95% CI<!-- br-->
+        1.959964*sqrt(<!-- br-->
+          (<!-- br-->
+            (:test_numerator/:test_denominator)<!-- br-->
+              *(1-(:test_numerator/:test_denominator))/<!-- br-->
+                :test_denominator<!-- br-->
+          ) + (<!-- br-->
+            (:ctrl_numerator/:ctrl_denominator)<!-- br-->
+              *(1-(:ctrl_numerator/:ctrl_denominator))/<!-- br-->
+                :ctrl_denominator<!-- br-->
+          )<!-- br-->
+        )<!-- br-->
+      )<!-- br-->
+  ,-1)/(:ctrl_numerator/:ctrl_denominator) as conf_int_low_95,<!-- br-->
+  least(<!-- br-->
+    (:test_numerator/:test_denominator) - (:ctrl_numerator/:ctrl_denominator)<!-- br-->
+      + (<!-- br-->
+        -- z-score for 95% CI<!-- br-->
+        1.959964*sqrt(<!-- br-->
+          (<!-- br-->
+            (:test_numerator/:test_denominator)<!-- br-->
+              *(1-(:test_numerator/:test_denominator))/<!-- br-->
+                :test_denominator<!-- br-->
+          ) + (<!-- br-->
+            (:ctrl_numerator/:ctrl_denominator)<!-- br-->
+              *(1-(:ctrl_numerator/:ctrl_denominator))/<!-- br-->
+                :ctrl_denominator<!-- br-->
+          )<!-- br-->
+        )<!-- br-->
+      )<!-- br-->
+  ,1)/(:ctrl_numerator/:ctrl_denominator) as conf_int_hi_95;
+</pre>
