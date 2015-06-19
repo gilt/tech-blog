@@ -1,0 +1,27 @@
+
+@accent: #c98702;
+@primary: #383838;
+@secondary: #737373;
+@tertiary: #9e9e9e;
+@error: #e12626;
+
+.primary () {
+  color: @primary;
+}
+
+.secondary () {
+  color: @secondary;
+}
+
+.tertiary () {
+  color: @tertiary;
+}
+
+.highlight (@tint: @accent) {
+  color: @tint;
+}
+
+.gilded () {
+  .highlight(@accent);
+}
+

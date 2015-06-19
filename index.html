@@ -1,0 +1,34 @@
+---
+layout: page
+---
+
+{% for post in paginator.posts %}
+<article>
+  <span class="separator">Gilt Tech</span>
+  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  {% if post.subtitle %}
+  <h2>{{post.subtitle}}</h2>
+  {% endif %}
+  <time>{{ post.date | date_to_long_string }}</time>
+
+  <div class="content">
+    {{ post.content }}
+  </div>
+  <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+  <span class="separator">Tech</span>
+</article>
+{% endfor %}
+
+<div class="pager">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="prev">Previous</a>
+  {% else %}
+    <span class="prev">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>

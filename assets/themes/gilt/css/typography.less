@@ -1,0 +1,121 @@
+@proxima: "Proxima Nova Regular";
+@proxima-semibold: "Proxima Nova Semibold";
+@freight: "Freight Big Pro Black";
+@aachen: "Aachen Bold";
+@din: "DIN 1451 Mittelschrift Standard";
+@museo: "Museo Slab 300";
+@neutra: "Neutraface2TextBook";
+
+@sans: @proxima, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sans-alternate: @neutra, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serif: Georgia, "Times New Roman", Times, serif;
+
+@baseSize: 13px;
+@smallSize: 11px;
+@largeSize: 15px;
+
+.serif () {
+  font-family: @serif;
+}
+
+.sans () {
+  font-family: @sans;
+  font-weight: normal;
+}
+
+.sans-strong () {
+  font-family: @proxima-semibold, @sans;
+  font-weight: 600;
+}
+
+.sans-alternate () {
+  font-family: @sans-alternate;
+  font-weight: normal;
+}
+
+.plain () {
+  .sans;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sans-alternate-plain () {
+  .sans-alternate;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.small () {
+  font-size: 11px;
+}
+
+.large () {
+  font-size: @largeSize;
+}
+
+.strike () {
+  text-decoration: line-through;
+}
+
+.flourish () {
+  .serif;
+  font-style: italic;
+}
+
+.quote () {
+  &:before {
+    content:"\201C";
+  }
+
+  &:after {
+    content:"\201D";
+  }
+}
+
+.h1 () {
+  font-size: 36px;
+}
+
+.h2 () {
+  font-size: 22px;
+  .flourish;
+  font-style: italic;
+}
+
+.h3 () {
+  .plain;
+  font-size: 22px;
+}
+
+.h4 () {
+  font-size: 18px;
+  .flourish;
+}
+
+.h5 () {
+  font-size: 15px;
+  .flourish;
+}
+
+.h6 () {
+  font-size: @baseSize;
+  .sans-strong;
+}
+
+.primary-link () {
+  text-decoration: none;
+  color: @accent;
+  &:hover {
+    text-decoration: underline;
+    color: @primary;
+  }
+}
+
+.secondary-link () {
+  text-decoration: underline;
+  color: @primary;
+  &:hover {
+    text-decoration: none;
+    color: @accent;
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ site.title }}{% if page.title %} / {{ page.title }}{% endif %}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="{{ ASSET_PATH }}/img/favicon.ico">
+    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet/less" href="{{ ASSET_PATH }}/css/style.less">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+
+    <script>
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'aed9a48340b830002b74641e868bfcec';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+
+    <div id="body">
+      <header>
+        {% include themes/gilt/nav.html %}
+        <section id="subnav">
+          <span>
+            <a>Categories</a>
+            <p class="social github"><a href="https://github.com/gilt" title="Github"></a></p>
+            <p class="social twitter"><a href="http://tech.gilt.com/twitter" title="Twitter"></a></p>
+            <p class="social facebook"><a href="http://tech.gilt.com/facebook" title="Facebook"></a></p>
+            <p class="social google"><a href="http://tech.gilt.com/google+" title="Google+"></a></p>
+            <span id="search">
+              <input type="search" placeholder="Search …" title="Search for:" />
+            </span>
+          </span>
+        </section>
+        <a class="logo" href="{{ HOME_PATH }}" class="logo"></a>
+        <h1>{{ site.tagline }}</h1>
+      </header>
+      <section id="main">
+{{ content }}
+      </section>
+      <footer>
+        <section id="copyright">
+          &copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+        </section>
+        {% include themes/gilt/nav.html %}
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{ ASSET_PATH }}/js/main.js"></script>
+  </body>
+</html>
