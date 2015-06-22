@@ -27,7 +27,7 @@ body {
   padding: 0;
 }
 
-header {
+#body > header {
   display: block;
   margin: 0 0 40px 0;
   overflow: visible;
@@ -87,11 +87,13 @@ nav {
 
 #subnav {
   border-bottom: 1px solid @secondary;
+  height: 54px;
   text-align: justify;
 
   > span {
     .body;
     display: table;
+    height: 34px;
     padding: 10px 0;
     position: relative;
 
@@ -101,6 +103,7 @@ nav {
         cursor: pointer;
         display: table-cell;
         font-size: 14px;
+        height: 34px;
         letter-spacing: 0.4px;
         text-align: center;
         text-decoration: none;
@@ -118,6 +121,52 @@ nav {
 
     > a:last-child {
       text-align: right;
+    }
+
+    menu {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-bottom-color: @secondary;
+      display: none;
+      left: -4px;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 54px;
+      z-index: 999;
+
+      menuitem {
+        display: block;
+        min-width: 160px;
+        padding: 4px 10px;
+      }
+
+      a {
+        .sans-alternate;
+        .primary;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      a:hover {
+        .highlight;
+      }
+    }
+
+    #search-results {
+      border-top: none;
+      left: 0px;
+      padding-top: 10px;
+      top: 44px;
+      width: 938px;
+
+      menuitem {
+        padding-bottom: 10px;
+      }
+
+      a {
+        font-size: 22px;
+      }
     }
   }
 
@@ -191,6 +240,7 @@ nav {
     border-color: @primary;
     left: 0;
     position: absolute;
+    top: 11px;
   }
 }
 
@@ -229,11 +279,46 @@ nav {
       margin: 0 0 0.2em 0;
     }
 
-    time {
+    > header {
       .secondary;
       display: block;
-      margin-bottom: 0.4em;
+      margin-bottom: 0.6em;
       text-align: center;
+
+      a {
+        .secondary;
+        text-decoration: none;
+      }
+
+      a:hover {
+        .highlight;
+      }
+
+      cite {
+        display: inline-block;
+        text-align: right;
+      }
+
+      cite:after {
+        content: "\2022";
+        padding: 0 10px;
+      }
+
+      time {
+        .secondary;
+        display: inline-block;
+        font-style: italic;
+        text-align: center;
+      }
+
+      span.categories {
+        text-align: left;
+      }
+
+      span.categories:before {
+        content: "\2022";
+        padding: 0 6px;
+      }
     }
 
     .content {
@@ -247,10 +332,94 @@ nav {
       }
 
       h2 {
-        .secondary;
+        .primary;
         font-size: 26px;
         padding-left: 12px;
         text-align: left;
+      }
+
+      p {
+        line-height: 1.4em;
+      }
+
+      p a {
+        .primary;
+        border-bottom: 1px dashed @tertiary;
+        padding-right: 4px;
+        text-decoration: none;
+      }
+
+      p a:hover {
+        .highlight;
+        border-bottom: none;
+      }
+
+      p a:before {
+        color: @tertiary;
+        content: "\f0ac";
+        font-family: 'FontAwesome';
+        padding: 0 6px 0 4px;
+      }
+
+      p a:hover:before {
+        color: @primary;
+      }
+
+      /* this supports the imported tumblr posts' code blocks */
+      > pre {
+        background: #f8f8f8;
+        border: 1px solid #cccccc;
+        display: block;
+        font-family: 'Consolas', 'Inconsolata', 'Monaco', 'Lucida Console', 'Liberation Mono', 'Courier New';
+        font-size: 13px;
+        line-height: 19px;
+        overflow-x: auto;
+        padding: 4px 10px;
+        white-space: pre;
+        word-wrap: normal;
+      }
+
+      /* this supports the imported tumblr posts' inline code blocks */
+      p strong code {
+        background: rgba(0,0,0,0.04);
+        border-radius: 3px;
+        color: #0086b3;
+        font-size: 0.85em;
+        font-weight: normal;
+        line-height: 1em;
+        padding: 0.2em 0;
+      }
+
+      p strong code:before,
+      p strong code:after {
+        letter-spacing: -0.2em;
+        content: "\00a0";
+      }
+    }
+
+    section.tags {
+      display: block;
+      padding: 10px 0;
+
+      a {
+        .sans-alternate;
+        .secondary;
+        border-left: 4px solid #e5e5e5;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 26px;
+        margin: 10px;
+        padding: 0 2px 0 6px;
+        text-decoration: none;
+        vertical-align: middle;
+
+        span {
+          display: none;
+        }
+      }
+
+      a:hover {
+        .highlight;
       }
     }
 
@@ -299,5 +468,12 @@ footer {
 
   nav span {
     border: 0;
+  }
+
+  section.copyright {
+    .sans-alternate;
+    .secondary;
+    padding: 10px;
+    text-align: center;
   }
 }

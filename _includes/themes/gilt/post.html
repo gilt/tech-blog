@@ -1,29 +1,64 @@
 <article>
-  <h1>{{ page.title }}</h1>
+  <h1><a href="{{ BASE_PATH }}{{ page.url }}">{{ page.title }}</a></h1>
   {% if page.subtitle %}
   <h2>{{page.subtitle}}</h2>
   {% endif %}
-  <time>{{ page.date | date_to_long_string }}</time>
+  <header>
+    {% if page.author %}
+    <cite><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ page.author }}-ref">{{ page.author }}</a></cite>
+    {% endif %}
+    <time>{{ page.date | date_to_long_string }}</time>
+    {% if page.category %}
+    <span class="categories">
+      <a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ page.author }}-ref">{{ page.category  }}</a>
+    </span>
+    {% endif %}
+    {% unless page.categories == empty %}
+    <span class="categories">
+    {% assign cats = page.categories %}
+      {% if cats.first[0] == null %}
+        {% for cat in cats %}
+      <a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ cat }}-ref">{{ cat }}</a>
+        {% endfor %}
+      {% else %}
+        {% for cat in cats %}
+      <a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ cat[0] }}-ref">{{ cat[0] }}</a>
+        {% endfor %}
+      {% endif %}
+    </span>
+    {% endunless %}
+  </header>
 
   <div class="content">
-    {{ content }}
+    {{ page.content }}
   </div>
+
   <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213596"></div>
-</article>
-<!--
-  {% unless page.categories == empty %}
-  <ul class="tag_box inline">
-    <li><i class="glyphicon glyphicon-open"></i></li>
-    {% assign categories_list = page.categories %}
-    {% include JB/categories_list %}
-  </ul>
-  {% endunless %}
 
   {% unless page.tags == empty %}
-  <ul class="tag_box inline">
-    <li><i class="glyphicon glyphicon-tags"></i></li>
-    {% assign tags_list = page.tags %}
-    {% include JB/tags_list %}
-  </ul>
-  {% endunless %}
+  <section class="tags">
+{% comment %}
+<!--
+  Note:
+    Tags can be either a Hash of tag objects (hashes) or an Array of tag-names (strings).
+    The encapsulating 'if' statement checks whether tags_list is a Hash or Array.
+    site.tags is a Hash while page.tags is an array.
 -->
+{% endcomment %}
+
+    {% assign tags_list = page.tags %}
+
+    {% if tags_list.first[0] == null %}
+      {% for tag in tags_list %}
+    <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a>
+      {% endfor %}
+    {% else %}
+      {% for tag in tags_list %}
+    <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
+      {% endfor %}
+    {% endif %}
+
+  </section>
+  {% endunless %}
+
+</article>

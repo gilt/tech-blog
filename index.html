@@ -5,16 +5,67 @@ layout: page
 {% for post in paginator.posts %}
 <article>
   <span class="separator">Gilt Tech</span>
-  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  <h1><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
   {% if post.subtitle %}
   <h2>{{post.subtitle}}</h2>
   {% endif %}
-  <time>{{ post.date | date_to_long_string }}</time>
+  <header>
+    {% if post.author %}
+    <cite><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ post.author }}-ref">{{ post.author }}</a></cite>
+    {% endif %}
+    <time>{{ post.date | date_to_long_string }}</time>
+    {% if post.category %}
+    <span class="categories">
+      <a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ post.author }}-ref">{{ post.category  }}</a>
+    </span>
+    {% endif %}
+    {% unless post.categories == empty %}
+    <span class="categories">
+    {% assign cats = post.categories %}
+      {% if cats.first[0] == null %}
+        {% for cat in cats %}
+      <a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ cat }}-ref">{{ cat }}</a>
+        {% endfor %}
+      {% else %}
+        {% for cat in cats %}
+      <a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ cat[0] }}-ref">{{ cat[0] }}</a>
+        {% endfor %}
+      {% endif %}
+    </span>
+    {% endunless %}
+  </header>
 
   <div class="content">
     {{ post.content }}
   </div>
   <div class="shareaholic-canvas" data-app="share_buttons" data-app-id="18213622"></div>
+
+  {% unless post.tags == empty %}
+  <section class="tags">
+{% comment %}
+<!--
+  Notes:
+    Tags can be either a Hash of tag objects (hashes) or an Array of tag-names (strings).
+    The encapsulating 'if' statement checks whether tags_list is a Hash or Array.
+    site.tags is a Hash while post.tags is an array.
+-->
+{% endcomment %}
+
+    {% assign tags_list = post.tags %}
+
+    {% if tags_list.first[0] == null %}
+      {% for tag in tags_list %}
+    <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a>
+      {% endfor %}
+    {% else %}
+      {% for tag in tags_list %}
+    <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
+      {% endfor %}
+    {% endif %}
+
+  </section>
+  {% endunless %}
+
   <span class="separator">Tech</span>
 </article>
 {% endfor %}
