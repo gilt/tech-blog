@@ -6,16 +6,14 @@ group: navigation
 ---
 {% include JB/setup %}
 
-<ul class="tag_box inline">
-  {% assign tags_list = site.tags %}  
-  {% include JB/tags_list %}
-</ul>
-
-
-{% for tag in site.tags %} 
-  <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+<section id="site-categories">
+{% capture tags %}{% for tag in site.tags %}{{ tag[0] }}|{% endfor %}{% endcapture %}
+{% assign sortedtags = tags | split:'|' | sort %}
+{% for tag in sortedtags %}
+  <h2 id="{{ tag }}-ref">{{ tag }}</h2>
   <ul>
-    {% assign pages_list = tag[1] %}  
+    {% assign pages_list = site.tags[tag] %}
     {% include JB/pages_list %}
   </ul>
 {% endfor %}
+</section>

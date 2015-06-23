@@ -92,7 +92,7 @@ nav {
 
   > span {
     .body;
-    display: table;
+    display: block;
     height: 34px;
     padding: 10px 0;
     position: relative;
@@ -212,13 +212,15 @@ nav {
       .sans;
       .primary;
       border: 1px solid #e5e5e5;
+      border-radius: 0;
       box-sizing: border-box;
       display: inline-block;
       font-size: 16px;
       height: 32px;
       outline: none;
       padding-right: 40px;
-      width: 100%;
+      width: 156px;
+      -webkit-appearance: none;
     }
 
     input:before {
@@ -250,10 +252,58 @@ nav {
   .serif;
   font-size: 16px;
 
+  .page-header h1 {
+    .primary;
+    .sans-alternate;
+    text-align: center;
+    font-size: 42px;
+    line-height: 50px;
+    margin: 1em 0 0.2em 0;
+    text-transform: uppercase;
+  }
+
+  #site-categories,
+  #site-tags {
+
+    h2 {
+      .primary;
+      .serif;
+      border-bottom: 1px solid #dfdfdf;
+      font-style: italic;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.7;
+      margin: 14px 0;
+    }
+
+    h2:first-child {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      .sans;
+      font-size: 16px;
+      list-style: none;
+      padding: 0 0 10px 10px;
+
+      a {
+        .primary;
+        text-decoration: none;
+      }
+    }
+  }
+
   article {
     padding: 15px 0;
 
-    h1, h2 {
+    h1,
+    h2 {
       .primary;
       .sans-alternate;
       text-align: center;
@@ -451,6 +501,48 @@ nav {
       right: 0;
     }
   }
+
+  .pager {
+    .sans-alternate;
+    .secondary;
+    font-size: 24px;
+    height: 70px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+
+    .prev,
+    .next {
+      .secondary;
+      border: 1px solid #fff;
+      font-family: 'FontAwesome';
+      font-size: 40px;
+      padding: 10px 10px 8px 14px;
+      position: absolute;
+      text-decoration: none;
+      top: 10px;
+    }
+
+    .prev:hover,
+    .next:hover {
+      .primary;
+      border-color: @primary;
+    }
+
+    .prev {
+      left: 0;
+      padding: 10px 14px 8px 10px;
+    }
+
+    .count {
+      line-height: 70px;
+    }
+
+    .next {
+      right: 0;
+    }
+  }
 }
 
 #pager {
@@ -469,11 +561,11 @@ footer {
   nav span {
     border: 0;
   }
+}
 
-  section.copyright {
-    .sans-alternate;
-    .secondary;
-    padding: 10px;
-    text-align: center;
-  }
+#copyright {
+  .sans-alternate;
+  .secondary;
+  padding: 10px;
+  text-align: center;
 }

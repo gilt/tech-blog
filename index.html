@@ -72,14 +72,10 @@ layout: page
 
 <div class="pager">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="prev">Previous</a>
-  {% else %}
-    <span class="prev">Previous</span>
+    <a href="{{ BASE_PATH }}{{ paginator.previous_page_path }}" class="fa fa-chevron-left prev" title="Previous"></a>
   {% endif %}
-  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  <span class="count">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-  {% else %}
-    <span class="next ">Next</span>
+    <a href="{{ BASE_PATH }}{{ paginator.next_page_path }}" class="fa fa-chevron-right next" title="Next"></a>
   {% endif %}
 </div>
