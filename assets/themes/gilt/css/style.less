@@ -263,7 +263,8 @@ nav {
   }
 
   #site-categories,
-  #site-tags {
+  #site-tags,
+  #site-archive {
 
     h2 {
       .primary;
@@ -296,7 +297,20 @@ nav {
         .primary;
         text-decoration: none;
       }
+
+      a:hover {
+        .highlight;
+      }
     }
+  }
+
+  #site-archive h3 {
+    padding-left: 10px;
+    font-weight: 400;
+  }
+
+  #site-archive li {
+    padding-left: 20px;
   }
 
   article {
@@ -568,4 +582,13 @@ footer {
   .secondary;
   padding: 10px;
   text-align: center;
+
+  a {
+    .secondary;
+    text-decoration: none;
+  }
+
+  a:hover {
+    .highlight;
+  }
 }
