@@ -57,9 +57,11 @@
               <input type="search" placeholder="Search …" title="Search for:" />
             </span>
             <menu id="categories-menu">
-            {% for category in site.categories %}
+            {% capture categories %}{% for category in site.categories %}{{ category[0] }}|{% endfor %}{% endcapture %}
+            {% assign sortedcats = categories | split:'|' | sort %}
+            {% for category in sortedcats %}
               <menuitem>
-                <a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category[0] }}-ref">{{ category[0] | join: "/" }}</a>
+                <a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref">{{ category | join: "/" }}</a>
               </menuitem>
             {% endfor %}
             </menu>
