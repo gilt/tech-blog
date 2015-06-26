@@ -9,11 +9,6 @@
     <cite><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ page.author }}-ref">{{ page.author }}</a></cite>
     {% endif %}
     <time>{{ page.date | date_to_long_string }}</time>
-    {% if page.category %}
-    <span class="categories">
-      <a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ page.author }}-ref">{{ page.category  }}</a>
-    </span>
-    {% endif %}
     {% unless page.categories == empty %}
     <span class="categories">
     {% assign cats = page.categories %}
