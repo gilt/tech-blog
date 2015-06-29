@@ -4,6 +4,7 @@ permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: pygments
+markdown: redcarpet
 
 # Workaround for https://github.com/mojombo/jekyll/issues/1401
 excerpt_separator: ""
