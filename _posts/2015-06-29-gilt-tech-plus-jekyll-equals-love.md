@@ -31,7 +31,7 @@ While we customized the bajeezus out of it, which was incredibly quick and painl
 chunk of what it ships with by default. We did roll our own helpful tidbits, like the [authors page](http://tech.gilt.com/authors.html),
 for which you can view the source [here](https://github.com/gilt/tech-blog/blob/gh-pages/authors.html).
 
-**[Github Pages](https://pages.github.com/)**. If you haven't looked into Github Pages for simple hosted websites or project websites yet, give it a gander. It's a phenominal way to quickly spin up a site, and it's Jekyll support is pretty great. 
+**[Github Pages](https://pages.github.com/)**. If you haven't looked into Github Pages for simple hosted websites or project websites yet, give it a gander. It's a phenomenal way to quickly spin up a site, and it's Jekyll support is pretty great. 
 
 ## Fin
 
