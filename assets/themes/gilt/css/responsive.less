@@ -1,0 +1,154 @@
+@viewport-wide:   ~"(min-width: 1024px)";
+@viewport-medium: ~"(min-width: 768px) and (max-width: 1023px)";
+@viewport-narrow: ~"(min-width: 480px) and (max-width: 767px)";
+@viewport-tiny:                          ~"(max-width: 479px)";
+
+@media @viewport-tiny {
+  nav {
+    padding: 0 10px;
+
+    > span {
+      width: 100%;
+
+      a {
+        display: none;
+      }
+
+      a:first-child,
+      a:last-child {
+        display: table-cell;
+      }
+    }
+  }
+
+  #subnav {
+    padding: 0 10px;
+
+    > span {
+      position: relative;
+      width: 100%;
+
+      .social {
+        display: none;
+      }
+
+      a,
+      #search {
+        display: inline-block;
+        width: 49.5%;
+      }
+
+      #search {
+        text-align: right;
+        width: 49.5%;
+      }
+    }
+  }
+
+  #main {
+    width: auto;
+    padding: 0 20px;
+
+    article span.separator:before,
+    article span.separator:after {
+      width: 36%;
+    }
+  }
+
+}
+
+@media @viewport-narrow {
+
+  nav {
+    padding: 0 10px;
+
+    > span {
+      width: 100%;
+
+      a {
+        display: none;
+      }
+
+      a:first-child,
+      a:last-child {
+        display: table-cell;
+      }
+    }
+  }
+
+  #subnav {
+    padding: 0 10px;
+
+    > span {
+      position: relative;
+      width: 100%;
+
+      .social {
+        position: absolute;
+        top: -6px;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        display: block;
+      }
+
+      .github {
+        left: 40%;
+      }
+
+      .facebook {
+        left: 60%;
+      }
+
+      .google {
+        display: none;
+      }
+
+      a,
+      #search {
+        display: inline-block;
+        width: 49.5%;
+      }
+
+      #search {
+        text-align: right;
+        width: 49.5%;
+      }
+    }
+  }
+
+  #main {
+    width: auto;
+    padding: 0 20px;
+
+    article span.separator:before,
+    article span.separator:after {
+      width: 39%;
+    }
+  }
+
+}
+
+@media @viewport-medium {
+
+  nav {
+    padding: 0 10px;
+
+    > span {
+      width: 100%;
+    }
+  }
+
+  #subnav {
+    padding: 0 10px;
+
+    > span {
+      width: 100%;
+    }
+  }
+
+  #main {
+    width: auto;
+    padding: 0 20px;
+  }
+}

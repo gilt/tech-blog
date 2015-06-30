@@ -43,10 +43,11 @@ body {
   h1 {
     .sans-alternate;
     .secondary;
-    .body;
+    .center;
     font-size: 20px;
     padding-bottom: 20px;
     text-align: center;
+    width: 100%;
   }
 }
 
@@ -175,6 +176,7 @@ nav {
     font-family: 'FontAwesome';
     font-size: 16px;
     text-align: center;
+    width: 16%;
 
     a {
       border: 1px solid #e5e5e5;
@@ -448,6 +450,7 @@ nav {
         border-bottom: 1px dashed @tertiary;
         padding-right: 4px;
         text-decoration: none;
+        word-break: break-word;
       }
 
       p a:hover {
@@ -652,3 +655,5 @@ footer {
     .highlight;
   }
 }
+
+@import "responsive.less";
