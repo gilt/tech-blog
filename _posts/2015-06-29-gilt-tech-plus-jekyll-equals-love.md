@@ -12,6 +12,10 @@ tags:
 
 ## Gilt Tech Blog Moves to Github
 
+~~~javascript
+console.log();
+~~~
+
 In continuing the march towards a more open Gilt Tech, we've made the switch to Github Pages and Jekyll from Tumblr.
 
 You can view the entirety of this blog's code and content here: **[https://github.com/gilt/tech-blog](https://github.com/gilt/tech-blog)**.
@@ -24,7 +28,9 @@ We've also got better control over how we write posts. We're a fairly large, dis
 
 ## We Used Technology
 
-![technology](http://i.imgur.com/trAIW3N.jpg){: .center}
+<p align="center">
+  <img src="http://i.imgur.com/trAIW3N.jpg"/>
+</p>
 
 **[Jekyll Bootstrap](http://jekyllbootstrap.com/)** is a fantastic bootstrap/scaffolding package put together to quickly spin up a blog.
 While we customized the bajeezus out of it, which was incredibly quick and painless, and rolled our own 'gilt' theme, we used a healthy
