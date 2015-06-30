@@ -12,10 +12,6 @@ tags:
 
 ## Gilt Tech Blog Moves to Github
 
-~~~javascript
-console.log();
-~~~
-
 In continuing the march towards a more open Gilt Tech, we've made the switch to Github Pages and Jekyll from Tumblr.
 
 You can view the entirety of this blog's code and content here: **[https://github.com/gilt/tech-blog](https://github.com/gilt/tech-blog)**.
