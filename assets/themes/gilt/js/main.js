@@ -59,8 +59,10 @@
         resultsMenu.show();
       })
       .on('focusout', function () {
-        $(this).removeClass('huge');
-        resultsMenu.hide();
+        setTimeout(function () {
+          $(this).removeClass('huge');
+          resultsMenu.hide();
+        }, 100);
       });
 
     // assign tag rollover colors
