@@ -59,8 +59,9 @@
         resultsMenu.show();
       })
       .on('focusout', function () {
+        var self = this;
         setTimeout(function () {
-          $(this).removeClass('huge');
+          $(self).removeClass('huge');
           resultsMenu.hide();
         }, 100);
       });
