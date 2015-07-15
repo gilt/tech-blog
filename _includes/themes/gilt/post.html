@@ -6,7 +6,7 @@
   {% endif %}
   <header>
     {% if page.author %}
-    <cite><a href="{{ BASE_PATH }}authors.html#{{ page.author }}-ref">{{ page.author }}</a></cite>
+    <cite><a href="{{ BASE_PATH }}/authors.html#{{ page.author }}-ref">{{ page.author }}</a></cite>
     {% endif %}
     <time>{{ page.date | date_to_long_string }}</time>
     {% unless page.categories == empty %}
