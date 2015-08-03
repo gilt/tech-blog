@@ -441,7 +441,8 @@ nav {
         text-align: left;
       }
 
-      p {
+      p,
+      li {
         color: #000000;
         line-height: 1.5em;
         font-size: 18px;
@@ -472,14 +473,60 @@ nav {
         margin: 0 auto;
       }
 
+      code,
+      pre {
+        font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        font-size: 1em;
+      }
+
+      code {
+        padding: 0;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        margin: 0;
+        font-size: 85%;
+        background-color: rgba(0,0,0,0.04);
+        border-radius: 3px;
+      }
+
+      code:before,
+      code:after {
+        letter-spacing: -0.2em;
+        content: "\00a0";
+      }
+
+      pre>code {
+        padding: 0;
+        margin: 0;
+        font-size: 100%;
+        word-break: normal;
+        white-space: pre;
+        background: transparent;
+        border: 0;
+      }
+
+      pre code {
+        display: inline;
+        max-width: initial;
+        padding: 0;
+        margin: 0;
+        overflow: initial;
+        line-height: inherit;
+        word-wrap: normal;
+        background-color: transparent;
+        border: 0;
+      }
+
+      pre code:before,
+      pre code:after {
+        content: normal;
+      }
+
       /* this supports the imported tumblr posts' code blocks */
       > pre {
         background: #f8f8f8;
         border: 1px solid #cccccc;
         display: block;
-        font-family: 'Consolas', 'Inconsolata', 'Monaco', 'Lucida Console', 'Liberation Mono', 'Courier New';
-        font-size: 13px;
-        line-height: 19px;
         overflow-x: auto;
         padding: 4px 10px;
         white-space: pre;

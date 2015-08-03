@@ -3,7 +3,7 @@ layout: post
 title: Private NPM Modules&#58; A Song of Fire and Ice
 author: Andrew Powell
 date: '2015-08-03'
-categories: 'tech npm'
+categories: npm
 tags:
 - npm
 - private modules
