@@ -442,32 +442,29 @@ nav {
       }
 
       p {
-        line-height: 1.4em;
+        color: #000000;
+        line-height: 1.5em;
+        font-size: 18px;
       }
 
       p a {
-        .primary;
-        border-bottom: 1px dashed @tertiary;
-        padding-right: 4px;
+        color: #000000;
+        background-color: transparent;
+        box-shadow: inset 0 -6px 0 #c0e6f7;
+        font-weight: normal !important;
+        line-height: 1.5em;
+        padding: 0 1px 1px 1px;
         text-decoration: none;
+        -ms-transition: background-color 500ms linear, box-shadow 500ms linear;
+        transition: background-color 500ms linear, box-shadow 500ms linear;
         word-break: break-word;
       }
 
       p a:hover {
-        .highlight;
-        border-bottom: none;
-      }
-
-      p a:before {
-        color: @tertiary;
-        content: "\f0ac";
-        font-family: 'FontAwesome';
-        font-style: normal !important;
-        padding: 0 6px 0 4px;
-      }
-
-      p a:hover:before {
-        color: @primary;
+        background-color: #efefef;
+        box-shadow: inset 0 -6px 0 #efefef;
+        font-weight: normal !important;
+        padding: 0 1px 1px 1px;
       }
 
       p img.center {
