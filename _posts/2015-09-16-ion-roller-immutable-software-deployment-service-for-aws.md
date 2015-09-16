@@ -3,14 +3,14 @@ layout: post
 title: ION-Roller: Immutable software deployment service for AWS
 author: Gary Coady, Natalia Bartol
 date: '2015-09-16'
-categories: 'tech blog'
+categories: 'tech aws ionroller'
 tags:
 - aws
 - docker
 - deployment
 ---
 
-Gilt has always been at the forefront of software development, and has been leading the new wave of microservices, which divides the software platform into many individual services that try to do one thing well. Along with the large increase in the number of services, comes the extra complexity of service management.
+Gilt has been at the forefront of the wave of microservice architecture. With the advantage of many individual services that do one thing well comes increased complexity of service management.
 
 Our previous system was based on a reasonably traditional model of deployment scripts that simply replaced software on machines in order, and performed health checks before proceeding to the next server. A number of issues caused friction in attempts to release software. One was that in spite of services being run as microservices, many deployment decisions had to be done in lockstep, due to the shared platform. Another was that services that took a long time to start up (cache loads, etc.) had a large cost when the service was stopped; if a new release had to be rolled back, this could take more time than people might like.
 
