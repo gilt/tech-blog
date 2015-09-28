@@ -91,6 +91,16 @@
         categoryMenu.show().focus();
       });
 
+    $('#subnav span menu#categories-menu')
+      .on('mouseover', function() {
+        categoryMenu.show().focus();
+      });
+
+    $('#subnav span menu#categories-menu')
+      .on('mouseout', function() {
+        categoryMenu.hide();
+      });
+
     $('body').on('click', function (e) {
       if (e.target.className !== 'categories') {
         categoryMenu.hide();
