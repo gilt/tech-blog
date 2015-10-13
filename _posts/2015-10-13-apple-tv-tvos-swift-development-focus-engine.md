@@ -11,7 +11,7 @@ tags:
 - Focus Engine
 ---
 
-At the Apple product launch event in September, Gilt demonstrated its upcoming “Gilt on TV” app for the Apple TV. If you missed the demo and would like to see it, [Apple has the video available on their website](http://www.apple.com/apple-events/september-2015/). Eddy Cue's introduction of Gilt begins at the 74:20 mark.
+At the Apple product launch event in September, Gilt demonstrated its upcoming “Gilt on TV” app for the Apple TV. (If you missed the demo and would like to see it, [Apple has the video available on their website](http://www.apple.com/apple-events/september-2015/). Eddy Cue's introduction of Gilt begins at the 74:20 mark.)
 
 Last night, at the [iOSoho meetup](http://www.meetup.com/iOSoho/events/221974097/), I presented some of the things our team learned while developing that application, such as:
 
@@ -19,7 +19,7 @@ Last night, at the [iOSoho meetup](http://www.meetup.com/iOSoho/events/221974097
 - The tvOS interaction model: What is “focus” and how does it work?
 - Interacting with the Focus Engine to set up your initial UI state
 - How the Focus Engine sees your views onscreen, and how that affects navigation
-- Using focus guides to make your UI to navigate
+- Using focus guides to make your UI easier to navigate
 - Swift: Is it ready for full-scale app development?
 
 Slides from the talk are [available here](http://www.slideshare.net/EvanMaloney/tvos-the-focus-engine-and-swift):
