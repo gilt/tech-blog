@@ -2,7 +2,7 @@
 layout: post
 title: Codedeploy Notifications
 author: Emerson Loureiro
-date: '2016-02-03'
+date: '2016-02-10'
 categories: 'aws'
 tags:
 - aws
