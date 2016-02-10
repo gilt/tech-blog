@@ -28,7 +28,9 @@ Despite that, one can easily think of more complicated workflows. For example, l
 
 So, the ideal approach here would be one that could deliver realtime notifications - or as close to that as possible - and handle multiple Codedeploy applications. Given that, the solution we have been using to some extent here at Gilt is to provide deployment notifications in a configurable way, as a service, by talking directly to Codedeploy. Below is a high-level view of our solution. In essence, our codedeploy notifications service gets deployments directly from Codedeploy and relies on a number of different channels - e.g., SNS, SES, Newrelic, Hipchat - for sending out deployment notifications. These channels are implemented and plugged in as we need though, so not really part of the core of our service. Dynamo DB is used for persisting registrations - more on that below - and successful notifications - to prevent duplications.
 
-![](http://i.imgur.com/iiRM48O.png)
+<p align="center">
+  <img src="http://i.imgur.com/iiRM48O.png" width=700/>
+</p>
 
 We have decided to require explicit *registration* for any application that we would want to have deployment notifications. There are two reasons for doing this. First, our service runs in an account where different applications - from different teams - are running, so we wanted the ability to select which of those would have deployment notifications triggered. Second, as part of registering the application, we wanted the ability to define over which channels those notifications would be triggered. So our service provides an endpoint that takes care of registering a Codedeploy application. Here's what a request to this endpoint look like.
 
