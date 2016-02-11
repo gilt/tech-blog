@@ -34,7 +34,7 @@ So, the ideal approach here would be one that could deliver realtime notificatio
 
 We have decided to require explicit *registration* for any application that we would want to have deployment notifications. There are two reasons for doing this. First, our service runs in an account where different applications - from different teams - are running, so we wanted the ability to select which of those would have deployment notifications triggered. Second, as part of registering the application, we wanted the ability to define over which channels those notifications would be triggered. So our service provides an endpoint that takes care of registering a Codedeploy application. Here's what a request to this endpoint look like.
 
-```
+```bash
 curl -H 'Content-type: application/json' -X POST -d '{ "codedeploy_application_name": "CODE_DEPLOY_APPLICATION_NAME", "notifications": [ { "newrelic_notification": { "application_name": "NEWRELIC_APPLICATION_NAME" } } ] }' 'http://localhost:9000/registrations'
 ```
 
@@ -46,7 +46,7 @@ Our idea of a notification channel is completely generic. In other words, it's i
 
 Even though we have talked about a single service doing all of the above, our solution, in fact, is split into two projects. One is a library - codedeploy-notifications - which provides an API for adding registrations, listing Codedeploy deployments, and triggering notifications. The service is then separate, simply integrating with the library. For example, for the registration endpoint we described above, the service uses the following API from codedeploy-notifications under the hood.
 
-```
+```scala
 val amazonDynamoClient = ...
 val registrationDao = new DynamoDbRegistrationDao(amazonDynamoClient)
 val newRelicNotificationSetup = NewrelicNotificationSetup("NewrelicApplicationName")

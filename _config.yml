@@ -2,9 +2,16 @@
 # For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:year/:month/:day/:title
 
+#Plugins
+gems : [jekyll-paginate]
+
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
-markdown: redcarpet
+highlighter: rouge
+markdown: kramdown
+
+# enable github flavored markdown (fenced code blocks)
+kramdown:
+  input: GFM
 
 # Workaround for https://github.com/mojombo/jekyll/issues/1401
 excerpt_separator: ""
@@ -71,7 +78,7 @@ JB :
   #   http://s3.amazonaws.com/yoursite/themes/watermelon
   #   /assets
   #
-  ASSET_PATH : false
+  ASSET_PATH : //tech.gilt.com/assets/themes/gilt
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
@@ -110,10 +117,10 @@ JB :
     provider : google
     gauges :
         site_id : 'SITE ID'
-    google : 
+    google :
         tracking_id : 'UA-123-12'
     getclicky :
-      site_id : 
+      site_id :
     mixpanel :
         token : '_MIXPANEL_TOKEN_'
     piwik :
