@@ -2,7 +2,7 @@
 layout: post
 title: gulp-scan &bull; Find Yourself Some Strings
 author: Andrew Powell
-date: '2015-02-15'
+date: '2016-02-15'
 categories: gulp
 tags:
 - gulp
