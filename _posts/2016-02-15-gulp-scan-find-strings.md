@@ -30,7 +30,7 @@ var scan = require('gulp-scan');
 
 ```js
 gulp.task('default', function () {
-	return gulp.src('src/file.ext')
+  return gulp.src('src/file.ext')
 		.pipe(scan({ term: '@import', fn: function (match) {
 			// do something with {String} match
 		}}));
@@ -48,4 +48,4 @@ gulp.task('default', function () {
 });
 ```
 
-Pretty simple. There's always room for improvement, and we welcome contribution on Github.
+Pretty simple. There's always room for improvement, and we welcome contribution on [Github](https://github.com/gilt/tech-blog).
