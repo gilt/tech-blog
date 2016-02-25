@@ -11,7 +11,7 @@ layout: page
   {% endif %}
   <header>
     {% if post.author %}
-    <cite><a href="{{ BASE_PATH }}authors.html#{{ post.author }}-ref">{{ post.author }}</a></cite>
+    <cite><a href="{{ BASE_PATH }}/authors.html#{{ post.author }}-ref">{{ post.author }}</a></cite>
     {% endif %}
     <time>{{ post.date | date_to_long_string }}</time>
     {% unless post.categories == empty %}
