@@ -10,17 +10,15 @@ tags:
 - firewall
 ---
 
-Mobile services team at Gilt uses Docker to both, build and run software.
-
-In addition to the usual Docker benefits for software deployments moving toolchains to Docker has a few advantages:
+The mobile services team at Gilt uses Docker to both build and run software. In addition to the usual Docker benefits for software deployments moving toolchains to Docker has a few advantages:
 
 - it's easy to (re)create a development environment
 - environment is preserved in a stable binary form (libs, configs, CLI tools, etc, etc don't bit rot as main OS packages or OS itself evolve)
 - easy to support multiple divergent environments where different versions of tools/libs are the default, e.g. java7/8, python, ruby, scala, etc
 
-We mostly develop on OSX, Docker is a Linux-specific tool, so we use docker-machine and VirtualBox to actually run it.
-To run toolchains we rely on having access to the host OS's filesystem, by default /Users is exposed in the Docker VM.
-Unfortunately, default setup uses VBOXFS which is very slow. This can be really painful when building larger projects or relying on build steps that require a lot of IO, like [sbt-assembly](https://github.com/sbt/sbt-assembly) plugin.
+We mostly develop on OSX, but since Docker is a Linux-specific tool, we must use docker-machine and VirtualBox to actually run it.
+Toolchains rely on having access to the host OS's filesystem. By default /Users is exposed in the Docker VM.
+Unfortunately, the default setup uses VBOXFS which is very slow. This can be really painful when building larger projects or relying on build steps that require a lot of IO, such as the [sbt-assembly](https://github.com/sbt/sbt-assembly) plugin.
 
 Here's a great [comparison of IO performance](http://mitchellh.com/comparing-filesystem-performance-in-virtual-machines).
 
