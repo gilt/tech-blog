@@ -10,37 +10,37 @@ tags:
 - firewall
 ---
 
-The mobile services team at Gilt uses Docker to both build and run software. In addition to the usual Docker benefits for software deployments moving toolchains to Docker has a few advantages:
+The Mobile Services team at Gilt uses Docker to both build and run software. In addition to the usual Docker benefits for software deployments moving toolchains to Docker has a few advantages:
 
 - it's easy to (re)create a development environment
-- environment is preserved in a stable binary form (libs, configs, CLI tools, etc, etc don't bit rot as main OS packages or OS itself evolve)
-- easy to support multiple divergent environments where different versions of tools/libs are the default, e.g. java7/8, python, ruby, scala, etc
+- the environment is preserved in a stable binary form (libs, configs, CLI tools, etc, etc don't bit rot as main OS packages or OS itself evolve)
+- easy to support multiple divergent environments where different versions of tools/libs are the default; e.g. java7/8, python, ruby, scala, etc
 
-We mostly develop on OSX, but since Docker is a Linux-specific tool, we must use docker-machine and VirtualBox to actually run it.
-Toolchains rely on having access to the host OS's filesystem. By default /Users is exposed in the Docker VM.
+We develop primarily on OSX, but since Docker is a Linux-specific tool, we must use docker-machine and VirtualBox to actually run it.
+Toolchains rely on having access to the host OS's filesystem. By default `/Users` is exposed in the Docker VM.
 Unfortunately, the default setup uses VBOXFS which is very slow. This can be really painful when building larger projects or relying on build steps that require a lot of IO, such as the [sbt-assembly](https://github.com/sbt/sbt-assembly) plugin.
 
 Here's a great [comparison of IO performance](http://mitchellh.com/comparing-filesystem-performance-in-virtual-machines).
 
-There's really no good solution for this problem at the moment but some folks have come up with a reasonable hack: use NFS.
+There's really no good solution for this problem at the moment, but some folks have come up with a reasonable hack: use NFS.
 
 One of them was even nice enough to wrap it up into a [shell script](https://github.com/adlogix/docker-machine-nfs) that "just works".
 
 
-Indeed, with NFS enabled project build times begin to approach "native" speeds, so it's tempting.
-One issue with it though is that NFS is a very old system, designed to work in trusted network environments, access is given to hosts, not authenticated users.
-While this is a reasonable access model for secure production networks it's hard to guarantee anything about random networks you may have to connect to with your laptop, having /Users exposed via NFS on un-trusted networks is a scary prospect.
+Indeed, with NFS enabled, project build times begin to approach "native" speeds, so it's tempting.
+The issue with NFS continues to be its aging design and intent to function in trusted network environment where access is given to hosts, not to authenticated users.
+While this is a reasonable access model for secure production networks, it's hard to guarantee anything about random networks you may have to connect to with your laptop, and having `/Users` exposed via NFS on un-trusted networks is a scary prospect.
 
 
 OSX has not one but two built-in firewalls.
 There's a simplified app-centric firewall available from Preferences panel.
-Unfortunately all it can do is either block all nfs traffic (docker VM can't access your exported file system) or open up nfs traffic on all interfaces (insecure), so, it doesn't really work for this case.
+Unfortunately all it can do is either block all NFS traffic (docker VM can't access your exported file system) or open up NFS traffic on all interfaces (insecure), so it doesn't really work for this case.
 
 Fortunately, under the hood there's also a much more flexible built-in packet level firewall that can be configured.
 It's called PF (packet filter) and its main CLI tool is pfctl.
 Here's a nice [intro](https://pleiades.ucsc.edu/hyades/PF_on_Mac_OS_X).
 
-With that, one possible solution is to disable firewall in the Preferences panel and add this section at the end of the /etc/pf.conf file instead:
+With that, one possible solution is to disable firewall in the Preferences panel and add this section at the end of the `/etc/pf.conf` file instead:
 
 ```
 # Do not filter anything on private interfaces
@@ -98,7 +98,7 @@ Then turn it on at a system boot time by adding /Library/LaunchDaemons/com.yourc
 </plist>
 ```
 
-and configuring it to start by running
+And configuring it to start by running
 
 ```sh
 sudo launchctl load -w /Library/LaunchDaemons/com.yourcompany.pfctl.plist
@@ -112,7 +112,7 @@ You can check that it starts by default after a reboot with
 sudo pfctl -s info
 ```
 
-and check the rules with
+And check the rules with
 
 ```sh
 sudo pfctl -s rules
@@ -127,4 +127,4 @@ sudo nmap -P0 -sU  YOUR_IP
 sudo nmap -P0 -sT  YOUR_IP
 ```
 
-and check for open ports.
+And check for open ports.
