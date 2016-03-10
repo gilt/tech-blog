@@ -128,3 +128,6 @@ sudo nmap -P0 -sT  YOUR_IP
 ```
 
 And check for open ports.
+
+After that configuration you should see a noticeable improvement in docker performance for file system intensive workloads.
+Hopefully this will no longer be necessary in future versions of Docker VM so check the docs to be sure.
