@@ -20,6 +20,6 @@ Join us for an evening of lightning talks by 4 of HBC Digital's Front End Engine
 
 Refreshments will be served!
 
-[Please RSVP!](http://www.meetup.com/HBC-Digital-Retail-Technology-Meetup/events/229552807/)
+_**Important**_: You must provide First Name & Last Name in order to enter the building.
 
-NOTE: You must provide First Name & Last Name in order to enter the building.
+[Please RSVP!](http://www.meetup.com/HBC-Digital-Retail-Technology-Meetup/events/229552807/)
