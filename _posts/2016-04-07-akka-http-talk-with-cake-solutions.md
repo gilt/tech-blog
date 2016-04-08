@@ -9,7 +9,7 @@ tags:
 - akka http
 - scala
 ---
-On Tuesday, April 12, 2016, we are thrilled to be hosting Aleksandr Ivanov of Cake Solutions, presenting a talk on Akka HTTP.
+We are thrilled to be hosting Aleksandr Ivanov of Cake Solutions on Tuesday, April 12th. He'll be presenting an excellent talk on [Akka HTTP](http://doc.akka.io/docs/akka/2.4.3/scala/http/index.html). Who is Aleksandr? We're glad you asked:
 
 > Aleksandr Ivanov is a senior software engineer at Cake Solutions, one of the leading European companies building Reactive Software with Scala.  Scala is his main language of choice since 2011. He's taken part in various projects, from developing backends for trivial web applications to enterprise-level reactive system and machine learning apps.
 >
