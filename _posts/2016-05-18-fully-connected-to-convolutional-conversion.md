@@ -73,6 +73,7 @@ More formally, we will have as many feature maps as rows the matrix **A** has. F
 Here we are assuming that the input of the fully connected layer is flattened and also that the fully connected layer only receives a single feature map from the last convolutional layer. For multidimensional convolutions with many feature maps, the transformation will depend on the way the framework we use encodes the different layer types (convolutional and fully connected).
 
 In case of [Torch](http://torch.ch/), it’s pretty easy as one simply has to copy the biases and the weights of the fully connected layer into the convolutional layer. The caveat is that the convolutional layer has to be declared using the following parameters:
+
 * **Number of input feature maps**: as many as output feature maps the last convolutional layer has.
 
 * **Number of output feature maps**: number of outputs the fully connected layer has.
