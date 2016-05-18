@@ -87,6 +87,8 @@ In case of [Torch](http://torch.ch/), it’s pretty easy as one simply has to co
 After the first transformation we will have in the second fully connected layer an input that has many feature maps of size one.
 
 The equivalent convolutional layer will be the following:
+
+
 * **Number of input feature maps**: as many input feature maps as output feature maps the last transformed convolutional layer has. It will also be equivalent to the input units the original second fully connected layer has.
 
 * **Number of output feature maps**: as many output feature maps as outputs the second fully connected layer has. In our case we have a single output and therefore the layer will only have a single output feature map. In case we would have more outputs or an additional fully connected layer, we would need to add more feature maps.
