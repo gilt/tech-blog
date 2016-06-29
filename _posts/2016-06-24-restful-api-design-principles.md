@@ -12,6 +12,10 @@ tags:
 
 
 > This post is translated from [RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html), which is originally written in Chinese under the [CreativeCommons License](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh), and the license prohibited me from modifying the article.
+     
+     
+This article gives the reader a blueprint of how *RESTful* APIs should look like.     
+And the last part, "hypermedia", is something what most developers neglect thesedays but is very crucial to a well-designed API.
 
 ## Protocal   
 
