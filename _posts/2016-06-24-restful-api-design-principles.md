@@ -23,15 +23,15 @@ If it's possible, APIs should be placed under a special domain name. e.g.
 ``` https://api.example.com```        
 
 However, if it's quite sure that APIs are very simple and won't change significantly, it's also reasonable to put it under main domain. e.g.    
-```https://example.com/api/```    
+    ```https://example.com/api/```    
 
 ## Versioning
 
 Version number should be put in the URL of all APIs. e.g.   
-```https://api.example.com/v1/```     
+    ```https://api.example.com/v1/```     
 
 Another approach is to put it in HTTP header, but this is not as intuitive as the previous one. (e.g. APIs of Github have such a field in their headers 
-```X-GitHub-Media-Type: github.v3```)    
+    ```X-GitHub-Media-Type: github.v3```)    
 
 ## Endpoint
 
