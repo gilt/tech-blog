@@ -103,7 +103,7 @@ If the status code is 4XX, the server should send an error message to the client
 For example, if a JSON error message is sent back, that message shall contain a field named *"error"*, whose value is the error message, like:   
 ```
 {
-error: "Invalid API Key"
+    error: "Invalid API Key"
 }
 ```
 
@@ -126,11 +126,11 @@ It will be very helpful and user-friendly if **hypermedia** is used in RESTful A
 For example, when the client makes a ```GET``` request to the root domain of ```api.example.com``` , it will get a response like:    
 ```
 {
-"link": {
-"rel" : "collection",
-"href" : "https://api.example.com/zoos",
-"type" : "application/vnd.example+json"
-}
+    "link": {
+        "rel" : "collection",
+        "href" : "https://api.example.com/zoos",
+        "type" : "application/vnd.example+json"
+    }
 }
 ```
 Such a response means that there is a link that the client could follow to do more opeations. The relationship between the link and the current response is defined by *"ref"* field, the URL of the resource this link points to is defined by *"href"* field, and the type of document returned by that link is defined by *"type"* field.   
@@ -138,17 +138,17 @@ Such a response means that there is a link that the client could follow to do mo
 The RESTful API design which uses hypermedia is called [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS). The APIs of github are HATEOAS APIs. If you try to ```GET https://api.github.com``` , you will get a list of available resources' URLs. e.g.:   
 ```
 {
-"current_user_url" : "https://api.github.com/user",
-"authorizations_url" : "https://api.github.com/authorizations"
-// ...
+    "current_user_url" : "https://api.github.com/user",
+    "authorizations_url" : "https://api.github.com/authorizations"
+    // ...
 }
 ```
 
 As you can imagine, if you want to get the infomation about current user, you should follow the URL ```api.github.com/user```, and that will give you:   
 ```
 {
-"message" : "Requires authentication",
-"documentation_url" : "https://developer.github.com/v3"
+    "message" : "Requires authentication",
+    "documentation_url" : "https://developer.github.com/v3"
 }
 ```   
 And that response also gives the client a link to follow, which actually leads to some documentations.
