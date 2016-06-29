@@ -9,9 +9,6 @@ tags:
 - api design
 - hypermedia
 ---    
-
-
-> This post is translated from [RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html), which is originally written in Chinese under the [CreativeCommons License](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh), and the license prohibited me from modifying the article.
      
      
 This article gives the reader a blueprint of how *RESTful* APIs should look like.     
@@ -156,3 +153,6 @@ As you can imagine, if you want to get the infomation about current user, you sh
 }
 ```   
 And that response also gives the client a link to follow, which actually leads to some documentations.
+    
+
+> This post is translated from [RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html), which is originally written in Chinese under the [CreativeCommons License](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh), and the license prohibited me from modifying the article.
