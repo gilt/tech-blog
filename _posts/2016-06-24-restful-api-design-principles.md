@@ -85,18 +85,20 @@ The design of parameters could be redundant, which means both ```/zoo/ID/animals
 
 ## Status Codes
 
-A respond from the server could have no content, however, each response MUST contain a **status code**.    
-* ```200 OK``` : The resource that client asked is successfully returned. *And also, the request caused 200 is idempotent.*
+A response from the server could have no content, however, each response MUST contain a **status code**.    
+* ```200 OK```\* : The resource that client asked is successfully returned.
 * ```201 CREATED``` : Client has successfully created or updated a resource.
 * ```202 ACCEPTED``` : The request has been accepted but the server chooses to process it later.
 * ```204 NO CONTENT``` : The resource has been successfully deleted.
-* ```400 INVALID REQUEST``` : There is some error in the request sent by the client. And the server hasn't done anything with the request.  *And also, the request caused 400 is idempotent.*
+* ```400 INVALID REQUEST```\* : There is some error in the request sent by the client. And the server hasn't done anything with the request.
 * ```401 UNAUTHORIZED``` : The client has not been authorized, which typically means the server cannot identify the client.
 * ```403 FORBIDDEN``` : The client has been authorized (opposite to 401), but the client doesn't have the access to requested resource. 
-* ```404 NOT FOUND``` : The resource requested by the client doesn't exist. And the server hasn't done anything with the request. *And also, the request caused 404 is idempotent.*
+* ```404 NOT FOUND```\* : The resource requested by the client doesn't exist. And the server hasn't done anything with the request.
 * ```406 NOT ACCEPTABLE``` : The data format listed in the "Accept" HTTP header is not acceptable by the server. e.g. The client requires JSON but the server could only serve XML.
 * ```410 GONE``` : The resource requested by the client is deleted permanently.
-* ```500 INTERNAL SERVER ERROR``` : The server encountered some errors while processing the request, and *the client cannot make any assumption about whether the request has been processed successfully or not.*
+* ```500 INTERNAL SERVER ERROR``` : The server encountered some errors while processing the request, and *the client cannot make any assumption about whether the request has been processed successfully or not.*    
+    
+\* If one of these responses is returned, then the corresponding request is idempotent. Namely, the same request could be sent multiple times without having any impact on the resource.
 
 
 ## Error Handling
@@ -135,7 +137,7 @@ For example, when the client makes a ```GET``` request to the root domain of ```
     }
 }
 ```
-Such a response means that there is a link that the client could follow to do more operations. The relationship between the link and the current response is defined by *"ref"* field, the URL of the resource this link points to is defined by *"href"* field, and the type of document returned by that link is defined by *"type"* field.   
+Such a response means that there is a link that the client could follow to perform more operations. The relationship between the link and the current response is defined by the *"rel"* field, the URL of the resource this link points to is defined by the *"href"* field, and the type of document returned by this link is defined by the *"type"* field.   
 
 The RESTful API design which uses hypermedia is called [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS). The APIs of GitHub are HATEOAS APIs. If you try to ```GET https://api.github.com``` , you will get a list of available resources' URLs. e.g.:   
 ```
