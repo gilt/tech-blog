@@ -21,7 +21,7 @@ All RESTful APIs should communicate with clients under the **HTTPS** protocol.
 
 ## Domain Name   
 
-If it's possible, APIs should be placed under a special domain name. e.g.   
+When it's possible, APIs should be placed under a special domain name. e.g.   
     ```
     https://api.example.com
     ```
