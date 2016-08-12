@@ -3,7 +3,7 @@
 **What can four interns do in a ten week internship? A lot, as it turns out.**
 
 <p align="center">
-<img src="http://i.imgur.com/LA5mUrj.jpg)"/>
+<img src="http://i.imgur.com/4efFbYF.png"/>
 </p>
 
 With some help from the fantastic team led by Kyle Dorman, we built out a complete backend and frontend iOS app and had a ton of fun in the meanwhile. Here’s a snapshot of our summer experience. 
