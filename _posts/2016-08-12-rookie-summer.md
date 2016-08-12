@@ -67,4 +67,4 @@ Gilt also has a unique open-source presence, and we used some of the Gilt open-s
 
 ### Takeaways
 
-Throughout the summer we were exposed to a host of skills that eased the software developement process. The adoption of standardized git workflows and explicit communication on project status through Agile sprints accelerated the development of our project across the short time frame.  If we listed all we learned this summer it would take about, oh say, ten weeks, but needless to say this was a summer that we'll all remember for a long time.
+Throughout the summer we were exposed to a host of skills that eased the software development process. The adoption of standardized git workflows and explicit communication on project status through Agile sprints accelerated the development of our project across the short time frame.  If we listed all we learned this summer it would take about, oh say, ten weeks, but needless to say this was a summer that we'll all remember for a long time.
