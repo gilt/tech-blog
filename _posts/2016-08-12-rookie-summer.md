@@ -20,9 +20,9 @@ After our brief introduction to software development at Gilt, we started on a pr
 While we worked a lot this summer, Gilt made sure that we had tons of fun as well. Every Friday, we left the office early to explore a new part of New York. We went up the Freedom Tower, walked the High Line, and saw a musical on Broadway, amongst tons of other fun activities. We even had fun inside the office. We had weekly lunches with different teams across the organization, and we enjoyed random festivities like Cheese-mageddon, where tech samples more cheese than is probably healthy.
 
 
-<center>
-<img src="http://i.imgur.com/6dAZjWD.png"  height="40%" width="40%"/>
-</center>
+<p align="center">
+<img src="http://i.imgur.com/D6Efzfb.png"/>
+</p>
 
 
 So, what was our actual project for the summer? The Gilt Style Quiz is a fun, playful way to get users interacting with the Gilt service without necessitating a purchase. At the same time, the app gives us a chance to get to know our users better as well. Through a series of style related questions, we are able to collect both brand and product category affinities for a user and are able to, as a result, better personalize the shopping experience for our users. As a team, we took complete ownership of the project and built the app from ground up. We began by developing the API and data models, and then we split up to tackle the front and back ends of the project.
