@@ -30,9 +30,9 @@ So, what was our actual project for the summer? The Gilt Style Quiz is a fun, pl
 
 ### What about Gilt Tech made the internship so cool?
 
-<center>
-<img src="http://i.imgur.com/9Mx9tbu.png"  height="40%" width="40%"/>
-</center>
+<p align="center">
+<img src="http://i.imgur.com/6DiY6xv.png"/>
+</p>
 
 
 
