@@ -8,7 +8,7 @@
 
 With some help from the fantastic team led by Kyle Dorman, we built out a complete backend and frontend iOS app and had a ton of fun in the meanwhile. Here’s a snapshot of our summer experience. 
 
-Our internship began with two weeks of heavy learning. We were going to be building a mobile application using Swift, Scala, and the Play framework, but most of us had no prior experience with any of these tools. So our mentors led us through lab assignments to get our feet wet. We built a few simple iOS apps and a [small Play application](https://github.com/gilt/gilttrest) that used the [Gilt Public API](https://dev.gilt.com). As we became familiar with the languages and tools we would eventually use to build our intern project.
+Our internship began with two weeks of heavy learning. We were going to be building a mobile application using [Swift](https://swift.org/), [Scala](http://www.scala-lang.org/), and the [Play framework](https://www.playframework.com/), but most of us had no prior experience with any of these tools. So our mentors led us through lab assignments to get our feet wet. We built a few simple iOS apps and a [small Play application](https://github.com/gilt/gilttrest) that used the [Gilt Public API](https://dev.gilt.com). As we became familiar with the languages and tools we would eventually use to build our intern project.
 
 After our brief introduction to software development at Gilt, we started on a project of our own. Our mentors introduced us to Agile sprints, and we were off. Our progress was slow at first, but kicked up near the end, and on the last day of development we finally got our finished app deployed.
 
@@ -25,7 +25,7 @@ While we worked a lot this summer, Gilt made sure that we had tons of fun as wel
 </p>
 
 
-So, what was our actual project for the summer? The Gilt Style Quiz is a fun, playful way to get users interacting with the Gilt service without necessitating a purchase. At the same time, the app gives us a chance to get to know our users better as well. Through a series of style related questions, we are able to collect both brand and product category affinities for a user and are able to, as a result, better personalize the shopping experience for our users. As a team, we took complete ownership of the project and built the app from ground up. We began by developing the API and data models, and then we split up to tackle the front and back ends of the project.
+So, what was our actual project for the summer? The Gilt Style Quiz is a fun, playful way for users to start interacting with the Gilt iOS app without making a purchase. At the same time, the app gives Gilt a chance to get to know our users better as well. Through a series of style related questions, we are able to collect both brand and product category affinities for a user and are able to, as a result, better personalize the shopping experience for our users. As a team, we took complete ownership of the project and built the app from ground up. We began by developing the API and data models, and then we split up to tackle the front and back ends of the project.
 
 
 ### What about Gilt Tech made the internship so cool?
@@ -58,7 +58,7 @@ From a project perspective, we had the chance to work with an amazing product ma
 
 Gilt has a unique, forward-thinking culture. The company constantly evaluates the tools it uses, and it is always open to exploring new technologies. We were exposed to this at the quarterly architecture council, where all the engineers spend a day discussing the current state of the Gilt technology stack and exploring possible new directions for tech. 
 
-Gilt also has a unique open-source presence, and we used some of the Gilt open-source technologies in our project. [The Cleanroom Initiative](https://github.com/gilt/Cleanroom) is an open-sourced codebase in Swift providing help with data transactions in our application.
+Gilt is also committed to open-source and we made use of some Gilt open-source technologies in our project. [The Cleanroom Initiative](https://github.com/gilt/Cleanroom) is an open-sourced codebase in Swift providing help with data transactions in our application. We also used an open-source apidoc [Swift client generator](https://github.com/kyle-dorman/ApidocSwiftGenerator) and worked with the owner to make some additions to the project.
 
 
 <p align="center">
