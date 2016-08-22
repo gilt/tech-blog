@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Our latest open source project: scala-fedex"
-authors: ['Ryan Caloras', 'John Coghlan']
+title: "New open source project: scala-fedex"
+author: Ryan Caloras
 date: '2016-8-21'
 categories: 'open source'
 tags:
@@ -10,12 +10,12 @@ tags:
 - open source
 - web-services
 - Ryan Caloras
+- John Coghlan
 ---
 <p align="center">
   <img src="http://code.scottshipp.com/wp-content/uploads/2016/05/scala-logo-small.png"/>
   <img height="180px" src="http://3.bp.blogspot.com/-SZGsKxvHaHY/VKUwUMGZIyI/AAAAAAAABCA/GRQowwqVxdA/s1600/fedex-main.png"/>
 </p>
-##
 
 We recently made the decision to switch from Newgistics to FedEx SmartPost for customer returns at Gilt. A couple of factors contributed to the decision, but the prettiness of FedEx's API was not one of them - it's not exactly the most developer friendly API you can find.
 
