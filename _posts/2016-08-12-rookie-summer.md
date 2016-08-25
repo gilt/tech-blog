@@ -3,7 +3,7 @@
 **What can four interns do in a ten week internship? A lot, as it turns out.**
 
 <p align="center">
-<img width="940px" img src="http://i.imgur.com/4efFbYF.png"/>
+<img src="http://i.imgur.com/4efFbYF.png" width="940" />
 </p>
 
 With some help from the fantastic team led by Kyle Dorman, we built out a complete backend and frontend iOS app and had a ton of fun in the meanwhile. Here’s a snapshot of our summer experience. 
@@ -13,7 +13,7 @@ Our internship began with two weeks of heavy learning. We were going to be build
 After our brief introduction to software development at Gilt, we started on a project of our own. Our mentors introduced us to Agile sprints, and we were off. Our progress was slow at first, but kicked up near the end, and on the last day of development we finally got our finished app deployed.
 
 <p align="center">
-<img width="940px" img src="http://i.imgur.com/dVtZ4D9.jpg"/>
+<img src="http://i.imgur.com/dVtZ4D9.jpg" width="940"/>
 </p>
 
 
@@ -21,7 +21,7 @@ While we worked a lot this summer, Gilt made sure that we had tons of fun as wel
 
 
 <p align="center">
-<img width="940px" img src="http://i.imgur.com/D6Efzfb.png"/>
+<img src="http://i.imgur.com/D6Efzfb.png" width="940"/>
 </p>
 
 
@@ -31,7 +31,7 @@ So, what was our actual project for the summer? The Gilt Style Quiz is a fun, pl
 ### What about Gilt Tech made the internship so cool?
 
 <p align="center">
-<img width="940px" img src="http://i.imgur.com/6DiY6xv.png"/>
+<img src="http://i.imgur.com/6DiY6xv.png" width="940"/>
 </p>
 
 
@@ -42,7 +42,7 @@ Gilt uses micro services architecture to back the business operations. Because o
 
 
 <p align="center">
-<img width="940px" img src="http://i.imgur.com/oeb6ktS.jpg"/>
+<img src="http://i.imgur.com/oeb6ktS.jpg" width="940"/>
 </p>
 #### Mentorship
 
@@ -53,7 +53,7 @@ From a project perspective, we had the chance to work with an amazing product ma
 #### Culture
 
 <p align="center">
-<img width="940px" img src="http://i.imgur.com/GYcJzx2.jpg"/>
+<img src="http://i.imgur.com/GYcJzx2.jpg" width="940"/>
 </p>
 
 Gilt has a unique, forward-thinking culture. The company constantly evaluates the tools it uses, and it is always open to exploring new technologies. We were exposed to this at the quarterly architecture council, where all the engineers spend a day discussing the current state of the Gilt technology stack and exploring possible new directions for tech. 
@@ -62,7 +62,7 @@ Gilt is also committed to open-source and we made use of some Gilt open-source t
 
 
 <p align="center">
-<img width="940px" img src="http://i.imgur.com/ryYiW8J.jpg"/>
+<img src="http://i.imgur.com/ryYiW8J.jpg" width="940"/>
 </p>
 
 ### Takeaways
