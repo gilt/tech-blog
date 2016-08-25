@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "New open source project: scala-fedex"
+title: "Rookie Summer"
 author: Team Rookie
 date: '2016-8-12'
 categories: 'internship'
