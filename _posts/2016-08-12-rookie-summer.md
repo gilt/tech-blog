@@ -1,3 +1,15 @@
+---
+layout: post
+title: "New open source project: scala-fedex"
+author: Team Rookie
+date: '2016-8-12'
+categories: 'internship'
+tags:
+- internship
+- mobile
+- team rookie
+---
+
 # The Summer Internship #TeamRookie
 
 **What can four interns do in a ten week internship? A lot, as it turns out.**
