@@ -14,7 +14,7 @@ Everyone is also really stoked about the views. The floorplan was designed to ma
 
 <p align="center">
   <img src="http://i.imgur.com/6WYb4lt.jpg")
-<p>
+</p>
 
 The floor has dozens of conference rooms, a pantry, two large collaboration spaces and room for about 320 employees. Our ping pong and foosball tables will be arriving shortly. 
 
