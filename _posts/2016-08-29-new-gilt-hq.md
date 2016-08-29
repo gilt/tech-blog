@@ -3,7 +3,7 @@
 Woohoo! Gilt and our colleagues at HBC Digital just moved into brand new offices! Our new digs are in Brookfield Place, a complex of office buildings across West Street from the Freedom Tower in Lower Manhattan. There's a lot to love about the new space. 
 
 <p align="center">
-![Gilt Office Design](http://i.imgur.com/hos6HZw.jpg)
+<img src="http://i.imgur.com/hos6HZw.jpg")
 </p>
 
 ## The office
@@ -13,7 +13,7 @@ It is great to have (almost) all of HBC and Gilt in one location (we have teams 
 Everyone is also really stoked about the views. The floorplan was designed to maximize the views and natural light by keeping the workstations and common areas on the perimeter while offices and conference rooms are in the center of the floor. Our location on the water provides great (I mean _really_ great) views of the Statue of Liberty, New York Harbor, the Hudson River, Lower Manhattan and New Jersey. 
 
 <p align="center">
-![Gilt Office Views](http://i.imgur.com/6WYb4lt.jpg)
+  <img src="http://i.imgur.com/6WYb4lt.jpg")
 <p>
 
 The floor has dozens of conference rooms, a pantry, two large collaboration spaces and room for about 320 employees. Our ping pong and foosball tables will be arriving shortly. 
@@ -37,5 +37,5 @@ Of course, a new office needs to get broken in and People Operations was on it. 
 Want to see the new space for yourself? Stay tuned to our blog for info about upcoming tech events we'll be hosting in the new space.
 
 <p align="center">
-![Cheers to the new office](http://i.imgur.com/Iiwo1gH.jpg)
+  <img src="http://i.imgur.com/Iiwo1gH.jpg")
 </p>
