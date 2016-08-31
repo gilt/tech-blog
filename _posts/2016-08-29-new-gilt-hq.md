@@ -8,7 +8,7 @@ Woohoo! Gilt and our colleagues at HBC Digital just moved into brand new offices
 
 ## The office
 
-It is great to have (almost) all of HBC and Gilt in one location (we have teams in Dublin, St. Louis and Jackson and some remote engineers). We're confident working side-by-side will allow us to better integrate our teams and better leverage our strengths.
+It is great to have all of our NYC-based HBC and Gilt people in one location (we have teams in Dublin, St. Louis and Jackson and some remote engineers, too). We're confident working side-by-side will allow us to better integrate our teams and better leverage our strengths.
 
 Everyone is also really stoked about the views. The floorplan was designed to maximize the views and natural light by keeping the workstations and common areas on the perimeter while offices and conference rooms are in the center of the floor. Our location on the water provides great (I mean _really_ great) views of the Statue of Liberty, New York Harbor, the Hudson River, Lower Manhattan and New Jersey. 
 
