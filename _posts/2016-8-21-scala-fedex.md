@@ -14,7 +14,7 @@ tags:
 ---
 <p align="center">
   <img src="http://code.scottshipp.com/wp-content/uploads/2016/05/scala-logo-small.png"/>
-  <img height="180px" src="http://3.bp.blogspot.com/-SZGsKxvHaHY/VKUwUMGZIyI/AAAAAAAABCA/GRQowwqVxdA/s1600/fedex-main.png"/>
+  <img src="http://south15airportcenter.com/wp-content/uploads/2015/10/FedEx_Logo1.png"/>
 </p>
 
 We recently made the decision to switch from Newgistics to FedEx SmartPost for customer returns at Gilt. A couple of factors contributed to the decision, but the prettiness of FedEx's API was not one of them - it's not exactly the most developer friendly API you can find.
