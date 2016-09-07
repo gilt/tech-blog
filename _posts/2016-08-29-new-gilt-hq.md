@@ -1,3 +1,16 @@
+---
+layout: post
+title: "The New Gilt HQ"
+author: John Coghlan
+date: '2016-8-29'
+categories: 'culture'
+tags:
+- office space
+- culture
+- john coghlan
+---
+
+
 # The New Gilt HQ 
 
 Woohoo! Gilt and our colleagues at HBC Digital just moved into brand new offices! Our new digs are in Brookfield Place, a complex of office buildings across West Street from the Freedom Tower in Lower Manhattan. There's a lot to love about the new space. 
