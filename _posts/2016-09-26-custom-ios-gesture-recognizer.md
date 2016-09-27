@@ -1,3 +1,15 @@
+---
+layout: post
+title: "iOS Custom Gesture Recognizer"
+author: Paul Lee
+date: '2016-8-29'
+categories: 'ios'
+tags:
+- ios
+- gesture recognizer
+- paul lee
+---
+
 # iOS Custom Gesture Recognizer
 
 ## Developing New Product Photo Gallery
