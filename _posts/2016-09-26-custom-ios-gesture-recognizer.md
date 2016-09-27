@@ -10,8 +10,6 @@ tags:
 - paul lee
 ---
 
-# iOS Custom Gesture Recognizer
-
 ## Developing New Product Photo Gallery
 As part of our Mobile team's ongoing effort to introduce more Swift-based pages in the iOS app, I recently started working on a full screen gallery feature on our Product Detail Page (PDP). The feature is similar to the typical full screen photo gallery users will recognize from many other apps, including Apple's Photo app and e-commerce applications featuring full screen view of product images.
 
