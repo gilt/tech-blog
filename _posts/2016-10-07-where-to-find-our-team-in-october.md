@@ -21,4 +21,4 @@ Here's where you can find our team this month:
 * Oct 18 - We're hosting the HBC Digital Technology Meetup featuring Tom Beute, Front End Engineer, and Jared Stetzelberg, UX Designer, talking about "Creating A Live Styleguide: Bridge the Gap Between Tech & Design Teams" - [RSVP](https://www.meetup.com/HBC-Digital-Technology-Meetup/events/234249937/)
 * and stay tuned for details on two TBA meetups in Dublin for the last week of the month! 
 
-##Come say hi! 
+##See you soon! 
