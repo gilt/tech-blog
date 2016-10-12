@@ -11,9 +11,7 @@ tags:
 - john coghlan
 ---
 
-# Where to find Gilt and HBC Digital in October
-
-Here's where to find our team this month: 
+Here's where to find Gilt and HBC Digital this month: 
 
 * Oct 11 - Dana Pylayeva, Agile Coach, is leading a Product Discovery Game Workshop at the Agile/Lean Practitioners Meetup - [RSVP](https://www.meetup.com/agile-lean-practitioners/events/234297424/)
 * Oct 13 - Sophie Huang, Product Manager, is on the "From Downloads to Daily Active Users" panel at the 🍕🍺📱 (Pizza + Beer + Mobile) Meetup - [RSVP](https://www.meetup.com/Pizza-Beer-Mobile-NYC/events/234006779/)
