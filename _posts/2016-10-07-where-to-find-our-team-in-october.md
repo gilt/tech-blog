@@ -11,7 +11,7 @@ tags:
 - john coghlan
 ---
 
-#Where to find Gilt and HBC Digital in October
+# Where to find Gilt and HBC Digital in October
 
 Here's where to find our team this month: 
 
@@ -21,4 +21,4 @@ Here's where to find our team this month:
 * Oct 18 - We're hosting the HBC Digital Technology Meetup featuring Tom Beute, Front End Engineer, and Jared Stetzelberg, UX Designer, talking about "Creating A Live Styleguide: Bridge the Gap Between Tech & Design Teams" - [RSVP](https://www.meetup.com/HBC-Digital-Technology-Meetup/events/234249937/)
 * TBA - Stay tuned for details on two meetups in Dublin on the last week of the month! 
 
-##See you soon! 
+## See you soon! 
