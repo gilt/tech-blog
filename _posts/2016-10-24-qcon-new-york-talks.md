@@ -13,8 +13,6 @@ tags:
 - heather fleming
 ---
 
-# Watch Heather Fleming and Ade Trenaman's QCon New York Talks 
-
 <p align="center">
 <img src="http://i.imgur.com/0T3BqJf.jpg">
 </p>
