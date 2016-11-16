@@ -23,7 +23,7 @@ between builds.
 And that's exactly what we ran into. We have a repository that contains *30 NPM
 modules*, each with their own specs (tests). These modules are part of an aging
 assets pipeline that I
-[briefly mentioned](http://shellscape.org/2016/11/09/linting-npm-version-conflicts)
+[briefly mentioned](http://tech.gilt.com/node/2016/11/09/linting-npm-version-conflicts)
 last week. As such each module is subject to a litany of tasks each time a change
 is made. Travis CI is hooked into the repo and for each Pull Request would run
 specs for every module, assuring that there are no errors in the code changes
