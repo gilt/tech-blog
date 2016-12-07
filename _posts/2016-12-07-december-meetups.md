@@ -28,7 +28,7 @@ Please [RSVP here](https://www.meetup.com/New-York-Scala-University/events/23530
 
 We're partnering with the NYC PostgreSQL User Group on Thursday, December 15 at 6:30pm to host [Bruce Momjian](http://momjian.us/main/resume.html#biography).
 
-Here's the description of his talk:
+Here's the description of Bruce's talk:
 
 Postgres 9.6 adds many features that take the database to a new level of scalability, with parallelism and multi-CPU-socket scaling improvements.
 
