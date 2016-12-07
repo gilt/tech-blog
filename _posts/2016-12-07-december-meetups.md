@@ -1,5 +1,16 @@
+---
+layout: post
+title: December Meetups at HBC Digital
+author: John Coghlan
+date:   2016-12-07
+categories: 'continuous integration'
+tag:
+- meetups
+- scala
+- postgresql
+---
 
-We're closing out 2016 with two more meetups at our new offices in Brookfied Place.
+We're closing out 2016 with two more meetups at our offices in Brookfied Place.
 
 ## New York Scala University - December 13
 
@@ -15,7 +26,7 @@ Please [RSVP here](https://www.meetup.com/New-York-Scala-University/events/23530
 
 ## HBC Digital Technology Meetup - December 15
 
-We're partnering with the NYC PostgresSQL User Group on Thursday, December 15 at 6:30pm to host [Bruce Momjian](http://momjian.us/main/resume.html#biography).
+We're partnering with the NYC PostgreSQL User Group on Thursday, December 15 at 6:30pm to host [Bruce Momjian](http://momjian.us/main/resume.html#biography).
 
 Here's the description of his talk:
 
