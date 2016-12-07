@@ -12,7 +12,7 @@ tag:
 
 We're closing out 2016 with two more meetups at our offices in Brookfied Place.
 
-## New York Scala University - December 13
+### New York Scala University - December 13
 
 On Tuesday, December 13 at 6:30pm, Puneet Arya, Senior Application Developer at HBC Digital, will talk about how MongoDB and the Play Framework get along. 
 
@@ -24,7 +24,7 @@ The talk will touch on:
 
 Please [RSVP here](https://www.meetup.com/New-York-Scala-University/events/235302171/) if you'd like to attend. 
 
-## HBC Digital Technology Meetup - December 15
+### HBC Digital Technology Meetup - December 15
 
 We're partnering with the NYC PostgreSQL User Group on Thursday, December 15 at 6:30pm to host [Bruce Momjian](http://momjian.us/main/resume.html#biography).
 
