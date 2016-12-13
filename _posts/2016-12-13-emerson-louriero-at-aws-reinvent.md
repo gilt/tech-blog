@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Emerson Loureiro at AWS re:Invent 2016: From Monolothic to Microservices - Gilt's Journey to Microservices on AWS"
+title: "From Monolothic to Microservices - Gilt's Journey to Microservices on AWS"
 author: John Coghlan
 date: '2016-12-13'
 categories: 'conferences'
