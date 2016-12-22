@@ -17,38 +17,38 @@ In the fashion industry there are many tasks that require human-level cognitive 
 such as detecting similar products or identifying facets in products (e.g. sleeve length or silhouette types
 in dresses).
 
-In GILT we are building automated cognitive systems to detect dresses based on their silhouette, neckline, sleeve type and occasion.
-On top of that, we are also developing systems to detect dress similarity which can be
+In [GILT](https://www.gilt.com/) we are building automated cognitive systems to detect dresses based on their **silhouette**, **neckline**, **sleeve type** and **occasion**.
+On top of that, we are also developing systems to detect **dress similarity** which can be
 useful for product recommendations. Furthermore, when integrated with automated tagging,
 our customers will be able to find similar products with different facets. For instance,
 a customer might be very interested in a dress in particular, but with a different neckline
 or sleeve length.
 
-For these automated cognitive tasks we are leveraging the power of a technology called Deep Learning that recently managed to [achieve groundbreaking results](https://www.youtube.com/watch?v=SUbqykXVx0A) thanks to
- mathematical and algorithmic advances together with the massive parallel processing power of modern GPUs.
+For these automated cognitive tasks we are leveraging the power of a technology called **Deep Learning** that recently managed to [achieve groundbreaking results](https://www.youtube.com/watch?v=SUbqykXVx0A) thanks to
+ mathematical and algorithmic advances together with the massive parallel processing power of modern [GPUs](https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units).
 
-GILT Automated dress faceting
+[GILT](https://www.gilt.com/) Automated dress faceting
 <p align="center">
  <img src="http://i.imgur.com/DwOJMqT.png"/>
 </p>
 
 
-GILT Automated dress similarity
+[GILT](https://www.gilt.com/) Automated dress similarity
 <p align="center">
  <img src="https://lh3.googleusercontent.com/MRGJeRWwyf8YXrnr4YLdJLS8X11VFAskS7K23OBwzF7PxqZCQcFPJaBY97b6O9HqN569FKLcANTlaJFPkAwcXKxtOeH0nXGOrfR70baCGOGAjowSR_-x6a7ZFgfaSGSzKEG6OodX3zrH1Cjgrs2iAk1EJmv1QXe9wdrftMsN45K6DweIerN6RupMGxIXeEwr8mFyb9ZEfvjcnWdgTQ-uWV1Nn3OwV6UdHH0nxzyG5Q0-NW37kJV8LXgwV_zQmqlUFOf5gpa0NckdO0kWnY589g1X8A7FUcpWhRcgMpBhf3sjla_5GeBVUJjVM4tHnymjIE65H-B45ptFbGx0B0AWbI-9yT_-wcHoaQKkg2lZjw8pk1IJ2l7RCOWuuzJphepdgtX4Wr4oR-unY5WB8VvMlX0sayQBwyCGu709R-3zp7TPv3yrG09RTdGkev5hqxu4Gcolt6kyAcIK5cKjMlERAvcNm8ILEJSZDzVXOOhT7GQmNhH3EOk1WZcTmcNVSLr06HaJFVHenhfSld84Wa-s_a_xf2Z_m_t7gt0EMK6kgU-WCIyDD07kts5K1RPT874VLJn5=w1790-h995-no"/>
 </p>
 
 # Deep Learning
 
-Deep learning is based on what's called 'deep neural networks'. A [neural network](https://en.wikipedia.org/wiki/Artificial_neural_network) is
+Deep learning is based on what's called **deep neural networks**. A [neural network](https://en.wikipedia.org/wiki/Artificial_neural_network) is
 a sequence of numerical parameters that transform an input into an output. The input
 can be the raw pixels in an image, and the output
 can be the probability of that image to be of a specific type (for example, a dress with boat neckline).
 
-To achieve the these results it's necessary to set the right numerical parameters to the network so it can make accurate predictions.
-This process is called 'neural network training' and most times, involves different forms of a base algorithm called [backpropagation](https://en.wikipedia.org/wiki/Backpropagation).
-The training is done using a set of inputs (e.g. images of dresses) and known output targets (e.g. the probability of each dress to be of a given silhouette) called the training set.
-The training set is used by the backpropagation algorithm to change the network parameters. Given an input image, the backpropagation parameters change gets closer to the target. Iterating many times through backpropagation, the input can produce outputs very close to the target.
+To achieve these results it's necessary to set the right numerical parameters to the network so it can make accurate predictions.
+This process is called **neural network training** and most times, involves different forms of a base algorithm called [backpropagation](https://en.wikipedia.org/wiki/Backpropagation).
+The training is done using a set of inputs (e.g. images of dresses) and known output targets (e.g. the probability of each dress to be of a given silhouette) called the **training set**.
+The training set is used by the backpropagation algorithm to update the network parameters. Given an input image, the backpropagation refines parameters so to get closer to the target. Iterating many times through backpropagation will lead to a model that is able to produce, for a given input, outputs very close to the target.
 
 Once the training is done, if it has a high accuracy and the model is not affected by overfitting, whenever the network is fed with a brand new image,
 it should be able to produce accurate predictions.
@@ -65,7 +65,7 @@ Neural networks are structured in layers which are atomic forms of neural networ
 an input the output of the previous layer, computes a new output with its numerical parameters and
 feeds it forward into the next layer's input.
 The first layers usually extract low level features in images such as edges, corners and curves.
-The the deeper the layer is, the more high level features it extracts.
+The deeper the layer is, the more high level features it extracts.
 Deep neural networks have many layers, usually one stacked on top of the other.
 
 Deep Neural Network Diagram
@@ -75,8 +75,8 @@ Deep Neural Network Diagram
 
 # Dress Faceting
 
-Automatic dress faceting is one of the new initiatives GILT is working on.
-GILT is currently training deep neural networks to tag occasion, silhouette, neckline and sleeve type in dresses.
+Automatic dress faceting is one of the new initiatives [GILT](https://www.gilt.com/) is working on.
+[GILT](https://www.gilt.com/) is currently training deep neural networks to tag occasion, silhouette, neckline and sleeve type in dresses.
 
 ## Dress Faceting: The Model
 The model used for training is [Facebook's open source Torch](https://github.com/facebook/fb.resnet.torch) implementation of [Microsoft's ResNet](https://arxiv.org/pdf/1512.03385v1).
@@ -109,7 +109,7 @@ a good metric that takes into account both [false positive and false negative er
 On top of that, we provide a few views to be able to analyze results, specifically
 intended to make sure samples are properly tagged.
 
-F1 Score View
+[F1 Score](https://en.wikipedia.org/wiki/F1_score) View
 <p align="center">
   <img src="https://i.imgur.com/ZaYqprN.png"/>
 </p>
@@ -122,7 +122,7 @@ the model retrained with the new test and training set. Once the model is retrai
 
 It's important to note here
 that images in either the test or the training set always remain in test or in train.
-It's only the tag that is changed: for example, a 'long sleeve' could be retagged to 'three-quarters sleeve'.
+It's only the tag that is changed: for example, a **long sleeve** could be retagged to **three-quarters sleeve**.
 
 To scale the system we are attempting to automate the retagging using [Amazon Mechanical Turk](https://www.mturk.com/mturk/welcome).
 
