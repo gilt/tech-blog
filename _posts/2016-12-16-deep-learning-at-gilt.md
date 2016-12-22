@@ -147,7 +147,7 @@ There are other alternatives to image tagging from SaaS companies. We've tried t
 
 # Dress Similarity
 
-Product similarity will allow us to be able to offer our customers recommendations based on product similarity. It'll also allow our customers to find similar products with other facets.
+Product similarity will allow us to be able to offer our customers recommendations based on product similarity. It'll also allow our customers to find visually similar product with other facets.
 
 ## Dress Similarity: The Model
 
