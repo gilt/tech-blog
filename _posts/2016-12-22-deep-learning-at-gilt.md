@@ -82,15 +82,25 @@ Automatic dress faceting is one of the new initiatives [GILT](https://www.gilt.c
 The model used for training is [Facebook's open source Torch](https://github.com/facebook/fb.resnet.torch) implementation of [Microsoft's ResNet](https://arxiv.org/pdf/1512.03385v1).
 Facebook's project is an image classifier, with models already trained in [ImageNet](http://image-net.org/).
 We've added a few additional features to the original open source project:
-- Selection of dataset for training and testing (silhouette, occasion, neckline...)
-- Weighted loss for imbalanced datasets
-- Inference given a file path of an image
-- Store and load models in/from [AWS S3](https://aws.amazon.com/s3/)
-- Automatic synchronization image labels with imported dataset
-- Tolerance to corrupted or invalid images
-- Custom ordering of labels
-- Test and train [F1 Score](https://en.wikipedia.org/wiki/F1_score) accuracy computation for each class as well as individual predictions for each image across all tags.
-- Spatial transformer attachment in existing networks
+
+
+* Selection of dataset for training and testing (silhouette, occasion, neckline...)
+
+* Weighted loss for imbalanced datasets
+
+* Inference given a file path of an image
+
+* Store and load models in/from [AWS S3](https://aws.amazon.com/s3/)
+
+* Automatic synchronization image labels with imported dataset
+
+* Tolerance to corrupted or invalid images
+
+* Custom ordering of labels
+
+* Test and train [F1 Score](https://en.wikipedia.org/wiki/F1_score) accuracy computation for each class as well as individual predictions for each image across all tags.
+
+* Spatial transformer attachment in existing networks
 
 The models are trained in [GPU P2 EC2](https://aws.amazon.com/blogs/aws/new-p2-instance-type-for-amazon-ec2-up-to-16-gpus/) instances deployed using [Cloud Formation](https://aws.amazon.com/cloudformation/) and
 attaching [EBS](https://aws.amazon.com/ebs/) to them. We plan to substitute
@@ -161,8 +171,11 @@ is know as [transfer learning](http://cs231n.github.io/transfer-learning/).
 The first trained networks are used to locate the dress in the image following Yann LeCun
 [Overfeat paper](https://arxiv.org/pdf/1312.6229v4.pdf).
 This location algorithm trains two networks using transfer learning:
-- Background detection: detects background and foreground (dress) patches.
-- Dress location network: locates a dress in an image given a patch
+
+
+* Background detection: detects background and foreground (dress) patches.
+
+* Dress location network: locates a dress in an image given a patch
 of a dress.
 
 Combination of Dress Location and Background detection to accurately detect the Location of the dress
@@ -187,8 +200,11 @@ Similarity Network Topology
 
 To compute the similarity of a dress and the other dresses we have in our database
 [TiefVision](https://github.com/paucarre/tiefvision) does the following two steps:
-- The dress is first cropped using the location and background detection networks.
-- Finally the dress similarity network computes the similarity between the cropped
+
+
+* The dress is first cropped using the location and background detection networks.
+
+* Finally the dress similarity network computes the similarity between the cropped
 dress and the cropped dresses we have in our database. It's also possible to compute
 similarity using unsupervised learning.
 
