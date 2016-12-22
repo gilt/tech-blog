@@ -140,7 +140,7 @@ Image Tagging Refining Workflow
 
 There are other alternatives to image tagging from SaaS companies. We've tried them without success. The problem with most of these platforms is that at this point in time they are not accurate nor detailed enough in regards of fashion tagging.
 
-[Amazon Rekognition](https://aws.amazon.com/rekognition/) image tagging results
+[Amazon Rekognition](https://aws.amazon.com/rekognition/) short sleeve dress image tagging results
 <p align="center">
  <img src="https://i.imgur.com/EAg58Xz.png"/>
 </p>
