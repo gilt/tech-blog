@@ -29,7 +29,7 @@ For these automated cognitive tasks we are leveraging the power of a technology 
 
 GILT Automated dress faceting
 <p align="center">
- <img src="https://lh5.googleusercontent.com/rcKDnBR7INFya_p5jYasxeKtC1fiYVCast1wpL67ey4bXfNdMVV9I6iSsDJD4HvrhMhrlrDWe9QZxzc=w2880-h1412-rw"/>
+ <img src="http://i.imgur.com/DwOJMqT.png"/>
 </p>
 
 
@@ -57,7 +57,7 @@ For example, say that we train a neural network to detect necklines in dresses u
 a dataset of images of dresses with known necklines.
 We'd expect that if the network parameters are properly set, when we feed the network with an image of a cowl neckline,
 the output probability for the cowl neckline should be close to 1 (100% confidence).
-The accuracy of the model can be computed using a set of inputs and expected targets called 'test set'.
+The accuracy of the model can be computed using a set of inputs and expected targets called **test set**.
 The test set is never used during training and thus it provides an objective view of how the network would
 behave with new data.
 
@@ -70,7 +70,7 @@ Deep neural networks have many layers, usually one stacked on top of the other.
 
 Deep Neural Network Diagram
 <p align="center">
-  <img src="https://lh3.googleusercontent.com/OMjySWDEsEbEfLT5udkR48WSL24JUph0HpspgXqOvSBfR07rDP4OgLxI3-_AAXIT63ArpcaRrrkbuKw=w2880-h1324-rw"/>
+  <img src="https://i.imgur.com/TGAKbuy.png"/>
 </p>
 
 # Dress Faceting
@@ -109,9 +109,9 @@ a good metric that takes into account both [false positive and false negative er
 On top of that, we provide a few views to be able to analyze results, specifically
 intended to make sure samples are properly tagged.
 
-F1-Score View
+F1 Score View
 <p align="center">
-  <img src="https://lh4.googleusercontent.com/yU45heCQnxFKYc8DV7Ls3vgYXkX-UFOyJ6wIfmXNP2sUtsJwQ2_bRWsavHUkKt4psSCbV27r7QGP6Qs=w2880-h1412"/>
+  <img src="https://i.imgur.com/ZaYqprN.png"/>
 </p>
 
 ### Image Tagging Refining
@@ -128,12 +128,12 @@ To scale the system we are attempting to automate the retagging using [Amazon Me
 
 False Negatives View
 <p align="center">
-  <img src="https://lh3.googleusercontent.com/myD-PY366xiFWSodU9tg0VZ-pKdcCp0HLi078g8XpSBli5o7K1JXqDppOzGzXSAj58SHKuu0PXf13gI=w2880-h1412-rw"/>
+  <img src="https://i.imgur.com/QXx0w07.png"/>
 </p>
 
 Image Tagging Refining Workflow
 <p align="center">
-  <img src="https://lh5.googleusercontent.com/n4CnqDpwiDn9F0dv0mLO92PAvLIDDNCfVbEx1iSeHZW1d_AmkH9OmXArCPTXSZUuozPunEE73H25UFk=w2880-h1412-rw"/>
+  <img src="https://i.imgur.com/IbvG9ZM.png"/>
 </p>
 
 ## Alternatives using SaaS
@@ -142,7 +142,7 @@ There are other alternatives to image tagging from SaaS companies. We've tried t
 
 [Amazon Rekognition](https://aws.amazon.com/rekognition/) image tagging results
 <p align="center">
- <img src="https://lh4.googleusercontent.com/ZK0g_j9Ak58G3enZsxQQYz5l0UwWqCo-V_VprMdvqCHrXlFnZROE8Yd7ISV60Nq_SkefSWZYU2GRreg=w2880-h1324-rw"/>
+ <img src="https://i.imgur.com/EAg58Xz.png"/>
 </p>
 
 # Dress Similarity
@@ -167,7 +167,7 @@ of a dress.
 
 Combination of Dress Location and Background detection to accurately detect the Location of the dress
 <p align="center">
-  <img src="https://lh6.googleusercontent.com/OIFF7sc8s0dUPOXr5pIWKGp1AJ75U78ys-Y7Y60VZpF9Ne08TIMkPHEPYxsaE8porY2xVo2M1__w9YQ=w2880-h1412-rw"/>
+  <img src="https://i.imgur.com/yufZKDn.png"/>
 </p>
 
 Once the dress is located, the next step is to detect whether two dresses are similar
@@ -182,7 +182,7 @@ detect dress similarities.
 
 Similarity Network Topology
 <p align="center">
-  <img src="https://lh4.googleusercontent.com/vpq9lVvduiISIaFPhd05kPrVqIYz0yoy-nIde5uMNkIj_mum61tXE1DHiUANfdlxT6-FGVgeAIWmeCo=w2880-h1412-rw"/>
+  <img src="https://i.imgur.com/9g9qltG.png"/>
 </p>
 
 To compute the similarity of a dress and the other dresses we have in our database
