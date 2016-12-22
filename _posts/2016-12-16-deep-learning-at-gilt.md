@@ -78,7 +78,7 @@ Deep Neural Network Diagram
 Automatic dress faceting is one of the new initiatives [GILT](https://www.gilt.com/) is working on.
 [GILT](https://www.gilt.com/) is currently training deep neural networks to tag occasion, silhouette, neckline and sleeve type in dresses.
 
-## Dress Faceting: The Model
+## Dress Faceting Model
 The model used for training is [Facebook's open source Torch](https://github.com/facebook/fb.resnet.torch) implementation of [Microsoft's ResNet](https://arxiv.org/pdf/1512.03385v1).
 Facebook's project is an image classifier, with models already trained in [ImageNet](http://image-net.org/).
 We've added a few additional features to the original open source project:
@@ -98,7 +98,7 @@ EBS by [EFS (Elastic File System)](https://aws.amazon.com/blogs/aws/amazon-elast
 
 We are also investing efforts trying to archive similar results using [TensorFlow](https://www.tensorflow.org/) and [GoogleNet v3](https://github.com/tensorflow/models/tree/master/inception).
 
-## Dress Faceting: Data and Quality Management
+## Data and Quality Management
 To keep track of the results that our model is generating we've built a [Play](https://www.playframework.com/) web application to analyze results, keep a persistent dataset, and change the tags of the samples if we detect they are wrong.
 
 
@@ -149,7 +149,7 @@ There are other alternatives to image tagging from SaaS companies. We've tried t
 
 Product similarity will allow us to be able to offer our customers recommendations based on product similarity. It'll also allow our customers to find visually similar product with other facets.
 
-## Dress Similarity: The Model
+## Dress Similarity Model
 
 For the machine learning model we are using [TiefVision](https://github.com/paucarre/tiefvision).
 
