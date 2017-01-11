@@ -9,7 +9,7 @@ tags:
 - agile
 ---
 
-We'll be hosting our first meetup of 2017 in partnership with the [NYC Scrum User Group](https://www.meetup.com/NYC-Scrum-User-Group/events/232541163/) on Thursday, January 19th. This is our first time hosting this group and together we're kicking things off with a bang: Ken Rubin will be joining us to lead a talk on Agile. 
+We'll be hosting our first meetup of 2017 in partnership with the [NYC Scrum User Group](https://www.meetup.com/NYC-Scrum-User-Group/events/232541163/) on Thursday, January 19th. This is our first time hosting this group and we're off to a great start: Ken Rubin will be joining us to lead a talk on Agile. 
 
 More on Ken: 
 
