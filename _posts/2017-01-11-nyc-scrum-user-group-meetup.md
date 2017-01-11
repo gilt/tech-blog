@@ -9,11 +9,14 @@ tags:
 - agile
 ---
 
-We will be hosting our first meetup of 2017 in partnership with the [NYC Scrum User Group](https://www.meetup.com/NYC-Scrum-User-Group/events/232541163/) on Thursday, January 19th. This is our first time hosting this Meetup group and we are kicking things off with a bang: Ken Rubin will be joining us to lead a talk on Agile. More on Ken: 
+We'll be hosting our first meetup of 2017 in partnership with the [NYC Scrum User Group](https://www.meetup.com/NYC-Scrum-User-Group/events/232541163/) on Thursday, January 19th. This is our first time hosting this group and together we're kicking things off with a bang: Ken Rubin will be joining us to lead a talk on Agile. 
+
+More on Ken: 
 
 _Ken is the author of Amazon’s #1 best selling book Essential Scrum: A Practical Guide to the Most Popular Agile Process. As an agile thought leader, he founded Innolution where he helps organizations thrive through the application of agile principles in an effective and economically sensible way. He has coached over 200 companies ranging from startups to Fortune 10, and is an angel investor and mentor to numerous exciting startups. As a Certified Scrum Trainer, Ken has trained over 24,000 people in agile / Scrum as well as object-oriented technology. He was the first managing director of the worldwide Scrum Alliance, a nonprofit organization focused on transforming the world of work using Scrum._
 
 The title of the talk is "Agile Transition Lessons That Address Practical Questions" and will address questions like: 
+
 - Is there a way to quantify the cost of the transition?
 - How many teams or what scope should the initial transition effort cover?
 - Should we use an internal coach or hire an external coach?
