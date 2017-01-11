@@ -1,6 +1,6 @@
 ---
 layout: post
-title: We're hosting the NYC Scrum User Group Meetup on Thursday, January 19th
+title: NYC Scrum User Group Meetup - January 19th
 author: 
 date: '2017-01-11'
 categories: 'meetups'
