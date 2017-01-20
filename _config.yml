@@ -110,6 +110,9 @@ JB :
     duoshuo :
       short_name : jekyllbootstrap
 
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+    google_analytics: UA-83021339-1
+
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
