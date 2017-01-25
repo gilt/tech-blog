@@ -60,7 +60,7 @@ I start the brewing process in the morning before going to work, and I keep the 
 
 12. Press the coffee and serve.
 
-13. Store what remains in an airtight container, and consume within 3 days.
+13. Store what remains in an airtight glass container, and consume within 3 days.
 
 Overall, it’s a 24-hour process, although there are some tricks you can use to cut down to on brew time. More frequent stirring helps you shorten the process a bit, as does repeated pressing at the end. (Pressing the grounds, removing the press, stirring the grounds, and pressing again.) You can adjust according to your equipment and tastes, but to allow the flavors to fully develop, I’d suggest a minimum of 16 hours brew time.
 
