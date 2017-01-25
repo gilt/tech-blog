@@ -56,20 +56,20 @@ Now let's get into the details of how we have set that up, starting with the ins
 
 ```yaml
 InstanceTerminationEvent:
-	Type: AWS::Events::Rule
-	Properties:
-	  Name: my-instance-termination-rule
-	  State: ENABLED
-	  Targets:
-	    - Arn: arn:aws:lambda:us-east-1:123456789:function:my-instance-termination-lambda-function
-	      Id: my-instance-termination-rule-target
-	  EventPattern:
-	    source: ['aws.autoscaling']
-	    detail-type: ['EC2 Instance Terminate Successful']
-	    detail:
-	      AutoScalingGroupName:
-	        - !Ref YourAutoScalingGroup
-	        - !Ref AnotherOfYourAutoScalingGroup
+    Type: AWS::Events::Rule
+    Properties:
+      Name: my-instance-termination-rule
+      State: ENABLED
+      Targets:
+        - Arn: arn:aws:lambda:us-east-1:123456789:function:my-instance-termination-lambda-function
+          Id: my-instance-termination-rule-target
+      EventPattern:
+        source: ['aws.autoscaling']
+        detail-type: ['EC2 Instance Terminate Successful']
+        detail:
+          AutoScalingGroupName:
+            - !Ref YourAutoScalingGroup
+            - !Ref AnotherOfYourAutoScalingGroup
 ```
 
 When the rule is matched to an event, given the conditions stated on the template, it will invoke the target - in this case a Lambda. The ARN of the Lambda is then provided as the value of the target. This rule is essentially stating that, when an EC2 instance is terminated within the auto scaling groups defined, the Lambda should be triggered. The event itself is then used as the input to the Lambda.
@@ -78,12 +78,12 @@ Remember though that you also need a permission to allow the rule to invoke the 
 
 ```yaml
 InstanceTerminationLambdaPermission:
-	Type: AWS::Lambda::Permission
-	Properties:
-	  Action: lambda:*
-	  FunctionName: arn:aws:lambda:us-east-1:123456789:function:my-instance-termination-lambda-function
-	  Principal: events.amazonaws.com
-	  SourceArn: !GetAtt ['InstanceTerminationEvent', 'Arn']
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:*
+      FunctionName: arn:aws:lambda:us-east-1:123456789:function:my-instance-termination-lambda-function
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt ['InstanceTerminationEvent', 'Arn']
 ```
 
 The Lambda itself is an exception; instead of creating it via a CloudFormation template, we simply defined it via the console. That way, it's simpler to test it out as and perform code changes. Below is our Lambda - in Python - which takes the instance termination events and sends an email to our team with details around the instance that has been terminated, the time, and also the cause. In this particular case, as I mentioned above, we are only interested in instances that have been terminated due to a health check failure, so the cause on the emails will always be the same. It's worth pointing out though that the email notification is just one option. You can also, for example, integrate your Lambda with something like [PagerDuty](https://www.pagerduty.com/) if you wish to have more real time alerts.
@@ -145,26 +145,26 @@ For our deployment notifications, the setup is fairly similar. For this, as I sa
 
 ```yaml
 CodeDeploySuccessNotificationEvent:
-	Type: AWS::Events::Rule
-	Properties:
-	  Name: my-deployment-successful-rule
-	  State: ENABLED
-	  Targets:
-	    - Arn: arn:aws:lambda:us-east-1:123456789:function:my-deployment-successful-lambda-function
-	      Id: my-deployment-successful-target
-	  EventPattern:
-	    source: ['aws.codedeploy']
-	    detail-type: ['CodeDeploy Deployment State-change Notification']
-	    detail:
-	      state: [SUCCESS]
-	      application: [!Ref YourCodedeployApplication]
+    Type: AWS::Events::Rule
+    Properties:
+      Name: my-deployment-successful-rule
+      State: ENABLED
+      Targets:
+        - Arn: arn:aws:lambda:us-east-1:123456789:function:my-deployment-successful-lambda-function
+          Id: my-deployment-successful-target
+      EventPattern:
+        source: ['aws.codedeploy']
+        detail-type: ['CodeDeploy Deployment State-change Notification']
+        detail:
+          state: [SUCCESS]
+          application: [!Ref YourCodedeployApplication]
 CodeDeploySuccessNotificationEventLambdaPermission:
-	Type: AWS::Lambda::Permission
-	Properties:
-	  Action: lambda:*
-	  FunctionName: arn:aws:lambda:us-east-1:123456789:function:my-deployment-successful-lambda-function
-	  Principal: events.amazonaws.com
-	  SourceArn: !GetAtt ['CodeDeploySuccessNotificationEvent', 'Arn']
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:*
+      FunctionName: arn:aws:lambda:us-east-1:123456789:function:my-deployment-successful-lambda-function
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt ['CodeDeploySuccessNotificationEvent', 'Arn']
 ```
 
 And below is the Lambda that receives the event, and sends out an email notification. On the email it will be included the application name, the deployment group where the deployment has happened, as well as the release version. Our actual Lambda in production also fires a deployment notification to NewRelic. In there you have a history of the releases for a given service, and how metrics have changed since each release. That can come in handy when establishing timelines and finding out exactly which release is broken.
