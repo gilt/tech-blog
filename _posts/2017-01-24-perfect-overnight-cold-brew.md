@@ -26,11 +26,11 @@ To me, this is the perfect iced coffee.
 
 - [Intelligentsia House Blend](https://www.intelligentsiacoffee.com/house-blend) beans: Delicious coffee, full-bodied but not over-roasted or overly bitter. Using beans as opposed to getting pre-ground coffee ensures maximum freshness when you brew. Ground coffee oxidizes quickly and will soon taste stale if stored. (I use Intelligentsia’s mail order subscription service so I’m never out of fresh beans.)
 
-- A [Bodum Bistro Electric Burr Grinder](https://www.amazon.com/Bodum-Bistro-Electric-Coffee-Grinder/dp/B0043095WW): This is a _conical burr grinder_, which means the grounds come out a consistent granularity. Most home coffee grinders are blade grinders, and the resulting grounds will be a random mix of fine and coarse bits. In a French press, fine grounds will not be caught by the mesh filter; those grounds will end up on your tongue like silt and the result will not be pleasant drinking. If you love coffee and you use a French press, you should consider buying a conical burr grinder.
+- A [Bodum Bistro Electric Burr Grinder](http://amzn.to/2jS6YGM): This is a _conical burr grinder_, which means the grounds come out a consistent granularity. Most home coffee grinders are blade grinders, and the resulting grounds will be a random mix of fine and coarse bits. In a French press, fine grounds will not be caught by the mesh filter; those grounds will end up on your tongue like silt and the result will not be pleasant drinking. If you love coffee and you use a French press, you should consider buying a conical burr grinder.
 
-- A 51oz (1.5 liter) [Bodum Chambord French Press](https://www.amazon.com/Bodum-Chambord-French-Coffee-Espresso/dp/B00005LM0T). This size yields about 2-3 days worth of coffee at my rate of consumption, which is ideal; beyond 3 days, the coffee would be getting stale anyway.
+- A 51oz (1.5 liter) [Bodum Chambord French Press](http://amzn.to/2jfs14p). This size yields about 2-3 days worth of coffee at my rate of consumption, which is ideal; beyond 3 days, the coffee would be getting stale anyway.
 
-- A pitcher of NYC tap water filtered through a [Brita](https://www.amazon.com/Brita-Everyday-Water-Pitcher-Filter/dp/B01FXN3E74)
+- A pitcher of NYC tap water filtered through a [Brita](http://amzn.to/2jSjKVN).
 
 I start the brewing process in the morning before going to work, and I keep the French press on the counter until nighttime so I can stir periodically when I get the chance. Then, when I go to bed, I put the carafe in the fridge so it’s cold and ready to consume when I wake up the next morning.
 
