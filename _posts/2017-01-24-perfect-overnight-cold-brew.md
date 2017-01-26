@@ -26,13 +26,13 @@ Despite these embarrassing setbacks, the technique continued to evolve and impro
 
 - [Intelligentsia House Blend](https://www.intelligentsiacoffee.com/house-blend) beans: Delicious coffee, full-bodied but not over-roasted or overly bitter. Using beans as opposed to getting pre-ground coffee ensures maximum freshness when you brew. Ground coffee oxidizes quickly and will soon taste stale if not used right away. (I signed up for Intelligentsia’s mail order subscription service so I’m never out of fresh beans.)
 
-- A [Bodum Bistro Electric Burr Grinder](http://amzn.to/2jS6YGM): This is a _conical burr grinder_, which means the grounds come out a consistent granularity. Most home coffee grinders are blade grinders, and the resulting grounds will be a random mix of fine and coarse bits. In a French press, fine grounds will not be caught by the mesh filter; those grounds will end up on your tongue like silt and the result will not be pleasant drinking. If you love coffee and you use a French press, you should consider buying a conical burr grinder.
+- A [Bodum Bistro Electric Burr Grinder](http://amzn.to/2jS6YGM): This is a _conical burr grinder_, which means the grounds come out a consistent granularity. Most home coffee grinders are blade grinders, and the resulting grounds will be a random mix of fine and coarse bits. In a French press, fine grounds will not be caught by the mesh filter; those grounds will end up on your tongue like silt and the result will not be pleasant drinking. If you love coffee and you use a French press, you should seriously consider a conical burr grinder.
 
 - A 51oz (1.5 liter) [Bodum Chambord French Press](http://amzn.to/2jfs14p). This size yields about 2-3 days of coffee at my rate of consumption, which is ideal; beyond 3 days, the coffee would begin tasting stale anyway.
 
 - A pitcher of [NYC tap water](https://www.nytimes.com/interactive/2016/03/24/nyregion/how-nyc-gets-its-water-new-york-101.html) filtered through a [Brita](http://amzn.to/2jSjKVN).
 
-<img src="/assets/images/cold-brew/bodum-french-press.png" align="right" width="285"/>I start the brewing process in the morning before going to work, and I keep the French press on the counter until nighttime so I can stir periodically when I get the chance. Then, when I go to bed, I put the carafe in the fridge so it’s cold and ready to consume when I get up the next morning.
+<img src="/assets/images/cold-brew/bodum-french-press.png" align="right" width="285"/>I start the brewing process in the morning, and I keep the French press on the counter until nighttime so I can stir periodically when I get the chance. Then, when I go to bed, I put the carafe in the fridge so it’s cold and ready to consume when I get up the next morning.
 
 **The brewing steps I follow:**
 
@@ -46,7 +46,7 @@ Despite these embarrassing setbacks, the technique continued to evolve and impro
 
 5. Take the fresh grounds out of the grinder—*be sure to stop and smell the coffee!*—and dump them in the glass carafe of the French press. Return any unground beans remaining in the hopper to an airtight container.
 
-6. Fill the carafe to nearly to the top with **cold** water. _Filtered_ tap water or bottled water is recommended, depending on the desirability of the water coming out of your faucet. (Remember, good beans + bad water = bad coffee.)
+6. Fill the carafe nearly to the top with **cold** water. _Filtered_ tap water or bottled water is recommended, depending on the desirability of the water coming out of your faucet. (Remember, good beans + bad water = bad coffee.)
 
 7. Mix the water and grounds together by stirring for 10 seconds.
 
@@ -58,10 +58,8 @@ Despite these embarrassing setbacks, the technique continued to evolve and impro
 
 11. Remove from fridge and stir for 10 seconds.
 
-12. Press the coffee and serve.
+12. Press the grounds and serve the coffee.
 
 13. Store what remains in an airtight glass container, and drink within 3 days.
 
-Overall, it’s a 24-hour process, although there are some tricks you can use to cut down to on brew time. More frequent, more vigorous and longer stirring helps you shorten the process a bit, as does repeated pressing at the end. (Pressing the grounds, removing the press, stirring the grounds, and pressing again.) You can adjust according to your equipment, beans and personal taste, but in my experience at least 16 hours is needed to let the flavors fully develop.
-
-If you _love_ iced coffee, give this process a try. Hope you enjoy it as much as I do!
+Overall, it’s a 24-hour process, although there are some tricks you can use to cut down to on brew time. More frequent, vigorous and longer stirring will help shorten the process, as will repeated pressing at the end. (Pressing the grounds, removing the press, stirring the grounds, and pressing again.) You can adjust according to your equipment, beans and personal taste, but in my experience you need at least 16 hours of brew time to let the flavors fully form.
