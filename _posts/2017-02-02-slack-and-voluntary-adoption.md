@@ -36,9 +36,9 @@ tech teams using different chat solutions, creating artificial divisions and
 cross-team awkwardness. We could have mandated a move to one of the incumbent
 chat solutions at HBC and dragged everyone across the divide: a solution that
 would have been a long hard march. Instead, we looked about at the current most-
-loved tool, Slack, kicked off a couple of channels, invited some folk in, 
+loved tool, Slack, kicked off a couple of channels, invited some of our teams in, 
 and said, "hey, try it out." Within days we encountered some interesting
-effects: first, folks loved it; and second, they wanted clarity to know if
+effects: first, people loved it; and second, they wanted clarity to know if
 everyone could just move there together. Without having to force or coerce
 anyone, we’re now all together on one system: Slack.
 
