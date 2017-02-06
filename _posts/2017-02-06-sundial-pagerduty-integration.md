@@ -2,7 +2,7 @@
 layout: post
 title: Sundial PagerDuty Integration
 author: Giovanni Gargiulo
-date: '2017-01-03'
+date: '2017-02-06'
 categories: 'aws'
 tags:
 - aws
