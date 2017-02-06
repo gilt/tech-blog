@@ -1,21 +1,20 @@
---- 
-layout: post 
-title: Voluntary Adoption in Action: HBC Digital Adopts Slack
-author: Adrian Trenaman  
-date: '2017-02-02' 
-categories: leadership 
+---
+layout: post
+title: Voluntary Adoption in Action&58; HBC Digital Adopts Slack
+author: Adrian Trenaman
+date: '2017-02-06'
+categories: leadership
 tags:
 - leadership
-- organisation 
-- chat solutions 
-- voluntary adoption 
-- culture 
+- organisation
+- chat solutions
+- voluntary adoption
+- culture
 - hipchat
-- slack 
+- slack
 ---
 
 ## Musings on Decentralised Control and Voluntary Adoption in Large Organisations.
-
 
 When I think of Slack, I think first of the great [book](https://www.amazon.com
 /Slack-Getting-Burnout-Busywork-Efficiency/dp/0767907698) by Tom DeMarco on the
