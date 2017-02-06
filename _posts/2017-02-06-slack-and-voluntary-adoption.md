@@ -2,7 +2,7 @@
 layout: post
 title: Voluntary Adoption in Action&58; HBC Digital Adopts Slack
 author: Adrian Trenaman
-date: '2017-02-02'
+date: '2017-02-06'
 categories: leadership
 tags:
 - leadership
