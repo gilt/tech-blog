@@ -23,20 +23,20 @@ organisational "slack" we need to play, innovate, get big things done. It’s an
 amazing read, and I recommend without reservation. More recently, when I think
 of Slack, I think of the massive grassroots movement at HBC Digital that
 switched us from HipChat to Slack in just a few short weeks, without any top-
-down edict or stop-the-world migration.  We have this core value in Tech called
-‘voluntary adoption’: if a technology, framework, tool or service is really good
-then your teams will adopt it naturally, without coercion. The corollary of
-voluntary adoption is that if you find that you’re having to push a solution on
-a group of people and they’re resisting, pushing back, or not getting it, then
-it’s a good sign that the solution might not be as good as you previously
-thought.
+down edict or stop-the-world migration.  We acheived this by leveraging the
+simple idea of  ‘voluntary adoption’: if a technology, framework, tool or
+service is really good then your teams will adopt it naturally, without
+coercion. The corollary of voluntary adoption is that if you find that you’re
+having to push a solution on a group of people and they’re resisting, pushing
+back, or not getting it, then it’s a good sign that the solution might not be as
+good as you previously thought.
 
 Through merger and acquisition, we found ourselves in a position with multiple
 tech teams using different chat solutions, creating artificial divisions and
 cross-team awkwardness. We could have mandated a move to one of the incumbent
 chat solutions at HBC and dragged everyone across the divide: a solution that
 would have been a long hard march. Instead, we looked about at the current most-
-loved tool, Slack, and kicked off a couple of channels and invited some folk in
+loved tool, Slack, kicked off a couple of channels, invited some folk in, 
 and said, "hey, try it out." Within days we encountered some interesting
 effects: first, folks loved it; and second, they wanted clarity to know if
 everyone could just move there together. Without having to force or coerce
@@ -61,5 +61,5 @@ internal libraries, tools, and how we work together as teams - and the
 ramifications for voluntary adoption for us as engineers and product innovators
 are profound. If you’re going to invest time into building something, spend time
 on making it a dream for the newcomer: easy to use, surprising, delighting.
-Think: you are not in a position to force your solution on someone: but you can
-make your solution something that’s a dream to adopt. Voluntarily.
+Think: you are not in a position to force your solution on someone; however, you
+can make your solution something that’s a dream to adopt. Voluntarily.
