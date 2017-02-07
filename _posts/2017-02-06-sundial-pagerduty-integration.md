@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sundial PagerDuty Integration
+title: "Sundial PagerDuty Integration"
 author: Giovanni Gargiulo
 date: '2017-02-06'
 categories: 'aws'
@@ -11,6 +11,7 @@ tags:
 ---
 
 # Sundial
+
 A few months ago, Gilt Tech announced [Sundial](https://github.com/gilt/sundial). Sundial is an open source batch job scheduler for Amazon ECS.
 Over the course of the last few months, Sundial has seen a significant adoption both inside and outside of Gilt.
 
@@ -28,6 +29,7 @@ and integrated PagerDuty with Sundial.
 ## Configuring PagerDuty on Sundial
 
 Configuring your job to support both Emails and PagerDuty notifications is very straightforward and can be done by adding the following json snippet to your job definition:
+
 ```json
 {
 "notifications": [
@@ -50,14 +52,15 @@ Configuring your job to support both Emails and PagerDuty notifications is very 
 ```
 
 Where 
-* _notify\_when_ defines when email notifications will be sent. Possible values are:
+
+* _notify_when_ defines when email notifications will be sent. Possible values are:
   * _always_, Always notify when a process completes
-  * _on\_failure_, Notify when a process fails
-  * _on\_state\_change_, Notify when a process goes from succeeding to failing and vice versa
-  * _on\_state\_change\_and\_failures_, Notify when going from failing to succeeded and on each failure
+  * _on_failure_, Notify when a process fails
+  * _on_state_change_, Notify when a process goes from succeeding to failing and vice versa
+  * _on_state_change_and_failures_, Notify when going from failing to succeeded and on each failure
   * _never_
-* _my\_pd\_service\_key_ is the key obtained in the _Service Page_ in PagerDuty
-* _num\_consecutive\_failures_ is the number of consecutive failures after which Sundial will trigger an alert in PagerDuty
+* _my_pd_service_key_ is the key obtained in the _Service Page_ in PagerDuty
+* _num_consecutive_failures_ is the number of consecutive failures after which Sundial will trigger an alert in PagerDuty
 
 Please note that the `subscriptions` object in the Process Definition json has been deprecated, so if you've already adopted Sundial and want to start using the new `notifications`, you will have to 
  update your json accordingly. 
