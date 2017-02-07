@@ -20,13 +20,13 @@ excerpt_separator: ""
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : Gilt ♥ Open Source
-tagline: The Gilt technology organization. We make gilt.com work.
+title : HBC Digital Tech Blog
+tagline: "We power the web and mobile experiences for Saks, Saks OFF 5TH, Gilt, Lord & Taylor and The Bay."
 author :
-  name : Gilt, Inc.
+  name : HBC Digital
   email : info@gilt.com
   github : gilt
-  twitter : ""
+  twitter : "@hbcdigital"
   feedburner : ""
 
 paginate: 10
