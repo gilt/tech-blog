@@ -7,6 +7,7 @@ categories: 'DevOps'
 tags:
 - culture
 - devops
+- Spotlight on DevOps
 ---
 
 # Don’t just read about DevOps culture, play-test it!
@@ -46,4 +47,5 @@ Curious about playing this game in your organization?  In a spirit of sharing sk
 
 
 
-_Do you know that HBC Digital has been travelling along the DevOps path as well? Check back to read the next blog in our **Spotlight on DevOps** series and find out what lessons we learnt so far with our first DevOps teams and how we are preparing for new challenges ahead._
+_Do you know that HBC Digital has been travelling along the DevOps path as well? 
+Check back to read the next blog in our **Spotlight on DevOps** series and find out what lessons we learnt so far with our first DevOps teams and how we are preparing for new challenges ahead._
