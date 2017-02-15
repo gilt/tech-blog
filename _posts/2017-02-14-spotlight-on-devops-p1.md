@@ -14,9 +14,9 @@ tags:
 
 _This blog post is the first one in a new **Spotlight on DevOps** series._
 
-Have you ever tried to learn a new language by reading about it and not having an opportunity to practice? How fruitful was that experience?  Keep that in mind as you read on this invitation to experience DevOps culture through a simulation game!  Develop your DevOps transformation muscle memory and experience teams’ behavioral patterns.  Feel the difference DevOps culture makes in establishing trust and [psychological safety](https://en.wikipedia.org/wiki/Psychological_safety) in your organization.
+Have you ever tried to learn a new language by reading about it and not having an opportunity to practice? How fruitful was that experience?  Keep that in mind as you read this invitation to experience DevOps culture through a simulation game!  Develop your DevOps transformation muscle memory and experience teams’ behavioral patterns.  Feel the difference DevOps culture makes in establishing trust and [psychological safety](https://en.wikipedia.org/wiki/Psychological_safety) in your organization.
 
-My interest in DevOps originated from a very unlikely turn that my carrier took 7 years ago. An opportunity came up to push myself completely out of my comfort zone of a developer’s world. I’ve taken on a job of DBA Manager and found myself in a harsh, alerts-driven world of pagers, [disaster recoveries](https://en.wikipedia.org/wiki/Disaster_recovery) and escalation procedures. The sense of urgency and pressure was incredible and made me wonder, why I never knew about it as a developer…
+My interest in DevOps originated from a very unlikely turn that my career took 7 years ago. An opportunity came up to push myself completely out of my comfort zone in a developer’s world. I’d taken on a job of DBA Manager and found myself in a harsh, alerts-driven world of pagers, [disaster recoveries](https://en.wikipedia.org/wiki/Disaster_recovery) and escalation procedures. The sense of urgency and pressure was incredible and made me wonder, why I never knew about it as a developer…
 
 Fast-forward a few years to my next role as an Agile Coach. I came across [“The Phoenix Project”](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/0988262592). I read the book from cover to cover, re-living painful moments of the past years, yet growing fond of this new “DevOps” approach.  How can I share the new learning and make it resonate as strongly with others? Why not try to make it into a simulation game?
 Equipped with [Gamification](https://www.coursera.org/learn/gamification) course and [“The Art of Game design”](https://www.amazon.com/Art-Game-Design-Book-Lenses/dp/0123694965), I put together the first version of the “Chocolate, Lego and Scrum Game". 
@@ -28,14 +28,14 @@ The game starts with showcase of a large organization with departmental silos. D
 ![Scrum Gathering Rio, Brazil - DevOps Culture simulation with Chocolate, Lego and Scrum Game](http://i.imgur.com/qKl4fWr.jpg?2) ![Build your T-shaped skills!](http://i.imgur.com/Q2tjPX7.jpg?1)
 ![Agile Practitioners 2017, Israel - DevOps workshop with Chocolate, LEGO and Scrum game](http://i.imgur.com/QcYjpZ6.png?2)
 
-Every player in the game gets a special role to play individually as well as a part of his/her team.  Together players build products with LEGO, learn to respond to ever-changing market demand.  They wait for environments to be build by Operations, get interrupted by security upgrades and even get attacked by a hacker! The game engages everyone to the extent that they forget about time. They experience a range of emotions as they go through their DevOps journey and transition toward generative culture of collaboration and shared goals.
+Every player in the game gets a special role to play individually as well as a part of his/her team.  Together players build products with LEGO and learn to respond to ever-changing market demand.  They wait for environments to be built by Operations, get interrupted by security upgrades and even get attacked by a hacker! The game engages everyone to the extent that they forget about time. They experience a range of emotions as they go through their DevOps journey and transition toward a generative culture of collaboration and shared goals.
 
 While this DevOps transformation is a gamified simulation, the lessons people learn are very real and can be applied to their actual DevOps transformations!
 Here are just a few examples of the “A-ha!” moments highlighted by the participants at [Scrum Gathering Porto](https://www.facebook.com/pg/Chocolate-Lego-and-Scrum-Game-Intro-to-DevOps-163199094149551/photos/?tab=album&album_id=169296690206458) and at [Lean-Agile practitioners of NJ](https://www.meetup.com/Lean-Agile-Practitioners-of-New-Jersey/events/235763877/) meetup:
 
 > “Even after DevOps transformation some Ops people want to keep being gate keepers. Hard to give up traditional roles!”
 
-> “Potentially shippable” not equals ”in production.”
+> “Potentially shippable” doe not equal ”in production.”
 
 > “Cross-training Dev and Ops streamlined the process of getting products to production.”
 
