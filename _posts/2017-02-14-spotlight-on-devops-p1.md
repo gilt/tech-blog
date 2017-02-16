@@ -14,9 +14,9 @@ tags:
 
 _This blog post is the first one in a new **Spotlight on DevOps** series._
 
-A lot of people talk about DevOps Culture. Yes, you can learn about a culture by reading a book or a blog post. Much more effective and fun way to learn about a culture is by experiencing it. This blog post is _**your**_ invitation to experience DevOps culture through a simulation game! 
+A lot of people talk about DevOps Culture. Yes, you can learn about a culture by reading a book or a blog post. A much more effective and fun way to learn about a culture is by experiencing it. This blog post is _**your**_ invitation to experience DevOps culture through a simulation game! 
 
-My interest in DevOps originated from a very unlikely turn that my career took 7 years ago. An opportunity came up to push myself completely out of my comfort zone in a developer’s world. I’d taken on a job of DBA Manager and found myself in a harsh, alerts-driven world of pagers, [disaster recoveries](https://en.wikipedia.org/wiki/Disaster_recovery) and escalation procedures. The sense of urgency and pressure was incredible and made me wonder, why I never knew about it as a developer…
+My interest in DevOps originated from a very unlikely turn that my career took 7 years ago. An opportunity came up to push myself completely out of my comfort zone in a developer’s world. I’d taken on a job of DBA Manager and found myself in a harsh, alerts-driven world of pagers, [disaster recoveries](https://en.wikipedia.org/wiki/Disaster_recovery) and escalation procedures. The sense of urgency and pressure was incredible and made me wonder why I never knew about it as a developer.
 
 Fast-forward a few years to my next role as an Agile Coach. I came across [“The Phoenix Project”](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/0988262592). I read the book from cover to cover, re-living painful moments of the past years, yet growing fond of this new “DevOps” approach.  How can I share the new learning and make it resonate as strongly with others? Why not try to make it into a simulation game?
 Equipped with [Gamification](https://www.coursera.org/learn/gamification) course and [“The Art of Game design”](https://www.amazon.com/Art-Game-Design-Book-Lenses/dp/0123694965), I put together the first version of the “Chocolate, Lego and Scrum Game". 
