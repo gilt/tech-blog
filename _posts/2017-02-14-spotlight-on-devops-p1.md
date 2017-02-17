@@ -12,8 +12,6 @@ tags:
 
 # Don’t just read about DevOps culture, play-test it!
 
-_This blog post is the first one in a new **Spotlight on DevOps** series._
-
 A lot of people talk about DevOps Culture. Yes, you can learn about a culture by reading a book or a blog post. A much more effective and fun way to learn about a culture is by experiencing it. This blog post is _**your**_ invitation to experience DevOps culture through a simulation game! 
 
 My interest in DevOps originated from a very unlikely turn that my career took 7 years ago. An opportunity came up to push myself completely out of my comfort zone in a developer’s world. I’d taken on a job of DBA Manager and found myself in a harsh, alerts-driven world of pagers, [disaster recoveries](https://en.wikipedia.org/wiki/Disaster_recovery) and escalation procedures. The sense of urgency and pressure was incredible and made me wonder why I never knew about it as a developer.
@@ -47,8 +45,3 @@ Curious about playing this game in your organization?
 In a spirit of sharing skills and not being a bottleneck, I have documented detailed facilitation instructions, floor plans, facilitator scripts and the game cards in my new [“Introduction to DevOps with Chocolate, LEGO”](https://www.amazon.com/Introduction-DevOps-Chocolate-LEGO-Scrum/dp/1484225643) book recently published by Apress. Go ahead - develop your DevOps transformation muscle memory and experience teams’ behavioral patterns.  Feel the difference DevOps culture makes in establishing trust and [psychological safety](https://en.wikipedia.org/wiki/Psychological_safety) in your organization.
 Have fun facilitating the game with your teams and please share your learnings.
 
-
-
-
-_Do you know that HBC Digital has been travelling along the DevOps path as well? 
-Check back to read the next blog in our **Spotlight on DevOps** series and find out what lessons we learnt so far with our first DevOps teams and how we are preparing for new challenges ahead._
