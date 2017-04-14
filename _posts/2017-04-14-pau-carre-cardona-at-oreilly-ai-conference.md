@@ -3,13 +3,13 @@ layout: post
 title: "Pau Carré Cardona Speaking at O'Reilly AI Conference"
 author: HBC Digital
 date: '2017-04-12'
-categories: 'AI'
+categories: AI
 tags:
-- 'machine learning'
-- 'deep learning'
+- machine learning
+- deep learning
 - AI
 - gilt
-- 'o'reilly conference'
+- conferences
 ---
 
 The [O'Reilly Articifical Intelligence Conference](https://conferences.oreilly.com/artificial-intelligence/ai-ny) is coming to New York City in June. From June 27-29, the tops mind in AI will be meeting for "a deep dive into emerging AI techniques and technologies with a focus on how to use it in real-world implementations." 
