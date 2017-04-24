@@ -29,7 +29,7 @@ JavaScript to trigger an event on `window` in the client. Sounds easy, yeah? If
 you happen to work within an environment in which an engineering team doesn't
 manage and test data being sent along with these events, debugging that `eventData`
 can be far more difficult than it should be. There's a simple solution to debugging
-`eventData` that introduces responsible patterns and easy of use, which go beyond
+`eventData` that introduces responsible patterns and ease of use, which go beyond
 `console.log`.
 
 ## Knowledge Gap
@@ -51,12 +51,11 @@ best-practice guidance.
 ## The Console.log Conundrum
 
 At one point in time, our Signal implementation went from being an engineering-first,
-engineering-owned product, to a Marketing and Analytics owned product. With very
-little JavaScript experience they were about to work within Signal. And those
-teams did a fine job using Signal to drive the associated sites forward. However,
-their guidance was coming from non-engineers as well, and at no fault of their own,
-[many anti-patterns were implemented](https://sourcemaking.com/antipatterns). One
-of the more egregious was the overuse of `console.log`.
+engineering-owned product, to a Marketing and Analytics owned product. Those
+teams did a fine job using Signal to drive the associated sites forward with very
+little JavaScript experience. However, their guidance was coming from non-engineers
+as well, and at no fault of their own, [many anti-patterns were implemented](https://sourcemaking.com/antipatterns).
+One of the more egregious was the overuse of `console.log`.
 
 Our Signal managing teams were advised to use `console.log` wherever they wanted
 to view the value/content of `eventData` for each event that came through Signal.
