@@ -103,5 +103,5 @@ a better solution, please comment!
 ### Cheers!
 
 *Originally published at
- [shellscape.org](http://shellscape.org/2017/04/24/signal-to-debug-ratio) on
+ [shellscape.org](http://shellscape.org/2017/04/24/signal-to-bug-ratio) on
  April 24, 2017.*
