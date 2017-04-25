@@ -1,0 +1,5 @@
+On May 6-7 one of the year's most interesting, exciting tech conference's is taking place in NYC. [!!Con](http://bangbangcon.com) (pronounced "bang bang con") is a two-day conference of ten-minute talks featuring a diverse array of [speakers and topics](http://bangbangcon.com/speakers.html). You won't find a lineup like this at your typical tech conference - punch cards, cyborgs, glowing mushrooms, queer feminist cyberpunk manifestos and airplane noise are just a few of the topics that will be covered.
+
+Given the awesomeness of this conference, tickets went fast --- *sold-out-in-minutes-fast* --- but there will be videos and a live stream so not all is lost. Stay tuned to the @bangbangcon Twitter account for more info. 
+
+We're super excited to be supporting this year's bangbangcon as an AWESOME! Sponsor! If you'll be there, make sure to say hi to one of our friendly engineers and snag some HBC Digital swag. 
