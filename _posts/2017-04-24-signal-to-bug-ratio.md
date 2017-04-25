@@ -78,7 +78,7 @@ _controlled_ manner that doesn't affect the world.
 
 The idea is dead simple. Sprinkle `bananas.signal.debug(...)` all over, anywhere,
 go bananas! It won't output to the console until explicitly enabled. That can be
-done in two ways, but adding `?debug=true` to the URI and refreshing, or by calling
+done in two ways; by adding `?debug=true` to the URI and refreshing, or by calling
 `bananas.signal.enable()` in the console before executing an action on the page
 that will trigger a Signal event.
 
