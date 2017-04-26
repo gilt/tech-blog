@@ -1,3 +1,14 @@
+---
+layout: post
+title: "HBC Digital is Sponsoring !!Con"
+author: HBC Digital
+date: '2017-04-25'
+categories: 'conferences'
+tags:
+- tech
+- conferences
+---
+
 ![](http://i.imgur.com/oOwcZoe.png)
 
 On May 6-7 one of the year's most unique tech events is taking place in NYC. [!!Con](http://bangbangcon.com) (pronounced "bang bang con") is two-days of ten-minute talks featuring a diverse array of [speakers and topics](http://bangbangcon.com/speakers.html). You won't find a lineup like this at your typical tech conference - punch cards, cyborgs, glowing mushrooms, queer feminist cyberpunk manifestos and airplane noise are just a few of the topics on the agenda.
