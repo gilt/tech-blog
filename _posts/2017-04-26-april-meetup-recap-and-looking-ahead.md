@@ -23,8 +23,8 @@ We followed the NYC SUG Meetup with an amazing talk from [Li Haoyi](https://twit
 
 Here are some of the tech events on our calendar in May. Hope to see you there! 
 
-* May 1 - Dana Pylayeva, HBC Digital's Agile Coach, is organizing **[Big Apple Scrum Day](http://www.bigapplescrumday.org/)**, a one day community conference focused on Scrum/Agile principles and practices. This 2017 theme is **Always Keep Growing**.
-* May 6-7 - We are sponsoring **[!!Con](http://bangbangcon.com/)** (pronounced “bang bang con”), "two days of ten-minute talks (with lots of breaks, of course!) to celebrate the joyous, exciting, and surprising moments in computing".
+* May 1 - Dana Pylayeva, HBC Digital's Agile Coach, is organizing [Big Apple Scrum Day](http://www.bigapplescrumday.org/), a one day community conference focused on Scrum/Agile principles and practices. This 2017 theme is *Always Keep Growing*.
+* May 6-7 - We are sponsoring [!!Con](http://bangbangcon.com/) (pronounced “bang bang con”), "two days of ten-minute talks (with lots of breaks, of course!) to celebrate the joyous, exciting, and surprising moments in computing".
 * May 10 - Evan Maloney, Distinguished Engineer at HBC Digital, will be speaking at the [Brooklyn Swift Developers Meetup](https://www.meetup.com/Brooklyn-Swift-Developers/events/239507650/) at Work & Co in DUMBO. His talk will trace through the evolution of our project structure and development workflow to arrive at where we are today: a codebase that's about halfway through a transition to Swift. Some folks from our mobile team will be visiting from Dublin for this one!
 * May 11 - [Petr Zapletal](https://twitter.com/petr_zapletal) of Cake Solutions is leading a talk on how to avoid common pitfalls when designing reactive applications at our [NY Scala University Meetup](https://www.meetup.com/New-York-Scala-University/events/239511823/). 
 * May 24 - Demo Day for our [ScriptEd](https://scripted.org) class - a group of high school students who have been learning web development from HBC Digital engineers in our offices every week for the entire school year. 
