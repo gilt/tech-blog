@@ -19,7 +19,7 @@ On April 20, we hosted the [NYC Scrum User Group](https://www.meetup.com/NYC-Scr
 
 ![](http://i.imgur.com/KgP4K4N.jpg)
 
-We followed up the NYC SUG Meetup with an amazing talk from [Li Haoyi](https://twitter.com/li_haoyi) on 'Designing Open Source Libraries' a few days later at our [NY Scala University Meetup](https://www.meetup.com/New-York-Scala-University/). The talk focused on intuitiveness, layering and documentation as the three keys to creating an open-source library that will keep engineers happy and drive engagement. Haoyi is the author of many very popular [libraries](https://github.com/lihaoyi) and was coming to HBC fresh off a talk at Scala Days which helped draw the biggest turnout we've had in our new Lower Manhattan HQ (we moved in last August). His honest insights and great delivery also helped us set a new record for laughs.
+We followed the NYC SUG Meetup with an amazing talk from [Li Haoyi](https://twitter.com/li_haoyi) on 'Designing Open Source Libraries' at our [NY Scala University Meetup](https://www.meetup.com/New-York-Scala-University/). The talk focused on intuitiveness, layering and documentation as the three keys to creating an open-source library that will keep engineers happy and drive engagement. Haoyi is the author of many very popular [libraries](https://github.com/lihaoyi) and was coming to HBC fresh off a talk at Scala Days which helped draw the biggest turnout we've had in our new Lower Manhattan HQ (we moved in last August). His honest insights and great delivery also helped us set a new record for laughs.
 
 ### Looking Ahead
 
