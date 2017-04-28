@@ -13,7 +13,7 @@ tags:
 
 ### April Meetups: 105 guests, 48 seltzers, 45 All Day IPAs, 19 pizzas & 2 great speakers. 
 
-On April 20, we hosted the [NYC Scrum User Group](https://www.meetup.com/NYC-Scrum-User-Group/) for the third time in 2017. [Rob Purdie](https://twitter.com/robpurdie), founder of the group and Agile Coach at IBM, gave an update on IBM's Agile Transformation. The talk repeatedly returned to the theme of ensuring your team is "doing the right work", warning the room of agilists that becoming very efficient at doing work that doesn't matter is the fastest way to get nowhere. It reminded me of a quote written on the wall of our office: *"Our greatest fear should not be failure, but of succeeding at things that don't really matter."* While every NYC SUG Meetup has been great, this one stood out for its accessibility and high levels of audience engagement.
+On April 20, we hosted the [NYC Scrum User Group](https://www.meetup.com/NYC-Scrum-User-Group/) for the third time in 2017. [Rob Purdie](https://twitter.com/robpurdie), founder of the group and Agile Coach at IBM, gave an update on IBM's Agile Transformation. The talk repeatedly returned to the theme of ensuring your team is "doing the right work", warning the room of agilists that becoming very efficient at doing work that doesn't matter is the fastest way to get nowhere. It reminded me of a quote written on the wall of our office: *"Our greatest fear should not be failure, but of succeeding in life at things that don't really matter."* While every NYC SUG Meetup has been great, this one stood out for its accessibility and high levels of audience engagement.
 
 ![NY Scala University Meetup](http://i.imgur.com/KgP4K4N.jpg)
 
