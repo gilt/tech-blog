@@ -18,7 +18,7 @@ HBC Digital is a large organization. We are hundreds of technologists responsibl
 
 Recently the HBC Digital Mobile Team took part in a week-long design sprint in order to refocus their efforts. The goal of the five-day process was to answer critical business questions through design, prototyping and testing ideas with customers, who are always at the center of our work.
 
-The design sprint was inspired by past exercises conducted with one of our partners, [Prolific Interactive](http://prolificinteractive.com/), however, this iteration was facilitated by the Senior Program Manager on our mobile team. The goal was to use the [Saks Fifth Avenue app](https://itunes.apple.com/us/app/saks-fifth-avenue-shop-designer-apparel-more/id491507258) to "reduce shopping friction, unifying the customer experience across physical and digital stores". 
+The design sprint was inspired by past exercises we've conducted with [Prolific Interactive](http://prolificinteractive.com/), however, this iteration was facilitated by the Senior Program Manager on our mobile team. The goal was to use the [Saks Fifth Avenue app](https://itunes.apple.com/us/app/saks-fifth-avenue-shop-designer-apparel-more/id491507258) to "reduce shopping friction, unifying the customer experience across physical and digital stores". 
 
 ## The Process
 
