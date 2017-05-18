@@ -29,7 +29,7 @@ We also like to have some fun, too.
 
 ## Surprise and Delight
 
-This week we coordinated an intercontinental __"POps Up Plant Shop"__ for our people in NYC and Dublin. Between the two offices, we distributed 350 plants to our people. Crotons, ivies, succulents and more were on offer. Everyone loved the surprise. While POps is focused on working with our tech teams, we noticed a few folks from other departments at HBC visiting the floor to grab plants for their desks - a good indicator that what we're doing is working!
+This week we coordinated an intercontinental __"POps Up Plant Shop"__ for our people in NYC and Dublin. Between the two offices, we distributed 350 plants. Crotons, ivies, succulents and more were on offer. Everyone loved the surprise. While POps is focused on working with our tech teams, we noticed a few folks from other departments at HBC visiting the floor to grab plants for their desks - a good indicator that what we're doing is working!
 
 Beyond adding a dash of color the office, [offices plants are proven to increase happiness and productivity](https://www.theguardian.com/money/2014/aug/31/plants-offices-workers-productive-minimalist-employees) which aligns perfectly with the mission of the POps team.
 
