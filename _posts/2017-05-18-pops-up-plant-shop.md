@@ -23,7 +23,7 @@ Our work includes:
 * facilitating ["self-selection"](https://twitter.com/DanaPylayeva/status/846854555832909830) exercises which allow people to choose who they work with and what they to work on.
 * working with [teams](https://www.infoq.com/presentations/gilt-team-communication) to make sure they have the right [team ingredients](https://www.slideshare.net/hhfleming/the-new-work-order-team-ingredients-and-role-blending).
 * providing people with the [best tools](http://tech.gilt.com/leadership/2017/02/06/slack-and-voluntary-adoption). 
-* encouraging people to share their work via speaking at [conferences](http://tech.gilt.com/ai/2017/04/12/pau-carre-cardona-at-oreilly-ai-conference) and [meetups](https://vimeo.com/217236459re) , writing for our [tech blog](http://tech.gilt.com/), and other [channels](https://remote.works/episode/10). 
+* encouraging people to share their work via speaking at [conferences](http://tech.gilt.com/ai/2017/04/12/pau-carre-cardona-at-oreilly-ai-conference) and [meetups](https://vimeo.com/217236459re) , writing for our [tech blog](http://tech.gilt.com/), teaching classes and other [channels](https://remote.works/episode/10). 
 
 We also like to have some fun, too.
 
