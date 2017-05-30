@@ -10,10 +10,14 @@ tags:
 - self-selection
 ---
 # Let’s run an experiment! Self-selection at HBC Digital.
+
+![Self-selection](http://i.imgur.com/DGJx44J.png)
+
 Inspired by Opower’s success story, we run a self-selection experiment at HBC Digital. 
 
 Dubbed as _“the most anticipated event of the year”_ it enabled 39 team members to self-select into 4 project teams. How did they do it? By picking a project they wanted to work on, the teammates they wanted to work with and keeping _“Do what’s best for the company”_ attitude. 
 Read on to learn about our experience and consider giving a self-selection a try!
+
 
 ## A little bit of introduction: 
 
@@ -23,38 +27,39 @@ HBC Digital is the group that drives the digital retail/ecommerce and digital cu
 ### Our process, trifectas and team ingredients
 
 Our development process is largely inspired by original [Gilt process](http://tech.gilt.com/2013/03/07/scaling-agile-at-gilt) and has the ideas of intrinsic motivation in its core. 
-What agile flavor do we use? It depends...
+What agile flavor do we use? It depends on a team.
 Each team has a full autonomy in selecting Scrum, Kanban, XP, a combination thereof or none of the above as their process. As long as they remain small, nimble, able to collaborate and continuously deliver value, they can tailor the process to their needs.
 We do keep certain key components standard across all teams. One of them is a “Trifecta” – a group of servant-leaders in each team: Product Manager, Agile Project Manager and Tech Lead. They work together to support the teams and enable the teams’ success. 
 Additionally, we enable continuous learning and role blending by instilling our [Team Ingredients framework](https://www.slideshare.net/hhfleming/the-new-work-order-team-ingredients-and-role-blending). 
 
 Our process continues to evolve. We experiment with new ideas and practices to facilitate teams’ effectiveness and create a culture and an environment for them to thrive. The self-selection is our latest experiment and this blog post is a glimpse into how it went. 
 
-## Five self-selection triggers and enablers
+## Self-selection triggers and enablers
 
-### 1. Organizational change
+### Organizational change
 
 Just like any other organization that grew through acquisitions, at one point we found ourselves dealing with an unhealthy mix of cultures, duplicate roles and clashing mindsets. To remain lean and agile, we went through a restructuring at all levels. 
 
-### 2.  Inspiring case studies
+### Inspiring case studies
 
 As we were evaluating the best ways to re-form the teams, we came across Amber King and Jess Huth’s talk on [self-selection](https://www.youtube.com/watch?v=OVyt62kZKiA) at Business Agility 2017 Conference. The lightbulb went on! Amber and Jess were describing exactly the situation we were in at that time and were reporting the positive effect of running a self-selection with the teams at Opower. We followed up with them on Skype afterwards. Hearing their compelling story again and being encouraged by their guidance, we left the call fired up to give the self-selection a try!
 
-### 3.  Self-selection manual
+### Self-selection manual
 
 When it is your turn to plan for self-selection, pick up a copy of Sandy Mamoli and David Mole’s book [“Creating Great Teams: How Self-Selection Lets People Excel”](https://www.amazon.com/Creating-Great-Teams-Self-Selection-People/dp/1680501283)
 This very detailed facilitation guide from the inventors of self-selection process was indispensable in preparing and facilitating our event. 
 
-### 4. Leadership support.
+### Leadership support.
 
 One of the first steps in self-selection is getting a buy-in from the leadership team. 
 What worked in our favor was the fact that Gilt had tried running a self-selection in the past and in general always supported idea of teams’ mobility. Last but not least, positioning the self-selection as an experiment, gained stronger support for it at all levels. 
 
-### 5. Transparency
+### Transparency
 We kept the preparation process very transparent. Dedicated Slack channel, Confluence page with progress updates and participants’ info, communication at the tech all-hands meetings and Q&A sessions – everything to avoid creating discomfort and to reduce a fear factor amongst the team members. 
  
 ## How can you prepare for a self-selection?
-### 1. Decide who will participate
+### 1. 
+Decide who will participate
 - Participants:
 - - Pre-selected
 - - Free-moving 
@@ -88,14 +93,14 @@ Establish the team composition (core team + larger community)
 - cross-checking the team needs with the number of participants. --> no musical chairs!
 
 ### 5. Assess participants’ level of skills and learning interests
-We used our Team ingredients framework and turned it a self-assessment.
+We used our Team ingredients framework and turned it into a self-assessment.
 In preparation for this large event we gamified and automated it using Kahoot! Survey platform. 
 Participants rated their skill level and learning interest for each of the 11 ingredients using the following scale:
 3 – I can teach it
 2 – I can do it
 1 – I’d like to learn it
 0 – Don’t make me do it.
-Data collected via Kahoot was later used for generating participants’ cards.
+Data collected via Kahoot was later used to generate the individual participants’ cards.
 
 ### 6. Prepare Participants cards
 At a minimum, have photos with names prepared for each participants. We invested a little more time to make participants card looks like game cards. Every participant received a card with their photo, name, current role and team ingredients scale.
