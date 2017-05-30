@@ -57,30 +57,18 @@ What worked in our favor was the fact that Gilt had tried running a self-selecti
 ### Transparency
 We kept the preparation process very transparent. Dedicated Slack channel, Confluence page with progress updates and participants’ info, communication at the tech all-hands meetings and Q&A sessions – everything to avoid creating discomfort and to reduce a fear factor amongst the team members. 
  
-## How can you prepare for a self-selection?
-### 1. 
-Decide who will participate
+## Seven steps of self-selection
+### 1. Get Leadership Buy-In
+### 2. Identify the Participants
+If you are running a self-selection for a subset of the teams, make sure that the list of participants is known and publicly available to everyone.
+
 - Participants:
 - - Pre-selected
 - - Free-moving 
 - - Contractors
 - Observers
 
-### 2. Find space
-1) Appropriate for the size of the group
-2) Natural light
-3) Separate space for pitches and for team posters
-4) Away from the usual team spaces (to minimize distractions)
-
-### 3. Evangelize 
-We learnt to use a variety of channels to spread the word about self-selection.
-1) announcement at Tech All-hands meeting
-2) Q&A sessions with each existing group.
-3) Confluence Q&A page
-4) #self-selection Slack channel
-5) formal and informal one-on-one conversations
-
-### 4. Partner with your Key players 
+### 3. Partner with Your Key Players 
 Build-in some time for group and one-on-one coaching.
 Adjust the process if required
 1) “I have no squad” poster was replaced with “I am available to help”
@@ -91,33 +79,43 @@ Product Managers and Tech Leads pitches.
 Establish the team composition (core team + larger community) 
 - front end, back end, APM, UX, Infra, Data, QA
 - cross-checking the team needs with the number of participants. --> no musical chairs!
+### 4. Evangelize 
+We learnt to use a variety of channels to spread the word about self-selection.
+1) announcement at Tech All-hands meeting
+2) Q&A sessions with each existing group.
+3) Confluence Q&A page
+4) #self-selection Slack channel
+5) formal and informal one-on-one conversations
+### 5. Prepare
+#### Space
+1) Appropriate for the size of the group
+2) Natural light
+3) Separate space for pitches and for team posters
+4) Away from the usual team spaces (to minimize distractions)
+#### Food
+[Do Food](https://www.amazon.com/Fearless-Change-Patterns-Introducing-Ideas/dp/0201741571) pattern applies here as well.
+Depending on the time of the day, plan on bringing breakfast, lunch or snacks into your self-selection event. We run ours in the afternoon and brought in chocolate, popcorn and organic juices.
+#### Posters
+1) one team poster per each team with the project /team name, required team composition and a team mascot. Make it visually appealing, be creative. Repeat the information from the pitches for clarity.
 
-### 5. Assess participants’ level of skills and learning interests
-We used our Team ingredients framework and turned it into a self-assessment.
-In preparation for this large event we gamified and automated it using Kahoot! Survey platform. 
-Participants rated their skill level and learning interest for each of the 11 ingredients using the following scale:
+2) Rules poster(s). At a minimum have “Do what’s best for the company” poster.
+As we added a few additional rule, those were outlined on a poster as well.
+
+3) “I am available to help” poster. This is very similar to “I have no squad” poster from Sandi Mamoli’s book. However, we wanted to make the message on that poster a little bit more positive. We were planning to ask more people to put their names there in the first self-selection round
+#### Participants Cards
+
+At a minimum, have photos with names prepared for each participants. 
+We invested a little more time to simplify a discussion about team's learning opportunities and make participants card look like game cards. 
+Using our Team ingredients framework and Kahoot! survey platform we created a gamified self-assessment.
+Participants rated their skill levels and learning interests for each of the 11 ingredients using the following scale:
 3 – I can teach it
 2 – I can do it
 1 – I’d like to learn it
 0 – Don’t make me do it.
-Data collected via Kahoot was later used to generate the individual participants’ cards.
-
-### 6. Prepare Participants cards
-At a minimum, have photos with names prepared for each participants. We invested a little more time to make participants card looks like game cards. Every participant received a card with their photo, name, current role and team ingredients scale.
-“Your photo is a fresh as your LinkedIn profile!”
+Data collected via Kahoot was later used to generate the individual participants’ cards. Every participant received a card with their photo, name, current role and team ingredients scale.
 Additional space was provided to indicate their first, second and third project choices during the event.
 
-### 7. Do food
-This [Fearless Change](https://www.amazon.com/Fearless-Change-Patterns-Introducing-Ideas/dp/0201741571) pattern applies here as well.
-Depending on the time of the day, plan on bringing breakfast, lunch or snacks into your self-selection event. We run ours in the afternoon and brought in chocolate, popcorn and organic juices.
+### 6. Run
 
-### 8. Prepare posters
-    You will need 
-1) one team poster per each team with the project /team name, required team composition and a team mascot. Make it visually appealing, be creative. Repeat the information from the pitches for clarity.
-2) Rules poster(s). At a minimum have “Do what’s best for the company” poster.
-As we added a few additional rule, those were outlined on a poster as well.
-3) “I am available to help” poster. This is very similar to “I have no squad” poster from Sandi Mamoli’s book. However, we wanted to make the message on that poster a little bit more positive. We were planning to ask more people to put their names there in the first self-selection round
-
-## What do you need to know about facilitating the self-selection event?
-1. Arrive early to set up the room
-2. 
+### 7. Support the New Teams
+ 
