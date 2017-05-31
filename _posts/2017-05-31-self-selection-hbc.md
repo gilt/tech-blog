@@ -73,6 +73,7 @@ From our experience, making self-selection participation invitational and positi
 
 How many people will be involved in self-selection? 
 Will all existing project teams will be participating? 
+
 If you are running a self-selection for a subset of the teams, make sure that the list of participants is known and publicly available to everyone. Verify that the total number of participants is equal or smaller than the number of open spots on the new teams. 
 
 #### Pre-selected vs. free-moving participants
