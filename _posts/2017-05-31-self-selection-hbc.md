@@ -109,7 +109,7 @@ Observers were asked to leave after the break and before the start of actual tea
 
 As a part of our prep work we discovered that some team members felt very apprehensive about self-selection. Some wanted to avoid a repeat of a negative experience they had in their childhood with a selection into sports teams.  We collaborated with current teams' Trifectas to reduce a potential discomfort with the following adjustments:
 
-<img src="http://i.imgur.com/xvbuRHp.jpg?1" align="right" width="200"/>
+<img src="http://i.imgur.com/NhTu2Vs.jpg" align="right" width="200"/>
 
 * We modified the “I have no squad” poster into “Available to help” poster for a more positive spin. 
 * We made a compromise on consultants’ participation, asking them to add their cards to "I am available to help" poster in the first round and letting them participate equally starting from the second round.
