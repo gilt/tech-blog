@@ -94,10 +94,14 @@ Observers were asked to leave after the break and before the start of actual tea
 
 ### 3. Work with Your Key Partners 
 
-#### Adjust the process if required
-1) “I have no squad” poster was replaced with “I am available to help”
-2)  Compromise on consultants’ participation
-3) “No first come-first serve” rule.
+#### Adjust the process to fit your needs
+
+As a part of our prep work we discovered that some team members felt very apprehensive about self-selection. Some wanted to avoid a repeat of a negative experience they had in their childhood with a selection into sports teams.  We collaborated with current teams' Trifectas to reduce a potential discomfort with the following adjustments:
+
+* “I have no squad” poster was rephrased as “I am available to help” for a more positive spin.
+* We made a compromise on consultants’ participation, asking them to add their cards to "I am available to help" poster in the first round and letting them participate equally starting from the second round.
+* “No first come first serve” rule was designed to keep the options open for everyone and avoid informal pre-selection.
+
 #### Product Managers and Tech Leads pitches.
 - coach them to inspire people with product vision and technology stack.
 #### Establish the team composition (core team + larger community) 
