@@ -28,8 +28,11 @@ HBC Digital is the group that drives the digital retail/ecommerce and digital cu
 
 Our development process is largely inspired by original [Gilt process](http://tech.gilt.com/2013/03/07/scaling-agile-at-gilt) and has the ideas of intrinsic motivation in its core. 
 What agile flavor do we use? It depends on a team.
+
 Each team has a full autonomy in selecting Scrum, Kanban, XP, a combination thereof or none of the above as their process. As long as they remain small, nimble, able to collaborate and continuously deliver value, they can tailor the process to their needs.
-We do keep certain key components standard across all teams. One of them is a “Trifecta” – a group of servant-leaders in each team: a Product Manager, an Agile Project Manager and a Tech Lead. They work together to support their team and enable the team's success. 
+
+We do keep certain key components standard across all teams. 
+One of them is a “Trifecta” – a group of servant-leaders in each team: a Product Manager, an Agile Project Manager and a Tech Lead. They work together to support their team and enable the team's success. 
 We value continuous learning and facilitate role blending by instilling our Team Ingredients framework. Originally designed by Heather Fleming, [Team Ingredients](https://www.slideshare.net/hhfleming/the-new-work-order-team-ingredients-and-role-blending) framework facilitates team-level conversations about the team strength, learning interests and cross-training opportunities. Over the years the framework evolved from being a management tool for assessing teams from "outside in" to being a team tool that supports self-organizing and learning discussions.
 
 Just like our Team Ingredients framework, our process continues to evolve. We experiment with new ideas and practices to facilitate teams’ effectiveness and create an environment for teams to thrive. The self-selection is our latest experiment and this blog post is a glimpse into how it went. 
@@ -68,23 +71,27 @@ Wheather you start from [feature teams or component teams](http://www.innolution
 Have an open conversation with each of the leaders to clarify the process, understand their conserns and answer questions. 
 
 Is there a small modification you can make to the process to mitigate these conserns and turn the leaders into your supporters? 
-From our experience, making a self-selection invitational and positioning it as an experiment fast-tracked its acceptance in the organization.
+From our experience, making a self-selection invitational and positioning it as "an experiment" fast-tracked its acceptance in the organization.
 
 ### 2. Identify Participants
 
-How many people will be involved in self-selection? 
-Will all existing project teams will be participating? 
+How many people will be involved in your self-selection? 
+Will it include all of your existing project teams or a subset? 
+
+Reducing the size of the self-selection to only a subset of the teams at HBC Digital made our experiment more plausable.
+By the same token, it created a bit of a confusion around who was in vs. who was not.
 
 If you are running a self-selection for a subset of your teams, make sure that the list of participants is known and publicly available to everyone. Verify that the total number of participants is equal or smaller than the number of open spots on the new teams. 
 
 #### Pre-selected vs. free-moving participants
-
-The only two pre-selected roles for each initiative were a Product Manager and a Tech Lead. They were the key partners in pitching the initiative to team members. Everyone else, including Agile Project Managers were allowed to self-select into new teams. 
+Decide if you will have any team members pre-selected for each team.
+For us,the only two pre-selected roles in each team were a Product Manager and a Tech Lead. They were the key partners in pitching the initiative to team members. Everyone else (including Agile Project Managers) was allowed to self-select into new teams. 
 
 #### FTEs vs. Contractors
 
-Since our typical team has a mix of full-time employees and contractors, it was logical to invite both groups to participate in the self-selection. Afterall, individuals were selecting the teams based on a business idea, a technology stack and the other individuals that they wanted to work with.
+Since our typical team had a mix of full-time employees and contractors, it was logical for us to invite both groups to participate in the self-selection. Afterall, individuals were selecting the teams based on a business idea, a technology stack and the other individuals that they wanted to work with.
 We did make one adjustment to the process and asked contractors to give employees a "fist dip" at selecting their new teams. Everone had equal opportunty after the first round of the self-selection.
+
 
 #### Observers
 
