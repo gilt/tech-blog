@@ -51,7 +51,7 @@ This very detailed facilitation guide from the inventors of self-selection proce
 
 ### Past success
 
-What worked in our favor was the fact that Gilt had tried running a self-selection in 2012 as part of a transition to pizza-sized teams. The self-selection event was called a Speed Dating, involved 50 people and 6 projects. Fun fact - a number of todays leaders were involved in 2012 event as regular participants.
+What worked in our favor was the fact that Gilt had tried running a self-selection in 2012 as part of a transition to pizza-sized teams. The self-selection event was called a Speed Dating, involved 50 people and 6 projects. Fun fact - a number of today's leaders were involved in 2012 event as regular participants.
 
 ### Transparency
 
@@ -67,16 +67,28 @@ One of the first steps in self-selection is getting a buy-in from your leadershi
 Wheather you start from [feature teams or component teams](http://www.innolution.com/blog/distinguishing-between-feature-component-teams), a self-selection event has a potential of impacting your existing reporting structure in organization. 
 Have an open conversation with each of the leaders to clarify the process, understand their conserns and answer questions. 
 Is there a small modification you can make to the process to mitigate these conserns and turn the leaders into your supporters? 
-From our experience, making self-selection participation invitational and positioning it as an experiment increases the number of supporters accross the organization.
+From our experience, making self-selection participation invitational and positioning it as an experiment fast-tracked the acceptance in the organization.
 
 ### 2. Identify Participants
-If you are running a self-selection for a subset of the teams, make sure that the list of participants is known and publicly available to everyone.
 
-- Participants:
-- - Pre-selected
-- - Free-moving 
-- - Contractors
-- Observers
+How many people will be involved in self-selection? 
+Will all existing project teams will be participating? 
+If you are running a self-selection for a subset of the teams, make sure that the list of participants is known and publicly available to everyone. Verify that the total number of participants is equal or smaller than the number of open spots on the new teams. 
+
+#### Pre-selected vs. free-moving participants
+
+The only two roles that were pre-selected for each initiative were a Product Manager and a Tech Lead roles. Everyone else, including Agile Project Managers were allowed to self-select into new teams. 
+
+#### FTEs vs. Contractors
+
+Since our typical team has a mix of a full-time employees and contractors, it was logical to invite both groups to participate in self-selection. Afterall, individuals were selecting the teams based on the business idea, technology stack and the other individuals that they wanted to work with.
+We did make one adjustment to the process and asked contractors to give employees a "fist dip" at selecting new teams. Everone had same opportunty after the first selection iteration.
+
+#### Observers
+
+There was so much interest in the self-selection experiment from others, not directly involved in it, that we had to invent an observer role.
+Observers were invited to join in the first part of the self-selection event, they could listen to initiative pitches for all teams (without making an actual selection).
+Observers were asked to leave after the break, just before the start of actual teams selection.
 
 ### 3. Work with Your Key Partners 
 Build-in some time for group and one-on-one coaching.
