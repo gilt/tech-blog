@@ -57,8 +57,8 @@ What worked in our favor was the fact that Gilt had tried running a self-selecti
 ### Transparency
 We kept the preparation process very transparent. Dedicated Slack channel, Confluence page with progress updates and participants’ info, communication at the tech all-hands meetings and Q&A sessions – everything to avoid creating discomfort and to reduce a fear factor amongst the team members. 
  
-## Seven steps of self-selection
-![Seven Steps of Self-Selection](http://i.imgur.com/K4DsLKx.png)
+## Self-selection in Seven Steps
+![Seven Steps of Self-Selection](http://i.imgur.com/g74dlgH.png)
 ### 1. Get Leadership Buy-In
 ### 2. Identify the Participants
 If you are running a self-selection for a subset of the teams, make sure that the list of participants is known and publicly available to everyone.
