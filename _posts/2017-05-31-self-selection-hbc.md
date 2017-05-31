@@ -109,7 +109,7 @@ Observers were asked to leave after the break and before the start of actual tea
 
 As a part of our prep work we discovered that some team members felt very apprehensive about self-selection. Some wanted to avoid a repeat of a negative experience they had in their childhood with a selection into sports teams.  We collaborated with current teams' Trifectas to reduce a potential discomfort with the following adjustments:
 
-<img src="http://i.imgur.com/NhTu2Vs.jpg" align="right" width="200"/>
+<img src="http://i.imgur.com/NhTu2Vs.jpg" align="right" width="180"/>
 
 * We modified the “I have no squad” poster into “Available to help” poster for a more positive spin. 
 * We made a compromise on consultants’ participation, asking them to add their cards to "I am available to help" poster in the first round and letting them participate equally starting from the second round.
@@ -124,9 +124,14 @@ Coach them to inspire people with their short pitches about a product vision and
 * What exciting technologies will you get a chance to work with if you become a part of this team? 
 * What kind of team are we looking to build?
 
+<img src="http://i.imgur.com/VPruZcp.jpg" align="right" width="180"/>
+
 #### Establish the team formula
 
-This part is really critical. You want to make sure you understand very well the needs of each project in terms of specific roles and the number of people required for each role. Cross-check the total number of people based on the team formula with the number of people, invited to participate in the self-selection. Avoid putting people into "musical chairs" at all cost! 
+This part is really critical. 
+
+Your team formula may include the core team only, or like in our case, include memebers from the larger project community (Infrastructure Engineers, UX Designers etc.)
+As a facilitator, you want to understand very well the needs of each project in terms of specific roles and the number of people required for each role. Cross-check the total number of people based on the team formula with the number of people, invited to participate in the self-selection. Avoid putting people into "musical chairs" at all cost! 
 
 ### 4. Evangelize 
 
