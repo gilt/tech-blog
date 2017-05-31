@@ -51,15 +51,24 @@ This very detailed facilitation guide from the inventors of self-selection proce
 
 ### Past success
 
-What worked in our favor was the fact that Gilt had tried running a self-selection in the past and in general always supported idea of teams’ mobility. Last but not least, positioning the self-selection as an experiment, gained stronger support for it at all levels. 
+What worked in our favor was the fact that Gilt had tried running a self-selection in 2012 as part of a transition to pizza-sized teams. The self-selection event was called a Speed Dating, involved 50 people and 6 projects. Fun fact - a number of todays leaders were involved in 2012 event as regular participants.
 
 ### Transparency
+
 We kept the preparation process very transparent. Dedicated Slack channel, Confluence page with progress updates and participants’ info, communication at the tech all-hands meetings and Q&A sessions – everything to avoid creating discomfort and to reduce a fear factor amongst the team members. 
  
 ## Self-selection in seven steps
+
 ![Seven Steps of Self-Selection](http://i.imgur.com/g74dlgH.png)
+
 ### 1. Get Leadership Buy-In
-One of the first steps in self-selection is getting a buy-in from the leadership team. 
+
+One of the first steps in self-selection is getting a buy-in from your leadership team. 
+Wheather you start from [feature teams or component teams](http://www.innolution.com/blog/distinguishing-between-feature-component-teams), a self-selection event has a potential of impacting your existing reporting structure in organization. 
+Have an open conversation with each of the leaders to clarify the process, understand their conserns and answer questions. 
+Is there a small modification you can make to the process to mitigate these conserns and turn the leaders into your supporters? 
+From our experience, making self-selection participation invitational and positioning it as an experiment increases the number of supporters accross the organization.
+
 ### 2. Identify Participants
 If you are running a self-selection for a subset of the teams, make sure that the list of participants is known and publicly available to everyone.
 
