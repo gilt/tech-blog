@@ -66,7 +66,7 @@ We kept the preparation process very transparent. Dedicated Slack channel, Confl
 
 ### 1. Get Leadership Buy-In
 
-One of the first steps in self-selection is getting a buy-in from your leadership team. 
+One of the first steps in a self-selection is getting a buy-in from your leadership team. 
 Wheather you start from [feature teams or component teams](http://www.innolution.com/blog/distinguishing-between-feature-component-teams), a self-selection event has a potential of impacting the existing reporting structure in your organization. 
 Have an open conversation with each of the leaders to clarify the process, understand their conserns and answer questions. 
 
@@ -84,10 +84,13 @@ By the same token, it created a bit of a confusion around who was in vs. who was
 If you are running a self-selection for a subset of your teams, make sure that the list of participants is known and publicly available to everyone. Verify that the total number of participants is equal or smaller than the number of open spots on the new teams. 
 
 #### Pre-selected vs. free-moving participants
-Decide if you will have any team members pre-selected for each team.
+
+Decide if you need to have any of the team members pre-selected in each team.
 For us,the only two pre-selected roles in each team were a Product Manager and a Tech Lead. They were the key partners in pitching the initiative to team members. Everyone else (including Agile Project Managers) was allowed to self-select into new teams. 
 
 #### FTEs vs. Contractors
+
+If you have contractors working on your projects alongside the full-time employees, you will need to figure out if limiting self-selection to full-time employees makes sense in your environment.
 
 Since our typical team had a mix of full-time employees and contractors, it was logical for us to invite both groups to participate in the self-selection. Afterall, individuals were selecting the teams based on a business idea, a technology stack and the other individuals that they wanted to work with.
 We did make one adjustment to the process and asked contractors to give employees a "fist dip" at selecting their new teams. Everone had equal opportunty after the first round of the self-selection.
@@ -95,8 +98,9 @@ We did make one adjustment to the process and asked contractors to give employee
 
 #### Observers
 
-There was so much interest in the self-selection experiment across the organization, that we had to invent an observer role.
-Observers were invited to join in the first part of the self-selection event. They could check out how the room is set up, take a pick at the participants cards. They could listen to initiative pitches for all teams, without making an actual selection.
+Usually, you would want to limit patricipation to those directly involved in a self-selection.
+In our case, there was so much interest in the self-selection experiment across the organization, that we had to compromize by introducing an observer role.
+Observers were invited to join in the first part of the self-selection event. They could check out how the room was set up, take a pick at the participants cards. They could listen to initiative pitches for all teams, without making an actual selection.
 Observers were asked to leave after the break and before the start of actual teams selection.
 
 ### 3. Work with Your Key Partners 
@@ -105,22 +109,35 @@ Observers were asked to leave after the break and before the start of actual tea
 
 As a part of our prep work we discovered that some team members felt very apprehensive about self-selection. Some wanted to avoid a repeat of a negative experience they had in their childhood with a selection into sports teams.  We collaborated with current teams' Trifectas to reduce a potential discomfort with the following adjustments:
 
-* “I have no squad” poster was rephrased as “I am available to help” for a more positive spin.
+* We modified the “I have no squad” poster into “I am available to help” poster for a more positive spin.
 * We made a compromise on consultants’ participation, asking them to add their cards to "I am available to help" poster in the first round and letting them participate equally starting from the second round.
-* “No first come first serve” rule was designed to keep the options open for everyone and avoid informal pre-selection.
+* We introduced a “No first come first serve” rule to keep the options open for everyone and avoid informal pre-selection.
 
 #### Product Managers and Tech Leads pitches.
-- coach them to inspire people with product vision and technology stack.
-#### Establish the team composition (core team + larger community) 
-- front end, back end, APM, UX, Infra, Data, QA
-- cross-checking the team needs with the number of participants. --> no musical chairs!
+
+Coach them to inspire people with their short pitches about a product vision and a technology stack: 
+
+* Why is this initiative important to our business? 
+* How can you make a difference if you join? 
+* What exciting technologies will you get a chance to work with if you become a part of this team? 
+* What kind of team are we looking to build?
+
+#### Establish the team formula
+
+This part is really critical. You want to make sure you understand very well the needs of each project in terms of specific roles and the number of people required for each role. Cross-check the total number of people based on the team formula with the number of people, invited to participate in the self-selection. Avoid putting people into "musical chairs" at all cost! 
+
 ### 4. Evangelize 
-We learnt to use a variety of channels to spread the word about self-selection.
-1) announcement at Tech All-hands meeting
-2) Q&A sessions with each existing group.
-3) Confluence Q&A page
-4) #self-selection Slack channel
-5) formal and informal one-on-one conversations
+
+Take the unsertainty out of the self-selection! Clarify questions, address concerns, play the "what-ifs", collection questions and make answers available to everyone.
+
+We learnt to use a variety of channels to spread the word about the self-selection:
+
+* announcements at Tech All-hands meetings
+* dedicated Q&A sessions with each existing group.
+* Confluence Q&A page
+* #self-selection Slack channel
+* formal and informal one-on-one conversations (including a hallway and an elevator conversations)
+
 ### 5. Prepare
 #### Space
 1) Appropriate for the size of the group
