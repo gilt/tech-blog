@@ -29,38 +29,38 @@ HBC Digital is the group that drives the digital retail/ecommerce and digital cu
 Our development process is largely inspired by original [Gilt process](http://tech.gilt.com/2013/03/07/scaling-agile-at-gilt) and has the ideas of intrinsic motivation in its core. 
 What agile flavor do we use? It depends on a team.
 Each team has a full autonomy in selecting Scrum, Kanban, XP, a combination thereof or none of the above as their process. As long as they remain small, nimble, able to collaborate and continuously deliver value, they can tailor the process to their needs.
-We do keep certain key components standard across all teams. One of them is a “Trifecta” – a group of servant-leaders in each team: Product Manager, Agile Project Manager and Tech Lead. They work together to support the teams and enable the teams’ success. 
-Additionally, we enable continuous learning and role blending by instilling our [Team Ingredients framework](https://www.slideshare.net/hhfleming/the-new-work-order-team-ingredients-and-role-blending). 
+We do keep certain key components standard across all teams. One of them is a “Trifecta” – a group of servant-leaders in each team: a Product Manager, an Agile Project Manager and a Tech Lead. They work together to support their team and enable the team's success. 
+We value continuous learning and facilitate role blending by instilling our Team Ingredients framework. Originally designed by Heather Fleming, [Team Ingredients](https://www.slideshare.net/hhfleming/the-new-work-order-team-ingredients-and-role-blending) framework facilitates team-level conversations about the team strength, learning interests and cross-training opportunities. Over the years the framework evolved from being a management tool for assessing teams from "outside in" to being a team tool that supports self-organizing and learning discussions.
 
-Our process continues to evolve. We experiment with new ideas and practices to facilitate teams’ effectiveness and create a culture and an environment for them to thrive. The self-selection is our latest experiment and this blog post is a glimpse into how it went. 
+Just like our Team Ingredients framework, our process continues to evolve. We experiment with new ideas and practices to facilitate teams’ effectiveness and create an environment for teams to thrive. The self-selection is our latest experiment and this blog post is a glimpse into how it went. 
 
 ## Self-selection triggers and enablers
 
 ### Organizational change
 
-Just like any other organization that grew through acquisitions, at one point we found ourselves dealing with an unhealthy mix of cultures, duplicate roles and clashing mindsets. To remain lean and agile, we went through a restructuring at all levels. 
+As an organization that grew through acquisitions, at one point we found ourselves dealing with an unhealthy mix of cultures, duplicate roles and clashing mindsets. To remain lean and agile, we went through a restructuring at all levels. 
 
 ### Inspiring case studies
 
-As we were evaluating the best ways to re-form the teams, we came across Amber King and Jess Huth’s talk on [self-selection](https://www.youtube.com/watch?v=OVyt62kZKiA) at Business Agility 2017 Conference. The lightbulb went on! Amber and Jess were describing exactly the situation we were in at that time and were reporting the positive effect of running a self-selection with the teams at Opower. We followed up with them on Skype afterwards. Hearing their compelling story again and being encouraged by their guidance, we left the call fired up to give the self-selection a try!
+When we were evaluating the best ways to re-form the teams, we came across Amber King and Jess Huth’s talk on [self-selection](https://www.youtube.com/watch?v=OVyt62kZKiA) at Business Agility 2017 Conference. The lightbulb went on! Amber and Jess were describing exactly the situation we were in at that time and were reporting the positive effect of running a self-selection with the teams at Opower. We followed up with them on Skype afterwards. Hearing their compelling story again and being encouraged by their guidance, we left the call fired up to give the self-selection a try!
 
 ### Self-selection manual
 
 When it is your turn to plan for self-selection, pick up a copy of Sandy Mamoli and David Mole’s book [“Creating Great Teams: How Self-Selection Lets People Excel”](https://www.amazon.com/Creating-Great-Teams-Self-Selection-People/dp/1680501283)
-This very detailed facilitation guide from the inventors of self-selection process was indispensable in preparing and facilitating our event. 
+This very detailed facilitation guide from the inventors of self-selection process is indispensable in preparing for and facilitating a self-selection event. 
 
-### Leadership support.
+### Past success
 
-One of the first steps in self-selection is getting a buy-in from the leadership team. 
 What worked in our favor was the fact that Gilt had tried running a self-selection in the past and in general always supported idea of teams’ mobility. Last but not least, positioning the self-selection as an experiment, gained stronger support for it at all levels. 
 
 ### Transparency
 We kept the preparation process very transparent. Dedicated Slack channel, Confluence page with progress updates and participants’ info, communication at the tech all-hands meetings and Q&A sessions – everything to avoid creating discomfort and to reduce a fear factor amongst the team members. 
  
-## Self-selection in Seven Steps
+## Self-selection in seven steps
 ![Seven Steps of Self-Selection](http://i.imgur.com/g74dlgH.png)
 ### 1. Get Leadership Buy-In
-### 2. Identify the Participants
+One of the first steps in self-selection is getting a buy-in from the leadership team. 
+### 2. Identify Participants
 If you are running a self-selection for a subset of the teams, make sure that the list of participants is known and publicly available to everyone.
 
 - Participants:
@@ -69,7 +69,7 @@ If you are running a self-selection for a subset of the teams, make sure that th
 - - Contractors
 - Observers
 
-### 3. Partner with Your Key Players 
+### 3. Work with Your Key Partners 
 Build-in some time for group and one-on-one coaching.
 Adjust the process if required
 1) “I have no squad” poster was replaced with “I am available to help”
@@ -118,5 +118,5 @@ Additional space was provided to indicate their first, second and third project 
 
 ### 6. Run
 
-### 7. Support the New Teams
+### 7. Support New Teams
  
