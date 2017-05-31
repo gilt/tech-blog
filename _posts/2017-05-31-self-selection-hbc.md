@@ -109,7 +109,9 @@ Observers were asked to leave after the break and before the start of actual tea
 
 As a part of our prep work we discovered that some team members felt very apprehensive about self-selection. Some wanted to avoid a repeat of a negative experience they had in their childhood with a selection into sports teams.  We collaborated with current teams' Trifectas to reduce a potential discomfort with the following adjustments:
 
-* We modified the “I have no squad” poster into “I am available to help” poster for a more positive spin.
+<img src="http://i.imgur.com/xvbuRHp.jpg?1" align="right" width="200"/>
+
+* We modified the “I have no squad” poster into “Available to help” poster for a more positive spin. 
 * We made a compromise on consultants’ participation, asking them to add their cards to "I am available to help" poster in the first round and letting them participate equally starting from the second round.
 * We introduced a “No first come first serve” rule to keep the options open for everyone and avoid informal pre-selection.
 
@@ -153,7 +155,7 @@ Depending on the time of the day, plan on bringing breakfast, lunch or snacks in
 2) Rules poster(s). At a minimum have “Do what’s best for the company” poster.
 As we added a few additional rule, those were outlined on a poster as well.
 
-3) “I am available to help” poster. This is very similar to “I have no squad” poster from Sandi Mamoli’s book. However, we wanted to make the message on that poster a little bit more positive. We were planning to ask more people to put their names there in the first self-selection round
+3) “Available to help” poster. This is very similar to “I have no squad” poster from Sandi Mamoli’s book. However, we wanted to make the message on that poster a little bit more positive. We were planning to ask more people to put their names there in the first self-selection round
 #### Participants Cards
 
 At a minimum, have photos with names prepared for each participants. 
