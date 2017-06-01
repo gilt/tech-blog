@@ -198,19 +198,20 @@ We invested a little more time in making participants cards look like game cards
 * their proficiency and learning interests in the eleven team ingredients
 * a space to indicate their first, second and third choices of the team (during the event).
 
-<img src="http://i.imgur.com/ubdUHcw.png" align="right" width="300"/>
-
 
 Using our Team ingredients framework and Kahoot! survey platform we created a gamified self-assessment to collect the data for these cards.
+
+<img src="http://i.imgur.com/ubdUHcw.png" align="right" width="300"/>
+
 Participants rated their skill levels and learning interests for each of the ingredients using the following scale:
 
-**3 – I can teach it
+**3 – I can teach it**
 
-**2 – I can do it
+**2 – I can do it**
 
-**1 – I’d like to learn it
+**1 – I’d like to learn it**
 
-**0 – Don’t make me do it.
+**0 – Don’t make me do it**
 
 
 
