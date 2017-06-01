@@ -71,10 +71,10 @@ We kept the preparation process very transparent. Dedicated Slack channel, Confl
 ### 1. Get Leadership Buy-In
 
 One of the first steps in a self-selection is getting a buy-in from your leadership team. 
-Wheather you start from [feature teams or component teams](http://www.innolution.com/blog/distinguishing-between-feature-component-teams), a self-selection event has a potential of impacting the existing reporting structure in your organization. 
-Have an open conversation with each of the leaders to clarify the process, understand their conserns and answer questions. 
+Whether you start from [feature teams or component teams](http://www.innolution.com/blog/distinguishing-between-feature-component-teams), a self-selection event has a potential of impacting the existing reporting structure in your organization. 
+Have an open conversation with each of the leaders to clarify the process, understand their concerns and answer questions. 
 
-Is there a small modification you can make to the process to mitigate these conserns and turn the leaders into your supporters? 
+Is there a small modification you can make to the process to mitigate these concerns and turn the leaders into your supporters? 
 From our experience, making a self-selection invitational and positioning it as "an experiment" fast-tracked its acceptance in the organization.
 
 ### 2. Identify Participants
@@ -82,7 +82,7 @@ From our experience, making a self-selection invitational and positioning it as 
 How many people will be involved in your self-selection? 
 Will it include all of your existing project teams or a subset? 
 
-Reducing the size of the self-selection to only a subset of the teams at HBC Digital made our experiment more plausable.
+Reducing the size of the self-selection to only a subset of the teams at HBC Digital made our experiment more plausible.
 By the same token, it created a bit of a confusion around who was in vs. who was not.
 
 If you are running a self-selection for a subset of your teams, make sure that the list of participants is known and publicly available to everyone. Verify that the total number of participants is equal or smaller than the number of open spots on the new teams. 
@@ -90,28 +90,28 @@ If you are running a self-selection for a subset of your teams, make sure that t
 #### Pre-selected vs. free-moving participants
 
 Decide if you need to have any of the team members pre-selected in each team.
-For us,the only two pre-selected roles in each team were a Product Manager and a Tech Lead. They were the key partners in pitching the initiative to team members. Everyone else (including Agile Project Managers) was allowed to self-select into new teams. 
+For us, the only two pre-selected roles in each team were a Product Manager and a Tech Lead. They were the key partners in pitching the initiative to team members. Everyone else (including Agile Project Managers) was allowed to self-select into new teams. 
 
 #### FTEs vs. Contractors
 
 If you have contractors working on your projects alongside the full-time employees, you will need to figure out if limiting self-selection to full-time employees makes sense in your environment.
 
-Since our typical team had a mix of full-time employees and contractors, it was logical for us to invite both groups to participate in the self-selection. Afterall, individuals were selecting the teams based on a business idea, a technology stack and the other individuals that they wanted to work with.
-We did make one adjustment to the process and asked contractors to give employees a "fist dip" at selecting their new teams. Everone had equal opportunty after the first round of the self-selection.
+Since our typical team had a mix of full-time employees and contractors, it was logical for us to invite both groups to participate in the self-selection. After all, individuals were selecting the teams based on a business idea, a technology stack and the other individuals that they wanted to work with.
+We did make one adjustment to the process and asked contractors to give employees a "fist dip" at selecting their new teams. Everyone had equal opportunity after the first round of the self-selection.
 
 
 #### Observers
 
-Usually, you would want to limit patricipation to those directly involved in a self-selection.
-In our case, there was so much interest in the self-selection experiment across the organization, that we had to compromize by introducing an observer role.
-Observers were invited to join in the first part of the self-selection event. They could check out how the room was set up, take a pick at the participants cards. They could listen to initiative pitches for all teams, without making an actual selection.
-Observers were asked to leave after the break and before the start of actual teams selection.
+Usually, you would want to limit participation to those directly involved in a self-selection.
+In our case, there was so much interest in the self-selection experiment across the organization, that we had to compromise by introducing an observer role.
+Observers were invited to join in the first part of the self-selection event. They could check out how the room was set up, take a pick at the participants' cards. They could listen to initiative pitches for all teams, without making an actual selection.
+Observers were asked to leave after the break and before the start of actual teams' selection.
 
 ### 3. Work with Your Key Partners 
 
 #### Adjust the process to fit your needs
 
-As a part of our prep work we discovered that some team members felt very apprehensive about self-selection. Some wanted to avoid a repeat of a negative experience they had in their childhood with a selection into sports teams.  We collaborated with current teams' Trifectas to reduce a potential discomfort with the following adjustments:
+During our prep work we discovered that some team members felt very apprehensive about self-selection processes. To some extent, it reminded them a negative experience they had in their childhood with a selection into sports teams.  We collaborated with current teams' Trifectas to reduce a potential discomfort with the following adjustments:
 
 <img src="http://i.imgur.com/NhTu2Vs.jpg" align="right" width="180"/>
 
@@ -134,12 +134,12 @@ Coach them to inspire people with their short pitches about a product vision and
 
 This part is really critical. 
 
-Your team formula may include the core team only, or like in our case, include memebers from the larger project community (Infrastructure Engineers, UX Designers etc.)
+Your team formula may include the core team only, or like in our case, include members from the larger project community (Infrastructure Engineers, UX Designers etc.)
 As a facilitator, you want to understand very well the needs of each project in terms of specific roles and the number of people required for each role. Cross-check the total number of people based on the team formula with the number of people, invited to participate in the self-selection. Avoid putting people into "musical chairs" at all cost! 
 
 ### 4. Evangelize 
 
-Take the unsertainty out of the self-selection! Clarify questions, address concerns, play the "what-ifs", collection questions and make answers available to everyone.
+Take the uncertainty out of the self-selection! Clarify questions, address concerns, play the "what-ifs", collection questions and make answers available to everyone.
 
 We learnt to use a variety of channels to spread the word about the self-selection:
 
