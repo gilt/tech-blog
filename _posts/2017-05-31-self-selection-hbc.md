@@ -171,15 +171,16 @@ We run ours in the afternoon and brought in selection of European chocolate, pop
 
 #### Posters
 
-<img src="http://i.imgur.com/P585DPe.jpg?1" align="right" width="300"/>
-
 Help the participants remember the rules and find the team corners by preparing posters. Be creative, make them visually appealing. Here is what worked for us:
+
+<img src="http://i.imgur.com/P585DPe.jpg?1" align="right" width="300"/>
 
 1) One team poster per each team with the project /team name, team formula and a team mascot. 
 
 2) Rules posters:
- “Do what’s best for the company” poster.
- " "
+ * “Do what’s best for the company”
+ * "Equal team selection opportunity"
+ * "Teams have to be capable of delivering end to end"
 
 3) “Available to help” poster. This is very similar to “I have no squad” poster from Sandi Mamoli’s book. However, we wanted to make the message on that poster a little bit more positive. 
 
