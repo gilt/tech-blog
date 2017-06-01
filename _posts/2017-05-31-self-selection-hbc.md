@@ -139,7 +139,7 @@ As a facilitator, you want to understand very well the needs of each project in 
 
 ### 4. Evangelize 
 
-Take the uncertainty out of the self-selection! Clarify questions, address concerns, play the "what-ifs", collection questions and make answers available to everyone.
+Take the uncertainty out of the self-selection! Clarify questions, address concerns, play the "what-ifs", collect questions and make answers available to everyone.
 
 We learnt to use a variety of channels to spread the word about the self-selection:
 
@@ -151,13 +151,23 @@ We learnt to use a variety of channels to spread the word about the self-selecti
 
 ### 5. Prepare
 #### Space
+
+It was important for us to find the right space and set the right mood for the actual self-selection event.
+The space that worked for us met all of our criteria:
+
+<img src="http://i.imgur.com/M0tzdmN.jpg" align="right" width="300"/>
+
 1) Appropriate for the size of the group
 2) Natural light
 3) Separate space for pitches and for team posters
 4) Away from the usual team spaces (to minimize distractions)
+
 #### Food
-[Do Food](https://www.amazon.com/Fearless-Change-Patterns-Introducing-Ideas/dp/0201741571) pattern applies here as well.
-Depending on the time of the day, plan on bringing breakfast, lunch or snacks into your self-selection event. We run ours in the afternoon and brought in chocolate, popcorn and organic juices.
+
+Speaking of the right mood, we had enough good snacks brought in for all participants and observers!
+
+Depending on the time of the day, you may plan on bringing breakfast, lunch or snacks into your self-selection event. 
+We run ours in the afternoon and brought in selection of European chocolate, popcorn and juices.
 #### Posters
 1) one team poster per each team with the project /team name, required team composition and a team mascot. Make it visually appealing, be creative. Repeat the information from the pitches for clarity.
 
