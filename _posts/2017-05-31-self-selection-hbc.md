@@ -168,13 +168,21 @@ Speaking of the right mood, we had enough good snacks brought in for all partici
 
 Depending on the time of the day, you may plan on bringing breakfast, lunch or snacks into your self-selection event. 
 We run ours in the afternoon and brought in selection of European chocolate, popcorn and juices.
+
 #### Posters
-1) one team poster per each team with the project /team name, required team composition and a team mascot. Make it visually appealing, be creative. Repeat the information from the pitches for clarity.
 
-2) Rules poster(s). At a minimum have “Do what’s best for the company” poster.
-As we added a few additional rule, those were outlined on a poster as well.
+<img src="http://i.imgur.com/P585DPe.jpg?1" align="right" width="300"/>
 
-3) “Available to help” poster. This is very similar to “I have no squad” poster from Sandi Mamoli’s book. However, we wanted to make the message on that poster a little bit more positive. We were planning to ask more people to put their names there in the first self-selection round
+Help the participants remember the rules and find the team corners by preparing posters. Be creative, make them visually appealing. Here is what worked for us:
+
+1) One team poster per each team with the project /team name, team formula and a team mascot. 
+
+2) Rules posters:
+ “Do what’s best for the company” poster.
+ " "
+
+3) “Available to help” poster. This is very similar to “I have no squad” poster from Sandi Mamoli’s book. However, we wanted to make the message on that poster a little bit more positive. 
+
 #### Participants Cards
 
 At a minimum, have photos with names prepared for each participants. 
