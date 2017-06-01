@@ -186,7 +186,7 @@ Help the participants remember the rules and find the team corners by preparing 
 
 #### Participants Cards
 
-<img src="http://i.imgur.com/aXZZoaM.jpg?1" align="right" width="300"/>
+<img src="http://i.imgur.com/aXZZoaM.jpg?1" align="right" width="180"/>
 
 At a minimum, have a printed photo prepared for each participant and color-coded labels to indicated different roles.
 
@@ -201,7 +201,7 @@ We invested a little more time in making participants cards look like game cards
 
 Using our Team ingredients framework and Kahoot! survey platform we created a gamified self-assessment to collect the data for these cards.
 
-<img src="http://i.imgur.com/ubdUHcw.png" align="right" width="300"/>
+<img src="http://i.imgur.com/ubdUHcw.png" align="right" width="180"/>
 
 Participants rated their skill levels and learning interests for each of the ingredients using the following scale:
 
@@ -214,8 +214,20 @@ Participants rated their skill levels and learning interests for each of the ing
 **0 – Don’t make me do it**
 
 
-
 ### 6. Run
+
+It took us exactly one month to get to this point. 
+On the day of the self-selection the group walked into the room. The product managers, tech leads and the facilitator were already there. The room was set and ready for action!
+
+#### Initiative Pitches
+
+Participants picked up their cards and settled in their chairs, prepared to hear the initiative pitches and make their selections. This was one of the most attentive audience we've seen! We didn't even have to set the rules around device usage - everyone was giving the pitches their undivided attention. 
+
+Product Managers and Tech Leads presented each initiative, the product, the technology stack and their perspective on the team they'd like to build. It was impressive to see how each pair worked together to answer questions and inspire people. 
+
+#### Two rounds of self-selection
+
+
 
 ### 7. Support New Teams
  
