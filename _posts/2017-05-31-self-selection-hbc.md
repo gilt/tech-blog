@@ -139,6 +139,9 @@ As a facilitator, you want to understand very well the needs of each project in 
 
 ### 4. Evangelize 
 
+<img src="http://i.imgur.com/MG8zRri.png" align="right" width="300"/>
+
+
 Take the uncertainty out of the self-selection! Clarify questions, address concerns, play the "what-ifs", collect questions and make answers available to everyone.
 
 We learnt to use a variety of channels to spread the word about the self-selection:
@@ -148,6 +151,8 @@ We learnt to use a variety of channels to spread the word about the self-selecti
 * Confluence Q&A page
 * #self-selection Slack channel
 * formal and informal one-on-one conversations (including a hallway and an elevator conversations)
+
+
 
 ### 5. Prepare
 #### Space
@@ -221,13 +226,31 @@ On the day of the self-selection the group walked into the room. The product man
 
 #### Initiative Pitches
 
-Participants picked up their cards and settled in their chairs, prepared to hear the initiative pitches and make their selections. This was one of the most attentive audience we've seen! We didn't even have to set the rules around device usage - everyone was giving the pitches their undivided attention. 
+Participants picked up their cards and settled in their chairs, prepared to hear the initiative pitches and to make their selections. This was one of the most attentive audience we've seen! We didn't even have to set the rules around device usage - everyone was giving the pitches their undivided attention. 
 
-Product Managers and Tech Leads presented each initiative, the product, the technology stack and their perspective on the team they'd like to build. It was impressive to see how each pair worked together to answer questions and inspire people. 
+After are short introduction from the facilitator and a "blessing" from one of the leaders, Product Managers and Tech Leads took the stage.
+
+For each initiative they presented their vision of the product, the technology stack and shared their perspective on the team they'd like to build. It was impressive to see how each pair worked together to answer questions and inspire people. 
+At the end of the pitches, we took a short break. It was a signal for observers to leave the room. 
 
 #### Two rounds of self-selection
 
+After the break, Product Managers and Tech Leads took their places in the team corners. We run two rounds of self-selection, ten minutes each. 
 
+During the *first self-selection round* people walked around, checked the team formula, chatted with others and placed their cards on a poster of their first choice team. Contractors and others, who didn't want to make a selection in the first round, placed their cards on "Available to help" poster. At the end of the round, each tech lead was asked to give an update on the following:
+
+* Was the team complete after this round?
+* Were there any ingredients or skills missing in the team after the first round?
+
+During the *second round*, there were more conversations, more negotiations and more movement between the teams. Some people agreed to move to their second choice teams to help fill the project needs. The "Do what's best for the company" poster served as a good reminder during this process.
+
+The debrief revieled that three teams out of four had been fully formed by the end of the second round.
+The last team had more open spots still. It was decided that those will be filled later by hiring new people with the required skillset. 
 
 ### 7. Support New Teams
+
+#### Transition Plan
+#### Team Working Agreement
+#### Coaching/Measuring Happiness
+
  
