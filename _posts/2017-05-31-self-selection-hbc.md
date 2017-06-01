@@ -33,7 +33,11 @@ Each team has a full autonomy in selecting Scrum, Kanban, XP, a combination ther
 
 We do keep certain key components standard across all teams. 
 One of them is a “Trifecta” – a group of servant-leaders in each team: a Product Manager, an Agile Project Manager and a Tech Lead. They work together to support their team and enable the team's success. 
-We value continuous learning and facilitate role blending by instilling our Team Ingredients framework. Originally designed by Heather Fleming, [Team Ingredients](https://www.slideshare.net/hhfleming/the-new-work-order-team-ingredients-and-role-blending) framework facilitates team-level conversations about the team strength, learning interests and cross-training opportunities. Over the years the framework evolved from being a management tool for assessing teams from "outside in" to being a team tool that supports self-organizing and learning discussions.
+We value continuous learning and facilitate role blending by instilling our Team Ingredients framework. Originally designed by Heather Fleming, [Team Ingredients](https://www.slideshare.net/hhfleming/the-new-work-order-team-ingredients-and-role-blending) framework facilitates team-level conversations about the team strength, learning interests and cross-training opportunities. 
+
+<img src="http://i.imgur.com/GgkQVa9.jpg" align="right" width="250"/>
+
+Over the years the framework evolved from being a management tool for assessing teams from "outside in" to being a team tool that supports self-organizing and learning discussions. After a major revamp and gamification of the framework in 2016, we now use it as part of our LiftOff sessions and team working agreement conversations. 
 
 Just like our Team Ingredients framework, our process continues to evolve. We experiment with new ideas and practices to facilitate teams’ effectiveness and create an environment for teams to thrive. The self-selection is our latest experiment and this blog post is a glimpse into how it went. 
 
