@@ -186,16 +186,33 @@ Help the participants remember the rules and find the team corners by preparing 
 
 #### Participants Cards
 
-At a minimum, have photos with names prepared for each participants. 
-We invested a little more time to simplify a discussion about team's learning opportunities and make participants card look like game cards. 
-Using our Team ingredients framework and Kahoot! survey platform we created a gamified self-assessment.
-Participants rated their skill levels and learning interests for each of the 11 ingredients using the following scale:
-3 – I can teach it
-2 – I can do it
-1 – I’d like to learn it
-0 – Don’t make me do it.
-Data collected via Kahoot was later used to generate the individual participants’ cards. Every participant received a card with their photo, name, current role and team ingredients scale.
-Additional space was provided to indicate their first, second and third project choices during the event.
+<img src="http://i.imgur.com/aXZZoaM.jpg?1" align="right" width="300"/>
+
+At a minimum, have a printed photo prepared for each participant and color-coded labels to indicated different roles.
+
+We invested a little more time in making participants cards look like game cards and included:
+
+* a LinkedIn photo of the participant
+* their name
+* a current role
+* their proficiency and learning interests in the eleven team ingredients
+* a space to indicate their first, second and third choices of the team (during the event).
+
+<img src="http://i.imgur.com/ubdUHcw.png" align="right" width="300"/>
+
+
+Using our Team ingredients framework and Kahoot! survey platform we created a gamified self-assessment to collect the data for these cards.
+Participants rated their skill levels and learning interests for each of the ingredients using the following scale:
+
+**3 – I can teach it
+
+**2 – I can do it
+
+**1 – I’d like to learn it
+
+**0 – Don’t make me do it.
+
+
 
 ### 6. Run
 
