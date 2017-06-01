@@ -206,7 +206,7 @@ We invested a little more time in making participants cards look like game cards
 
 Using our Team ingredients framework and Kahoot! survey platform we created a gamified self-assessment to collect the data for these cards.
 
-<img src="http://i.imgur.com/ubdUHcw.png" align="right" width="180"/>
+<img src="http://i.imgur.com/ubdUHcw.png" align="right" width="300"/>
 
 Participants rated their skill levels and learning interests for each of the ingredients using the following scale:
 
