@@ -242,15 +242,56 @@ During the *first self-selection round* people walked around, checked the team f
 * Was the team complete after this round?
 * Were there any ingredients or skills missing in the team after the first round?
 
+<img src="http://i.imgur.com/YvflUIjt.jpg" align="right" width="180"/> 
+
 During the *second round*, there were more conversations, more negotiations and more movement between the teams. Some people agreed to move to their second choice teams to help fill the project needs. The "Do what's best for the company" poster served as a good reminder during this process.
 
-The debrief revieled that three teams out of four had been fully formed by the end of the second round.
+The debrief revealed that three teams out of four had been fully formed by the end of the second round.
 The last team had more open spots still. It was decided that those will be filled later by hiring new people with the required skillset. 
+
+The self-selection event was completed. It was a time to celebrate and to start planning the work with the new teams.
+
 
 ### 7. Support New Teams
 
 #### Transition Plan
+
+During the self-selection we formed the new teams or the "end state". What we needed to figure out afterwards was how to get to the end state given the "current state" at that time.
+Tech leads worked with their new team members to figure our the systems they supported,  the projects they were involved with at that time and to map out the transition plan.
+
 #### Team Working Agreement
+
+Once all members of the new teams were available to start, we faciliated [Liftoff](https://www.amazon.com/Liftoff-Launching-Agile-Teams-Projects/dp/097792016X) workshops to help them get more details on the product purpose, establish team working agreements and help the teams understand larger organizational context.
+
 #### Coaching/Measuring Happiness
+
+Our experiment didn't stop there. We continue checking in with the team through coaching, measuring happiness (we use gamified [Spotify Squad Health check](https://play.kahoot.it/#/?quizId=6815b7d1-29ba-4d1a-a859-295a5ed91693)) and facilitating regular retrospectives.
+
+## What's next?
+
+As our roadmap continues to change and as we get more people joining the organization, we may consider running a self-selection again with a new group. 
+Or we may decide to move away from "large batches" of self-selection and experiment with a flow of [Dynamic Reteaming](https://leanpub.com/dynamicreteaming).
+
+The time will tell. One thing is clear - we will continue learning and experimenting. 
+
+## How can you learn more?
+
+We hope this blog post inspired you to think about a self-selection for your teams. Still have questions after reading it? Get in touch with us, we'd love to tell you more!
+
+### We are speaking
+
+Join our talks and workshops around the World:
+
+1. ["The New Work Order" keynote](https://www.slideshare.net/hhfleming/the-new-work-order-team-ingredients-and-role-blending) at Future of Work by Heather Fleming, VP People Operations & PMO
+
+2. [Removing Friction In the Developer Experience](https://qconnewyork.com/ny2017/speakers/adrian-trenaman) at QConn New York by Adrian Trenaman, SVP Engineering 
+
+3. [Discover Your Dream Teams Through Self-Selection with a Team Ingredients Game](https://www.scrumalliance.org/sgdub) at Global Scrum Gathering Dublin by Dana Pylayeva, Agile Coach
+
+### Great books that inspired us
+
+1. Sandy Mamoli, David Mole [“Creating Great Teams: How Self-Selection Lets People Excel”](https://www.amazon.com/Creating-Great-Teams-Self-Selection-People/dp/1680501283)
+2. Diana Larsen, Ainsley Nies [Liftoff: Launching Agile Teams & Projects](https://www.amazon.com/Liftoff-Launching-Agile-Teams-Projects/dp/097792016X)
+3. Heidi Shetzer Helfand [Dynamic Reteaming. The Art and Wisdom of Changing Teams](https://leanpub.com/dynamicreteaming)
 
  
