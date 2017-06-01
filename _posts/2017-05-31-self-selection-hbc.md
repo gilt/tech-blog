@@ -242,7 +242,7 @@ During the *first self-selection round* people walked around, checked the team f
 * Was the team complete after this round?
 * Were there any ingredients or skills missing in the team after the first round?
 
-<img src="http://i.imgur.com/YvflUIjt.jpg" align="right" width="180"/> 
+<img src="http://i.imgur.com/YvflUIjl.jpg" align="right" width="180"/> 
 
 During the *second round*, there were more conversations, more negotiations and more movement between the teams. Some people agreed to move to their second choice teams to help fill the project needs. The "Do what's best for the company" poster served as a good reminder during this process.
 
