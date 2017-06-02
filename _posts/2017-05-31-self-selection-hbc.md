@@ -13,9 +13,9 @@ tags:
 
 ![Self-selection](http://i.imgur.com/DGJx44J.png)
 
-Inspired by Opower’s success story, we run a self-selection experiment at HBC Digital. 
+Inspired by Opower’s success story, we ran a self-selection experiment at HBC Digital. 
 
-Dubbed as _“the most anticipated event of the year”_ it enabled 39 team members to self-select into 4 project teams. How did they do it? By picking a project they wanted to work on, the teammates they wanted to work with and keeping _“Do what’s best for the company”_ attitude. 
+Dubbed as _“the most anticipated event of the year”_ it enabled 39 team members to self-select into 4 project teams. How did they do it? By picking a project they wanted to work on, the teammates they wanted to work with and keeping a _“Do what’s best for the company”_ attitude. 
 Read on to learn about our experience and consider giving a self-selection a try!
 
 
@@ -26,14 +26,14 @@ HBC Digital is the group that drives the digital retail/ecommerce and digital cu
 
 ### Our process, trifectas and team ingredients
 
-Our development process is largely inspired by original [Gilt process](http://tech.gilt.com/2013/03/07/scaling-agile-at-gilt) and has the ideas of intrinsic motivation in its core. 
+Our development process is largely inspired by the original [Gilt process](http://tech.gilt.com/2013/03/07/scaling-agile-at-gilt) and has the ideas of intrinsic motivation in its core. 
 What agile flavor do we use? It depends on a team.
 
 Each team has a full autonomy in selecting Scrum, Kanban, XP, a combination thereof or none of the above as their process. As long as they remain small, nimble, able to collaborate and continuously deliver value, they can tailor the process to their needs.
 
 We do keep certain key components standard across all teams. 
 One of them is a “Trifecta” – a group of servant-leaders in each team: a Product Manager, an Agile Project Manager and a Tech Lead. They work together to support their team and enable the team's success. 
-We value continuous learning and facilitate role blending by instilling our Team Ingredients framework. Originally designed by Heather Fleming, [Team Ingredients](https://www.slideshare.net/hhfleming/the-new-work-order-team-ingredients-and-role-blending) framework facilitates team-level conversations about the team strength, learning interests and cross-training opportunities. 
+We value continuous learning and facilitate role blending by instilling our Team Ingredients framework. Originally designed by Heather Fleming, [Team Ingredients](https://www.slideshare.net/hhfleming/the-new-work-order-team-ingredients-and-role-blending) framework facilitates team-level conversations about the team strengths, learning interests and cross-training opportunities. 
 
 <img src="http://i.imgur.com/GgkQVa9.jpg" align="right" width="250"/>
 
@@ -62,7 +62,7 @@ What worked in our favor was the fact that Gilt had tried running a self-selecti
 
 ### Transparency
 
-We kept the preparation process very transparent. Dedicated Slack channel, Confluence page with progress updates and participants’ info, communication at the tech all-hands meetings and Q&A sessions – everything to avoid creating discomfort and to reduce a fear factor amongst the team members. 
+We kept the preparation process very transparent. Dedicated Slack channel, Confluence page with progress updates and participants’ info, communication at the tech all-hands meetings and Q&A sessions – everything to avoid creating discomfort and to reduce the fear factor amongst team members. 
  
 ## Self-selection in seven steps
 
@@ -70,7 +70,7 @@ We kept the preparation process very transparent. Dedicated Slack channel, Confl
 
 ### 1. Get Leadership Buy-In
 
-One of the first steps in a self-selection is getting a buy-in from your leadership team. 
+One of the first steps in a self-selection is getting buy-in from your leadership team. 
 Whether you start from [feature teams or component teams](http://www.innolution.com/blog/distinguishing-between-feature-component-teams), a self-selection event has a potential of impacting the existing reporting structure in your organization. 
 Have an open conversation with each of the leaders to clarify the process, understand their concerns and answer questions. 
 
@@ -90,28 +90,28 @@ If you are running a self-selection for a subset of your teams, make sure that t
 #### Pre-selected vs. free-moving participants
 
 Decide if you need to have any of the team members pre-selected in each team.
-For us, the only two pre-selected roles in each team were a Product Manager and a Tech Lead. They were the key partners in pitching the initiative to team members. Everyone else (including Agile Project Managers) was allowed to self-select into new teams. 
+For us, the only two pre-selected roles in each team were a Product Manager and a Tech Lead. They were the key partners in pitching the initiative to team members. All others (including Agile Project Managers) were invited to self-select into new teams. 
 
 #### FTEs vs. Contractors
 
 If you have contractors working on your projects alongside the full-time employees, you will need to figure out if limiting self-selection to full-time employees makes sense in your environment.
 
 Since our typical team had a mix of full-time employees and contractors, it was logical for us to invite both groups to participate in the self-selection. After all, individuals were selecting the teams based on a business idea, a technology stack and the other individuals that they wanted to work with.
-We did make one adjustment to the process and asked contractors to give employees a "fist dip" at selecting their new teams. Everyone had equal opportunity after the first round of the self-selection.
+We did make one adjustment to the process and asked contractors to give employees a "first dip" at selecting their new teams. Everyone had equal opportunity after the first round of the self-selection.
 
 
 #### Observers
 
 Usually, you would want to limit participation to those directly involved in a self-selection.
 In our case, there was so much interest in the self-selection experiment across the organization, that we had to compromise by introducing an observer role.
-Observers were invited to join in the first part of the self-selection event. They could check out how the room was set up, take a pick at the participants' cards. They could listen to initiative pitches for all teams, without making an actual selection.
+Observers were invited to join in the first part of the self-selection event. They could check out how the room was set up, take a peek at the participants' cards. They could listen to initiative pitches for all teams, without making an actual selection.
 Observers were asked to leave after the break and before the start of actual teams' selection.
 
 ### 3. Work with Your Key Partners 
 
 #### Adjust the process to fit your needs
 
-During our prep work we discovered that some team members felt very apprehensive about self-selection processes. To some extent, it reminded them a negative experience they had in their childhood with a selection into sports teams.  We collaborated with current teams' Trifectas to reduce a potential discomfort with the following adjustments:
+During our prep work we discovered that some team members felt very apprehensive about self-selection processes. To some extent, it reminded them of a negative experience they had in their childhood with a selection into sports teams.  We collaborated with current teams' Trifectas to reduce potential discomfort with the following adjustments:
 
 <img src="http://i.imgur.com/NhTu2Vs.jpg" align="right" width="180"/>
 
@@ -135,7 +135,7 @@ Coach them to inspire people with their short pitches about a product vision and
 This part is really critical. 
 
 Your team formula may include the core team only, or like in our case, include members from the larger project community (Infrastructure Engineers, UX Designers etc.)
-As a facilitator, you want to understand very well the needs of each project in terms of specific roles and the number of people required for each role. Cross-check the total number of people based on the team formula with the number of people, invited to participate in the self-selection. Avoid putting people into "musical chairs" at all cost! 
+As a facilitator, you want to understand very well the needs of each project in terms of specific roles and the number of people required for each role. Cross-check the total number of people based on the team formula with the number of people invited to participate in the self-selection. Avoid putting people into "musical chairs" at all cost! 
 
 ### 4. Evangelize 
 
@@ -150,7 +150,7 @@ We learnt to use a variety of channels to spread the word about the self-selecti
 * dedicated Q&A sessions with each existing group.
 * Confluence Q&A page
 * #self-selection Slack channel
-* formal and informal one-on-one conversations (including a hallway and an elevator conversations)
+* formal and informal one-on-one conversations (including hallway and elevator chats)
 
 
 
@@ -172,7 +172,7 @@ The space that worked for us met all of our criteria:
 Speaking of the right mood, we had enough good snacks brought in for all participants and observers!
 
 Depending on the time of the day, you may plan on bringing breakfast, lunch or snacks into your self-selection event. 
-We run ours in the afternoon and brought in selection of European chocolate, popcorn and juices.
+We ran ours in the afternoon and brought in a selection of European chocolate, popcorn and juices.
 
 #### Posters
 
@@ -180,7 +180,7 @@ Help the participants remember the rules and find the team corners by preparing 
 
 <img src="http://i.imgur.com/P585DPe.jpg?1" align="right" width="300"/>
 
-1) One team poster per each team with the project /team name, team formula and a team mascot. 
+1) One team poster per team with the project/team name, team formula and a team mascot. 
 
 2) Rules posters:
  * “Do what’s best for the company”
@@ -272,7 +272,7 @@ Our experiment didn't stop there. We continue checking in with the team through 
 As our roadmap continues to change and as we get more people joining the organization, we may consider running a self-selection again with a new group. 
 Or we may decide to move away from "large batches" of self-selection and experiment with a flow of [Dynamic Reteaming](https://leanpub.com/dynamicreteaming).
 
-The time will tell. One thing is clear - we will continue learning and experimenting. 
+Time will tell. One thing is clear - we will continue learning and experimenting. 
 
 ## How can you learn more?
 
