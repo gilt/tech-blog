@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Self-Selection experiment at HBC Digital
+title: Let’s run an experiment! Self-selection at HBC Digital
 author: Dana Pylayeva
 date: '2017-05-31'
 categories: 'Agile'
@@ -8,8 +8,8 @@ tags:
 - culture
 - agile
 - self-selection
+- leadership
 ---
-# Let’s run an experiment! Self-selection at HBC Digital.
 
 ![Self-selection](http://i.imgur.com/DGJx44J.png)
 
@@ -27,17 +27,17 @@ HBC Digital is the group that drives the digital retail/ecommerce and digital cu
 ### Our process, trifectas and team ingredients
 
 Our development process is largely inspired by the original [Gilt process](http://tech.gilt.com/2013/03/07/scaling-agile-at-gilt) and has the ideas of intrinsic motivation in its core. 
-What agile flavor do we use? It depends on a team.
+What agile flavor do we use? It depends on the team.
 
 Each team has a full autonomy in selecting Scrum, Kanban, XP, a combination thereof or none of the above as their process. As long as they remain small, nimble, able to collaborate and continuously deliver value, they can tailor the process to their needs.
 
 We do keep certain key components standard across all teams. 
 One of them is a “Trifecta” – a group of servant-leaders in each team: a Product Manager, an Agile Project Manager and a Tech Lead. They work together to support their team and enable the team's success. 
-We value continuous learning and facilitate role blending by instilling our Team Ingredients framework. Originally designed by Heather Fleming, [Team Ingredients](https://www.slideshare.net/hhfleming/the-new-work-order-team-ingredients-and-role-blending) framework facilitates team-level conversations about the team strengths, learning interests and cross-training opportunities. 
+We value continuous learning and facilitate role blending by instilling our Team Ingredients framework. Originally designed by Heather Fleming, the [Team Ingredients](https://www.slideshare.net/hhfleming/the-new-work-order-team-ingredients-and-role-blending) framework facilitates team-level conversations about the team strengths, learning interests and cross-training opportunities. 
 
 <img src="http://i.imgur.com/GgkQVa9.jpg" align="right" width="250"/>
 
-Over the years the framework evolved from being a management tool for assessing teams from "outside in" to being a team tool that supports self-organizing and learning discussions. After a major revamp and gamification of the framework in 2016, we now use it as part of our LiftOff sessions and team working agreement conversations. 
+Over the years the framework evolved from being a management tool for assessing teams from "outside in" to being a team tool that supports self-organizing and learning discussions. After a major revamp and gamification of the framework in 2016, we now use it as part of our [Liftoff](https://www.amazon.com/Liftoff-Launching-Agile-Teams-Projects/dp/097792016X) sessions and team working agreement conversations. 
 
 Just like our Team Ingredients framework, our process continues to evolve. We experiment with new ideas and practices to facilitate teams’ effectiveness and create an environment for teams to thrive. The self-selection is our latest experiment and this blog post is a glimpse into how it went. 
 
@@ -58,7 +58,7 @@ This very detailed facilitation guide from the inventors of self-selection proce
 
 ### Past success
 
-What worked in our favor was the fact that Gilt had tried running a self-selection in 2012 as part of a transition to pizza-sized teams. The self-selection event was called a Speed Dating, involved 50 people and 6 projects. Fun fact - a number of today's leaders were involved in 2012 event as regular participants.
+What worked in our favor was the fact that Gilt had tried running a self-selection in 2012 as part of a transition to ["two-pizza"](http://zurb.com/word/two-pizza-team) teams. The self-selection event was called a Speed Dating, involved 50 people and 6 projects. Fun fact - a number of today's leaders were involved in 2012 event as regular participants.
 
 ### Transparency
 
@@ -97,7 +97,7 @@ For us, the only two pre-selected roles in each team were a Product Manager and 
 If you have contractors working on your projects alongside the full-time employees, you will need to figure out if limiting self-selection to full-time employees makes sense in your environment.
 
 Since our typical team had a mix of full-time employees and contractors, it was logical for us to invite both groups to participate in the self-selection. After all, individuals were selecting the teams based on a business idea, a technology stack and the other individuals that they wanted to work with.
-We did make one adjustment to the process and asked contractors to give employees a "first dip" at selecting their new teams. Everyone had equal opportunity after the first round of the self-selection.
+We did make one adjustment to the process and asked contractors to give employees "first dibs" at selecting their new teams. Everyone had equal opportunity after the first round of the self-selection.
 
 
 #### Observers
@@ -151,6 +151,7 @@ We learnt to use a variety of channels to spread the word about the self-selecti
 * Confluence Q&A page
 * #self-selection Slack channel
 * formal and informal one-on-one conversations (including hallway and elevator chats)
+* discussion between the Tech Leads and Product Managers and their potential team members
 
 
 
@@ -228,14 +229,14 @@ On the day of the self-selection the group walked into the room. The product man
 
 Participants picked up their cards and settled in their chairs, prepared to hear the initiative pitches and to make their selections. This was one of the most attentive audience we've seen! We didn't even have to set the rules around device usage - everyone was giving the pitches their undivided attention. 
 
-After are short introduction from the facilitator and a "blessing" from one of the leaders, Product Managers and Tech Leads took the stage.
+After a short introduction from the facilitator and a "blessing" from one of the leaders, Product Managers and Tech Leads took the stage.
 
-For each initiative they presented their vision of the product, the technology stack and shared their perspective on the team they'd like to build. It was impressive to see how each pair worked together to answer questions and inspire people. 
+For each initiative they presented their vision of the product, the technology stack and their perspective on the team they'd like to build. It was impressive to see how each pair worked together to answer questions and inspire people. 
 At the end of the pitches, we took a short break. It was a signal for observers to leave the room. 
 
 #### Two rounds of self-selection
 
-After the break, Product Managers and Tech Leads took their places in the team corners. We run two rounds of self-selection, ten minutes each. 
+After the break, Product Managers and Tech Leads took their places in the team corners. We ran two rounds of self-selection, ten minutes each. 
 
 During the *first self-selection round* people walked around, checked the team formula, chatted with others and placed their cards on a poster of their first choice team. Contractors and others, who didn't want to make a selection in the first round, placed their cards on "Available to help" poster. At the end of the round, each tech lead was asked to give an update on the following:
 
@@ -256,8 +257,8 @@ The self-selection event was completed. It was a time to celebrate and to start 
 
 #### Transition Plan
 
-During the self-selection we formed the new teams or the "end state". What we needed to figure out afterwards was how to get to the end state given the "current state" at that time.
-Tech leads worked with their new team members to figure our the systems they supported,  the projects they were involved with at that time and to map out the transition plan.
+With the self-selection exercise, our teams formed a vision for their ideal "end state". Afterwards, we needed to figure out how to achieve that vision.
+Tech leads worked with their new team members to figure our the systems they supported,  the projects they were involved with at that time and mapped out the transition plan.
 
 #### Team Working Agreement
 
