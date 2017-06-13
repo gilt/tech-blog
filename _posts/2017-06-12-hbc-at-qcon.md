@@ -21,7 +21,7 @@ If you follow this blog at all, you know that we talk a lot about how we work he
 With that in mind, it only makes sense that [Ade Trenaman](https://twitter.com/adrian_trenaman), SVP Engineering at Hudson's Bay Company, will be part of the Developer Experience track at QCon New York in June. Titled ["Removing Friction In the Developer Experience"](https://qconnewyork.com/ny2017/presentation/fitter-happier-more-productive-removing-friction-developer-experience), Ade will highlight a number of the steps we've taken as an organisation to improve how we work. His session will cover:
 
 * how we blend microservice / serverless architectures, continuous deployment, and cloud technology to make it easy to push code swiftly, safely and frequently and operate it reliably in production.
-* the organisational tools like team self-selection, team ingredients (see above), voluntary adoption and internal startups that allow us to decentralise and decouple high-performing teams.
+* the organisational tools like [team self-selection](http://tech.gilt.com/agile/2017/05/31/self-selection-hbc), team ingredients (see above), voluntary adoption and internal startups that allow us to decentralise and decouple high-performing teams.
 
 ## Survival of the Fittest - Streaming Architectures
 
