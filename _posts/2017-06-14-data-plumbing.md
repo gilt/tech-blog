@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Data Plumbing at Hudson's Bay Company
