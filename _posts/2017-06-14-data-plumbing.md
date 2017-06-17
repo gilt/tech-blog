@@ -78,7 +78,7 @@ Another common data type not supported in Avro (yet) is UUID. Again, some minor 
  }}
 ```
 
-Then to encode an UUID to Avro, usinng Scala, you can do something along these lines:
+Then to encode an UUID to Avro, using Scala, you can do something along these lines:
 ```Scala
 /** Converts UUID to avro bytes. */
 def encodeAvro( uuid: UUID): GenericData.Fixed = {
@@ -116,6 +116,22 @@ Data type mapping and (de)serialization just takes care of the low level work.  
 
 #### File Conveyor Belt
 * A service, _dung-beetle_, (build on [sundial](https://github.com/gilt/sundial)) listen for new/raw files in S3, as well as, polls SFTP sites for files. Once a new file enters the conveyor belt, _dung-beetle_, it 1) validate it according to it's schema specs, 2) converts it to an Avro file, 3) encrypt it, 4) push it to S3, and 5) push the file's data into the Data Lake.
+
+To add a new file source to the Data Lake is now very simple:
+```YAML
+  foo_bar_file:
+    hermes: s3_copy # listen to S3 activity
+    remote_bucket: foo-bar-s3-bucket
+    remote_dir: foo/bar
+    remote_filename_filters: "^.*foo.bar.csv.gz$"
+    compress_type: gzip
+    skip_first: true
+    delimiter: ','
+    load_db: true # whether or not to push to Data Lake
+    fail_threshold: 100
+    avro_namespace: com.gilt.foo.bar
+    delete_post_fetch: false
+ ```
 
 #### Database Assimilator
 * A batch utility, Borg, that replicates tables from various source databases, into the Data Lake. This tool eliminates deep integration requirement between databases, as well as inefficient real-time calls or sync-up integration, by simply mixing together the ingredients of JDBC, Avro, and Functional Streams for Scala ([fs2](https://github.com/functional-streams-for-scala/fs2)). We are able to get this database-to-data-lake synchronization down to hourly.
