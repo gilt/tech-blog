@@ -47,7 +47,7 @@ Also, to automate processes, we created auto-detection and creation of Avro sche
 
 One important thing about data mapping and Avro is that it will likely _not_ support all your data type use cases out-of-the-box.  For example, if you are in banking or finance, it may not be sufficient to express _amounts_ in terms double values or even the new logical data type of decimal, introduced in Avro 1.8.x.  Rather you may need to express them in terms of two fields, decimal and currency code:
 
-```
+```JSON
 {"namespace": "com.gilt",
  "type" : "record",
  "name" : "Money",
@@ -68,7 +68,7 @@ One important thing about data mapping and Avro is that it will likely _not_ sup
 
 Another common data type not supported in Avro (yet) is UUID. Again, some minor extensions will be required for the mapping and (de)serialization, for example:
 
-```
+```JSON
 { "name": "my_uuid_field",
   "type": {
    "namespace": "gfc.avro",
