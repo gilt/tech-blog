@@ -17,13 +17,13 @@ The data plumber’s core mission is to 1) assimilate/ingest and 2) curate the r
 
 At Hudson's Bay Company, we have thousands of very different data sources that needs to be ingested (daily or intra-day) into our Data Lake (being “old school”, I really just see “Data Lakes” as an over-hyped term for data warehouse staging of data). There is no shortage of frameworks out there to assist with this kind of plumbing work. However, we have found that these frameworks tend to fall into one of two categories, either 1) too bloated and complex or 2) too specialized and thus requires multiple frameworks in order to solve all your data plumbing use cases.. 
 
-If you run a large data plumbing shop and there was a data ingestion framework that solved 95% of your use cases, while not being too bloated and overly complex, you should still think twice (and do lot’s of experimentation) before adopting it. Most ELT/pipeline frameworks are pretty agile to work with in terms in day-to-day data tasks. However, frameworks comes and goes, and replacing them with next generation is _almost always anti-agile_!  It is much more agile, and organic, to find some general principles required to solve your current and anticipated use cases around data plumbing, and then build your own lightweight, libraries, tooling, and apps around these. This makes it easier to move with the times and gradually improve, or replace, components as your use cases evolve and change. One of these core principles would be to find a “Lingua Franca” for structure and (de)serialization of your data sources and Data Lake.
+If you run a large data plumbing shop and there was a data ingestion framework that solved 95% of your use cases, while not being too bloated and overly complex, you should still think twice (and do lot’s of experimentation) before adopting it. Most ELT/pipeline frameworks are pretty agile to work with in terms in day-to-day data tasks. However, frameworks come and go, and replacing them with next generation is _almost always anti-agile_!  It is much more agile, and organic, to define some general principles required to solve your current and anticipated use cases around data plumbing, and then build your own lightweight, libraries, tooling, and apps around these. This makes it easier to move with the times and gradually improve, or replace, components as your use cases evolve and change. One of these core principles would be to find a “Lingua Franca” for structure and (de)serialization of your data sources and Data Lake.
 
 ## Avro - a Lingua Franca
 
-At Hudson's Bay Company, our data sources can be split into 3 main categories: _databases_, _files_, and _real-time streaming_.  All three types are dramatically different in their structure (or lack thereof), retrieval, serialization, deserialization, etc. However there is one principle that you can apply to all of these - it’s much simpler to work with the datasets if they adhere to well-defined and evolvable schemas. More importantly, if these schemas are system, environment, and programming language agnostic, as well as, being easily accessible from anywhere within your organization, you can use them to automate your data ingestion processes!
+At Hudson's Bay Company, our data sources can be split into 3 main categories: _databases_, _files_, and _real-time streaming_.  All three types are dramatically different in their structure, retrieval, serialization, deserialization, etc. However there is one principle that you can apply to all of these - it’s much simpler to work with the datasets if they adhere to well-defined and evolvable schemas. More importantly, if these schemas are system, environment, and programming language agnostic, as well as, being easily accessible from anywhere within your organization, you can use them to automate your data ingestion processes!
 
-Most relational SQL databases uses well-defined and evolvable schemas, but is not always the case for NoSQL databases. Files are rarely schematized, even JSON data files can be nightmarish to deal with. There may or may not be structure in your real-time streams, depending on how these are implemented. 
+Most relational SQL databases use well-defined and evolvable schemas, but is not always the case for NoSQL databases. Files are rarely schematized, even JSON data files can be nightmarish to deal with. There may or may not be structure in your real-time streams, depending on how these are implemented. 
 
 So to automate all work with these very heterogeneous data sources, we need to bridge them in terms of programming-friendly schema and serialization.  As of this writing, there are 3 proven protocols to (de)serialize and schematize your data, streaming and files alike, in an agnostic manner - [Avro](http://avro.apache.org/), [Protobuf](https://github.com/google/protobuf), and [Thrift](http://thrift.apache.org/). We chose Avro, as it was best suited for our particular use cases. Regardless of your situation, _schema evolution_ will like likely play a large role in your decision making (for a great comparison between the three, see [this](http://martin.kleppmann.com/2012/12/05/schema-evolution-in-avro-protocol-buffers-thrift.html) by Martin Kleppmann).  
 
@@ -31,7 +31,7 @@ We have been using Avro as our Lingua Franca on the Hudson's Bay Company data te
 
 <img class="center" src="http://i.imgur.com/0ZhMHLs.png"/>
 
-Our data type mapping and (de)serialization libraries around Avro are:
+Our data type mapping and (de)serialization libraries around Avro include:
 * delimited and fixed field files to Avro files
 * JSON streaming events to Avro events, and vice-versa
 * JSON files to Avro files, and vice-versa
@@ -109,7 +109,7 @@ One last thing on your lingua franca choice, spend time thinking, discussing, an
 Data type mapping and (de)serialization just takes care of the low level work.  To put these libraries to good use, we created a few micro-services and command-line tools. These applications and tools falls into four categories - shared, real-time streaming, databases, and files.
 
 #### Shared:
-* An RESTful Avro schema registry that hold all schemas and their versions.
+* A RESTful Avro schema registry that holds all schemas and their versions.
 * Tools to register/update schemas.
 * Tools to detect exact schema compatibility issues and their causes (the default Avro compatibility check is _not_ very user-friendly).
 * Aster SQL/MRs for importing and exporting Avro files in and out of our data warehouse.
