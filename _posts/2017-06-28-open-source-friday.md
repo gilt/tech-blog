@@ -16,6 +16,10 @@ From the 54 public repos maintained at [code.gilt.com](http://code.gilt.com/) to
 
 Our open source love is why we're excited to participate in our first Open Source Friday on June 28. [Open Source Friday](https://opensourcefriday.com/) is an effort being led by GitHub to make it easier to contribute to the open source community. This [blog post](https://github.com/blog/2386-contribute-on-open-source-friday) has more detail on the who, what and why. We're hoping to make this a regular activity to help our teams foster an open-source-first culture as we grow and evolve. 
 
-Some of the projects we'll be working on are [CleanroomLogger](https://github.com/emaloney/CleanroomLogger), [ApiBuilder](https://www.apibuilder.io/) and [gfc-guava](https://github.com/gilt/gfc-guava). For CleanroomLogger, Evan Maloney will be tackling a specific long-standing user request: custom "named subsystems" for logging. Some background here: https://github.com/emaloney/CleanroomLogger/issues/37. Ryan Martin will be working on Swagger import for ApiBuilder and Sean Sullivan is working on gfc-guava. 
+Some of the projects we'll be working on:
+
+* [CleanroomLogger](https://github.com/emaloney/CleanroomLogger) - Evan Maloney will be tackling a specific long-standing user request: custom "named subsystems" for logging. Some background here: https://github.com/emaloney/CleanroomLogger/issues/37. 
+* [ApiBuilder](https://www.apibuilder.io/) - Ryan Martin will be working on Swagger import for ApiBuilder.
+*  [gfc-guava](https://github.com/gilt/gfc-guava) - Sean Sullivan is working on gfc-guava. 
 
 If you're inspired but don't know where to start, head to our directory of [open source projects](http://code.gilt.com), visit [this list](http://up-for-grabs.net/) by GitHub or ping us on [Twitter](https://twitter.com/hbcdigital) and we can help point you in the right direction. 
