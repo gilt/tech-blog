@@ -2,7 +2,7 @@
 layout: post
 title: "Open Source Friday"
 author: HBC Tech
-date: '2017-06-28'
+date: '2017-06-29'
 categories: 'open source'
 tags:
 - open source
