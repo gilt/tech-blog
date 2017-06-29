@@ -20,6 +20,6 @@ Some of the projects we'll be working on:
 
 * [CleanroomLogger](https://github.com/emaloney/CleanroomLogger) - Evan Maloney will be tackling a specific long-standing user request: custom "named subsystems" for logging. Some background here: https://github.com/emaloney/CleanroomLogger/issues/37. 
 * [ApiBuilder](https://www.apibuilder.io/) - Ryan Martin will be working on fixing some edge cases in the [Swagger Generator](https://github.com/apicollective/apibuilder-swagger-generator) for ApiBuilder.
-*  [gfc-guava](https://github.com/gilt/gfc-guava) - Sean Sullivan is working on gfc-guava. 
+*  [gfc-guava](https://github.com/gilt/gfc-guava) - Sean Sullivan will be updating the documentation for gfc-guava and working on compatability with [Google Guava 22.0](https://github.com/google/guava/wiki/Release22). 
 
 If you're inspired but don't know where to start, head to our directory of [open source projects](http://code.gilt.com), visit [this list](http://up-for-grabs.net/) by GitHub or ping us on [Twitter](https://twitter.com/hbcdigital) and we can help point you in the right direction. 
