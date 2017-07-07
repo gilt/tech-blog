@@ -2,7 +2,7 @@
 layout: post
 title: "Advanced tips for building an iOS Notification Service Extension"
 author: Kyle Dorman
-date: '2017-06-10'
+date: '2017-07-07'
 categories: 'ios'
 tags:
 - ios
