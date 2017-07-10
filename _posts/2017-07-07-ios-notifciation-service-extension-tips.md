@@ -34,10 +34,10 @@ This post details four helpful advanced tips I wish I had when I started buildin
 
 If you've stumbled upon this post, you're most likely about to start building a NSE or started already and have hit an unexpected roadblock. If you have not already created the shell of your extension, I recommend reading the official Apple [documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/ModifyingNotifications.html#//apple_ref/doc/uid/TP40008194-CH16-SW1) and some other helpful blog posts found [here](https://pusher.com/docs/push_notifications/ios/ios10) and [here](https://www.avanderlee.com/ios-10/rich-notifications-ios-10/). These posts give a great overview of how to get started receiving and displaying push notifications with media. 
 
-###Tip 0: Sending notifications
+### Tip 0: Sending notifications
 When working with NSEs it is extremely helpful to have a reliable way of sending yourself push notifications. Whether you use a third party push platform or a home grown platform, validate that you can send yourself test notifications before going any further. Additionally, validate that you have the ability to send modified push payloads.
 
-###Tip 1: Debugging
+### Tip 1: Debugging
 Being able to debug your code while you work is paramount. If you've ever built an app extension this tip may be old hat to you but as a first time extension builder it was a revelation to me! Because a NSE is not actually a part of your app, but an extension, it does not run on the same process id as your application. When you install your app on an iOS device from Xcode, the Xcode debugger and console are only listening to the process id of your application. This means any print statements and break points you set in the NSE won't show up in the Xcode console and won't pause the execution of your NSE. 
 
 ![alt image][but_but_but]
@@ -68,14 +68,14 @@ Amazing! Your NSE development experience will now be 10x faster than my own. I s
 
 ![alt image][say_what]
 
-###Tip 2: Sharing data between your application and NSE
+### Tip 2: Sharing data between your application and NSE
 Although your NSE is bundled with your app, it is not part of your app, does not run on the same process id (see above), and does not have the same bundle identifier. Because of this, your application and NSE cannot talk to each other and cannot use the same file system. If you have any information you would like to share between the app and the NSE, you will need to add them both to an App Group. For the specifics of adding an app group check out Apple's [Sharing Data with Your Containing App](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html#//apple_ref/doc/uid/TP40014214-CH21-SW1).
 
 This came up in Gilt's NSE because we wanted to have the ability to get logs from the NSE and include them with the rest of the app. For background, the Gilt iOS team uses our own open sourced logging library, [CleanroomLogger](https://github.com/emaloney/CleanroomLogger). The library writes log files in the app's allocated file system. To collect the log files from the NSE in the application, we needed to save the log files from the NSE to the shared app group. 
 
 Another feature you get once you set up the App Group is the ability to share information using the app group's `NSUserDefaults`. We aren't using this feature right now, but might in the future.
 
-###Tip 3: Using frameworks in your NSE
+### Tip 3: Using frameworks in your NSE
 If you haven't already realized, rich notifications don't send actual media but just links to media which your NSE will download. If you're a bolder person than me, you might decide to forgo the use of an HTTP framework in your extension and re-implement any functions/classes you need. For the rest of us, its a good idea to include additional frameworks in your NSE. In the simplest case, adding a framework to a NSE is the same as including a framework in another framework or your container app. Unfortunately, not all frameworks can be used in an extension. 
 
 ![alt image][frameworks]
@@ -86,7 +86,7 @@ To use a framework in your application, the framework must check the "App Extens
 
 Most popular open source frameworks are already set up to work with extensions but its something you should look out for. The Gilt iOS app has one internal framework which we weren't able to use in extensions and I had to re-implement a few functions in the NSE. If you come across a framework that you think should work in an extension, but doesn't, check out Apple's [Using an Embedded Framework to Share Code](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html#//apple_ref/doc/uid/TP40014214-CH21-SW1).
 
-###Tip 4: Display different media for thumbnail and expanded view
+### Tip 4: Display different media for thumbnail and expanded view
 When the rich notification comes up on the device, users see a small thumbnail image beside the notification title and message. 
 
 ![alt image][thumbnail_notification]
