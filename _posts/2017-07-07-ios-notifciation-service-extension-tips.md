@@ -11,7 +11,7 @@ tags:
 ---
 
 [//]: # (Image References)
-[attched_process]: /assets/images/notification-service-extension/attched_process.png "Attached to notification process id"
+[attched_process]: /assets/images/notification-service-extension/attached_process.png "Attached to notification process id"
 [but_but_but]: /assets/images/notification-service-extension/but_but_but.jpeg "but but but"
 [console]: /assets/images/notification-service-extension/console.png "console"
 [debug_screen]: /assets/images/notification-service-extension/debug_screen.png "debug screen"
@@ -20,7 +20,7 @@ tags:
 [frameworks]: /assets/images/notification-service-extension/frameworks.jpg "These aren't the frameworks you are looking for."
 [gilt_process]: /assets/images/notification-service-extension/gilt_process.png "gilt process id"
 [last_meme]: /assets/images/notification-service-extension/last_meme.png "last meme"
-[promise-kit]: /assets/images/notification-service-extension/promise.png "framework for extension"
+[promise-kit]: /assets/images/notification-service-extension/promise-kit.png "framework for extension"
 [say_what]: /assets/images/notification-service-extension/say_what.jpg "say whaaaaaat"
 [thumbnail_notification]: /assets/images/notification-service-extension/thumbnail_notification.png "thumbnail notification"
 [thumbnail_notification_diff]: /assets/images/notification-service-extension/thumbnail_notification_diff.png "thumbnail notification different than expanded"
