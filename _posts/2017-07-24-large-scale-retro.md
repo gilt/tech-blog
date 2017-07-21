@@ -10,7 +10,7 @@ tags:
 - scaling
 ---
 Can you recall the size and length of your typical retrospective?
-If your team operates by [The Scrum Guide](http://www.scrumguides.org/docs/scrumguide/v2016/2016-Scrum-Guide-US.pdf), your retrospectives likely have under ten people in one room and last three hours for a month-long Sprint (one hour for a two-weeks Sprint)
+If your team operates by [The Scrum Guide](http://www.scrumguides.org/docs/scrumguide/v2016/2016-Scrum-Guide-US.pdf), your retrospectives likely have less than ten people in one room, and last about an hour for a two-weeks Sprint.
 
 What if your current team is larger than a typical Scrum team and a retrospective period is longer than a month? What if the team members are distributed across locations, countries, time zones and multiple third party vendors? Is this retrospective doomed to fail? Not quite.
 These factors just add an additional complexity and call for a different facilitation approach. 
@@ -18,34 +18,55 @@ These factors just add an additional complexity and call for a different facilit
 Last month at HBC we facilitated a large-scale mid-project retrospective for a 60 people-project team. While this project certainly didn’t start as an agile project, bringing in an agile retrospective practice helped identify significant improvements. 
 This is how we did it.
 
-# From an inquiry to a buy-in
+# From Inquiry to Buy-in
 
-This all started with one of the project sub-teams reaching out with an inquiry: “Can you facilitate a retrospective for us?” 
-Further digging into a list of participants and the goal of this retrospective uncovered additional complexity:
+This all started with one of the project sub-teams reaching out with an inquiry: “Can you facilitate a retrospective for us?”
+That didn't sound like anything major. We've been advocating for and facilitating retrospectives on various occasions at HBC: regular Sprint retrospectives, process retrospectives, new hire onboarding retrospectives etc. 
+
+Further digging into a list of participants revealed that this retro will be unlike any others. We were about to pull together a group of 60 people from HBC as well as from five different consulting companies(!) In spite of working on the same project for a long time, these people never had a chance to step back and reflect on how they could work together differently.
+Some of the other challenges we discovered: 
 
 * Multiple locations and time zones, 
 * full-time employees and consultants, 
 * different level of agile experience, 
 * limited travel budget etc.
 
-In order to make it successful, we needed to get the buy-in from the leadership team to bring the entire team (including consultants) into this retrospective.
+In order to make it successful, we needed to get a buy-in from the leadership team to bring the entire team (including consultants) into the retrospective. Our first intent was to bring everyone into the same space (physical and virtual) and facilitate a retrospective with [Open Space Technology](https://en.wikipedia.org/wiki/Open_Space_Technology).
 Initial response wasn’t promising: 
 
 > “We have another problem with this retro
 > […] is concerned that it is all day and that the cost of doing this meeting is like $25K-$50K”
 
-We had to go back and re-think the retrospective approach.
+We had to go back and re-think the retrospective approach. How can we reduce the cost of this event without affecting the depth and breadth of the insights?
 
 # Options we considered
+
+Thanks to the well-documented large retrospectives experiments by other agile practitioners, there was a number of options to evaluate:
 
 1)	[Full project team, full day, face-to-face, Open Space-style retro](http://joakimsunden.com/2013/01/running-big-retrospectives-at-spotify/)
 2)	[Decentralized, themes-based retros with learnings collected over a period of time and shared with the group](https://labs.spotify.com/2015/11/05/large-scale-retros/)
 3)	[Decentralized retrospectives using Innovation Games Online platform](http://www.innovationgames.com/2014/06/how-to-run-huge-retrospectives/)
 4)	[Overall retrospective (LeSS framework)](https://less.works/less/framework/overall-retrospective.html)
 
+Around the same time, I was fortunate to join a Retrospective Facilitator's Gathering (RFG2017) - an annual event that brings together the most experienced retrospective facilitators from around the World. Learning from their experience as well as brainstorming together on the possible format was really helpful. I was especially greateful for the in-depth conversation with Diana Larsen in which she pointed out to 
+> "clarify the goal and commitment of the key stakeholders before you start designing how to run the retrospective."
+
+Back to the drawing board again! More conversations, clarifications and convincing... 
+With some modifications and adjustments, we finally were able to present a better option.
+
 # What worked for us – a tiered format.
 
 ![Tiered Retro](http://i.imgur.com/35i1f82h.png)
+
+In this approach, each individual sub-team was asked to run a retrospective using same data gathering format (provided by the main facilitator). The sub-teams were asked to identify two types of action items: ones that they felt were in their power to address and others that required system-level thinking and support from the larger project community. The former were selected by the sub-team and put in motion by their respective owners. The latter were passed to the main facilitator for analysis and later served as a starting point for the final retrospective.
+
+Who was invited to participate in final retrospective?
+We agreed to invite two types of participants:
+
+1) Leads and delegates from individual sub-teams (participated actively at all times)
+2) Senior leaders of the organization (joined in the last hour to review and support team's recommendations)
+
+Insights and actions from the final retrospective were later shared with entire project team.
 
 ## Tier 1: Individual team-level retrospective
 
@@ -99,12 +120,6 @@ For those teams that had remote team members or were fully distributed, we used 
 **Duration: 3 hours**
 
 Once all individual sub-teams retrospective were completed, we consolidated the project-level improvement proposals. These insights were reviewed, analyzed for trends and systemic issues and then shared during Tier 2 Final Retrospective.
-
-### Participants
-
-There were two types of participants invited to join the Final Retrospective:
-1) Leads and delegates from individual sub-teams (participated actively at all times)
-2) Senior leaders of the organization (joined in the last hour to review and support team's recommendations)
 
 ### Final Retrospective format
 
