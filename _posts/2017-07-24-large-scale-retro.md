@@ -23,13 +23,7 @@ This is how we did it.
 This all started with one of the project sub-teams reaching out with an inquiry: “Can you facilitate a retrospective for us?”
 That didn't sound like anything major. We've been advocating for and facilitating retrospectives on various occasions at HBC: regular Sprint retrospectives, process retrospectives, new hire onboarding retrospectives etc. 
 
-Further digging into a list of participants revealed that this retro will be unlike any others. We were about to pull together a group of 60 people from HBC as well as from five different consulting companies(!) In spite of working on the same project for a long time, these people never had a chance to step back and reflect on how they could work together differently.
-Some of the other challenges we discovered: 
-
-* Multiple locations and time zones, 
-* full-time employees and consultants, 
-* different level of agile experience, 
-* limited travel budget etc.
+Further digging into a list of participants revealed that this retro will be unlike any others. We were about to pull together a group of 60 people from HBC as well as from five different consulting companies(!) In spite of working on the same project for a long time, these people never had a chance to step back and reflect on how they could work together differently. 
 
 In order to make it successful, we needed to get a buy-in from the leadership team to bring the entire team (including consultants) into the retrospective. Our first intent was to bring everyone into the same space (physical and virtual) and facilitate a retrospective with [Open Space Technology](https://en.wikipedia.org/wiki/Open_Space_Technology).
 Initial response wasn’t promising: 
@@ -48,44 +42,48 @@ Thanks to the well-documented large retrospectives experiments by other agile pr
 3)	[Decentralized retrospectives using Innovation Games Online platform](http://www.innovationgames.com/2014/06/how-to-run-huge-retrospectives/)
 4)	[Overall retrospective (LeSS framework)](https://less.works/less/framework/overall-retrospective.html)
 
-Around the same time, I was fortunate to join a Retrospective Facilitator's Gathering (RFG2017) - an annual event that brings together the most experienced retrospective facilitators from around the World. Learning from their experience as well as brainstorming together on the possible format was really helpful. I was especially greateful for the in-depth conversation with Diana Larsen in which she pointed out to 
+Around the same time, I was fortunate to join a Retrospective Facilitator's Gathering (RFG2017) - an annual event that brought together the most experienced retrospective facilitators from around the World. Learning from their experience as well as brainstorming together on the possible format was really helpful. I was especially greateful for the in-depth conversation with Diana Larsen in which she pointed out to 
 > "clarify the goal and commitment of the key stakeholders before you start designing how to run the retrospective."
 
 Back to the drawing board again! More conversations, clarifications and convincing... 
-With some modifications and adjustments, we finally were able to present a better option.
+With some modifications and adjustments, we finally were able to get the buy-in and moved forward with the retrospective.
 
 # What worked for us – a tiered format.
 
 ![Tiered Retro](http://i.imgur.com/35i1f82h.png)
 
-In this approach, each individual sub-team was asked to run a retrospective using same data gathering format (provided by the main facilitator). The sub-teams were asked to identify two types of action items: ones that they felt were in their power to address and others that required system-level thinking and support from the larger project community. The former were selected by the sub-team and put in motion by their respective owners. The latter were passed to the main facilitator for analysis and later served as a starting point for the final retrospective.
+## Individual team-level retrospective
 
-Who was invited to participate in final retrospective?
-We agreed to invite two types of participants:
+We had a mix of co-located and distributed sub-teams on this project and chose to enlist some help from multiple facilitators. To simplify data consolidation, each facilitator received a data gathering format along with a sample retrospective facilitation plan. Each individual sub-team was asked to identify two types of action items: ones that they felt were in their power to address and others that required a system-level thinking and the support from the larger project community. The former were selected by the sub-teams and put in motion by their respective owners. The latter were passed to the main facilitator for analysis and aggregation to serve as a starting point for the final retrospective.
+
+## Final retrospective 
+
+For the final retrospective we brought together two types of participants:
 
 1) Leads and delegates from individual sub-teams (participated actively at all times)
 2) Senior leaders of the organization (joined in the last hour to review and support team's recommendations)
 
-Insights and actions from the final retrospective were later shared with entire project team.
+The goal of this workshop was to review the recommendations from sub-teams, explore system level improvements and get the support from senior leadership to put the system-level changes into motion.
 
-## Tier 1: Individual team-level retrospective
+## Retrospective plans
 
-We had a mix of co-located and distributed sub-teams on this project and choose to enlist help from multiple facilitators. To simplify data consolidation, each facilitator received a data gathering format along with a sample retrospective facilitation plan.
+Each retrospective was structured according to the [classic five-steps framework](https://www.amazon.com/Agile-Retrospectives-Making-Teams-Great/dp/0977616649) and included a number of activites selected from [Retromat](https://plans-for-retrospectives.com/en/).
 
 ### Sample plan for a Tier 1: Individual team-level retrospective
 
-**Duration: 1.5 - 2 hours**
+**Set the Stage** 
 
-**Goal:** Identify team-level improvements and uncover system level improvement opportunities to be presented at the final retrospective.
-
-**Set the Stage** with a happiness histogram: How happy are you about the overall project (on the scale from 0 to 5)?
-Review Prime directive.
-
+We used a happiness histogram to get things started and get a sense for how the people felt about the overall project.
 ![Happiness Histogram](http://i.imgur.com/iJMp2W5m.jpg)
 
+Instead of reading the [Prime Directive](http://www.retrospectives.com/pages/retroPrimeDirective.html) once at the beginning with the team, we opted for displaying it in the room on a large poster as a visible reminder throughout the retrospective.
+
 **Gather Data** 
-* Silent brainstorming: What worked well? What didn't work so well? - write at least two items in each category.
-* Pair-share: Stand in a line, facing each other. Discuss with the person in front of you what each of you have written on the post-its. Switch partner after two minutes. Switch again and talk to at least three different partners.
+
+Everyone was instructed to think about the things they liked about the project (**What worked well?**) and the once that could've been better (**What didn't work so well?**). In a short time-boxed silent brainstorming each team member had to come up with at least two items in each category.
+
+Next we facilitated a pair-share activity in a "speed dating" format. Forming two lines, we asked participants to face each other and take turns discussing what each of them wrote on their post-its. After two minutes the partners were switched and the new pair were formed to continue discussion with the new people. 
+The randomness of forming pairs in this activity was a great way to increase the level of energy in the room and get e
 
 ![Pair Share](http://i.imgur.com/juJpgPwm.jpg)
 
