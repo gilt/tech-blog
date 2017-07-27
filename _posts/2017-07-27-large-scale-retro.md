@@ -2,8 +2,8 @@
 layout: post
 title: How Large Is YOUR Retrospective?
 author: Dana Pylayeva
-date: '2017-07-24'
-categories: 'tech blog'
+date: '2017-07-27'
+categories: 'agile'
 tags: 
 - agile
 - retrospective
