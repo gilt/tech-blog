@@ -10,6 +10,10 @@ tags:
 - evangelism
 ---
 
+In addition to hosting various meetup communities at our offices in New York and Dublin, our people are constantly on the road talking about the interesting work our teams are doing. This year we've had people speak in Austin, Sydney, Portland, Seattle, San Diego, Boston, London, Israel and on our home turf in NYC and Dublin. The talk topics have covered everything from *Writing Microservices in Go* to *Gamifying DevOps with Chocolate and Legos*. We've covered deep learning, design thinking, data streaming and developer experience to name a few. 
+
+Lucky for you, if you haven't been able to check out our talks in person, we've compiled the decks and videos from a bunch of our talks right here for you. Enjoy! 
+
 ### February 
 * Sean Sullivan spoke at the Portland Java User Group about [Gilt's E-Commerce Platform](https://speakerdeck.com/sullis/e-commerce-under-the-hood). 
 * Mikhail Girkin spoke at the Reactive Systems Meetup in Dublin about [Streaming Data to s3 Using Akka Streams](https://www.slideshare.net/MikhailGirkin/streaming-data-to-s3-using-akka-streams).
@@ -38,3 +42,4 @@ tags:
 * Sean Sullivan spoke at the Portland Java User Group about [ApiBuilder](https://speakerdeck.com/sullis/apibuilder). 
 * Sophie Huang spoke at the Customer Love Summit in Seattle.
 * Kyla Robinson gave a keynote on Key to Success: Creating A Mobile–First Mentality.
+* Sera Chin and Yi Cao spoke at the NYC Scrum User Group about HBC's Design Sprints. 
