@@ -10,22 +10,22 @@ tags:
 - scaling
 ---
 Can you recall the size and length of your typical retrospective?
-If your team operates by [The Scrum Guide](http://www.scrumguides.org/docs/scrumguide/v2016/2016-Scrum-Guide-US.pdf), your retrospectives likely have less than ten people in one room, and last about an hour for a two-weeks Sprint.
+If your team operates by [The Scrum Guide](http://www.scrumguides.org/docs/scrumguide/v2016/2016-Scrum-Guide-US.pdf), your retrospectives likely have less than ten people in one room and last about an hour for a two-weeks Sprint.
 
 What if your current team is larger than a typical Scrum team and a retrospective period is longer than a month? What if the team members are distributed across locations, countries, time zones and multiple third party vendors? Is this retrospective doomed to fail? Not quite.
 These factors just add an additional complexity and call for a different facilitation approach. 
 
 Last month at HBC we facilitated a large-scale mid-project retrospective for a 60 people-project team. While this project certainly didn’t start as an agile project, bringing in an agile retrospective practice helped identify significant improvements. 
-This is how we did it.
+Here is how we did it.
 
 # From Inquiry to Buy-in
 
 This all started with one of the project sub-teams reaching out with an inquiry: “Can you facilitate a retrospective for us?”
 That didn't sound like anything major. We've been advocating for and facilitating retrospectives on various occasions at HBC: regular Sprint retrospectives, process retrospectives, new hire onboarding retrospectives etc. 
 
-Further digging into a list of participants revealed that this retro will be unlike any others. We were about to pull together a group of 60 people from HBC as well as from five different consulting companies(!) In spite of working on the same project for a long time, these people never had a chance to step back and reflect on how they could work together differently. 
+Further digging into a list of participants revealed that this retro would be unlike any others. We were about to pull together a group of 60 people from HBC and five consulting companies(!) In spite of working on the same project for a long time, these people never had a chance to step back and reflect on how they could work together differently. 
 
-In order to make it successful, we needed to get a buy-in from the leadership team to bring the entire team (including consultants) into the retrospective. Our first intent was to bring everyone into the same space (physical and virtual) and facilitate a retrospective with [Open Space Technology](https://en.wikipedia.org/wiki/Open_Space_Technology).
+In order to make it successful, we needed buy-in from the leadership team to bring the entire team (including consultants) into the retrospective. Our first intent was to bring everyone into the same space (physical and virtual) and facilitate a retrospective with [Open Space Technology](https://en.wikipedia.org/wiki/Open_Space_Technology).
 Initial response wasn’t promising: 
 
 > “We have another problem with this retro
@@ -140,7 +140,7 @@ Next we paired the participants and asked them to walk to the consolidated recom
 ![What Didn't](http://i.imgur.com/tkxnjwWm.jpg)
 
 
-Each table used the[LeanCoffee](http://leancoffee.org) format to vote on the selected issues, prioritize them into a discussion backlog and explore as many of them as the timebox allowed. Participants used roman voting as a way to decide if they are ready to more on to the next topic or need more discussion about the current one. Closing each discussion, participants recorded their recommended action. At the end of the timebox all actions from each table were shared with the rest of the group to get feedback.
+Each table used the [LeanCoffee](http://leancoffee.org) format to vote on the selected issues, prioritize them into a discussion backlog and explore as many of them as the timebox allowed. Participants used roman voting as a way to decide if they are ready to more on to the next topic or need more discussion about the current one. Closing each discussion, participants recorded their recommended action. At the end of the timebox all actions from each table were shared with the rest of the group to get feedback.
 
 ![LeanCoffee](http://i.imgur.com/wylfBVom.jpg)
 
@@ -158,21 +158,21 @@ Could we have done it better? You bet! As the project continues, we will be look
 
 * Designing a retrospective of this size is a project in itself. You need to be clear about the vision, the stakeholders and the success criteria for the retrospective.
 * Do your research, tap into the knowledge of agile community and get inspired by the experience of others. Take what you like and then adapt to make it work in the context of your organization.
-* Ask for help. Involve additional facilitators to get a feedback, speed up the execution and created a safe space for individual sub-teams.
+* Ask for help. Involve additional facilitators to get feedback, speed up the execution and created a safe space for individual sub-teams.
 * Inclusion trumps exclusion. Invite consultants as well as full-time employees into your retrospective to better understand the project dynamic. 
-* Beware of a potential confusion around retrospective practice. Be ready to explain the benefits and highlight the differences between a retrospective and a postmortem.
+* Beware of potential confusion around retrospective practice. Be ready to explain the benefits and highlight the differences between a retrospective and a postmortem.
 * Bringing senior leaders into the last hour of final retrospective can negatively affect the dynamics of the discussions. Either work on prepping them better or plan on re-establishing the safe space after they join.
 
 # What would we like to do next?
 
 * Continue promoting the retrospective practice across the organization.
-* Offer a retrospective facilitator training to Scrum Masters, Agile Project Managers and anyone who is interested in learning how to run it effectively.
+* Offer a retrospective facilitator training to Scrum Masters, Agile Project Managers and anyone who is interested in learning how to run an effective retro.
 * Establish retrospective facilitator circle to help maintain and improve the practice for all teams.
 
-Inspired by our experiment? Have your own experience worth sharing? We'd love to hear from you and learn what works in your environment.
+Inspired by our experiment? Have your own experience worth sharing? We'd love to hear from you and learn what works in your environment. Blog about it and tweet your questions at @hbcdigital.
 
 # World Retrospective Day
 
 Whether you are a retrospective pro, have never tried one in the past or your experience is anywhere in between, please do yourself a favor and mark **February 6, 2018** on your calendar. 
-A group of experienced retrospective facilitators is currently planning a record-breaking World Retrospective Day with live local workshops at every continent and time zone along with many on-line learning opportunities. We are engaging with the industry thought leaders to make this one of the best and most engaging learning experience. We hope to see you there!
+A group of experienced retrospective facilitators is currently planning a record-breaking World Retrospective Day with live local workshops on every continent and in every time zone along with many on-line learning opportunities. We are engaging with the industry thought leaders to make this one of the best and most engaging learning experience. We hope to see you there!
 
