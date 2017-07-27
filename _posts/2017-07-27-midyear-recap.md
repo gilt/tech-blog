@@ -10,9 +10,9 @@ tags:
 - evangelism
 ---
 
-We've had a busy 2017 at HBC. The great work of our teams has created opportunities to share what we've learned with audiences around the world. This year our folks have been on stage in Austin, Sydney, Portland, Seattle, San Diego, Boston, London, Israel and on our home turf in NYC and Dublin. The talks have covered everything from *Writing Microservices in Go* to *Gamifying DevOps with Chocolate and Legos*. We've covered deep learning, design thinking, data streaming and developer experience to name a few.
+We've had a busy 2017 at HBC. The great work of our teams has created opportunities to share what we've learned with audiences around the world. This year our folks have been on stage in Austin, Sydney, Portland, Seattle, San Diego, Boston, London, Israel and on our home turf in NYC and Dublin. The talks have covered deep learning, design thinking, data streaming and developer experience to name just a few.
 
-Lucky for you, if you haven't been able to check out our talks in person, we've compiled the decks and videos from a bunch of our talks right here for you. Enjoy! 
+Lucky for you, if you haven't been able to check out our talks in person, we've compiled the decks and videos from a bunch of our talks right here. Enjoy! 
 
 ### February 
 * Sean Sullivan spoke at the Portland Java User Group about [Gilt's E-Commerce Platform](https://speakerdeck.com/sullis/e-commerce-under-the-hood). 
