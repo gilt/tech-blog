@@ -16,7 +16,7 @@ tags:
 
 ### March
 * Ryan Martin spoke at AWS Architecture Week in NYC. 
-* Ugo Mantrangalo presented at the Microservices Meetup in Dublin about 
+* Ugo Mantrangalo presented at the Microservices Meetup in Dublin about [Writing Microservices in Go](https://umatrangolo.github.io/go-microservices-deck/).  
 * Dana Pylayeva lead a workshop entitled [Growing by Sharing: Transitioning a Group to a Self-Directed Model](https://www.slideshare.net/danapylayeva/growing-by-sharing-workshop-at-sgcal) at the NYC Scrum User Group in March and the Scrum Gathering in San Diego in April. 
 
 ### April 
