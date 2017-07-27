@@ -40,7 +40,7 @@ Lucky for you, if you haven't been able to check out our talks in person, we've 
 * Pau Carré Cardona spoke a the O'Reilly AI Conference in NYC and the Deep Learning in Retail Summit in London about [Deep Learning in the Fashion Industry](https://cdn.oreillystatic.com/en/assets/1/event/258/Deep%20learning%20in%20the%20fashion%20industry%20Presentation.pdf). 
 
 ### July 
-* Sean Sullivan spoke at [Scala Up North](https://speakerdeck.com/sullis/api-builder-scala-up-north-2017) and the [Portland Java User Group](https://speakerdeck.com/sullis/apibuilder)about ApiBuilder. 
+* Sean Sullivan spoke at [Scala Up North](https://speakerdeck.com/sullis/api-builder-scala-up-north-2017) and the [Portland Java User Group](https://speakerdeck.com/sullis/apibuilder) about ApiBuilder. 
 * Sophie Huang spoke at the Customer Love Summit in Seattle.
 * Kyla Robinson gave a keynote on Key to Success: Creating A Mobile–First Mentality.
 * Sera Chin and Yi Cao spoke at the NYC Scrum User Group about HBC's Design Sprints. 
