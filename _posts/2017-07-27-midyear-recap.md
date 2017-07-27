@@ -22,6 +22,7 @@ Lucky for you, if you haven't been able to check out our talks in person, we've 
 * Ryan Martin spoke at AWS Architecture Week in NYC. 
 * Ugo Mantrangalo presented at the Microservices Meetup in Dublin about [Writing Microservices in Go](https://umatrangolo.github.io/go-microservices-deck/).  
 * Dana Pylayeva lead a workshop entitled [Growing by Sharing: Transitioning a Group to a Self-Directed Model](https://www.slideshare.net/danapylayeva/growing-by-sharing-workshop-at-sgcal) at the NYC Scrum User Group in March and the Scrum Gathering in San Diego in April. 
+* Jose Martinez and Ed Perry spoke at the Elastic NYC User Group Meetup. 
 
 ### April 
 * Adrian Trenaman spoke at the AWS Dublin User Group about [Serverless Architectures](https://www.slideshare.net/trenaman/serverless-hbc-digital-real-world-explorations-of-lambda-aws-meetup-april-4th-2017). 
