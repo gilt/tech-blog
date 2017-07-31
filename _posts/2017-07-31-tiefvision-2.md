@@ -25,7 +25,7 @@ making them usable in a production scalable way, that allows us to
 roll out to new product categories besides dresses quickly and
 efficiently. Today, we're excited to announce that we've rolled out
 visually similar recommendations on Gilt for all dresses, t-shirts, and handbags,
-as well to women's shoes, women's denim, women's pants, and men's
+as well as to women's shoes, women's denim, women's pants, and men's
 outerwear.
 
 Let's start with a brief overview. Consider the general task at
