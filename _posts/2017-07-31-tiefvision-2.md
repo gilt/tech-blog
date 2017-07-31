@@ -2,7 +2,7 @@
 layout: post
 title: "Visually Similar Recommendations"
 author: Chris Curro
-date: '2017-07-25'
+date: '2017-07-31'
 categories: 'personalization'
 tags:
 - machine learning
