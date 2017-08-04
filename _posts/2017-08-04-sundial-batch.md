@@ -74,5 +74,5 @@ Sundial still provides features that Batch doesn't provide:
 
  ### What next?
 
- Although Sundial on Batch solves the immediate needs for us (The Gilt/HBC Personalization team), maintaining a job system counts as technical debt that
- is a distraction from product focused tasks. The HBC data team, who have very similar requirements to us, have started investigating making Airflow (by Airbnb) run on Batch; so this is a solution we may consider in the future.
+ Sundial with AWS Batch backend now works great for the use cases we encounter doing personalization. We may consider enhancements such as Prometheus push gateway integration (to replace the Graphite service we had with ECS and to keep track of metrics over time) and UI enhancements to Sundial. In the long term we may consider other open source solutions as maintaining a job system counts as technical debt that
+ is a distraction from product focused tasks. The HBC data team, who have very similar requirements to us, have started investigating making Airflow (by Airbnb). As part of their investigations, they have contributed to an open source effort to make Airflow support Batch as a backend. If it works well for them, this is a solution we may adopt in the future.
