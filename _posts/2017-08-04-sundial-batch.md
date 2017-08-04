@@ -26,7 +26,7 @@ We built Sundial to provide the following features on top of the standard ECS se
  - Email status reporting for jobs
  - Pagerduty integration for notifying team members about failing critical jobs
 
-![alt text)(http://i.imgur.com/RUZHLdI.png "Sundial DAG")
+![alt text](http://i.imgur.com/RUZHLdI.png "Sundial DAG")
 
  Other solutions available at the time didn't suit our needs. Solutions we considered included [Chronos](https://mesos.github.io/chronos/) which lacked the features we needed and required a Mesos cluster, and [Airbnb Airflow](http://airbnb.io/projects/airflow/), which was immature at the time.
 
