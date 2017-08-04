@@ -14,7 +14,7 @@ tags:
 # Sundial on AWS Batch
 
 
-About a year ago, we open sourced Sundial (https://github.com/gilt/sundial) , a batch job orchestration system leveraging [Amazon EC2 Container Service](https://aws.amazon.com/ecs/).
+About a year ago, we (the Gilt/HBC personalization team) open sourced Sundial (https://github.com/gilt/sundial) , a batch job orchestration system leveraging [Amazon EC2 Container Service](https://aws.amazon.com/ecs/).
 
 We built Sundial to provide the following features on top of the standard ECS setup:
 
