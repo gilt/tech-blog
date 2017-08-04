@@ -26,7 +26,7 @@ We built Sundial to provide the following features on top of the standard ECS se
  - Email status reporting for jobs
  - Pagerduty integration for notifying team members about failing critical jobs
 
- Other solutions available at the time didn't suit our needs. Solutions we considered included [Chronos](https://mesos.github.io/chronos/) which lacked the features we needed and required a Mesos cluster, and [Airbnb Airflow](http://airbnb.io/projects/airflow/), which was immature at the time. http://airbnb.io/projects/airflow/
+ Other solutions available at the time didn't suit our needs. Solutions we considered included [Chronos](https://mesos.github.io/chronos/) which lacked the features we needed and required a Mesos cluster, and [Airbnb Airflow](http://airbnb.io/projects/airflow/), which was immature at the time.
 
  At the time, we chose ECS because we hoped to take advantages of AWS features such as autoscaling in order to save costs
  by scaling the cluster up and down by demand. In practice, this required too much manual effort and moving parts so we lived with a long running cluster
