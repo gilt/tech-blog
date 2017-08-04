@@ -14,7 +14,7 @@ tags:
 # Sundial on AWS Batch
 
 
-About a year ago, we open sourced Sundial (https://github.com/gilt/sundial) , a batch job orchestration system leveraging Amazon EC2 Container Service.
+About a year ago, we open sourced Sundial (https://github.com/gilt/sundial) , a batch job orchestration system leveraging [Amazon EC2 Container Service](https://aws.amazon.com/ecs/).
 
 We built Sundial to provide the following features on top of the standard ECS setup:
 
@@ -32,10 +32,10 @@ We built Sundial to provide the following features on top of the standard ECS se
  by scaling the cluster up and down by demand. In practice, this required too much manual effort and moving parts so we lived with a long running cluster
  scaled to handle peak load.
 
- Since then our needs have grown and we have jobs ranging in size from a couple of hundred MB of memory to 60GB of memory. Having a cluster scaled
- to handle peak load with all these job sizes has become too expensive. Most job failure noise has been due to cluster resources not being available or smaller jobs taking up space on instances meant to be dedicated to bigger jobs. (ECS is weak when it comes to task placement strategies).
+ Since then, our needs have grown and we have jobs ranging in size from a couple of hundred MB of memory to 60GB of memory. Having a cluster scaled
+ to handle peak load with all these job sizes had become too expensive. Most job failure noise has been due to cluster resources not being available or smaller jobs taking up space on instances meant to be dedicated to bigger jobs. (ECS is weak when it comes to task placement strategies).
 
- Thankfully AWS have come along with their own enhancements on top of ECS in the form of AWS Batch.
+ Thankfully AWS have come along with their own enhancements on top of ECS in the form of [AWS Batch](https://aws.amazon.com/batch/).
 
 
 ### What we love about Batch
@@ -66,9 +66,9 @@ Sundial still provides features that Batch doesn't provide:
  - Time limits for jobs. If a job hangs, we can kill and retry after a certain period of time
  - Nice dashboard of processes (At a glance see what's green and what's red)
 
- Sure enough some of the above can be configured through hooking up lambdas/SNS messages etc. but Sundial gives it to you out of the box.
+ Sure enough, some of the above can be configured through hooking up lambdas/SNS messages etc. but Sundial gives it to you out of the box.
 
  ### What next?
 
  Although Sundial on Batch solves the immediate needs for us (The Gilt/HBC Personalization team), maintaining a job system counts as technical debt that
- is a distraction from product focused tasks. The HBC data team who have very similar requirements to us have started investigating making Airflow (by Airbnb) run on Batch so this is a solution we may consider in the future.
+ is a distraction from product focused tasks. The HBC data team, who have very similar requirements to us, have started investigating making Airflow (by Airbnb) run on Batch; so this is a solution we may consider in the future.
