@@ -14,7 +14,7 @@ tags:
 # Sundial on AWS Batch
 
 
-About a year ago, we open sourced Sundial (https://github.com/gilt/sundial) , a batch job orchestration system built on top of Amazon EC2 Container Service.
+About a year ago, we open sourced Sundial (https://github.com/gilt/sundial) , a batch job orchestration system leveraging Amazon EC2 Container Service.
 
 We built Sundial to provide the following features on top of the standard ECS setup:
 
@@ -26,7 +26,7 @@ We built Sundial to provide the following features on top of the standard ECS se
  - Email status reporting for jobs
  - Pagerduty integration for notifying team members about failing critical jobs
 
- Other solutions available at the time didn't suit our needs. Solutions we considered included Chronos https://mesos.github.io/chronos/ which lacked the features we needed and required a Mesos cluster, and Airbnb Airflow, which was immature at the time. http://airbnb.io/projects/airflow/
+ Other solutions available at the time didn't suit our needs. Solutions we considered included [Chronos](https://mesos.github.io/chronos/) which lacked the features we needed and required a Mesos cluster, and [Airbnb Airflow](http://airbnb.io/projects/airflow/), which was immature at the time. http://airbnb.io/projects/airflow/
 
  At the time, we chose ECS because we hoped to take advantages of AWS features such as autoscaling in order to save costs
  by scaling the cluster up and down by demand. In practice, this required too much manual effort and moving parts so we lived with a long running cluster
@@ -56,16 +56,17 @@ We built Sundial to provide the following features on top of the standard ECS se
    Gilt has a feature request open with Amazon on this issue.
 
 
-### Why not dump Sundial in favour of Batch?
+### Why not dump Sundial in favour of using Batch directly?
 
 - Sundial still provides features that Batch doesn't provide:
  - Email reporting
  - Pagerduty integration
  - Easy transition, processes can be a mixed workload of jobs running on ECS and Batch.
  - Configurable backoff strategy for job retries.
+ - Time limits for jobs. If a job hangs, we can kill and retry after a certain period of time
  - Nice dashboard of processes (At a glance see what's green and what's red)
 
- Sure enough the above can be configured through hooking up lambdas/SNS messages etc. but Sundial gives it to you out of the box.
+ Sure enough some of the above can be configured through hooking up lambdas/SNS messages etc. but Sundial gives it to you out of the box.
 
  ### What next?
 
