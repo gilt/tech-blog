@@ -26,6 +26,8 @@ We built Sundial to provide the following features on top of the standard ECS se
  - Email status reporting for jobs
  - Pagerduty integration for notifying team members about failing critical jobs
 
+![alt text)(http://i.imgur.com/RUZHLdI.png "Sundial DAG")
+
  Other solutions available at the time didn't suit our needs. Solutions we considered included [Chronos](https://mesos.github.io/chronos/) which lacked the features we needed and required a Mesos cluster, and [Airbnb Airflow](http://airbnb.io/projects/airflow/), which was immature at the time.
 
  At the time, we chose ECS because we hoped to take advantages of AWS features such as autoscaling in order to save costs
@@ -65,6 +67,8 @@ Sundial still provides features that Batch doesn't provide:
  - Configurable backoff strategy for job retries.
  - Time limits for jobs. If a job hangs, we can kill and retry after a certain period of time
  - Nice dashboard of processes (At a glance see what's green and what's red)
+
+ ![alt text](http://i.imgur.com/PAeqBJH.png "Sundial dashboard")
 
  Sure enough, some of the above can be configured through hooking up lambdas/SNS messages etc. but Sundial gives it to you out of the box.
 
