@@ -52,13 +52,13 @@ We built Sundial to provide the following features on top of the standard ECS se
 
 ### What we'd love for Batch to do better
   - Make disk space on managed instances configurable.
-   Currently the workaround is to create a custom AMI with the disk space you need if you have jobs that store a lot of data on disk. (Not uncommon in a data processing environment)
+   Currently the workaround is to create a custom AMI with the disk space you need if you have jobs that store a lot of data on disk (Not uncommon in a data processing environment). 
    Gilt has a feature request open with Amazon on this issue.
 
 
 ### Why not dump Sundial in favour of using Batch directly?
 
-- Sundial still provides features that Batch doesn't provide:
+Sundial still provides features that Batch doesn't provide:
  - Email reporting
  - Pagerduty integration
  - Easy transition, processes can be a mixed workload of jobs running on ECS and Batch.
