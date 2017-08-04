@@ -11,7 +11,7 @@ tags:
 - personalization
 ---
 
-# Sundial on AWS Batch.
+# Sundial on AWS Batch
 
 
 About a year ago, we open sourced Sundial (https://github.com/gilt/sundial) , a batch job orchestration system built on top of Amazon EC2 Container Service.
@@ -63,7 +63,7 @@ We built Sundial to provide the following features on top of the standard ECS se
  - Pagerduty integration
  - Easy transition, processes can be a mixed workload of jobs running on ECS and Batch.
  - Configurable backoff strategy for job retries.
- - Nice dashboard of processes
+ - Nice dashboard of processes (At a glance see what's green and what's red)
 
  Sure enough the above can be configured through hooking up lambdas/SNS messages etc. but Sundial gives it to you out of the box.
 
