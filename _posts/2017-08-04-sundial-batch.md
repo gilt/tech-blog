@@ -28,7 +28,7 @@ We built Sundial to provide the following features on top of the standard ECS se
 
 ![alt text](http://i.imgur.com/RUZHLdI.png "Sundial DAG")
 
- Other solutions available at the time didn't suit our needs. Solutions we considered included [Chronos](https://mesos.github.io/chronos/) which lacked the features we needed and required a Mesos cluster, and [Airbnb Airflow](http://airbnb.io/projects/airflow/), which was immature at the time.
+ Other solutions available at the time didn't suit our needs. Solutions we considered included [Chronos](https://mesos.github.io/chronos/) which lacked the features we needed and required a Mesos cluster, [Spotify Luigi](https://github.com/spotify/luigi) and [Airbnb Airflow](http://airbnb.io/projects/airflow/), which was immature at the time.
 
  At the time, we chose ECS because we hoped to take advantages of AWS features such as autoscaling in order to save costs
  by scaling the cluster up and down by demand. In practice, this required too much manual effort and moving parts so we lived with a long running cluster
@@ -72,7 +72,7 @@ Sundial still provides features that Batch doesn't provide:
 
  Sure enough, some of the above can be configured through hooking up lambdas/SNS messages etc. but Sundial gives it to you out of the box.
 
- ### What next?
+### What next?
 
  Sundial with AWS Batch backend now works great for the use cases we encounter doing personalization. We may consider enhancements such as Prometheus push gateway integration (to replace the Graphite service we had with ECS and to keep track of metrics over time) and UI enhancements to Sundial. 
 
