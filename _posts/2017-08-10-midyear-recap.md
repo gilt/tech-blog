@@ -2,7 +2,7 @@
 layout: post
 title: "HBC Tech Talks: February 2017 through July 2017"
 author: HBC Tech
-date: '2017-07-27'
+date: '2017-08-10'
 categories: 'conferences'
 tags:
 - meetups
