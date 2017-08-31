@@ -66,15 +66,15 @@ So in a nutshell, this is the completed project of the 10 week internship filled
 While we are not busy being awesome engineers, team-rookie spent most of their leisure time exploring New York and staying cool. Here are some of the highlights.
 
 <p align="center">
-<img src="/assets/images/team-rookie-2017/pose.jpg" width="940"/>
+<img src="/assets/images/team-rookie-2017/pose.JPG" width="940"/>
 </p>
 
 <p align="center">
-<img src="/assets/images/team-rookie-2017/poke.jpg" width="940"/>
+<img src="/assets/images/team-rookie-2017/poke.JPG" width="940"/>
 </p>
 
 <p align="center">
-<img src="/assets/images/team-rookie-2017/wonderwoman.jpg" width="940"/>
+<img src="/assets/images/team-rookie-2017/wonderwoman.JPG" width="940"/>
 </p>
 
 <p align="center">
@@ -82,11 +82,11 @@ While we are not busy being awesome engineers, team-rookie spent most of their l
 </p>
 
 <p align="center">
-<img src="/assets/images/team-rookie-2017/helmets.jpg" width="940"/>
+<img src="/assets/images/team-rookie-2017/helmets.JPG" width="940"/>
 </p>
 
 <p align="center">
-<img src="/assets/images/team-rookie-2017/presentation.jpg" width="940"/>
+<img src="/assets/images/team-rookie-2017/presentation.JPG" width="940"/>
 </p>
 
 # Mentorship
@@ -94,9 +94,9 @@ While we are not busy being awesome engineers, team-rookie spent most of their l
 Team Rookie would like to give out a huge shout out to all of our mentors that helped us along they way and made this project possible (you know who you are)! With a special thanks to Doochan and Mike, who led the intern committee through all of our battles and came out on the other end with a solid victory. The complete-the-look experience would not have been possible without you guys.
 
 <p align="center">
-<img src="/assets/images/team-rookie-2017/doochan.jpg" width="940"/>
+<img src="/assets/images/team-rookie-2017/doochan.JPG" width="940"/>
 </p>
 
 <p align="center">
-<img src="/assets/images/team-rookie-2017/mike.jpg" width="940"/>
+<img src="/assets/images/team-rookie-2017/mike.JPG" width="940"/>
 </p>
