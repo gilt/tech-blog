@@ -22,7 +22,7 @@ Team-Rookie-2017, as we pride ourselves with being the most awesome team ever, h
 After our brief introduction to software development at Gilt, we started on a project of our own. Our mentors introduced us to Agile sprints, and we were off. Our progress was slow at first, but kicked up near the end, and on the last day of development we finally got our finished app deployed.
 
 # Project Ideation
-The final project idea rose to the top through countless meetings and discussions with various teams in the organization. With the initially decided problem-solution proven to be unexecutable, our team, along with all of our mentors, took efforts to come up with a new solution to solve the given problem with the limited resource we had. This immersive process, in the very beginning of the program, ensured the understanding of the engineering problem and established the success of our project.
+The final project idea rose to the top through countless meetings and discussions with various teams in the organization. With the initially decided problem-solution proven to be unexecutable, our team, along with all of our mentors, took efforts to come up with a new solution to solve the given problem with the limited resources we had. This immersive process, in the very beginning of the program, ensured the understanding of the engineering problem and established the success of our project.
 
 During this problem-solving phase, Team-Rookie also spent time in parallel to understand the technology stack in order to come up with the best solution possible. We went through many tutorials and labs with our mentors on the technologies we were going to eventually use, namely Scala, Android, and the Play framework. As we gained familiarities with these tools and technologies daily, the design of our solution became clearer and clearer and we were quickly able to finalize on our ideas and the project has finally taken off.
 
@@ -58,7 +58,7 @@ As of this point, if the user has made it this far, our purpose has been complet
 <img src="/assets/images/team-rookie-2017/second_page.png" width="940"/>
 </p>
 
-So in a nutshell, this is the completed project of the 10 week internship filled with hard work, grind, sweat (most from our daily trips to equinox right down stairs), and a whole lot of fun.
+So in a nutshell, this is the completed project of the 10 week internship filled with hard work, grind, sweat (mostly from our daily trips to equinox right down stairs), and a whole lot of fun.
 
 
 # Intern Activities
