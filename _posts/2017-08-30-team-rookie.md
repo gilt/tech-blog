@@ -46,7 +46,7 @@ For our experience, to minimize disruption to the current workflow, we’ve adde
 <img src="/assets/images/team-rookie-2017/favorite.png" width="940"/>
 </p>
 
-The experience, a.k.a our solution, provides the user with additional items that can potentially be paired with the initial favorited item to form completed looks. These products, limited by category and price based on the initial favorited items, will be presented to the users for individual selections. The users can let their imaginations go wild and pick what they think are the best combinations. During this process, we will collected this user preference data and persist it through our back-end API to the database.
+The experience, a.k.a our solution, provides the users with additional items that can potentially be paired with the initial favorited item to form completed looks. These products, limited by category and price based on the initial favorited items, will be presented to the users for individual selections. The users can let their imaginations go wild and pick what they think are the best combinations. During this process, we will collected this user preference data and persist it through our back-end API to the database.
 
 <p align="center">
 <img src="/assets/images/team-rookie-2017/first_page.png" width="940"/>
@@ -63,7 +63,7 @@ So in a nutshell, this is the completed project of the 10 week internship filled
 
 # Intern Activities
 
-While we are not busy being awesome engineers, team-rookie spent most of their leisure time exploring New York and staying cool. Here are some of the highlights.
+While we were not busy being awesome engineers, team-rookie spent most of our leisure time exploring New York and staying cool. Here are some of the highlights.
 
 <p align="center">
 <img src="/assets/images/team-rookie-2017/pose.JPG" width="940"/>
