@@ -22,7 +22,7 @@ The event is organized by the Dublin Scala Usergroup in cooperation with Dublin 
 
 <img class="center" src="https://pbs.twimg.com/media/DEIosBJWAAAj87h.jpg">
 
-### What is Scala Spree?
+### What is a Scala Spree?
 Scala Spree is a free community event aiming to popularize Open Source Software. It brings together Open Source authors, 
 maintainers and software engineers willing to contribute to OSS projects. Under the guidance of seasoned experts, newcomers learn about the inner 
 working of some popular tools and Scala libraries, and contribute to make them even better. For library authors, it's an opportunity to improve 
