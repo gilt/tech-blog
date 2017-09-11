@@ -12,6 +12,7 @@ tags:
 - meetups
 ---
 
+### Dublin Scala Spree
 This Friday the Gilt/Hudson's Bay Dublin office will be hosting the first ever Dublin Scala Spree, a day-long Scala Open Source Hackathon. 
 The event is organized by the Dublin Scala Usergroup in cooperation with Dublin Functional Kubs and the Scala Center at EPFL in Lausanne, Switzerland.
 
