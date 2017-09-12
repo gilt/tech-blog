@@ -33,7 +33,7 @@ expand their skills. And for everyone it's a great opportunity to meet and have 
 ### Featured Projects
 For this week's Spree we have the following special guests and their OSS projects: 
 * [sbt and zinc](http://www.scala-sbt.org) - Jorge Vicente Cantero [@jvican](https://twitter.com/jvican) ([Scala Center](https://scala.epfl.ch))
-* [Api Builder](https://www.apibuilder.io) - Michael Bryzek [@mbryzek](https://twitter.com/mbryzek) ([Flow.io](https://www.flow.io)) 
+* [API Builder](https://www.apibuilder.io) - Michael Bryzek [@mbryzek](https://twitter.com/mbryzek) ([Flow.io](https://www.flow.io)) 
 * [Gilt Foundation Classes](https://github.com/gilt?q=gfc) - Gregor Heine [@greheine](https://twitter.com/greheine) ([HBC Digital](http://tech.gilt.com)) 
 
 If you have a Scala open source project that you would like to feature at the Spree, please get in touch with the [Dublin Scala Users Group organizers](https://www.meetup.com/Dublin-Scala-users-group).
