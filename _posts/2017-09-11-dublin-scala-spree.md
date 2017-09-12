@@ -18,6 +18,7 @@ The event is organized by the Dublin Scala Usergroup in cooperation with Dublin 
 
 * __Date & Time:__ Friday, 15th September, 10am - 4pm
 * __Location:__ Gilt/HBC Digital Office, Shelbourne Rd., Dublin 4, Ireland
+* __Sign-Up:__ Please register for the event via the [Dublin Scala Users Group](https://www.meetup.com/Dublin-Scala-users-group/events/242952081)
 * __Organizers:__ Dublin Scala Meetup and Dublin Functional Kubs in cooperation with the Scala Center @ EPFL in Lausanne
 
 <img class="center" src="https://pbs.twimg.com/media/DEIosBJWAAAj87h.jpg">
@@ -29,10 +30,16 @@ working of some popular tools and Scala libraries, and contribute to make them e
 their tools and get fresh feedback. For attendees it is a unique opportunity to lean more about Scala, contribute to Open Source Software and 
 expand their skills. And for everyone it's great opportunity to meet and have fun!
 
+### Featured Projects
 For this week's Spree we have the following special guests and their OSS projects: 
-- Jorge Vicente Cantero [@jvican](https://twitter.com/jvican) ([Scala Center](https://scala.epfl.ch)) : [sbt and zinc](http://www.scala-sbt.org)
-- Michael Bryzek [@mbryzek](https://twitter.com/mbryzek) ([Flow.io](https://www.flow.io)): [Api Builder](https://www.apibuilder.io)
-- Gregor Heine [@greheine](https://twitter.com/greheine) ([HBC Digital](http://tech.gilt.com)): [Gilt Foundation Classes](https://github.com/gilt?q=gfc)
+* [sbt and zinc](http://www.scala-sbt.org) - Jorge Vicente Cantero [@jvican](https://twitter.com/jvican) ([Scala Center](https://scala.epfl.ch))
+* [Api Builder](https://www.apibuilder.io) - Michael Bryzek [@mbryzek](https://twitter.com/mbryzek) ([Flow.io](https://www.flow.io)) 
+* [Gilt Foundation Classes](https://github.com/gilt?q=gfc) - Gregor Heine [@greheine](https://twitter.com/greheine) ([HBC Digital](http://tech.gilt.com)) 
+
+If you have a Scala open source project that you would like to feature at the Speer, please get in touch with the [Dublin Scala Users Group organizers](https://www.meetup.com/Dublin-Scala-users-group).
+
+__Like all Dublin Scala Community events, Scala Spree is free of charge and the only real requirement is an open mind and the will to contribute! 
+-- Apart from bringing your own computer to use, but chances are you figured that out already.__
 
 ### Duration and pace
 At the beginning, maintainers gather together in front of all the contributors to briefly explain their projects and tickets in one minute. 
@@ -47,7 +54,5 @@ At the middle of the spree, we will provide free lunch and refreshments.
 Participants can leave the event at any time they want. When the time approaches the end, everyone starts to wrap up: participants finish their 
 PRs while maintainers finish their review, and organizers of the spree give away swag. We finish by thanking your hard work for open-source. 
 
-__Like all Dublin Scala Community events, Scala Spree is free of charge and the only real requirement is an open mind and the will to contribute! 
--- Apart from bringing your own computer to use, but chances are you figured that out already.__
-
-__Places will be strictly limited and will be allocated on a first come first served basis.__
+__Places will be strictly limited and will be allocated on a first come first served basis. 
+Registration through the [Dublin Scala Users Group](https://www.meetup.com/Dublin-Scala-users-group/events/242952081) is required and only successfull RSVPs can attend.__
