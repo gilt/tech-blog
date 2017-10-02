@@ -3,7 +3,8 @@ layout: post
 title: "Mobile Design Sprint"
 author: HBC Digital
 date: '2017-05-02'
-categories: 'mobile'
+categories: 
+- mobile
 tags:
 - agile
 - saks

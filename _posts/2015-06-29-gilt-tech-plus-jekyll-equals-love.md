@@ -3,7 +3,8 @@ layout: post
 title: Gilt Tech + Jekyll = ♥
 author: Andrew Powell
 date: '2015-06-29'
-categories: 'tech blog'
+categories: 
+- tech blog
 tags:
 - jekyll
 - github

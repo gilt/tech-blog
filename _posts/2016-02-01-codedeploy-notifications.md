@@ -3,7 +3,8 @@ layout: post
 title: Codedeploy Notifications as a Service
 author: Emerson Loureiro
 date: '2016-02-10'
-categories: 'aws'
+categories: 
+- aws
 tags:
 - aws
 - codedeploy

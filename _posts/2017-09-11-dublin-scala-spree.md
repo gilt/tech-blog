@@ -3,7 +3,8 @@ layout: post
 title: "Dublin Scala Spree"
 author: Gregor Heine
 date: '2017-09-11'
-categories: 'open source'
+categories: 
+- open source
 tags:
 - open source
 - hackathon

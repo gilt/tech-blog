@@ -3,7 +3,8 @@ layout: post
 title: "Sundial or AWS Batch, Why not both?"
 author: Kevin O'Riordan
 date: '2017-08-04'
-categories: 'data'
+categories: 
+- data
 tags:
 - batch
 - aws
