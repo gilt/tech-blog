@@ -1,5 +1,7 @@
 ---
 layout: post
+redirect_to:
+- https://saksdirect.github.io/hbc-tech-blog/2017-09-11-dublin-scala-spree.html
 title: "Dublin Scala Spree"
 author: Gregor Heine
 date: '2017-09-11'

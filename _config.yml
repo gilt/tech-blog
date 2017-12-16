@@ -4,7 +4,9 @@ permalink: /:categories/:year/:month/:day/:title
 future: true
 
 #Plugins
-gems : [jekyll-paginate]
+plugins:
+- jekyll-paginate
+- jekyll-redirect-from
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: rouge
