@@ -10,6 +10,8 @@ tags:
 - scrum
 - agile
 - scala
+redirect_to:
+- https://tech.hbc.com/2017-04-26-april-meetup-recap-and-looking-ahead.html
 ---
 
 ### April Meetups: 105 guests, 48 seltzers, 45 All Day IPAs, 19 pizzas & 2 great speakers. 

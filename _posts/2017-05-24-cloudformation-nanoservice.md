@@ -14,6 +14,8 @@ tags:
 - swagger
 - apibuilder
 - serverless
+redirect_to:
+- https://tech.hbc.com/2017-05-19-cloudformation-nanoservice.html
 ---
 
 One of the big HBC Digital initiatives for 2017 is "buy online, pickup in store" - somewhat awkwardly nicknamed "BOPIS" internally. This is the option for the customer to, instead of shipping an order to an address, pick it up in a store that has the items in inventory.

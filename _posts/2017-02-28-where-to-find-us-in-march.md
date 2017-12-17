@@ -10,6 +10,8 @@ tags:
 - people ops
 - scala
 - aws
+redirect_to:
+- https://tech.hbc.com/2017-02-28-where-to-find-us-in-march.html
 ---
 
 We have a busy month lined up: 

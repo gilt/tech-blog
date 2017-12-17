@@ -10,6 +10,8 @@ tags:
 - codedeploy
 - newrelic
 - notifications
+redirect_to:
+- https://tech.hbc.com/2016-02-10-codedeploy-notifications.html
 ---
 
 After moving our software stack to AWS, some of us here at Gilt have started deploying our services to production using [AWS's Codedeploy](https://aws.amazon.com/documentation/codedeploy/). Before that, in a not-so-distant past, we used an in-house tool for deployments - IonCannon. One of the things IonCannon provided were deployment notifications. In particular, it would:

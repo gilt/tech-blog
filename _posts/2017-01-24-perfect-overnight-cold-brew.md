@@ -11,6 +11,8 @@ tags:
 - conical burr grinder
 - French press
 - Intelligentsia Coffee
+redirect_to:
+- https://tech.hbc.com/2017-01-25-perfect-overnight-cold-brew.html
 ---
 
 When Gilt’s Mobile team worked at [1 Madison Avenue](https://www.emporis.com/buildings/115458/metropolitan-life-tower-new-york-city-ny-usa), my morning coffee ritual involved getting a large black iced coffee from [myWayCup](https://www.yelp.com/biz/mywaycup-coffee-new-york) as I exited the 6 train at 23rd Street. What they served at myWayCup—a private-label version of [Intelligentsia Coffee’s](https://www.intelligentsiacoffee.com) House Blend—was *so* good that I switched to iced coffee year-round—even through brutal New York winters—a trait that often earned me quizzical looks when ordering my preferred drink during a snowstorm.

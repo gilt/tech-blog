@@ -10,7 +10,10 @@ tags:
 - urgency
 - panic
 - shopping
+redirect_to:
+- https://tech.hbc.com/2016-04-06-urgency-vs-panic.html
 ---
+
 ## Urgency vs. Panic
 
 My first initiative as a product manager at Gilt was something called “Urgency”. It was formed under the premise that Gilt customers had become numb to the flash model, and we in tech could find ways to reinvigorate the sense of urgency that once existed while shopping at Gilt; the noon rush wherein products were flying off the virtual shelves, and customers knew if they liked something they had precious few minutes to purchase it before it’d be gone forever.

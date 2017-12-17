@@ -10,7 +10,10 @@ tags:
 - aws
 - tech
 - personalization
+redirect_to:
+- http://tech.hbc.com/2017-08-04-sundial-batch.html
 ---
+
 
 # Sundial on AWS Batch
 

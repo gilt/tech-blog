@@ -10,6 +10,8 @@ tags:
 - deep learning
 - personalization
 - recommendation
+redirect_to:
+- https://tech.hbc.com/2017-07-31-tiefvision-2.html
 ---
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>

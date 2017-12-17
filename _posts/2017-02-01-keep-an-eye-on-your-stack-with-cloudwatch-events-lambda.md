@@ -11,6 +11,8 @@ tags:
 - events
 - lambda
 - production
+redirect_to:
+- https://tech.hbc.com/2017-01-25-keep-an-eye-on-your-stack-with-cloudwatch-events-lambda.html
 ---
 
 # Why an Extra Eye?

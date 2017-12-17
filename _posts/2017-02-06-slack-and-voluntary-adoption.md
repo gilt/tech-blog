@@ -13,6 +13,8 @@ tags:
 - culture
 - hipchat
 - slack
+redirect_to:
+- https://tech.hbc.com/2017-02-06-slack-and-voluntary-adoption.html
 ---
 
 ## Musings on Decentralised Control and Voluntary Adoption in Large Organisations.

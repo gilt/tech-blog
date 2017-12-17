@@ -8,6 +8,8 @@ categories:
 tags:
 - culture
 - outing
+redirect_to:
+- https://tech.hbc.com/2017-01-05-backoffice-hike.html
 ---
 
 Now that winter is here and the cold is keeping us inside, I thought it would be good to dream of warm days and look back at a BackOffice team outing from October.

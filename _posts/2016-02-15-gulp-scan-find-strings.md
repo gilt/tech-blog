@@ -8,6 +8,8 @@ categories:
 tags:
 - gulp
 - javascript
+redirect_to:
+- https://tech.hbc.com/2016-02-15-gulp-scan-find-strings.html
 ---
 
 We recently ran across the need to simply scan a file for a particular term during
