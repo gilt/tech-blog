@@ -1,0 +1,1264 @@
+redirect_to:
+- https://tech.hbc.com/2015-06-16-introducing-gumshoe.html
+redirect_to:
+- https://tech.hbc.com/2015-06-10-the-video-from-the-recent-atlassian-webinar.html
+redirect_to:
+- https://tech.hbc.com/2015-06-08-welcome-to-our-summer-interns.html
+redirect_to:
+- https://tech.hbc.com/2015-05-19-is-agile-a-competitive-advantage.html
+redirect_to:
+- https://tech.hbc.com/2015-05-14-last-chance-to-join-the-meetup-tonight.html
+redirect_to:
+- https://tech.hbc.com/2015-05-11-importing-google-trends-data.html
+redirect_to:
+- https://tech.hbc.com/2015-05-08-java-has-log4j-objective-c-has.html
+redirect_to:
+- https://tech.hbc.com/2015-05-05-solr-gilt-powering-search-and-listing-for-the.html
+redirect_to:
+- https://tech.hbc.com/2015-04-17-were-hosting-the-nycpug-meetup-on-april-21.html
+redirect_to:
+- https://tech.hbc.com/2015-04-16-tips-for-debugging-ec2-container-service.html
+redirect_to:
+- https://tech.hbc.com/2015-04-08-ubar-open-source-first-front-end-effort.html
+redirect_to:
+- https://tech.hbc.com/2015-03-31-panel-recap-lets-talk-culture.html
+redirect_to:
+- https://tech.hbc.com/2015-03-18-interested-in-free-scala-training-at-gilts-dublin.html
+redirect_to:
+- https://tech.hbc.com/2015-03-16-an-update-on-gilts-ios-open-source-awesomeness.html
+redirect_to:
+- https://tech.hbc.com/2015-03-12-lets-talk-culture.html
+redirect_to:
+- https://tech.hbc.com/2015-03-10-missed-the-brooklyn-tech-triangle-u-tech-all-stars.html
+redirect_to:
+- https://tech.hbc.com/2015-03-09-gilt-visits-the-young-womens-leadership-school-of.html
+redirect_to:
+- https://tech.hbc.com/2015-03-06-gilt-qcon-london-2015.html
+redirect_to:
+- https://tech.hbc.com/2015-03-05-senior-director-pmo-heather-fleming-was-one-of.html
+redirect_to:
+- https://tech.hbc.com/2015-03-03-the-recording-of-heather-fleming-and-justin.html
+redirect_to:
+- https://tech.hbc.com/2015-03-02-stop-going-agile.html
+redirect_to:
+- https://tech.hbc.com/2015-02-26-inaugural-micro-services-dublin-meetup-lots-of.html
+redirect_to:
+- https://tech.hbc.com/2015-02-12-dsug-scala-meetup-gilt-dublin-scaldi-type.html
+redirect_to:
+- https://tech.hbc.com/2015-02-04-gilt-releases-mockingbird-data-environment.html
+redirect_to:
+- https://tech.hbc.com/2015-01-29-docker-classes-in-dublin-by-demonware.html
+redirect_to:
+- https://tech.hbc.com/2015-01-27-five-tools-every-business-systems-analyst-should.html
+redirect_to:
+- https://tech.hbc.com/2015-01-27-new-gilt-product-feature-fit-predictor.html
+redirect_to:
+- https://tech.hbc.com/2015-01-26-announcing-the-next-dublin-scala-users-group.html
+redirect_to:
+- https://tech.hbc.com/2015-01-23-it-takes-more-than-great-algorithms-to-make.html
+redirect_to:
+- https://tech.hbc.com/2015-01-22-scala-futures-and-lazy-vals.html
+redirect_to:
+- https://tech.hbc.com/2015-01-22-practical-performance-monitoring-gilt-presents.html
+redirect_to:
+- https://tech.hbc.com/2015-01-20-i-cant-get-no-satisfaction-ramblings-on-the.html
+redirect_to:
+- https://tech.hbc.com/2015-01-20-video-why-engineers-should-work-with-the-dark.html
+redirect_to:
+- https://tech.hbc.com/2015-01-09-vote-for-gilt-in-the-developerweek-awards.html
+redirect_to:
+- https://tech.hbc.com/2015-01-07-an-open-source-aws-leader-election-library-built.html
+redirect_to:
+- https://tech.hbc.com/2015-01-06-rsvp-for-get-stuff-done-faster-why-engineers.html
+redirect_to:
+- https://tech.hbc.com/2015-01-05-some-quick-tips-for-using-scala-futures.html
+redirect_to:
+- https://tech.hbc.com/2014-12-30-best-of-2014-gilt-tech-culture-and-evangelism.html
+redirect_to:
+- https://tech.hbc.com/2014-12-23-best-of-gilt-2014-security.html
+redirect_to:
+- https://tech.hbc.com/2014-12-23-video-gilt-back-offices-2014-in-2-33.html
+redirect_to:
+- https://tech.hbc.com/2014-12-22-best-of-gilt-2014-product-and-user-experience.html
+redirect_to:
+- https://tech.hbc.com/2014-12-19-the-gilt-personalization-teams-best-of-list-for.html
+redirect_to:
+- https://tech.hbc.com/2014-12-19-best-of-gilt-2014-engineering.html
+redirect_to:
+- https://tech.hbc.com/2014-12-17-the-gilt-mobile-teams-favorite-apps-of-2014.html
+redirect_to:
+- https://tech.hbc.com/2014-12-16-gilt-is-going-to-craft-conf.html
+redirect_to:
+- https://tech.hbc.com/2014-12-12-new-in-gilt-tech-open-source.html
+redirect_to:
+- https://tech.hbc.com/2014-12-09-boosting-sales-through-analytics-curated.html
+redirect_to:
+- https://tech.hbc.com/2014-12-08-designing-for-china-with-gilts-andrew-chen.html
+redirect_to:
+- https://tech.hbc.com/2014-12-05-learn-cutting-edge-techniques-from-gilt-and.html
+redirect_to:
+- https://tech.hbc.com/2014-12-05-responsive-tools-and-pushy-actors-akka-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-12-04-postgresql-query-catalog-to-find-primary-key.html
+redirect_to:
+- https://tech.hbc.com/2014-12-02-gilt-presents-at-design-driven-nyc.html
+redirect_to:
+- https://tech.hbc.com/2014-11-24-next-free-tech-course-at-gilt-nyc-chef.html
+redirect_to:
+- https://tech.hbc.com/2014-11-14-hallway-to-the-danger-zone-gilt-techs-first-ever.html
+redirect_to:
+- https://tech.hbc.com/2014-11-14-making-architecture-work-in-microservice.html
+redirect_to:
+- https://tech.hbc.com/2014-11-14-how-gilts-free-r-class-set-me-on-the-path-to.html
+redirect_to:
+- https://tech.hbc.com/2014-11-12-gilt-at-last-nights-tech-talent-draft-cuny.html
+redirect_to:
+- https://tech.hbc.com/2014-11-12-bloomberg-covers-gilts-singles-day-relaunch-in.html
+redirect_to:
+- https://tech.hbc.com/2014-11-11-a-synthetic-monitoring-case-study.html
+redirect_to:
+- https://tech.hbc.com/2014-11-11-korean-startups-visit-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-11-10-betting-on-china-gilts-relaunch-into-the-worlds.html
+redirect_to:
+- https://tech.hbc.com/2014-11-07-new-in-gilt-open-source-a-performance-timing.html
+redirect_to:
+- https://tech.hbc.com/2014-11-07-tune-in-to-typesafes-webinar-with-gilt-on.html
+redirect_to:
+- https://tech.hbc.com/2014-11-07-team-scalasaurus-ftw.html
+redirect_to:
+- https://tech.hbc.com/2014-11-07-watch-the-agile-pmo-video.html
+redirect_to:
+- https://tech.hbc.com/2014-11-05-hps-sridhar-solur-shares-his-top-five-secrets-to.html
+redirect_to:
+- https://tech.hbc.com/2014-11-05-informationweek-writes-about-gilt-tech-evangelism.html
+redirect_to:
+- https://tech.hbc.com/2014-11-04-product-launch-todays-best-sellers.html
+redirect_to:
+- https://tech.hbc.com/2014-11-04-mobile-design-at-gilt-see-the-slides.html
+redirect_to:
+- https://tech.hbc.com/2014-11-03-gilt-participates-in-tech-nyu-startup-week.html
+redirect_to:
+- https://tech.hbc.com/2014-10-31-video-of-scaling-gilt-from-monolithic-ruby-app.html
+redirect_to:
+- https://tech.hbc.com/2014-10-31-zero-room-to-move-at-our-rwd-gilt-meetup.html
+redirect_to:
+- https://tech.hbc.com/2014-10-31-happy-gregorween.html
+redirect_to:
+- https://tech.hbc.com/2014-10-29-stilettos-by-state-a-gilt-infographic-while.html
+redirect_to:
+- https://tech.hbc.com/2014-10-29-rules-for-best-practice-email-design-playing-nice.html
+redirect_to:
+- https://tech.hbc.com/2014-10-28-gilt-presents-tonight-at-meetme.html
+redirect_to:
+- https://tech.hbc.com/2014-10-27-code-the-deal-and-watch-the-video.html
+redirect_to:
+- https://tech.hbc.com/2014-10-27-running-for-alzheimers-nyc-marathon-in-7-days.html
+redirect_to:
+- https://tech.hbc.com/2014-10-24-slideshow-gilt-pmo-headlines-the-next-lean-eggs.html
+redirect_to:
+- https://tech.hbc.com/2014-10-24-gilt-featured-at-todays-nyu-stern-luxury-retail.html
+redirect_to:
+- https://tech.hbc.com/2014-10-22-thanks-docker.html
+redirect_to:
+- https://tech.hbc.com/2014-10-22-next-meetup-learn-about-responsive-web-design-at.html
+redirect_to:
+- https://tech.hbc.com/2014-10-21-do-you-care-about-increasing-the-number-of-women.html
+redirect_to:
+- https://tech.hbc.com/2014-10-21-gil-at-gilt-our-lunchtime-chat-with-gil-tene.html
+redirect_to:
+- https://tech.hbc.com/2014-10-17-haiku-by-the-gilt-tech-team-in-japan.html
+redirect_to:
+- https://tech.hbc.com/2014-10-17-complexity-and-lactic-acid.html
+redirect_to:
+- https://tech.hbc.com/2014-10-15-prison-ed-cats-and-vmware-meet-the-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-10-15-okta-bierfest.html
+redirect_to:
+- https://tech.hbc.com/2014-10-14-gilt-cio-is-a-david-rockefeller-fellow.html
+redirect_to:
+- https://tech.hbc.com/2014-10-09-gilt-tech-team-outing-rebuilding-documentary.html
+redirect_to:
+- https://tech.hbc.com/2014-10-08-our-next-free-course-at-gilt-data-visualization.html
+redirect_to:
+- https://tech.hbc.com/2014-10-06-on-being-a-woman-member-of-gilts-tech-team.html
+redirect_to:
+- https://tech.hbc.com/2014-10-03-innovation-driven-by-the-open-source-ethos-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-10-03-welcome-michael-palma.html
+redirect_to:
+- https://tech.hbc.com/2014-10-03-gilt-techs-scott-albrecht-has-an-art-opening.html
+redirect_to:
+- https://tech.hbc.com/2014-10-01-two-of-europes-top-node-js-experts-visit-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-09-30-learnings-from-building-and-scaling-gilt-video.html
+redirect_to:
+- https://tech.hbc.com/2014-09-30-gilt-gets-uncubed.html
+redirect_to:
+- https://tech.hbc.com/2014-09-29-gilt-to-present-at-this-weeks-interop-expo.html
+redirect_to:
+- https://tech.hbc.com/2014-09-26-hacking-hipchat-for-foosball-fun.html
+redirect_to:
+- https://tech.hbc.com/2014-09-26-thanks-for-the-cupcakes-facebook.html
+redirect_to:
+- https://tech.hbc.com/2014-09-25-gilt-and-preemptive-shipping-a-q-a-with-our-chief.html
+redirect_to:
+- https://tech.hbc.com/2014-09-24-slideshows-and-photos-from-last-nights-dublin.html
+redirect_to:
+- https://tech.hbc.com/2014-09-23-five-things-you-need-to-know-about-hammer-js-2-0.html
+redirect_to:
+- https://tech.hbc.com/2014-09-22-gilt-goes-to-nodeland-a-recap-of-nodeconf-eu.html
+redirect_to:
+- https://tech.hbc.com/2014-09-19-gilt-presents-at-this-weekends-droidcon-nyc.html
+redirect_to:
+- https://tech.hbc.com/2014-09-19-upcoming-at-gilt-what-constitutes-a-reactive.html
+redirect_to:
+- https://tech.hbc.com/2014-09-19-gilt-participates-in-this-weekends-code-the.html
+redirect_to:
+- https://tech.hbc.com/2014-09-18-gilts-heather-fleming-is-a-woman-who-rocks.html
+redirect_to:
+- https://tech.hbc.com/2014-09-18-learn-about-gatling-and-cave-at-the-next-dublin.html
+redirect_to:
+- https://tech.hbc.com/2014-09-16-dream-girl-documentarian-visits-with-gilts.html
+redirect_to:
+- https://tech.hbc.com/2014-09-16-gilt-participates-in-todays-droidcon-nyc.html
+redirect_to:
+- https://tech.hbc.com/2014-09-12-gilt-web-design-joins-gilttech.html
+redirect_to:
+- https://tech.hbc.com/2014-09-11-gilt-featured-at-brand-innovators-fashion-week.html
+redirect_to:
+- https://tech.hbc.com/2014-09-09-profit-purpose-a-chat-with-author-kyle-westaway.html
+redirect_to:
+- https://tech.hbc.com/2014-09-08-new-gilt-hires-get-a-crash-course-in-scala.html
+redirect_to:
+- https://tech.hbc.com/2014-09-08-join-gilt-in-supporting-net-neutrality-on.html
+redirect_to:
+- https://tech.hbc.com/2014-09-05-microservices-and-crystal-balls-gilt-goes-to-the.html
+redirect_to:
+- https://tech.hbc.com/2014-09-04-gilt-ceo-michelle-peluso-is-smartceos-cover-story.html
+redirect_to:
+- https://tech.hbc.com/2014-09-02-gilttech-celebrates-wear-white-after-labor-day.html
+redirect_to:
+- https://tech.hbc.com/2014-08-29-check-out-gilts-cool-new-office-space-in-dublin.html
+redirect_to:
+- https://tech.hbc.com/2014-08-27-scenes-from-gilts-free-go-class.html
+redirect_to:
+- https://tech.hbc.com/2014-08-26-welcome-natalia-bartol.html
+redirect_to:
+- https://tech.hbc.com/2014-08-25-an-intro-to-swift-slideshow.html
+redirect_to:
+- https://tech.hbc.com/2014-08-25-modularity-and-the-ios-status-bar-network.html
+redirect_to:
+- https://tech.hbc.com/2014-08-22-rules-for-best-practice-email-design-coding.html
+redirect_to:
+- https://tech.hbc.com/2014-08-21-welcome-mackenzie-nicholson.html
+redirect_to:
+- https://tech.hbc.com/2014-08-21-gilt-presents-at-the-appium-roadshow-slideshow.html
+redirect_to:
+- https://tech.hbc.com/2014-08-21-gilt-cio-steve-jacobs-featured-on-nj-tech-weekly.html
+redirect_to:
+- https://tech.hbc.com/2014-08-20-tonight-in-honolulu-gilt-presents-an-intro-to.html
+redirect_to:
+- https://tech.hbc.com/2014-08-19-introducing-gilt-japans-all-new-iphone-app.html
+redirect_to:
+- https://tech.hbc.com/2014-08-19-gilt-featured-at-the-atlassian-ugs-anniversary.html
+redirect_to:
+- https://tech.hbc.com/2014-08-18-rules-for-best-practice-email-design-content.html
+redirect_to:
+- https://tech.hbc.com/2014-08-15-born-to-be-wild-about-data.html
+redirect_to:
+- https://tech.hbc.com/2014-08-14-summer-interning-with-gilts-program-management.html
+redirect_to:
+- https://tech.hbc.com/2014-08-13-handling-changes-to-your-server-side-data-model.html
+redirect_to:
+- https://tech.hbc.com/2014-08-13-meet-a-gilt-technologist-george-chien-lead.html
+redirect_to:
+- https://tech.hbc.com/2014-08-12-the-immutable-stack-david-nolen-speaks-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-08-12-our-next-free-course-at-gilt-dublin-machine.html
+redirect_to:
+- https://tech.hbc.com/2014-08-08-gilttechs-recommended-reads-for-the-dog-days-of.html
+redirect_to:
+- https://tech.hbc.com/2014-08-08-learn-about-web-scale-postgresql-monday-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-08-07-gilt-featured-at-next-weeks-iosoho-developers.html
+redirect_to:
+- https://tech.hbc.com/2014-08-07-new-in-open-source-at-gilt-elixir-json.html
+redirect_to:
+- https://tech.hbc.com/2014-08-06-new-infoq-magazine-on-microservices-features-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-08-05-the-docker-book-now-available.html
+redirect_to:
+- https://tech.hbc.com/2014-08-05-the-new-relic-user-group-comes-to-gilt-on-august-7.html
+redirect_to:
+- https://tech.hbc.com/2014-08-01-gatling-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-08-01-welcome-pawel-raszewski.html
+redirect_to:
+- https://tech.hbc.com/2014-07-31-our-next-free-course-at-gilt-nyc-go.html
+redirect_to:
+- https://tech.hbc.com/2014-07-30-a-chat-with-alexy-khrabrov-organizer-of-scala-by.html
+redirect_to:
+- https://tech.hbc.com/2014-07-30-new-gilt-product-feature-the-shops.html
+redirect_to:
+- https://tech.hbc.com/2014-07-29-selenium-pageobjects-in-scalatest.html
+redirect_to:
+- https://tech.hbc.com/2014-07-29-welcome-michal-kowaliszyn.html
+redirect_to:
+- https://tech.hbc.com/2014-07-28-true-love-is-giving-back.html
+redirect_to:
+- https://tech.hbc.com/2014-07-28-play-framework-at-gilt-webinar-video.html
+redirect_to:
+- https://tech.hbc.com/2014-07-28-the-gilt-tech-teams-online-sticker-book.html
+redirect_to:
+- https://tech.hbc.com/2014-07-28-shop-by-category-on-gilts-iphone-and-ipad-apps.html
+redirect_to:
+- https://tech.hbc.com/2014-07-25-welcome-nick-rogers.html
+redirect_to:
+- https://tech.hbc.com/2014-07-25-gilt-mobile-apps-now-make-shopping-faster-by.html
+redirect_to:
+- https://tech.hbc.com/2014-07-24-welcome-felix-garcia-borrego.html
+redirect_to:
+- https://tech.hbc.com/2014-07-22-designing-a-responsive-navigation.html
+redirect_to:
+- https://tech.hbc.com/2014-07-21-gilt-product-management-and-user-experience.html
+redirect_to:
+- https://tech.hbc.com/2014-07-21-watch-last-weeks-metis-data-science-meetup.html
+redirect_to:
+- https://tech.hbc.com/2014-07-18-connection-where-emotions-drive-kpis-a-talk-by.html
+redirect_to:
+- https://tech.hbc.com/2014-07-16-josh-suereth-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-07-15-learn-about-jedis-and-redis-from-gilts-jonathan.html
+redirect_to:
+- https://tech.hbc.com/2014-07-15-gilt-featured-at-tonights-metis-data-science.html
+redirect_to:
+- https://tech.hbc.com/2014-07-14-gilt-to-host-mit-under-the-dome-an-interactive.html
+redirect_to:
+- https://tech.hbc.com/2014-07-11-learn-about-scala-android-bluetooth-low-energy.html
+redirect_to:
+- https://tech.hbc.com/2014-07-10-a-great-turnout-at-last-nights-docker-dublin.html
+redirect_to:
+- https://tech.hbc.com/2014-07-09-responsive-gilt-com-the-full-screen-modal.html
+redirect_to:
+- https://tech.hbc.com/2014-07-07-responsive-gilt-com-selenium-edition.html
+redirect_to:
+- https://tech.hbc.com/2014-07-03-five-simple-lisp-tips-guaranteed-to-boost-your.html
+redirect_to:
+- https://tech.hbc.com/2014-07-02-responsive-gilt-com-block-vs-in-selector-media.html
+redirect_to:
+- https://tech.hbc.com/2014-07-02-immutable-infrastructure-with-docker-and-ec2.html
+redirect_to:
+- https://tech.hbc.com/2014-07-01-gilt-watches-the-world-cup.html
+redirect_to:
+- https://tech.hbc.com/2014-07-01-happy-one-year-anniversary-free-tech-courses-at.html
+redirect_to:
+- https://tech.hbc.com/2014-07-01-responsive-gilt-com-retrospective.html
+redirect_to:
+- https://tech.hbc.com/2014-07-01-gregor-brews-some-anchorage-weissbier.html
+redirect_to:
+- https://tech.hbc.com/2014-06-30-look-at-our-looker-hackathon.html
+redirect_to:
+- https://tech.hbc.com/2014-06-30-gilts-hosting-a-free-sbt-workshop-with-josh.html
+redirect_to:
+- https://tech.hbc.com/2014-06-27-five-rules-for-best-practice-email-design.html
+redirect_to:
+- https://tech.hbc.com/2014-06-27-we-found-the-bob-ross-mobile.html
+redirect_to:
+- https://tech.hbc.com/2014-06-27-welcome-anders-holm.html
+redirect_to:
+- https://tech.hbc.com/2014-06-27-gilts-next-free-tech-course-in-dublin-angularjs.html
+redirect_to:
+- https://tech.hbc.com/2014-06-26-gilt-lunches-with-the-father-of-data-warehousing.html
+redirect_to:
+- https://tech.hbc.com/2014-06-26-inaugural-docker-dublin-meetup-with-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-06-25-welcome-evan-wall.html
+redirect_to:
+- https://tech.hbc.com/2014-06-25-gilt-guest-posts-on-appium.html
+redirect_to:
+- https://tech.hbc.com/2014-06-20-when-code-blows-up-and-you-dont-know-why.html
+redirect_to:
+- https://tech.hbc.com/2014-06-10-our-next-free-class-at-gilt-nyc-advanced.html
+redirect_to:
+- https://tech.hbc.com/2014-06-09-some-sugar-for-your-sbt-dependency-graph.html
+redirect_to:
+- https://tech.hbc.com/2014-06-09-gilt-presents-at-this-weeks-dockercon.html
+redirect_to:
+- https://tech.hbc.com/2014-06-06-scala-scalability-open-source-and-more-listen.html
+redirect_to:
+- https://tech.hbc.com/2014-06-05-welcome-keith-eng.html
+redirect_to:
+- https://tech.hbc.com/2014-06-05-gilt-mobile-nymad-bring-you-a-night-of-post-wwdc.html
+redirect_to:
+- https://tech.hbc.com/2014-06-04-gilts-special-ops-team-has-a-mini-offsite.html
+redirect_to:
+- https://tech.hbc.com/2014-06-04-our-next-free-tech-class-at-gilt-mongodb-in.html
+redirect_to:
+- https://tech.hbc.com/2014-06-03-gilt-celebrates-play-day-with-typesafe-tune-into.html
+redirect_to:
+- https://tech.hbc.com/2014-06-03-welcome-zachary-cohn.html
+redirect_to:
+- https://tech.hbc.com/2014-06-02-how-to-test-androids-parcelable-interface.html
+redirect_to:
+- https://tech.hbc.com/2014-06-02-rsvp-for-tonights-product-and-the-people-side-an.html
+redirect_to:
+- https://tech.hbc.com/2014-05-30-team-data-at-last-nights-fashion-2-0-panel.html
+redirect_to:
+- https://tech.hbc.com/2014-05-29-gilt-to-help-judge-this-weekends-angelhack.html
+redirect_to:
+- https://tech.hbc.com/2014-05-29-gilt-participating-in-nycs-first-computer-science.html
+redirect_to:
+- https://tech.hbc.com/2014-05-28-data-driven-personalization-at-gilt-video.html
+redirect_to:
+- https://tech.hbc.com/2014-05-28-gilt-featured-at-tomorrows-fashion-2-0-smart.html
+redirect_to:
+- https://tech.hbc.com/2014-05-28-jedis-2-5-0-new-updates-to-jedis-just-released.html
+redirect_to:
+- https://tech.hbc.com/2014-05-28-gilt-featured-in-postgres-weekly.html
+redirect_to:
+- https://tech.hbc.com/2014-05-27-gilt-lunches-with-brandon-philips-of-coreos.html
+redirect_to:
+- https://tech.hbc.com/2014-05-23-full-stack-engineering-comes-back-to-gilt-this.html
+redirect_to:
+- https://tech.hbc.com/2014-05-23-gaslight-at-gilt-scenes-from-yesterdays-free.html
+redirect_to:
+- https://tech.hbc.com/2014-05-22-enterprisedb-features-gilt-as-a-postgresql-pro.html
+redirect_to:
+- https://tech.hbc.com/2014-05-22-welcome-kevin-schultz.html
+redirect_to:
+- https://tech.hbc.com/2014-05-22-last-nights-mobile-engineering-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-05-21-dr-martin-odersky-at-gilt-5-19-2014-video.html
+redirect_to:
+- https://tech.hbc.com/2014-05-20-gilt-featured-at-tonights-product-council-nyc.html
+redirect_to:
+- https://tech.hbc.com/2014-05-19-a-very-special-guest-visited-gilt-this-afternoon.html
+redirect_to:
+- https://tech.hbc.com/2014-05-16-scaling-gilt-with-postgresql-from-one-database-to.html
+redirect_to:
+- https://tech.hbc.com/2014-05-16-scala-the-simple-parts-martin-odersky-presents.html
+redirect_to:
+- https://tech.hbc.com/2014-05-14-mobile-engineering-at-gilt-in-dublin-on-may-21.html
+redirect_to:
+- https://tech.hbc.com/2014-05-14-gilt-presents-at-this-weekends-con.html
+redirect_to:
+- https://tech.hbc.com/2014-05-13-gadgets-for-holistic-web-detection-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-05-13-javascript-in-the-empire-state.html
+redirect_to:
+- https://tech.hbc.com/2014-05-13-welcome-chris-poenaru.html
+redirect_to:
+- https://tech.hbc.com/2014-05-09-our-next-free-class-at-gilt-cartodb-on-june-4.html
+redirect_to:
+- https://tech.hbc.com/2014-05-08-readwrite-profiles-gilt-and-our-insane-traffic.html
+redirect_to:
+- https://tech.hbc.com/2014-05-07-gilt-helps-to-judge-columbias-annual-venture.html
+redirect_to:
+- https://tech.hbc.com/2014-05-07-gilt-lunchtime-tech-talk-parse.html
+redirect_to:
+- https://tech.hbc.com/2014-05-07-metro-ny-covers-gilts-free-tech-courses.html
+redirect_to:
+- https://tech.hbc.com/2014-05-06-welcome-kevin-oriordan.html
+redirect_to:
+- https://tech.hbc.com/2014-05-05-gilt-presents-at-empirejs.html
+redirect_to:
+- https://tech.hbc.com/2014-05-02-welcome-myron-miller.html
+redirect_to:
+- https://tech.hbc.com/2014-05-01-gilt-goes-to-xo-group.html
+redirect_to:
+- https://tech.hbc.com/2014-05-01-gilt-techs-first-game-night-was-a-blast.html
+redirect_to:
+- https://tech.hbc.com/2014-05-01-our-next-free-gilt-tech-course-angularjs-on-may.html
+redirect_to:
+- https://tech.hbc.com/2014-04-30-video-and-photos-from-last-nights-awesome-docker.html
+redirect_to:
+- https://tech.hbc.com/2014-04-29-the-gilt-team-in-dublin-launches-5-4.html
+redirect_to:
+- https://tech.hbc.com/2014-04-28-we-won-the-webby.html
+redirect_to:
+- https://tech.hbc.com/2014-04-28-dr-roland-kuhn-of-typesafe-visits-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-04-25-gilt-lunchtime-tech-talk-spray-some-nsq-on-it.html
+redirect_to:
+- https://tech.hbc.com/2014-04-25-java-8-vs-scala-and-more-at-the-dublin-scala.html
+redirect_to:
+- https://tech.hbc.com/2014-04-23-gilt-ceo-michelle-peluso-is-a-mentorship-champion.html
+redirect_to:
+- https://tech.hbc.com/2014-04-23-come-to-the-docker-panel-discussion-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-04-22-visit-gilt-at-nyc-techday-and-play-some-games.html
+redirect_to:
+- https://tech.hbc.com/2014-04-22-gilts-back-office-goes-to-the-snapple-theater.html
+redirect_to:
+- https://tech.hbc.com/2014-04-18-gilt-goes-to-hack-red-hook-tonight.html
+redirect_to:
+- https://tech.hbc.com/2014-04-18-gilt-featured-at-this-weekends-lambdaconf.html
+redirect_to:
+- https://tech.hbc.com/2014-04-18-check-out-the-slides-from-mobile-testing-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-04-16-vote-for-gilt-in-this-years-webby-awards.html
+redirect_to:
+- https://tech.hbc.com/2014-04-16-taxes-and-payments-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-04-16-brooklyn-ios-developer-meetup-features-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-04-15-check-out-the-slides-from-gilt-pmos-the-agile.html
+redirect_to:
+- https://tech.hbc.com/2014-04-15-planet-cassandra-features-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-04-14-nyc-html5-features-gilt-in-april.html
+redirect_to:
+- https://tech.hbc.com/2014-04-14-gilt-pmo-featured-at-agile-nyc-tonight.html
+redirect_to:
+- https://tech.hbc.com/2014-04-11-portland-java-users-group-features-gilt-on-tax-day.html
+redirect_to:
+- https://tech.hbc.com/2014-04-11-whats-for-brunch.html
+redirect_to:
+- https://tech.hbc.com/2014-04-11-shmock-gets-a-shout-out.html
+redirect_to:
+- https://tech.hbc.com/2014-04-09-welcome-fidan-kasra.html
+redirect_to:
+- https://tech.hbc.com/2014-04-08-welcome-justin-vitale.html
+redirect_to:
+- https://tech.hbc.com/2014-04-07-going-the-extra-mile-more-than-200-extra-miles.html
+redirect_to:
+- https://tech.hbc.com/2014-04-03-bronx-academy-of-software-engineering-students.html
+redirect_to:
+- https://tech.hbc.com/2014-04-02-gilt-co-founder-cto-michael-bryzek-to-keynote.html
+redirect_to:
+- https://tech.hbc.com/2014-03-31-bigchat-and-other-highlights-from-last-weeks.html
+redirect_to:
+- https://tech.hbc.com/2014-03-27-thumbs-up-to-a-great-git-github-skills-class.html
+redirect_to:
+- https://tech.hbc.com/2014-03-26-a-special-guest-and-familiar-face-visits-with.html
+redirect_to:
+- https://tech.hbc.com/2014-03-26-meet-a-gilt-micro-service-1.html
+redirect_to:
+- https://tech.hbc.com/2014-03-25-the-2014-gilt-plasma-prix-the-movie.html
+redirect_to:
+- https://tech.hbc.com/2014-03-25-gilt-japans-gilt-city-app-goes-fully-responsive.html
+redirect_to:
+- https://tech.hbc.com/2014-03-21-gilt-lunches-with-adrian-cockcroft-of-battery.html
+redirect_to:
+- https://tech.hbc.com/2014-03-20-use-etcd-as-a-filesystem-with-etcd-fs.html
+redirect_to:
+- https://tech.hbc.com/2014-03-20-how-we-scale-our-push-notification-system-with.html
+redirect_to:
+- https://tech.hbc.com/2014-03-19-welcome-kevin-li.html
+redirect_to:
+- https://tech.hbc.com/2014-03-19-jons-latest-open-source-project-go-supertest.html
+redirect_to:
+- https://tech.hbc.com/2014-03-18-meet-a-gilt-technologist-andrew-duffy-senior.html
+redirect_to:
+- https://tech.hbc.com/2014-03-17-our-next-free-gilt-tech-course-git-github.html
+redirect_to:
+- https://tech.hbc.com/2014-03-14-boston-area-scala-enthusiasts-to-feature-gilt-tech.html
+redirect_to:
+- https://tech.hbc.com/2014-03-12-new-updates-to-jedis-just-released.html
+redirect_to:
+- https://tech.hbc.com/2014-03-12-our-next-meetup-using-akka-to-scale-gilts.html
+redirect_to:
+- https://tech.hbc.com/2014-03-10-gilts-architecture-summit-bigger-and-better-than.html
+redirect_to:
+- https://tech.hbc.com/2014-03-10-free-tech-course-at-gilt-nyc-hadoop-with-sameer.html
+redirect_to:
+- https://tech.hbc.com/2014-03-07-shmock-an-express-based-http-mocking-library-for.html
+redirect_to:
+- https://tech.hbc.com/2014-03-06-our-next-free-tech-course-at-gilt-dublin-a.html
+redirect_to:
+- https://tech.hbc.com/2014-03-06-exploring-docker-at-gilt-presentation-slides.html
+redirect_to:
+- https://tech.hbc.com/2014-03-06-gilts-micro-services-architecture-gets-a-mention.html
+redirect_to:
+- https://tech.hbc.com/2014-03-04-chatting-with-new-york-startup-cto-summit.html
+redirect_to:
+- https://tech.hbc.com/2014-03-03-hacker-forum-provisioning-continuous-delivery.html
+redirect_to:
+- https://tech.hbc.com/2014-03-03-scenes-from-fridays-free-scala-course-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2014-02-27-gilts-roger-huang-speaks-at-open-analytics-nyc.html
+redirect_to:
+- https://tech.hbc.com/2014-02-27-plasma-prix-preview.html
+redirect_to:
+- https://tech.hbc.com/2014-02-26-interior-design-for-the-mobile-web-presentation.html
+redirect_to:
+- https://tech.hbc.com/2014-02-25-plasmacar-fever-takes-over-gilt-tech.html
+redirect_to:
+- https://tech.hbc.com/2014-02-25-new-agilefm-vodcast-with-gilt-senior-director-pmo.html
+redirect_to:
+- https://tech.hbc.com/2014-02-24-gilts-heather-fleming-and-nithya-venkateswaran.html
+redirect_to:
+- https://tech.hbc.com/2014-02-21-gilt-participating-in-nyc-startup-weekend.html
+redirect_to:
+- https://tech.hbc.com/2014-02-21-some-tips-for-making-your-own-3d-printer.html
+redirect_to:
+- https://tech.hbc.com/2014-02-20-mobile-ux-and-web-components-gilt-headlines-the.html
+redirect_to:
+- https://tech.hbc.com/2014-02-19-scenes-from-last-nights-full-stack-engineering.html
+redirect_to:
+- https://tech.hbc.com/2014-02-18-scenes-from-the-annual-encryption-key-ceremony-at.html
+redirect_to:
+- https://tech.hbc.com/2014-02-14-let-gilt-engineer-nathan-stilwell-school-you-on.html
+redirect_to:
+- https://tech.hbc.com/2014-02-12-looker-gilt-presentation-includes-slideshow.html
+redirect_to:
+- https://tech.hbc.com/2014-02-11-gilt-hosting-the-first-looker-user-group-meetup.html
+redirect_to:
+- https://tech.hbc.com/2014-02-10-lucene-solr-the-default-search-engine-for.html
+redirect_to:
+- https://tech.hbc.com/2014-02-07-fancy-cheese-friday.html
+redirect_to:
+- https://tech.hbc.com/2014-02-06-produce-a-great-tech-talk-by-asking-yourself-and.html
+redirect_to:
+- https://tech.hbc.com/2014-02-06-gilt-software-engineer-miguel-fajardo-wrote-a.html
+redirect_to:
+- https://tech.hbc.com/2014-02-05-gilt-tech-lunchtime-tv-break-watching-typesafes.html
+redirect_to:
+- https://tech.hbc.com/2014-02-04-next-free-tech-course-at-gilt-scala-for-beginners.html
+redirect_to:
+- https://tech.hbc.com/2014-01-30-welcome-mike-melton.html
+redirect_to:
+- https://tech.hbc.com/2014-01-29-gilt-cio-steve-jacobs-the-columbia-nyc-tech.html
+redirect_to:
+- https://tech.hbc.com/2014-01-29-fat-stacks-and-fat-sandwiches-full-stack.html
+redirect_to:
+- https://tech.hbc.com/2014-01-28-welcome-dana-romano.html
+redirect_to:
+- https://tech.hbc.com/2014-01-27-gilts-michael-bryzek-featured-on-the-business-of.html
+redirect_to:
+- https://tech.hbc.com/2014-01-27-a-few-things-about-ping-a-play-framework.html
+redirect_to:
+- https://tech.hbc.com/2014-01-24-welcome-rory-haddon.html
+redirect_to:
+- https://tech.hbc.com/2014-01-24-catching-up-with-open-source-advocate-rocky.html
+redirect_to:
+- https://tech.hbc.com/2014-01-24-meet-the-gilt-tech-office-horse.html
+redirect_to:
+- https://tech.hbc.com/2014-01-21-gilt-cio-steve-jacobs-gives-his-new-york-tech.html
+redirect_to:
+- https://tech.hbc.com/2014-01-21-some-special-guests-from-typesafe-and-the-akka.html
+redirect_to:
+- https://tech.hbc.com/2014-01-21-welcome-chavdar-chernashki.html
+redirect_to:
+- https://tech.hbc.com/2014-01-15-scaling-gilt-at-gilt-nyc-tech-talks-comes-to-2.html
+redirect_to:
+- https://tech.hbc.com/2014-01-14-welcome-archana-kumar.html
+redirect_to:
+- https://tech.hbc.com/2014-01-13-the-guardian-interviews-gilt-ceo-michelle-peluso.html
+redirect_to:
+- https://tech.hbc.com/2014-01-13-welcome-deirdre-obrien.html
+redirect_to:
+- https://tech.hbc.com/2014-01-10-a-brief-chat-with-nyc-machine-learning-organizer.html
+redirect_to:
+- https://tech.hbc.com/2014-01-09-watch-gilt-co-founder-cto-michael-bryzek-at.html
+redirect_to:
+- https://tech.hbc.com/2014-01-08-catch-gilt-at-the-next-nyc-tech-talent-draft-event.html
+redirect_to:
+- https://tech.hbc.com/2014-01-06-come-to-nyc-tech-talks-at-gilt-on-january-14.html
+redirect_to:
+- https://tech.hbc.com/2013-12-31-paypal-at-gilt-groupe.html
+redirect_to:
+- https://tech.hbc.com/2013-12-30-register-for-sauce-labs-next-webinar-automating.html
+redirect_to:
+- https://tech.hbc.com/2013-12-20-welcome-giancarlo-silvestrin.html
+redirect_to:
+- https://tech.hbc.com/2013-12-20-scenes-from-our-sql-class.html
+redirect_to:
+- https://tech.hbc.com/2013-12-19-some-of-the-gilt-personalization-teams-favorite.html
+redirect_to:
+- https://tech.hbc.com/2013-12-19-a-full-stack-and-a-full-house.html
+redirect_to:
+- https://tech.hbc.com/2013-12-18-gilt-insider-the-5th-best-retail-loyalty-program.html
+redirect_to:
+- https://tech.hbc.com/2013-12-18-santa-claus-comes-to-gilt.html
+redirect_to:
+- https://tech.hbc.com/2013-12-18-alleywatch-interviews-father-of-sensors-and.html
+redirect_to:
+- https://tech.hbc.com/2013-12-17-welcome-paul-roman.html
+redirect_to:
+- https://tech.hbc.com/2013-12-17-gilt-co-founder-cto-michael-bryzek-to-present-at.html
+redirect_to:
+- https://tech.hbc.com/2013-12-13-introspy-an-open-source-mobile-security-tool-to.html
+redirect_to:
+- https://tech.hbc.com/2013-12-12-new-york-city-postgresql-user-group-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2013-12-12-gilt-featured-in-ny-daily-news-article-about-stem.html
+redirect_to:
+- https://tech.hbc.com/2013-12-11-ios-office-hours-12-09-2013.html
+redirect_to:
+- https://tech.hbc.com/2013-12-11-our-last-tech-meetup-of-2013-full-stack.html
+redirect_to:
+- https://tech.hbc.com/2013-12-10-the-gilt-mobile-teams-favorite-apps-of-2013.html
+redirect_to:
+- https://tech.hbc.com/2013-12-05-gilt-to-host-the-new-york-city-postgresql-user.html
+redirect_to:
+- https://tech.hbc.com/2013-12-04-welcome-erica-mitchell.html
+redirect_to:
+- https://tech.hbc.com/2013-12-04-get-personal-with-gilt-at-the-next-brooklyn-tech.html
+redirect_to:
+- https://tech.hbc.com/2013-12-03-gilt-hosts-ios-office-hours-holiday-edition-on.html
+redirect_to:
+- https://tech.hbc.com/2013-12-02-next-free-tech-course-at-gilt-big-data-analysis.html
+redirect_to:
+- https://tech.hbc.com/2013-12-02-slides-from-dr-janusz-bryzeks-roadmap-for-the.html
+redirect_to:
+- https://tech.hbc.com/2013-11-30-read-this-quick-q-a-with-gilts-eric-bowman.html
+redirect_to:
+- https://tech.hbc.com/2013-11-26-happy-techs-giving.html
+redirect_to:
+- https://tech.hbc.com/2013-11-25-tonight-at-gilt-nycchi-presents-ux-for-iot-an.html
+redirect_to:
+- https://tech.hbc.com/2013-11-24-sleuthing-and-solving-the-user-logout-bug-on-ios.html
+redirect_to:
+- https://tech.hbc.com/2013-11-22-experimenting-with-product-and-ux-design-at-test.html
+redirect_to:
+- https://tech.hbc.com/2013-11-20-gilt-is-a-sponsor-of-krakow-polands-scalacamp.html
+redirect_to:
+- https://tech.hbc.com/2013-11-20-gilt-software-engineer-jenny-leahy-is-a-winner.html
+redirect_to:
+- https://tech.hbc.com/2013-11-19-the-nyc-search-discovery-analytics-meetup-comes.html
+redirect_to:
+- https://tech.hbc.com/2013-11-18-gilt-hosts-university-of-virginia-nyc-tech-talent.html
+redirect_to:
+- https://tech.hbc.com/2013-11-15-former-gilt-girl-who-codes-nikita-rau-featured-in.html
+redirect_to:
+- https://tech.hbc.com/2013-11-15-tuts-interview-scalability-scala-and-more-with.html
+redirect_to:
+- https://tech.hbc.com/2013-11-14-video-immutability-and-innovation-gilt-talk.html
+redirect_to:
+- https://tech.hbc.com/2013-11-13-come-to-introduction-to-elasticsearch-at-gilt-on.html
+redirect_to:
+- https://tech.hbc.com/2013-11-11-tools-to-drive-up-conversion-in-fashion.html
+redirect_to:
+- https://tech.hbc.com/2013-11-11-gilts-susan-thomas-featured-at-tomorrows-future.html
+redirect_to:
+- https://tech.hbc.com/2013-11-10-immutability-and-innovation-gilt-the-perfect.html
+redirect_to:
+- https://tech.hbc.com/2013-11-08-gilts-christopher-gonzalez-featured-at-mobile.html
+redirect_to:
+- https://tech.hbc.com/2013-11-08-come-to-test-tube-speed-dating-for-product.html
+redirect_to:
+- https://tech.hbc.com/2013-11-06-tonight-at-gilt-ios-office-hours-mobile-app.html
+redirect_to:
+- https://tech.hbc.com/2013-11-05-rsvp-for-our-internet-of-things-tech-talk-by-dr.html
+redirect_to:
+- https://tech.hbc.com/2013-11-05-gilt-hosts-railsbridge-orientation-session-tonight.html
+redirect_to:
+- https://tech.hbc.com/2013-11-04-gilt-presents-at-optimizely-101-slideshow.html
+redirect_to:
+- https://tech.hbc.com/2013-11-01-goreq-a-simple-sane-http-request-library-for-go.html
+redirect_to:
+- https://tech.hbc.com/2013-11-01-welcome-andrew-chen.html
+redirect_to:
+- https://tech.hbc.com/2013-11-01-our-next-free-tech-course-at-gilt-hadoop-with.html
+redirect_to:
+- https://tech.hbc.com/2013-10-31-gilt-vp-architecture-eric-bowman-on-continuous.html
+redirect_to:
+- https://tech.hbc.com/2013-10-30-welcome-gary-loshuertos.html
+redirect_to:
+- https://tech.hbc.com/2013-10-28-making-news-gilt-ireland-coo-fidelma-healy.html
+redirect_to:
+- https://tech.hbc.com/2013-10-28-the-story-of-the-gilt-load-testing-platform.html
+redirect_to:
+- https://tech.hbc.com/2013-10-25-gilt-on-the-go-4-0.html
+redirect_to:
+- https://tech.hbc.com/2013-10-25-gilts-kevin-scaldeferri-on-enabling-micro-service.html
+redirect_to:
+- https://tech.hbc.com/2013-10-24-scala-self-types-gregor-heines-presentation-at.html
+redirect_to:
+- https://tech.hbc.com/2013-10-24-welcome-brendan-st-john.html
+redirect_to:
+- https://tech.hbc.com/2013-10-23-gilt-co-founder-cto-michael-bryzek-is-a-judge-at.html
+redirect_to:
+- https://tech.hbc.com/2013-10-23-the-talks-from-last-weekends-pacific-northwest.html
+redirect_to:
+- https://tech.hbc.com/2013-10-22-apple-features-gilt-push-notifications-in-todays.html
+redirect_to:
+- https://tech.hbc.com/2013-10-22-dublin-scala-users-group-meets-tonight.html
+redirect_to:
+- https://tech.hbc.com/2013-10-21-gilts-knitting-ninjas.html
+redirect_to:
+- https://tech.hbc.com/2013-10-21-monthly-nyc-java-users-meetup-comes-to-gilt.html
+redirect_to:
+- https://tech.hbc.com/2013-10-18-goblin-a-minimal-and-beautiful-testing-framework.html
+redirect_to:
+- https://tech.hbc.com/2013-10-17-infiniti-cars-and-fashion-stars-making-adaptive.html
+redirect_to:
+- https://tech.hbc.com/2013-10-17-scala-days-2014-announced.html
+redirect_to:
+- https://tech.hbc.com/2013-10-15-gilt-featured-at-fordham-technology-summit-on.html
+redirect_to:
+- https://tech.hbc.com/2013-10-11-today-in-hot-writing-utensils-the-gilt-pen.html
+redirect_to:
+- https://tech.hbc.com/2013-10-11-symmetry-scala-software-eric-bowman-presents.html
+redirect_to:
+- https://tech.hbc.com/2013-10-10-hadoop-vs-aster-a-quick-comparison.html
+redirect_to:
+- https://tech.hbc.com/2013-10-09-gilt-mobile-engineer-featured-in-new-moma.html
+redirect_to:
+- https://tech.hbc.com/2013-10-08-learn-how-gilt-works-at-this-oct-10-talk.html
+redirect_to:
+- https://tech.hbc.com/2013-10-07-a-chat-with-data-scientist-claudia-perlich.html
+redirect_to:
+- https://tech.hbc.com/2013-10-04-welcome-jonathan-leibiusky.html
+redirect_to:
+- https://tech.hbc.com/2013-10-04-groc-featured-on-the-design-blitz.html
+redirect_to:
+- https://tech.hbc.com/2013-10-04-meet-a-gilt-technologist-senior-software-engineer.html
+redirect_to:
+- https://tech.hbc.com/2013-10-03-gilt-presenting-at-todays-nyc-talent-draft-at-mit.html
+redirect_to:
+- https://tech.hbc.com/2013-10-02-watch-michael-bryzek-discuss-the-secret-to.html
+redirect_to:
+- https://tech.hbc.com/2013-10-02-talking-customer-loyalty-at-tonights-ny-data.html
+redirect_to:
+- https://tech.hbc.com/2013-10-02-typesafe-clients-in-a-distributed-service.html
+redirect_to:
+- https://tech.hbc.com/2013-10-01-a-quick-catch-up-with-james-ward-of-typesafe.html
+redirect_to:
+- https://tech.hbc.com/2013-10-01-scandlebars-presentation-slides-now-available.html
+redirect_to:
+- https://tech.hbc.com/2013-09-30-were-at-shop-orgs-annual-summit-this-week.html
+redirect_to:
+- https://tech.hbc.com/2013-09-30-register-for-pacific-northwest-scala-conference.html
+redirect_to:
+- https://tech.hbc.com/2013-09-27-funconf-bill-venners-on-scalatest-2-0.html
+redirect_to:
+- https://tech.hbc.com/2013-09-27-gilt-is-participating-in-this-weekends-internet.html
+redirect_to:
+- https://tech.hbc.com/2013-09-27-which-scala-testing-tools-should-you-use.html
+redirect_to:
+- https://tech.hbc.com/2013-09-26-catch-gilt-lead-engineer-mark-wunschs-talk-at.html
+redirect_to:
+- https://tech.hbc.com/2013-09-25-photos-dublin-scala-users-group-sept-24.html
+redirect_to:
+- https://tech.hbc.com/2013-09-24-the-art-of-personalization-at-gilt-a-talk-by.html
+redirect_to:
+- https://tech.hbc.com/2013-09-23-we-have-the-tools-to-build-a-brand-new-store.html
+redirect_to:
+- https://tech.hbc.com/2013-09-23-watch-live-video-from-todays-edge-conference.html
+redirect_to:
+- https://tech.hbc.com/2013-09-22-gilt-presents-at-cufp-conference.html
+redirect_to:
+- https://tech.hbc.com/2013-09-20-dublin-come-to-the-scala-users-group-meetup-on.html
+redirect_to:
+- https://tech.hbc.com/2013-09-20-gilt-founder-to-deliver-keynote-at-switchpitch-nyc.html
+redirect_to:
+- https://tech.hbc.com/2013-09-19-meet-groc-0-6-0-an-updated-version-of-our.html
+redirect_to:
+- https://tech.hbc.com/2013-09-18-gilt-at-gsummitx.html
+redirect_to:
+- https://tech.hbc.com/2013-09-18-riak-in-silicon-alley.html
+redirect_to:
+- https://tech.hbc.com/2013-09-17-automating-mobile-testing-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2013-09-17-next-free-tech-course-at-gilt-r.html
+redirect_to:
+- https://tech.hbc.com/2013-09-17-hacker-heart-mind-body-the-best-programmer-in.html
+redirect_to:
+- https://tech.hbc.com/2013-09-16-mobile-shopping-deconstructed-talk-now-on-video.html
+redirect_to:
+- https://tech.hbc.com/2013-09-15-radioon-dsc3167-jpg-by-randyau-on-flickr.html
+redirect_to:
+- https://tech.hbc.com/2013-09-13-sept-16-gilt-hosts-fireside-chat-with-data.html
+redirect_to:
+- https://tech.hbc.com/2013-09-13-scala-at-netflix-building-apis-with-netflix-oss.html
+redirect_to:
+- https://tech.hbc.com/2013-09-13-talking-about-trust-at-surge-2013-updated-with.html
+redirect_to:
+- https://tech.hbc.com/2013-09-12-gilt-datas-on-a-mini-tour-this-week.html
+redirect_to:
+- https://tech.hbc.com/2013-09-10-create-pdfs-from-scala-using-html-css-and.html
+redirect_to:
+- https://tech.hbc.com/2013-09-10-catch-us-at-tonights-software-meets-fashion.html
+redirect_to:
+- https://tech.hbc.com/2013-09-09-gilt-at-fashion-tech-demos-drinks-on-9-12.html
+redirect_to:
+- https://tech.hbc.com/2013-09-09-machine-learning-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2013-09-09-the-product-councils-sept-25-event-features-our.html
+redirect_to:
+- https://tech.hbc.com/2013-09-06-talking-mobile-in-nj-on-september-11.html
+redirect_to:
+- https://tech.hbc.com/2013-09-05-welcome-bin-liu.html
+redirect_to:
+- https://tech.hbc.com/2013-09-04-use-our-apis-win-a-prize-at-dressed-to-code.html
+redirect_to:
+- https://tech.hbc.com/2013-09-04-ny-tech-council-presents-three-part-series.html
+redirect_to:
+- https://tech.hbc.com/2013-08-30-come-to-our-mobile-fireside-chat-on-9-5.html
+redirect_to:
+- https://tech.hbc.com/2013-08-29-handlebars-scala-a-handlebars-for-scala.html
+redirect_to:
+- https://tech.hbc.com/2013-08-27-nyc-riak-meetup-featuring-gilt-hosted-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2013-08-27-the-day-i-submitted-600-gerrit-reviews.html
+redirect_to:
+- https://tech.hbc.com/2013-08-26-meet-a-gilt-technologist-nikita-and-diana.html
+redirect_to:
+- https://tech.hbc.com/2013-08-23-learn-more-about-gilt-mobile-at-3rd-ward-9-3.html
+redirect_to:
+- https://tech.hbc.com/2013-08-22-the-man-of-the-hacker-hour.html
+redirect_to:
+- https://tech.hbc.com/2013-08-21-hadoop-presentation-at-gilt-on-8-29.html
+redirect_to:
+- https://tech.hbc.com/2013-08-20-meet-a-gilt-technologist-hernan-teano-director.html
+redirect_to:
+- https://tech.hbc.com/2013-08-20-gilt-lifehacks-getting-gtd-done.html
+redirect_to:
+- https://tech.hbc.com/2013-08-19-gilt-at-alley-weekly-8-16.html
+redirect_to:
+- https://tech.hbc.com/2013-08-15-datadivas-documented.html
+redirect_to:
+- https://tech.hbc.com/2013-08-15-welcome-jenny-leahy.html
+redirect_to:
+- https://tech.hbc.com/2013-08-14-next-free-training-course-machine-learning-with.html
+redirect_to:
+- https://tech.hbc.com/2013-08-14-rsvp-for-our-next-ios-office-hours-with-code.html
+redirect_to:
+- https://tech.hbc.com/2013-08-13-learn-about-the-geologic-time-scale-of-gilt-coms.html
+redirect_to:
+- https://tech.hbc.com/2013-08-13-distributed-systems-zookeeper.html
+redirect_to:
+- https://tech.hbc.com/2013-08-13-alley-weekly-features-gilt-cto-cofounder-this.html
+redirect_to:
+- https://tech.hbc.com/2013-08-12-talking-census-data-with-the-datadivas-on-8-14.html
+redirect_to:
+- https://tech.hbc.com/2013-08-09-meet-a-gilt-technologist-roland-tritsch-vp.html
+redirect_to:
+- https://tech.hbc.com/2013-08-08-its-hat-day.html
+redirect_to:
+- https://tech.hbc.com/2013-08-06-startup-pitch-night-presents-gilt-cto-cofounder.html
+redirect_to:
+- https://tech.hbc.com/2013-08-05-meet-a-gilt-technologist-nabila-yusaf-software.html
+redirect_to:
+- https://tech.hbc.com/2013-08-03-common-statistical-misconceptions.html
+redirect_to:
+- https://tech.hbc.com/2013-08-02-an-hour-in-the-life-of-the-gilt-mobile-team-in.html
+redirect_to:
+- https://tech.hbc.com/2013-08-02-study-4-goofing-off-is-good-for-you-and-your.html
+redirect_to:
+- https://tech.hbc.com/2013-08-02-gilt-tech-leaders-meet-headphone-kpis-for-july.html
+redirect_to:
+- https://tech.hbc.com/2013-08-01-rock-your-doc-with-groc-our-favorite-automated.html
+redirect_to:
+- https://tech.hbc.com/2013-07-31-hey-nyc-come-to-our-ios-office-hours-meetup-on.html
+redirect_to:
+- https://tech.hbc.com/2013-07-31-catch-gilts-presentation-at-backboneconf-today.html
+redirect_to:
+- https://tech.hbc.com/2013-07-30-interested-in-free-scala-training-at-gilts-dublin.html
+redirect_to:
+- https://tech.hbc.com/2013-07-29-baking-soda-volcanoes-need-not-apply-highlights.html
+redirect_to:
+- https://tech.hbc.com/2013-07-29-gilt-an-official-sponsor-of-the-pnw-scala.html
+redirect_to:
+- https://tech.hbc.com/2013-07-26-a-perfect-day-for-a-mobile-team-outing.html
+redirect_to:
+- https://tech.hbc.com/2013-07-26-meet-a-gilt-technologist-christine-titus-lead.html
+redirect_to:
+- https://tech.hbc.com/2013-07-24-gilt-tech-on-the-town-technology-you-can-touch.html
+redirect_to:
+- https://tech.hbc.com/2013-07-23-hope-to-see-you-at-the-open-source-science-fair.html
+redirect_to:
+- https://tech.hbc.com/2013-07-19-meet-a-gilt-technologist-patrick-losco-software.html
+redirect_to:
+- https://tech.hbc.com/2013-07-19-girls-who-code-visit-gilt-tech.html
+redirect_to:
+- https://tech.hbc.com/2013-07-18-rsvp-for-our-lucene-event-in-dublin-on-7-31.html
+redirect_to:
+- https://tech.hbc.com/2013-07-18-lucene-scala.html
+redirect_to:
+- https://tech.hbc.com/2013-07-17-attend-our-first-ever-scala-hacker-hours-meetup-on.html
+redirect_to:
+- https://tech.hbc.com/2013-07-16-talking-to-typesafe-about-scala-akka-play-and.html
+redirect_to:
+- https://tech.hbc.com/2013-07-16-how-to-set-up-your-own-photo-booth-using-eye-fi.html
+redirect_to:
+- https://tech.hbc.com/2013-07-15-riak-passes-the-stress-test.html
+redirect_to:
+- https://tech.hbc.com/2013-07-15-truly-scale-a-modern-engineering-organization.html
+redirect_to:
+- https://tech.hbc.com/2013-07-12-meet-a-gilt-technologist-lead-software-engineer.html
+redirect_to:
+- https://tech.hbc.com/2013-07-12-play-meetup-recap.html
+redirect_to:
+- https://tech.hbc.com/2013-07-11-gilt-featured-on-huffpost-lives-tech-game.html
+redirect_to:
+- https://tech.hbc.com/2013-07-11-making-cents-of-census-data.html
+redirect_to:
+- https://tech.hbc.com/2013-07-10-async-coding-in-play-with-both-java-and-scala.html
+redirect_to:
+- https://tech.hbc.com/2013-07-09-how-to-do-high-tea-the-gilt-tech-way.html
+redirect_to:
+- https://tech.hbc.com/2013-07-09-rsvp-for-tomorrows-engineering-scale-talk.html
+redirect_to:
+- https://tech.hbc.com/2013-07-08-gilt-a-sponsor-of-this-weeks-lambda-jam.html
+redirect_to:
+- https://tech.hbc.com/2013-07-05-if-you-love-it-so-much-why-dont-you-write-a.html
+redirect_to:
+- https://tech.hbc.com/2013-07-03-scala-training-at-gilt-an-engineer-shares-her.html
+redirect_to:
+- https://tech.hbc.com/2013-07-02-ceo-michelle-peluso-lunches-with-gilts-women.html
+redirect_to:
+- https://tech.hbc.com/2013-07-01-talking-tact-stacks-and-antifragility-at-tech-in.html
+redirect_to:
+- https://tech.hbc.com/2013-07-01-gilt-an-official-sponsor-of-the-postgresql.html
+redirect_to:
+- https://tech.hbc.com/2013-06-28-deployment-milestone.html
+redirect_to:
+- https://tech.hbc.com/2013-06-28-meet-a-gilt-technologist-nathan-stilwell.html
+redirect_to:
+- https://tech.hbc.com/2013-06-27-gilt-featured-at-tonights-made-in-ny-tech.html
+redirect_to:
+- https://tech.hbc.com/2013-06-26-scaling-happiness-horizontally-video-basho-has.html
+redirect_to:
+- https://tech.hbc.com/2013-06-25-our-cookies-are-secure.html
+redirect_to:
+- https://tech.hbc.com/2013-06-25-committing-to-cloudstack.html
+redirect_to:
+- https://tech.hbc.com/2013-06-21-the-27-day-beer-challenge-is-underway-when-we.html
+redirect_to:
+- https://tech.hbc.com/2013-06-21-meet-a-gilt-technologist-nithya-venkateswaran.html
+redirect_to:
+- https://tech.hbc.com/2013-06-20-gilts-development-deployment-infrastructure.html
+redirect_to:
+- https://tech.hbc.com/2013-06-20-sign-up-for-free-scala-training-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2013-06-18-the-human-side-of-scala.html
+redirect_to:
+- https://tech.hbc.com/2013-06-14-meet-a-gilt-technologist-paul-lee-software.html
+redirect_to:
+- https://tech.hbc.com/2013-06-11-gilt-tech-presents-at-scala-days-slides.html
+redirect_to:
+- https://tech.hbc.com/2013-06-10-scala-days-begins-in-nyc.html
+redirect_to:
+- https://tech.hbc.com/2013-06-07-virtualization-at-gilt-a-lightning-talk-for-nyc.html
+redirect_to:
+- https://tech.hbc.com/2013-06-05-desert-chrome.html
+redirect_to:
+- https://tech.hbc.com/2013-06-03-pondering-how-to-manage-email-templates-after-a.html
+redirect_to:
+- https://tech.hbc.com/2013-06-03-fail-ales-beers-carefully-selected-for-the-first.html
+redirect_to:
+- https://tech.hbc.com/2013-05-29-gilt-ceo-michelle-peluso-visits-the-dublin-office.html
+redirect_to:
+- https://tech.hbc.com/2013-05-26-ade-trenaman-gilt-slide-wins-pic-o-the-day.html
+redirect_to:
+- https://tech.hbc.com/2013-05-22-ninjas-in-their-natural-habitat.html
+redirect_to:
+- https://tech.hbc.com/2013-05-16-c-level-engineering-symmetry.html
+redirect_to:
+- https://tech.hbc.com/2013-05-14-monitoring-network-traffic-and-service-chatter.html
+redirect_to:
+- https://tech.hbc.com/2013-05-08-mobile-web-how-to-development-environment-toolkit.html
+redirect_to:
+- https://tech.hbc.com/2013-05-07-mobile-web-how-to-proxy-local-environment-to.html
+redirect_to:
+- https://tech.hbc.com/2013-05-07-today-in-pictures.html
+redirect_to:
+- https://tech.hbc.com/2013-05-06-mobile-web-how-to-detect-samsung-s4-device-on.html
+redirect_to:
+- https://tech.hbc.com/2013-05-03-mobile-web-how-to-inspect-elements-on-androids.html
+redirect_to:
+- https://tech.hbc.com/2013-05-01-offsite.html
+redirect_to:
+- https://tech.hbc.com/2013-04-30-ade-trenaman-erlang-distributed-systems-and.html
+redirect_to:
+- https://tech.hbc.com/2013-04-25-ade-trenaman-why-java-8-doesnt-rock-my-scala.html
+redirect_to:
+- https://tech.hbc.com/2013-04-24-gilt-mobile-web-nav-redesigned.html
+redirect_to:
+- https://tech.hbc.com/2013-04-18-up-and-running-with-play2.html
+redirect_to:
+- https://tech.hbc.com/2013-04-08-working-with-time-series-data.html
+redirect_to:
+- https://tech.hbc.com/2013-04-05-gilt-mobile-web-redesigned-10-views-compared.html
+redirect_to:
+- https://tech.hbc.com/2013-03-26-26-3-13-todays-noon-outage-and-what-were-doing.html
+redirect_to:
+- https://tech.hbc.com/2013-03-18-intro-to-angularjs-gilt-api.html
+redirect_to:
+- https://tech.hbc.com/2013-03-14-sxsw-2013-recap.html
+redirect_to:
+- https://tech.hbc.com/2013-03-07-scaling-agile-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2013-02-26-love-the-tech-badge-of-honor-stickers-appearing.html
+redirect_to:
+- https://tech.hbc.com/2013-02-20-gilt-at-the-fashion-hackathon.html
+redirect_to:
+- https://tech.hbc.com/2013-02-20-already-looking-forward-to-dress-like-nathan-day.html
+redirect_to:
+- https://tech.hbc.com/2013-02-20-gilt-tech-mongodb-austin-2013.html
+redirect_to:
+- https://tech.hbc.com/2013-02-19-codecademy-gilt.html
+redirect_to:
+- https://tech.hbc.com/2013-02-14-apparently-i-wasnt-the-only-one-in-tech-nominated.html
+redirect_to:
+- https://tech.hbc.com/2013-02-12-some-of-us-went-to-the-nyc-data-science-meet-up.html
+redirect_to:
+- https://tech.hbc.com/2013-02-08-its-official-traffic-from-ie-7-finally-hit-1.html
+redirect_to:
+- https://tech.hbc.com/2013-02-07-great-start-to-the-2013-gilt-groupe-architecture.html
+redirect_to:
+- https://tech.hbc.com/2013-02-03-great-turnout-at-the-decoded-fashion-and-tech.html
+redirect_to:
+- https://tech.hbc.com/2013-01-28-adding-lxc-support-to-cloudstack.html
+redirect_to:
+- https://tech.hbc.com/2013-01-15-join-gilt-groupe-for-the-hearst-fashion-hack.html
+redirect_to:
+- https://tech.hbc.com/2013-01-11-it-is-beer-oclock-in-dublin.html
+redirect_to:
+- https://tech.hbc.com/2013-01-10-father-of-tm1-gilt.html
+redirect_to:
+- https://tech.hbc.com/2012-12-21-tamara-gruzbarg-of-gilt-using-analytics-to-give.html
+redirect_to:
+- https://tech.hbc.com/2012-12-20-a-moment-of-silence-for-the-sandy-hook-victims.html
+redirect_to:
+- https://tech.hbc.com/2012-12-08-vp-infrastructure-engineering-work.html
+redirect_to:
+- https://tech.hbc.com/2012-12-06-thanks-to-cliff-moon-moonpolysoft-for-stopping-by.html
+redirect_to:
+- https://tech.hbc.com/2012-12-04-the-end-of-movember-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2012-11-14-how-gilt-com-give-came-to-be.html
+redirect_to:
+- https://tech.hbc.com/2012-11-14-teaching-scala-tcd-back-to-the-roots.html
+redirect_to:
+- https://tech.hbc.com/2012-11-14-sometimes-small-things-make-a-big-difference.html
+redirect_to:
+- https://tech.hbc.com/2012-11-13-gilt-tech-propaganda.html
+redirect_to:
+- https://tech.hbc.com/2012-11-03-the-gilt-data-team-goes-to-partners.html
+redirect_to:
+- https://tech.hbc.com/2012-10-02-mongodb-performance-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2012-08-08-a-big-thanks-to-this-years-girls-who-code-field.html
+redirect_to:
+- https://tech.hbc.com/2012-07-27-search-on-gilt.html
+redirect_to:
+- https://tech.hbc.com/2012-07-20-the-rare-double-deploy-by-geoff-guerdat.html
+redirect_to:
+- https://tech.hbc.com/2012-07-18-gilt-internal-hackathon-july-edition.html
+redirect_to:
+- https://tech.hbc.com/2012-07-08-gilt-live-a-new-way-to-shop.html
+redirect_to:
+- https://tech.hbc.com/2012-06-18-we-saw-a-great-turnout-here-at-gilt-hq-on-saturday.html
+redirect_to:
+- https://tech.hbc.com/2012-06-01-users-can-now-browse-the-gilt-daily-sales-in-a.html
+redirect_to:
+- https://tech.hbc.com/2012-05-21-nyc-fashion-hack-day-2012-june-16.html
+redirect_to:
+- https://tech.hbc.com/2012-05-18-gilt-is-hosting-the-play-nyc-meetup.html
+redirect_to:
+- https://tech.hbc.com/2012-05-04-friday-fun-with-gilt-games.html
+redirect_to:
+- https://tech.hbc.com/2012-04-28-the-5th-floor.html
+redirect_to:
+- https://tech.hbc.com/2012-04-20-gilt-tech-nyc-powered-by-mongodb-hackathon.html
+redirect_to:
+- https://tech.hbc.com/2012-04-16-the-pmo-right-work-right-time-right-people.html
+redirect_to:
+- https://tech.hbc.com/2012-03-14-lessons-in-ratatouille.html
+redirect_to:
+- https://tech.hbc.com/2012-03-07-summerqamp-introducing-qa-as-a-career-opportunity.html
+redirect_to:
+- https://tech.hbc.com/2012-03-01-public-api-language-bindings-round-2.html
+redirect_to:
+- https://tech.hbc.com/2012-02-23-affiliate-marketing-program-open-to-developers.html
+redirect_to:
+- https://tech.hbc.com/2012-02-15-first-public-api-language-bindings-available-now.html
+redirect_to:
+- https://tech.hbc.com/2012-02-13-managers-become-the-flywheel.html
+redirect_to:
+- https://tech.hbc.com/2012-02-10-nosql-in-the-real-world-the-video-pics-and.html
+redirect_to:
+- https://tech.hbc.com/2012-02-08-gilt-public-api-launched.html
+redirect_to:
+- https://tech.hbc.com/2012-02-07-old-browsers-in-ecommerce-what-to-do-with-ie6.html
+redirect_to:
+- https://tech.hbc.com/2012-01-20-the-gilt-tech-shirts-are-here-if-you-love-bacon.html
+redirect_to:
+- https://tech.hbc.com/2012-01-18-nosql-in-the-real-world.html
+redirect_to:
+- https://tech.hbc.com/2012-01-17-no-title.html
+redirect_to:
+- https://tech.hbc.com/2011-12-12-my-time-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2011-12-05-gilt-apis.html
+redirect_to:
+- https://tech.hbc.com/2011-11-28-movember-at-gilt-here-at-gilt-we-care-about-each.html
+redirect_to:
+- https://tech.hbc.com/2011-10-25-gilt-home-launch.html
+redirect_to:
+- https://tech.hbc.com/2011-10-21-exotic-languages-and-the-web.html
+redirect_to:
+- https://tech.hbc.com/2011-10-17-building-great-tech-teams-12-critical-questions.html
+redirect_to:
+- https://tech.hbc.com/2011-10-06-exotic-languages-and-the-web.html
+redirect_to:
+- https://tech.hbc.com/2011-10-04-restoring-page-state-with-session-storage.html
+redirect_to:
+- https://tech.hbc.com/2011-09-16-implementing-taxonomy-for-better-user-experiences.html
+redirect_to:
+- https://tech.hbc.com/2011-08-24-thinking-functionally-the-video.html
+redirect_to:
+- https://tech.hbc.com/2011-08-03-my-time-in-gilt-tech.html
+redirect_to:
+- https://tech.hbc.com/2011-08-02-using-dependency-injection-to-incorporate-a-b.html
+redirect_to:
+- https://tech.hbc.com/2011-08-01-thinking-functionally.html
+redirect_to:
+- https://tech.hbc.com/2011-07-12-mothership.html
+redirect_to:
+- https://tech.hbc.com/2011-06-21-gilt-technologie-goes-global.html
+redirect_to:
+- https://tech.hbc.com/2011-06-07-coffee-club.html
+redirect_to:
+- https://tech.hbc.com/2011-06-06-product-recommendations-at-gilt.html
+redirect_to:
+- https://tech.hbc.com/2011-06-03-pci-poetry.html
+redirect_to:
+- https://tech.hbc.com/2011-05-26-gilt-tech-talks-mike-taylor-on-html5-web.html
+redirect_to:
+- https://tech.hbc.com/2011-05-12-gilt-tech-talks-java-scala-with-the-guardians.html
+redirect_to:
+- https://tech.hbc.com/2011-05-04-optimistic-type-casting-in-objective-c.html
+redirect_to:
+- https://tech.hbc.com/2011-05-03-charlie-sheen-time-lapse.html
+redirect_to:
+- https://tech.hbc.com/2011-04-25-stay-out-of-the-way.html
+redirect_to:
+- https://tech.hbc.com/2011-04-15-puppetnyc-monthly-meetup-13-apr-2011.html
+redirect_to:
+- https://tech.hbc.com/2011-04-14-codeconf-lightning-talk.html
+redirect_to:
+- https://tech.hbc.com/2011-04-08-30k-foot-commit.html
+redirect_to:
+- https://tech.hbc.com/2011-04-05-gilt-tech-divas.html
+redirect_to:
+- https://tech.hbc.com/2011-04-01-building-a-javascript-module-framework.html
+redirect_to:
+- https://tech.hbc.com/2011-03-10-hackathon.html
+redirect_to:
+- https://tech.hbc.com/2011-03-09-coffeescript.html
+redirect_to:
+- https://tech.hbc.com/2011-03-04-five-questions-you-must-ask-your-pci-auditor.html
+redirect_to:
+- https://tech.hbc.com/2011-03-02-the-rule-of-4.html
+redirect_to:
+- https://tech.hbc.com/2011-02-17-kiva-robots.html
+redirect_to:
+- https://tech.hbc.com/2011-02-15-gilt-template.html
+redirect_to:
+- https://tech.hbc.com/2011-02-14-the-friday-5-4.html
+redirect_to:
+- https://tech.hbc.com/2011-02-11-bacon.html
+redirect_to:
+- https://tech.hbc.com/2011-02-10-asynchronous-specs.html
+redirect_to:
+- https://tech.hbc.com/2011-02-10-the-xcode-organizer-doesnt-show-me-all-my-crash.html
+redirect_to:
+- https://tech.hbc.com/2011-02-09-test-swarm.html
+redirect_to:
+- https://tech.hbc.com/2011-02-08-tips-for-optimizing-iphone-ipad-applications.html
