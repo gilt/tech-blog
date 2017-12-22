@@ -43,7 +43,7 @@ We triangulated ourselves of organisations like Netflix, Facebook and Google, an
 
 * __Google__: Google has multi-tier 'levelled' system, with IC levels ranging from _Level 1: Software Engineer I_ to _Level 10: Senior Google Fellow_, and a parallel engineering management track that ranges from level 5 to level 10.
 
-* __FaceBook__: FaceBook also has a multi-tier 'levelled' system. Engineers range from _Level 3 - Software Engineer_ up to a _Level 9_, with associated _Manager_ and _Director_ roles on a parallel track above _Level 5_. Anecdotally, once an individual elects into the management track, the intent is that they will remain in that track.
+* __Facebook__: Facebook also has a multi-tier 'levelled' system. Engineers range from _Level 3 - Software Engineer_ up to a _Level 9_, with associated _Manager_ and _Director_ roles on a parallel track above _Level 5_. Anecdotally, once an individual elects into the management track, the intent is that they will remain in that track.
 
 * __Gilt__: At Gilt, pre-2014 we had a structure similar to Netflix (see above!), and we found that this structure didn't give a compelling career prospect for individual contributors in our engineering teams. Ironically, for tech team with a strong startup mentality, we looked to the industry and adopted what outwardly seems to be a fairly _traditional_ approach. Based on the [Radford](https://radford.aon.com/insights/articles/2015/radford-global-job-leveling) methodology, we created a career path and approach that had the following qualities:
 
@@ -94,6 +94,12 @@ Lead Level  | Title                           | Team size
 7           | Senior Director                 | 25+
 8           | VP Engineering                  | ~80 (e.g. a engineering site / office)
 9           | SVP Engineering                 | ~150 (a Dunbar)
+
+* Accountability: what are the systems that you own / are responsible for. How critical are they to the business?
+
+One big learning is that these indicators are only _guidelines_. I dislike the idea of career advancement being a box-ticking exercise: there is a qualitative judgement that we as leaders need to apply, and sometimes a candidate's excellence in one area may make up for a deficit in another, or, make up for organisational blockers. For example, we once had a Director of Engineering with a small team of four or five reports; you could argue that this Director didn't have a large enough team to warrant the title. However, when we considered his technical ability, the scope of the role, the level of accountability, and, the fact that we would most like never have a class room size team in this area, we felt great about promoting.
+
+Qualitative judgement of levels is, of course, hard. One idea we found helpful was looking at _peer groups_, to ensure that staff at the same level are in the same peer group. If we found that a member of staff ended up grouped with other members who seem at a different level, we re-examine the case to make sure our evaluation has been correct and fair.
 
 ###  Rolling out a Career Path
 
