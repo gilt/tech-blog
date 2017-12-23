@@ -3,7 +3,8 @@ layout: post
 title:  Linting NPM Version Conflicts
 author: Andrew Powell
 date: 2016-11-09
-categories: 'node'
+categories: 
+- node
 tag:
 - npm
 - node.js

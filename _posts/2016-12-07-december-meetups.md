@@ -3,7 +3,8 @@ layout: post
 title: December Meetups at HBC Digital
 author: John Coghlan
 date:   2016-12-07
-categories: 'continuous integration'
+categories: 
+- meetups
 tag:
 - meetups
 - scala

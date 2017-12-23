@@ -3,7 +3,8 @@ layout: post
 title: ION-Roller - Immutable software deployment service for AWS
 author: Natalia Bartol
 date: '2015-09-16'
-categories: 'aws deployment'
+categories: 
+- aws
 tags:
 - Gary Coady
 - Natalia Bartol

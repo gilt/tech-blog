@@ -3,7 +3,8 @@ layout: post
 title: "Pau Carré Cardona To Speak at O'Reilly AI Conference"
 author: HBC Digital
 date: '2017-04-12'
-categories: AI
+categories:
+- AI
 tags:
 - machine learning
 - deep learning

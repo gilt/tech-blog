@@ -3,7 +3,8 @@ layout: post
 title: "The POps Up Plant Shop"
 author: HBC Digital
 date: '2017-05-18'
-categories: 'culture'
+categories: 
+- culture
 tags:
 - people operations
 - happiness

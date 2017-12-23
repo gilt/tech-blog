@@ -3,7 +3,8 @@ layout: post
 title: "New Gilt HQ"
 author: John Coghlan
 date: '2016-8-29'
-categories: 'culture'
+categories: 
+- culture
 tags:
 - office space
 - culture

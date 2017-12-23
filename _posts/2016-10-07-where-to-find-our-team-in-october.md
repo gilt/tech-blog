@@ -3,7 +3,8 @@ layout: post
 title: "Where to find our team in October"
 author: John Coghlan
 date: '2016-10-07'
-categories: 'meetups'
+categories: 
+- meetups
 tags:
 - agile
 - product
