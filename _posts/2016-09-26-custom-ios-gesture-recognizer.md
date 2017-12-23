@@ -3,7 +3,8 @@ layout: post
 title: "iOS Custom Gesture Recognizer"
 author: Paul Lee
 date: '2016-9-26'
-categories: 'ios'
+categories: 
+- ios
 tags:
 - ios
 - gesture recognizer

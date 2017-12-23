@@ -3,7 +3,8 @@ layout: post
 title: NYC Scrum User Group - January 19th
 author: 
 date: '2017-01-11'
-categories: 'meetups'
+categories: 
+- meetups
 tags:
 - meetups
 - agile

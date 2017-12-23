@@ -3,7 +3,8 @@ layout: post
 title: "New open source project: scala-fedex"
 author: Ryan Caloras
 date: '2016-8-21'
-categories: 'open source'
+categories: 
+- open source
 tags:
 - scala
 - fedex

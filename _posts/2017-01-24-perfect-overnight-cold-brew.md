@@ -3,7 +3,8 @@ layout: post
 title: Perfect Overnight Cold Brew
 author: Evan Maloney
 date: '2017-01-25'
-categories: 'coffee'
+categories: 
+- coffee
 tags:
 - iced coffee
 - cold brew

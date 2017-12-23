@@ -3,7 +3,8 @@ layout: post
 title: Don’t just read about DevOps culture, play-test it!
 author: Dana Pylayeva
 date: '2017-02-14'
-categories: 'devops'
+categories: 
+- devops
 tags:
 - culture
 - devops

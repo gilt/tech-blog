@@ -3,7 +3,8 @@ layout: post
 title: BackOffice Hike
 author: Ryan Martin
 date: '2017-01-05'
-categories: 'culture'
+categories: 
+- culture
 tags:
 - culture
 - outing

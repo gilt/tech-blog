@@ -3,7 +3,8 @@ layout: post
 title: "Where to find our team in March"
 author: HBC Digital
 date: '2017-02-28'
-categories: 'meetups'
+categories: 
+- meetups
 tags:
 - agile
 - people ops

@@ -3,7 +3,8 @@ layout: post
 title:  'Running with Scissors: Koa2 and Vue.js'
 author: Andrew Powell
 date: '2016-11-04'
-categories: 'node'
+categories: 
+- node
 tag:
 - koa2
 - node.js
