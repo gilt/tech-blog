@@ -70,7 +70,7 @@ Rob Witoff  ([@rwitoff](https://twitter.com/rwitoff)) at QCon London 2017
 [![Rob Witoff - Tech Debt](http://img.youtube.com/vi/KaK2lAj1B-Q/0.jpg)](http://www.youtube.com/watch?v=KaK2lAj1B-Q "Video Title")
 
 ## Gilt's iOS codebase evolution
-Evan Maloney ([@_emaloney_](https://twitter.com/_emaloney_)) at the Brooklyn Swift Developers Meetup
+Evan Maloney ([@\_emaloney\_](https://twitter.com/_emaloney_)) at the Brooklyn Swift Developers Meetup
 
 [![evan-maloney-image](/assets/images/presentations-we-love-2017/evan-maloney-ios-swift-gilt-2017.png)](https://vimeo.com/217236459)
 
