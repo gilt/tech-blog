@@ -32,7 +32,7 @@ Mike Bryzek ([@mbryzek](https://twitter.com/mbryzek)) at QCon New York 2017
 ## Streaming Microservices: Contracts & Compatibility
 Gwen Shapira ([@gwenshap](https://twitter.com/gwenshap)) at QCon New York 2017
 
-[![contracts-streaming-image](/assets/images/presentations-we-love-2017/gwen-shapira-contracts-and-compatibility.png)](https://www.infoq.com/presentations/contracts-streaming-microservices)
+[![contracts-streaming-image](/assets/images/presentations-we-love-2017/gwen-shapira-contracts-and-compatibility-480.png)](https://www.infoq.com/presentations/contracts-streaming-microservices)
 
 ## Spinnaker and the Culture Behind the Tech
 Dianne Marsh ([@dmarsh](https://twitter.com/dmarsh)) at KubeCon 2017
@@ -57,7 +57,7 @@ Nora Jones ([@nora_js](https://twitter.com/nora_js)) at AWS re:invent 2017
 ## apibuilder
 Sean Sullivan ([@tinyrobots](https://twitter.com/tinyrobots)) at Scala Up North 2017
 
-[![apibuilder-image](/assets/images/presentations-we-love-2017/sean-sullivan-apibuilder-july-2017.png)](https://speakerdeck.com/sullis/api-builder-scala-up-north-2017)
+[![apibuilder-image](/assets/images/presentations-we-love-2017/sean-sullivan-apibuilder-july-2017-480.png)](https://speakerdeck.com/sullis/api-builder-scala-up-north-2017)
 
 ## Managing Data in Microservices
 Randy Shoup ([@randyshoup](https://twitter.com/randyshoup)) at QCon New York 2017
@@ -77,4 +77,4 @@ Evan Maloney ([@\_emaloney\_](https://twitter.com/_emaloney_)) at the Brooklyn S
 ## Apache Struts and the Equifax Data Breach
 Sean Sullivan ([@tinyrobots](https://twitter.com/tinyrobots)) at the Portland Java User Group
 
-[![struts-equifax-image](/assets/images/presentations-we-love-2017/sean-sullivan-struts-and-equifax-october-2017.png)](https://speakerdeck.com/sullis/apache-struts-and-the-equifax-data-breach)
+[![struts-equifax-image](/assets/images/presentations-we-love-2017/sean-sullivan-struts-and-equifax-october-2017-480.png)](https://speakerdeck.com/sullis/apache-struts-and-the-equifax-data-breach)
