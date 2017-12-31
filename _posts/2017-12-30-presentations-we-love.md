@@ -13,8 +13,6 @@ tags:
 - 2017
 ---
 
-# Presentations we love: 2017
-
 2017 was a year of growth and learning at HBC Tech. Our organization embraced new technologies and new ways of building application software.
 
 As the year comes to an end, let's recognize some notable technical presentations from 2017.
