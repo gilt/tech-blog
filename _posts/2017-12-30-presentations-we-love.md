@@ -72,7 +72,7 @@ Rob Witoff  ([@rwitoff](https://twitter.com/rwitoff)) at QCon London 2017
 ## Gilt's iOS codebase evolution
 Evan Maloney ([@\_emaloney\_](https://twitter.com/_emaloney_)) at the Brooklyn Swift Developers Meetup
 
-[![evan-maloney-image](/assets/images/presentations-we-love-2017/evan-maloney-ios-swift-gilt-2017.png)](https://vimeo.com/217236459)
+[![evan-maloney-image](/assets/images/presentations-we-love-2017/evan-maloney-ios-swift-gilt-2017-480.png)](https://vimeo.com/217236459)
 
 ## Apache Struts and the Equifax Data Breach
 Sean Sullivan ([@tinyrobots](https://twitter.com/tinyrobots)) at the Portland Java User Group
