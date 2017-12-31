@@ -17,7 +17,7 @@ tags:
 
 2017 was a year of growth and learning at HBC Tech. Our organization embraced new technologies and new ways of building application software.
 
-As the year comes to an end, let's recognize some notable technical presentations from the past twelve months.
+As the year comes to an end, let's recognize some notable technical presentations from 2017.
 
 ## Kubernetes Project update
 Kelsey Hightower ([@kelseyhightower](https://twitter.com/kelseyhightower)) at KubeCon 2017
