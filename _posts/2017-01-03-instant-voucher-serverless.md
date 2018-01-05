@@ -25,12 +25,12 @@ Since many of Gilt City’s offers are of impulsive nature and time-sensitive, l
 
 It is never easy to rewrite (or replace) a mission critical system. In our case, we have to keep existing monolithic ruby & rails app running while spinning up new pipeline. We took the strangler pattern (see this [Martin Fowler’s article](https://martinfowler.com/bliki/StranglerApplication.html) for strangler concept) and built a new per-order-processing api layer around existing batch-processing, job-based system in the same r&r app. With this approach, the legacy job-based system gradually receives less traffic and becomes a fallback safety net to catch and retry failed orders from instant pipeline.
 
-The new instant order pipeline starts with order-service publishing a notification to an SNS topic whenever it creates an order object. An order notification contains essential order properties such as order_id, user_guid, unit_id etc to allow event subscribers looking up the order object in orders key-value store. An AWS Lambda application order-notification-dispatcher subscribes to this SNS topic and kicks off the processing by invoking an AWS Step Function resource. See below a simplified architecture diagram of the order processing system.
+The new instant order pipeline starts with order-service publishing a notification to an SNS topic whenever it creates an order object. An order notification contains essential order properties such as order_id, user_guid, unit_id etc to allow event subscribers looking up the order object in orders key-value store. An AWS Lambda application order-notification-dispatcher subscribes to this SNS topic and kicks off the processing by invoking an AWS Step Function resource. See below a simplified architecture diagram of the order processing system.
 
 The architecture leverages Lambda and Step Function from AWS Serverless suite to build several key components. At Gilt, different teams have started embracing serverless paradigm to build production applications. There are many benefits from adoption of serverless paradigm, such as abstraction from infrastructure, out of box scalability, on-demand cost model etc just to name a few. Comparing to the alternative of building and maintaining an array of EC2/container instances, serverless architecture takes a step further from microservices to allow even faster iteration cycle within SDLC. With the use of Step Function as orchestrating engine, it is mucher easier to facilitate communication between Lambda applications. 
 
 <p align="center">
-<img src="https://imgur.com/a/iQSZJ"/>
+  <img src="https://imgur.com/a/iQSZJ"/>
 </p>
 
 
@@ -39,7 +39,7 @@ The architecture leverages Lambda and Step Function from AWS Serverless suite to
 As mentioned above, AWS Step Function is an orchestrating service which makes it easy to coordinates stateless Lambda applications by establishing a specification to transition application states. Behind the scene it is depicted as a state machine constructed with JSON based [Amazone State Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html). See below a sample execution from order-processing step function.
 
 <p align="center">
-<img src="https://imgur.com/a/JsZqN"/>
+  <img src="https://imgur.com/a/JsZqN"/>
 </p>
 
 At the top level the specification include various types of [States](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-states.html) such as Task, Choice, Wait to be used to compose simple business logic to transition application state. inside a Task state, an AWS Lambda arn can be specified to be executed as task. The output of the Lambda will be directed as input of next State. It also provides powerful error handling which allows catching customised errors and different retry strategies. This is some sample json spec from the order-processing state machine:
