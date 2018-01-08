@@ -152,9 +152,9 @@ Also it is critical to make cloud applications resilient to errors such as netwo
 Deploying a mission critical service to production environment is always a nervous process. At Gilt we advocate immutable deployment whenever possible and leverage AB test to help us roll out new features to customers in a gradual manner. In serverless world it is a little different since most of the infrastructure management is abstracted away but on the other side it could be simpler. 
 
 ### Lambda Versioning
-AWS Lambda's [versioning](https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html) feature provides the ability to make Lambda function immutable by publishing a version (snapshot) of the application. We really like this since it ensures the Lambda application artifact as well as environment variables cannot be modified once published. Note that in the above code snippets of state machine json, the ARN specified for each Lambda resource is Lambda version ARN instead of function ARN. We also use Lambda's [aliasing](https://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html) feature to have a **prod** alias mapping to current production version:
+AWS Lambda's [versioning](https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html) feature provides the ability to make Lambda function immutable by publishing a version (snapshot) of the application. We really like this since it ensures the Lambda application artifact as well as environment variables cannot be modified once published. Note that in the above code snippets of state machine json, the ARN specified for each Lambda resource is Lambda version ARN instead of function ARN. We also use Lambda's [aliasing](https://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html) feature to have a **prod** alias mapping to current production version, with immutable environment variables:
 
-![alt text](https://i.imgur.com/tNlFV14.png "Lambda Alias Mapping")
+![alt text](https://i.imgur.com/Rj7UeTy.png "Lambda Alias Mapping")
 
 With aliasing we can easily roll back to previous Lambda version in case of unexpected production failure.
 
@@ -162,26 +162,14 @@ With aliasing we can easily roll back to previous Lambda version in case of unex
 
 So we have immutable Lambda functions, but we still want to make our Step Functions immutable. We decide to create new Step Function resource every time we release it, meanwhile the old SF resource remains unchanged. Since AWS does not provide versioning feature for Step Function, we include semantic versioning in the Step Function name e.g. order-processing-v0.0.6. With both new and old versions (including historical SFs) we are able to apply blue/green deployment and possible rollback procedure. 
 
-To route orders to either blue/green stack, we make the **order-notification-dispatcher** Lambda the de facto router by providing blue/green versions of SF as its [environment variables](https://docs.aws.amazon.com/lambda/latest/dg/env_variables.html). Here is the Node.js codes to read these environment variables:
+To route orders to either blue/green stack, we make the **order-notification-dispatcher** Lambda the de facto router by providing blue/green versions of SF as its [environment variables](https://docs.aws.amazon.com/lambda/latest/dg/env_variables.html). Here is the Node.js codes to read stack environment variables:
 ```javascript
 const stateMachineBlueVer = process.env.STATE_MACHINE_BLUE_VER;
 const stateMachineGreenVer = process.env.STATE_MACHINE_GREEN_VER;
 ```
 
-And we can easily compose the Step Function ARN and start a new execution with AWS sdk Step Function api:
+With fetched state machine stack version we can compose the Step Function ARN with predefined format, then start a new execution with AWS sdk Step Function api:
 ```javascript
-function stateMachineVer(routeVariant) {  
-  switch (routeVariant) {
-    case routeToBlueStack: 
-      return stateMachineBlueVer;        
-    case routeToGreenStack: 
-      return stateMachineGreenVer;
-    default:      
-      console.warn(`Unknown route variant [${routeVariant}].`);
-      return stateMachineBlueVer;
-  }    
-};
-
 function dispatch(orderJson) {
   const orderId = orderJson.order_id;
   const stateMachine = preProcessingStepFunctionPrefix + orderJson.state_machine_version; 
@@ -199,7 +187,7 @@ function dispatch(orderJson) {
 
 There are 2 places in this architecture where we query our abtest service to get variance control for each order. The 1st place is in order-service where we control whether an order goes to new processing pipeline or legacy system. The 2nd one is in **order-notification-dispatcher** where we use it to shift the traffic to blue/green Step Function stacks. Also note that AWS recently released a nice [traffic shifting](https://docs.aws.amazon.com/lambda/latest/dg/lambda-traffic-shifting-using-aliases.html) feature for Lambda application. Here we didn't use it since our abtest engine provides finer-granular control which can target to certain group such as Gilt's internal employees. Here is a diagram depicting the partial rollout process for new Step Function resources:
 
-![alt text](https://i.imgur.com/QrzXAUz.png "Partial Rollout Process")
+![alt text](https://i.imgur.com/pT48c3C.png "Partial Rollout Process")
 
 # Conclusion
 
@@ -211,11 +199,11 @@ As of today all of Gilt City's orders have been directed to instant processing p
 
 From our development exerience using AWS Step Function we discover some limitations of this service.
 
-First of all it does not provdie a 'Map' state which ideally can take a list of objects and transform it to another list of result objects. In our case, an order object can 'spawn' a list of orders depending on the items it include in. Unfortuntely SF does not offer a State type that can map a dynamic number of elements. We eventually make the workaround by creating a **order-pre-processing** Step Function and make it call **order-processing** Step Function multiple times to process those 'spawned' orders.
+First of all it lacks of a feature like 'Map' state which ideally can take a list of input objects and transform it to another list of result objects. In our case, an order object can 'spawn' a list of orders depending on the items it include in. Unfortuntely SF does not offer a State type that can map a dynamic number of elements. We eventually make the workaround by creating a **order-pre-processing** Step Function and make it call **order-processing** Step Function multiple times to process those 'spawned' orders.
 
 Secondly we hope AWS can provide versioning/aliasing for Step Function so we can gain immutability out of the box instead of forcing immutability on our side. Any support for blue/green deployment would be even better.
 
-Also we expect AWS to provide better filtering/searching abilities on Step Function dashboard so we can gain some fundamental data analytics of historical executions.
+Also we expect AWS to provide better filtering/searching abilities on Step Function dashboard so we can gain some fundamental data analytics from historical executions.
 
 ### Future Work
 From architecture perspective, we are trying to standardise continous delivery process for our serverless components. At the moment what we have is "poor man's CI/CD" - some bash/node scripts which use AWS sdk's CloudFormation api to provision resources. There are varioius tools available either from AWS or serverless community such as [Terraform](https://www.terraform.io/), [CodePipeline](https://aws.amazon.com/documentation/codepipeline/) we are trying to integrate to provide a frictionless process to production.
