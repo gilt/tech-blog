@@ -76,3 +76,8 @@ Evan Maloney ([@\_emaloney\_](https://twitter.com/_emaloney_)) at the Brooklyn S
 Sean Sullivan ([@tinyrobots](https://twitter.com/tinyrobots)) at the Portland Java User Group
 
 [![struts-equifax-image](/assets/images/presentations-we-love-2017/sean-sullivan-struts-and-equifax-october-2017-480.png)](https://speakerdeck.com/sullis/apache-struts-and-the-equifax-data-breach)
+
+## Promcon 2017
+Giovanni Gargiulo ([@giannigar](https://twitter.com/giannigar)) at Promcon 2017 (Munich)
+
+[![giovanni-gargiulo-image](http://img.youtube.com/vi/btnXuFLcpS8/0.jpg)](https://www.youtube.com/watch?v=btnXuFLcpS8)
