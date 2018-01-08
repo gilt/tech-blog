@@ -27,20 +27,20 @@ It is never easy to rewrite (or replace) a mission critical system. In our case,
 
 The new instant order pipeline starts with **order-service** publishing a notification to an SNS topic whenever it creates an order object. An order notification contains essential order properties such as order_id, user_guid, unit_id etc to allow event subscribers looking up the order object in orders key-value store. An AWS Lambda application **order-notification-dispatcher** subscribes to this SNS topic and kicks off the processing by invoking an AWS Step Function resource. See below a simplified architecture diagram of the order processing system.
 
-The architecture leverages Lambda and Step Function from AWS Serverless suite to build several key components. At Gilt, different teams have started embracing serverless paradigm to build production applications. There are many benefits from adoption of serverless paradigm, such as abstraction from infrastructure, out of box scalability, on-demand cost model etc just to name a few. Comparing to the alternative of building and maintaining an array of EC2/container instances, serverless architecture takes a step further from microservices to allow even faster iteration cycle within SDLC. With the use of Step Function as orchestrating engine, it is mucher easier to facilitate communication between Lambda applications. 
+The architecture leverages Lambda and Step Function from AWS Serverless suite to build several key components. At Gilt, different teams have started embracing serverless paradigm to build production applications. There are many benefits from adoption of serverless paradigm, such as abstraction from infrastructure, out of box scalability, on-demand cost model etc just to name a few. Comparing to the alternative of building and maintaining an array of EC2/container instances, serverless architecture takes a step further from microservices to allow even faster iteration cycle within SDLC. With the use of Step Function as orchestrating engine, it is mucher easier to facilitate interaction between Lambda applications. 
 
 ![alt text](https://i.imgur.com/6QM1pHi.png "Instant Order Processing Architecture")
 
 
 # AWS Step Function for Lambda Orchestration
 
-As mentioned above, AWS Step Function is an orchestrating service which makes it easy to coordinates stateless Lambda applications by establishing a specification to transition application states. Behind the scene it is depicted as a state machine constructed with JSON based [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html). See below a sample execution from order-processing step function.
+As mentioned above, AWS Step Function is an orchestrating service which makes it easy to coordinate stateless Lambda applications by establishing a specification to transition application states. Behind the scene it is depicted as a state machine constructed with JSON based [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html). See below a sample execution from order-processing step function.
 
 ![alt text](https://i.imgur.com/xROzpZV.png "An successful Step Function execution example")
 
 ### Inside Step Function
 
-At the top level the specification include various types of [States](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-states.html) such as Task, Choice, Wait to be used to compose simple business logic to transition application state. inside a Task state, an AWS Lambda ARN can be specified to be executed as task. The output of the Lambda will be directed as input of next State. This is some sample json spec from the order-processing state machine:
+At the top level the specification include various types of [States](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-states.html) such as Task, Choice, Wait to be used to compose simple business logic to transition application state. Inside a Task state, an AWS Lambda ARN can be specified to be executed as task. The output of the Lambda will be directed as input to next State. This is some sample json spec from the order-processing state machine:
 
 ```json
 {
@@ -93,7 +93,7 @@ At the top level the specification include various types of [States](https://doc
 
 ### Polling and Retry on Errors
 
-Serverless (or FaaS) paradigm fits really well on the scenarios that computing completes within short time (ideally seconds). However sometimes we still need to run slightly longer computing or async tasks. For example in our pipeline we need to keep polling an service endpoint for fraud scan result since it is an async process. We implement it by defining a retry counter *get_fraud_status_retries* within a Choice state and set a max attempt count of 60 to terminate retries.
+Serverless (or FaaS) paradigm fits really well on the scenarios that computing completes within short time (ideally seconds). However sometimes we still need to run slightly longer computing or async tasks. For example in our pipeline we need to keep polling a service endpoint for fraud scan result since it is an async process. We implement it by defining a retry counter *get_fraud_status_retries* within a Choice state and set a max attempt count of 60 to terminate retries.
 
 ```json
 "IsFraudOrder": {
@@ -149,10 +149,10 @@ Also it is critical to make cloud applications resilient to errors such as netwo
 
 # Immutable Deployment & Partial Rollout
 
-Deploying a mission critical service to production environment is always a nervous process. At Gilt we advocate immutable deployment whenever possible and leverage AB test to help us roll out new features to customers in a gradual manner. In serverless world it is a little different since most of the infrastructure management is abstracted away but on the other side it could be simpler. 
+Deploying a mission critical service to production environment is always a nervous process. At Gilt we advocate immutable deployment whenever possible and leverage A/B test to help us roll out new features to customers in a gradual manner. In serverless world it is a little different since most of the infrastructure management is abstracted away but on the other side it could be simpler. 
 
 ### Lambda Versioning
-AWS Lambda's [versioning](https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html) feature provides the ability to make Lambda function immutable by publishing a version (snapshot) of the application. We really like this since it ensures the Lambda application artifact as well as environment variables cannot be modified once published. Note that in the above code snippets of state machine json, the ARN specified for each Lambda resource is Lambda version ARN instead of function ARN. We also use Lambda's [aliasing](https://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html) feature to have a **prod** alias mapping to current production version, with immutable environment variables:
+AWS Lambda's [versioning](https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html) feature provides the ability to make Lambda function immutable by publishing a version (snapshot) of the application. We really like this since it ensures the Lambda application artifact as well as environment variables remain untouchable once published. Note that in the above code snippets of state machine json, the ARN specified for each Lambda resource is Lambda version ARN instead of function ARN. We also use Lambda's [aliasing](https://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html) feature to have a **prod** alias mapping to current production version, with immutable environment variables:
 
 ![alt text](https://i.imgur.com/Rj7UeTy.png "Lambda Alias Mapping")
 
@@ -160,7 +160,7 @@ With aliasing we can easily roll back to previous Lambda version in case of unex
 
 ### Blue/Green Stacks
 
-So we have immutable Lambda functions, but we still want to make our Step Functions immutable. We decide to create new Step Function resource every time we release it, meanwhile the old SF resource remains unchanged. Since AWS does not provide versioning feature for Step Function, we include semantic versioning in the Step Function name e.g. order-processing-v0.0.6. With both new and old versions (including historical SFs) we are able to apply blue/green deployment and possible rollback procedure. 
+So we have immutable Lambda functions, but we still want to make our Step Functions immutable. We decide to create new Step Function resource every time we release it, meanwhile the old SF resource remains unchanged. Since AWS does not provide versioning feature for Step Function, we include semantic versioning in the Step Function name e.g. order-processing-v0.0.6. With both new and old versions (including historical SFs) we are able to apply blue/green deployment and rollback procedure. 
 
 To route orders to either blue/green stack, we make the **order-notification-dispatcher** Lambda the de facto router by providing blue/green versions of SF as its [environment variables](https://docs.aws.amazon.com/lambda/latest/dg/env_variables.html). Here is the Node.js codes to read stack environment variables:
 ```javascript
@@ -168,7 +168,7 @@ const stateMachineBlueVer = process.env.STATE_MACHINE_BLUE_VER;
 const stateMachineGreenVer = process.env.STATE_MACHINE_GREEN_VER;
 ```
 
-With fetched state machine stack version we can compose the Step Function ARN with predefined format, then start a new execution with AWS sdk Step Function api:
+With fetched state machine stack version we can compose Step Function ARN with predefined format, then start a new execution with AWS sdk Step Function api:
 ```javascript
 function dispatch(orderJson) {
   const orderId = orderJson.order_id;
@@ -185,7 +185,7 @@ function dispatch(orderJson) {
 
 ### Partial Rollout
 
-There are 2 places in this architecture where we query our abtest service to get variance control for each order. The 1st place is in order-service where we control whether an order goes to new processing pipeline or legacy system. The 2nd one is in **order-notification-dispatcher** where we use it to shift the traffic to blue/green Step Function stacks. Also note that AWS recently released a nice [traffic shifting](https://docs.aws.amazon.com/lambda/latest/dg/lambda-traffic-shifting-using-aliases.html) feature for Lambda application. Here we didn't use it since our abtest engine provides finer-granular control which can target to certain group such as Gilt's internal employees. Here is a diagram depicting the partial rollout process for new Step Function resources:
+We make **order-notification-dispatcher** query our a/b test engine to have simple routing logic for each order notification, so that it can shift traffic to either blue/green Step Function stack according to test/control group the order falls into. Also note that AWS recently released a nice [traffic shifting](https://docs.aws.amazon.com/lambda/latest/dg/lambda-traffic-shifting-using-aliases.html) feature for Lambda application. Here we didn't use it as our a/b test engine provides finer-granular control which can target to certain group such as Gilt's internal employees. Here is a diagram depicting the partial rollout process for new Step Function resources:
 
 ![alt text](https://i.imgur.com/pT48c3C.png "Partial Rollout Process")
 
