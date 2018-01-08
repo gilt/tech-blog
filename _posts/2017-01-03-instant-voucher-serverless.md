@@ -29,7 +29,7 @@ The new instant order pipeline starts with **order-service** publishing a notifi
 
 The architecture leverages Lambda and Step Function from AWS Serverless suite to build several key components. At Gilt, different teams have started embracing serverless paradigm to build production applications. There are many benefits from adoption of serverless paradigm, such as abstraction from infrastructure, out of box scalability, on-demand cost model etc just to name a few. Comparing to the alternative of building and maintaining an array of EC2/container instances, serverless architecture takes a step further from microservices to allow even faster iteration cycle within SDLC. With the use of Step Function as orchestrating engine, it is mucher easier to facilitate interaction between Lambda applications. 
 
-![alt text](https://i.imgur.com/6QM1pHi.png "Instant Order Processing Architecture")
+![alt text](https://i.imgur.com/tXXY6bH.png "Instant Order Processing Architecture")
 
 
 # AWS Step Function for Lambda Orchestration
