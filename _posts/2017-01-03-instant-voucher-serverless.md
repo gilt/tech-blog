@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Revitalise Gilt City's Order Processing with Serverless Architecture"
+title: "Revitalize Gilt City's Order Processing with Serverless Architecture"
 author: Liyu Ma
 date: '2017-01-05'
 categories: 
@@ -206,4 +206,4 @@ Secondly we hope AWS can provide versioning/aliasing for Step Function so we can
 Also we expect AWS to provide better filtering/searching abilities on Step Function dashboard so we can gain some fundamental data analytics from historical executions.
 
 ### Future Work
-From architecture perspective, we are trying to standardise continous delivery process for our serverless components. At the moment what we have is "poor man's CI/CD" - some bash/node scripts which use AWS sdk's CloudFormation api to provision resources. There are varioius tools available either from AWS or serverless community such as [Terraform](https://www.terraform.io/), [CodePipeline](https://aws.amazon.com/documentation/codepipeline/) we are trying to integrate to provide a frictionless process to production.
+From architecture perspective, we are trying to standardize continous delivery process for our serverless components. At the moment what we have is "poor man's CI/CD" - some bash/node scripts which use AWS sdk's CloudFormation api to provision resources. There are varioius tools available either from AWS or serverless community such as [Terraform](https://www.terraform.io/), [CodePipeline](https://aws.amazon.com/documentation/codepipeline/) we are trying to integrate to provide a frictionless process to production.
