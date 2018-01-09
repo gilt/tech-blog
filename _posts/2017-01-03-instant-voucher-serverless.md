@@ -29,14 +29,14 @@ The new instant order pipeline starts with the checkout system publishing a noti
 
 The architecture leverages Lambda and Step Functions from the AWS Serverless suite to build several key components. At HBC, different teams have started embracing a serverless paradigm to build production applications. There are many benefits of adopting a serverless paradigm, such as abstraction from infrastructure, out-of-the-box scalability, an on-demand cost model just to name a few. Compared to the alternative of building and maintaining an array of EC2/container instances, a serverless architecture goes a step beyond microservices to allow an even faster iteration cycle within the Software Development Life Cycle (SDLC). With the use of Step Functions as an orchestration engine, it is much easier to facilitate interaction between Lambda applications. 
 
-![alt text](https://i.imgur.com/tXXY6bH.png "Instant Order Processing Architecture")
+![alt text](https://i.imgur.com/2FYlarr.png "Instant Order Processing Architecture")
 
 
 # AWS Step Functions for Lambda Orchestration
 
 As mentioned above, AWS Step Functions is an orchestration service that makes it easy to coordinate stateless Lambda applications by establishing a specification to transition application states. Behind the scenes, it is depicted as a state machine constructed with the JSON-based [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html). See below a sample execution from the order-processing step function.
 
-![alt text](https://i.imgur.com/2FYlarr.png "An successful Step Function execution example")
+![alt text](https://i.imgur.com/xROzpZV.png "An successful Step Function execution example")
 
 ### Inside Step Functions
 
