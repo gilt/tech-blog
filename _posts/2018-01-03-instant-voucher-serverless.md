@@ -2,7 +2,7 @@
 layout: post
 title: "Revitalize Gilt City's Order Processing with Serverless Architecture"
 author: Liyu Ma
-date: '2017-01-05'
+date: '2018-01-03'
 categories: 
 - aws
 tags:
