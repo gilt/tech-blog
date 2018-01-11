@@ -16,17 +16,17 @@ tags:
 
 # Instant Vouchers Initiative
 
-[Gilt City](https://www.gilt.com/city/) is Gilt's high-end voucher portal that offers localised discounts on exclusive lifestyle experiences in dining, entertainment, beauty, fitness etc to our 3.4 million members across 13 U.S. cities. Gilt City's legacy order processing backend is a scheduled-job based architecture in which functionality such as fraud scan, payment authorisation, order fulfillment are assigned to independent jobs that process orders in batch according to order status. Though this architecture can scale to meet peak time workload and provides some level of resilience (failed orders are retried the next time the job runs), it inevitably includes some idle time i.e. wait for next job to pick up order from previous job. The resulting average processing time could add up to 15~30 minutes. 
+[Gilt City](https://www.gilt.com/city/) is Gilt's high-end voucher portal that offers localised discounts on exclusive lifestyle experiences in dining, entertainment, beauty, fitness etc to our 3.4 million members across 13 U.S. cities. Gilt City's legacy order processing backend is a scheduled-job based architecture in which functionality such as fraud scan, payment authorisation, order fulfillment are assigned to independent jobs that process orders in batches according to order status. Though this architecture can scale to meet peak time workload and provides some level of resilience (failed orders are retried the next time the job runs), it inevitably includes some idle time i.e. wait for the next job to pick up an order from the previous job. The resulting average processing time could add up to 15 minutes. 
 
-Since many of Gilt City’s offers are of impulsive nature and time-sensitive, long processing time becomes a clear bottleneck to user experience. Team Marconi in Gilt have been driving the work on the Instant Vouchers Initiative for the past few months ago, in an effort to re-architect the backend of order processing using the latest cloud technologies. We believe that by reducing this wait time, it will significantly boost overall shopping experience and enable immediate use of vouchers. Furthermore, the instantaneous user experience can unblock new features such as location-based push notifications.
+Since many of Gilt City’s offers are of an impulsive nature and time-sensitive, long processing time becomes a clear bottleneck to user experience. Team Marconi in Gilt have been driving the work on the Instant Vouchers Initiative for the past few months ago, in an effort to re-architect the backend of order processing using the latest cloud technologies. We believe that by reducing this wait time, it will significantly boost overall shopping experience and enable immediate use of vouchers and, in turn, it allows for new features such as location-based push notifications.
 
 # An Event Driven, Serverless Architecture
 
-It is never easy to rewrite (or replace) a mission critical system. In our case, we have to keep the existing monolithic Ruby on Rails app running while spinning up a new pipeline. We took the strangler pattern (see this [Martin Fowler article](https://martinfowler.com/bliki/StranglerApplication.html) for an explanation) and built a new API layer for processing individual orders around the existing batch-processing, job-based system in the same Rails app. With this approach, the legacy job-based system gradually receives less traffic and becomes a fallback safety net to catch and retry failed orders from instant pipeline.
+It is never easy to rewrite (or replace) a mission critical system. In our case, we have to keep the existing monolithic Ruby on Rails app running while spinning up a new pipeline. We took the strangler pattern (see this [Martin Fowler article](https://martinfowler.com/bliki/StranglerApplication.html) for an explanation) and built a new API layer for processing individual orders around the existing batch-processing, job-based system in the same Rails app. With this approach, the legacy job-based system gradually receives less traffic and becomes a fallback safety net to catch and retry failed orders from the instant processing pipeline.
 
-The new instant order pipeline starts with the **checkout system** publishing a notification to an SNS topic whenever it creates an order object. An order notification contains the order ID to allow event subscribers to look up the order object in the orders key-value store. An AWS Lambda application **order-notification-dispatcher** subscribes to this SNS topic and kicks off the processing by invoking an AWS Step Functions resource. See below a simplified architecture diagram of the order processing system.
+The new instant order pipeline starts with the **checkout system** publishing a notification to an SNS topic whenever it creates an order object. An order notification contains the order ID to allow event subscribers to look up the order object in the order key-value store. An AWS Lambda application **order-notification-dispatcher** subscribes to this SNS topic and kicks off the processing by invoking an AWS Step Functions resource. See below a simplified architecture diagram of the order processing system.
 
-The architecture leverages Lambda and Step Functions from the AWS Serverless suite to build several key components. At HBC, different teams have started embracing a serverless paradigm to build production applications. There are many benefits of adopting a serverless paradigm, such as abstraction from infrastructure, out-of-the-box scalability, an on-demand cost model just to name a few. Compared to the alternative of building and maintaining an array of EC2/container instances, a serverless architecture goes a step beyond microservices to allow an even faster iteration cycle within the Software Development Life Cycle (SDLC). With the use of Step Functions as an orchestration engine, it is much easier to facilitate interaction between Lambda applications. 
+The architecture leverages Lambda and Step Functions from the AWS Serverless suite to build several key components. At HBC, different teams have started embracing a serverless paradigm to build production applications. There are many benefits of adopting a serverless paradigm, such as abstraction from infrastructure, out-of-the-box scalability, and an on-demand cost model just to name a few. Compared to the alternative of building and maintaining an array of EC2/container instances, a serverless architecture goes a step beyond microservices to allow an even faster development iteration cycle. With the use of Step Functions as an orchestration engine, it is much easier to facilitate interaction between Lambda applications. 
 
 ![alt text](https://i.imgur.com/2FYlarr.png "Instant Order Processing Architecture")
 
@@ -39,7 +39,7 @@ As mentioned above, AWS Step Functions is an orchestration service that makes it
 
 ### Inside Step Functions
 
-At the top level the specification includes various types of [States](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-states.html), such as `Task`, `Choice` and `Wait`, to be used to compose simple business logic to transition application state. Inside a `Task` state, an AWS Lambda ARN can be specified to be invoked. The output of the Lambda will be directed as input to next State. This is an excerpt from the order-processing state machine:
+At the top level the specification includes various types of [States](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-states.html), such as `Task`, `Choice` and `Wait`, to be used to compose simple business logic to transition application state. Inside a `Task` State, an AWS Lambda ARN can be specified to be invoked. The output of the Lambda will be directed as input to next State. This is an excerpt from the order-processing state machine:
 
 ```json
 {
@@ -122,7 +122,7 @@ A serverless paradigm fits really well in situations where computation completes
 }
 ```
 
-It is also critical to make cloud applications resilient to errors such as network timeouts. Step Functions provides error handling to allow catching/retrying some predefined errors as well as customised Lambda error types. You can specify different retry strategies with properties such as `MaxAttempts` and `BackoffRate`. See the below example where we implemented a retry mechanism for different errors in the `Task` state to create redemption codes:
+It is also critical to make cloud applications resilient to errors such as network timeouts. Step Functions provides error handling to allow catching/retrying of some predefined errors as well as customised Lambda error types. You can specify different retry strategies with properties such as `MaxAttempts` and `BackoffRate`. See the below example where we implemented a retry mechanism for different errors in the `Task` state to create redemption codes:
 
 ```json
 "CreateRedemptionCode": {
@@ -148,7 +148,7 @@ It is also critical to make cloud applications resilient to errors such as netwo
 
 # Immutable Deployment & Partial Rollout
 
-Deploying a mission critical service to a production environment is always a nervous process. At HBC we advocate immutable deployments whenever possible and leverage A/B test to help us roll out new features to customers in a gradual manner. In a serverless world, it is a little different, since most of the infrastructure management is abstracted away. 
+Deploying a mission critical service to a production environment is always a nervous process. At HBC we advocate immutable deployments whenever possible and leverage A/B testing to help us roll out new features to customers in a gradual manner. In a serverless world, it is a little different, since most of the infrastructure management is abstracted away. 
 
 ### Lambda Versioning
 AWS Lambda's [versioning feature](https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html) provides the ability to make Lambda functions immutable by taking a snapshot of the function (aka publishing a version). We really like this, since it ensures the Lambda function artifact as well as environment variables remain immutable once published. Note that in the above code snippets of state machine JSON, the ARN specified for each Lambda resource is Lambda version ARN instead of function ARN. We also use Lambda's [aliasing feature](https://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html) to have a `prod` alias mapped to the current production version, with immutable environment variables:
@@ -169,6 +169,7 @@ const stateMachineGreenVer = process.env.STATE_MACHINE_GREEN_VER;
 
 With fetched state machine stack version we can compose Step Function ARN with predefined format, then start a new execution with AWS sdk Step Function api:
 ```javascript
+const stateMachineVersion = ... // Read from environment vars
 function dispatch(orderJson) {
   const orderId = orderJson.order_id;
   const stateMachine = preProcessingStepFunctionPrefix + stateMachineVersion; 
@@ -196,13 +197,13 @@ As of today all of Gilt City's orders have been directed to the instant processi
 
 ### Step Functions Limitations
 
-From our development exerience using AWS Step Functions we discovered some limitations of this service. First of all, it lacks of a feature like a `Map` state which would take a list of input objects and transform it to another list of result objects. A possible solution could be allowing invocation of a sub SF multiple times. In our case, an order object can be split into multiple order objects depending on the items in the original order. Unfortuntely SF does not offer a State type that can map a dynamic number of elements. We eventually made the workaround by creating a **order-pre-processing** SF and make it invoke the **order-processing** SF multiple times to process those 'split' orders.
+From our development exerience using AWS Step Functions we discovered some limitations of this service. First of all, it lacks of a feature like a `Map` state which would take a list of input objects and transform it to another list of result objects. A possible solution could be allowing invocation of a sub SF multiple times. In our case, an order object can be split into multiple order objects depending on the items in the original order. Unfortuntely SF does not offer a State type that can map a dynamic number of elements. We eventually made the workaround by creating an **order-pre-processing** SF and make it invoke the **order-processing** SF multiple times to process those 'split' orders.
 
 Secondly, we hope AWS can provide versioning/aliasing for Step Functions so we can gain immutability out of the box instead of forcing immutability on our side. Any support for blue/green deployment would be even better.
 
 Also, we expect AWS to provide better filtering/searching abilities on the Step Functions dashboard so we can gain some fundamental data analytics from historical executions. This could be obtained by declaring some "searchable" fields and relative types in the SF definition.
 
-In the context of AWS Enterprise Support, we (Team Marconi) had a productive meeting directly with AWS Step Functions Product Manager during which we have suggested our list of improvements. It was gratifying to hear that most of these are already or will be included in their development roadmap.
+In the context of AWS Enterprise Support, we (Team Marconi) had a productive meeting directly with the AWS Step Functions Product Manager during which we have suggested our list of improvements. It was gratifying to hear that most of these are already or will be included in their development roadmap.
 
 ### Future Work
-From an architecture perspective, we are trying to standardize a continous delivery process for our serverless components. At the moment, what we have is "poor man's CI/CD" - some bash/node scripts which use AWS CloudFormation SDK to provision resources. There are varioius tools available either from AWS or the serverless community such as [Terraform](https://www.terraform.io/), [CodePipeline](https://aws.amazon.com/documentation/codepipeline/) that we are trying to integrate with to provide a frictionless process to production.
+From an architecture perspective, we are trying to standardize a continous delivery process for our serverless components. At the moment, what we have is "poor man's CI/CD" - some bash/node scripts which use AWS CloudFormation SDK to provision resources. There are various tools available either from AWS or the serverless community such as [Terraform](https://www.terraform.io/), [CodePipeline](https://aws.amazon.com/documentation/codepipeline/) that we are trying to integrate with to provide a frictionless path to production.
