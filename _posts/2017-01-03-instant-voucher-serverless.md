@@ -18,8 +18,7 @@ tags:
 
 [Gilt City](https://www.gilt.com/city/) is Gilt's high-end voucher portal that offers localised discounts on exclusive lifestyle experiences in dining, entertainment, beauty, fitness etc to our 3.4 million members across 13 U.S. cities. Gilt City's legacy order processing backend is a scheduled-job based architecture in which functionality such as fraud scan, payment authorisation, order fulfillment are assigned to independent jobs that process orders in batch according to order status. Though this architecture can scale to meet peak time workload and provides some level of resilience (failed orders are retried the next time the job runs), it inevitably includes some idle time i.e. wait for next job to pick up order from previous job. The resulting average processing time could add up to 15~30 minutes. 
 
-Since many of Gilt City’s offers are of impulsive nature and time-sensitive, long processing time becomes a clear bottleneck to user experience and development of new features. Team Marconi in Gilt have been driving the work on the Instant Vouchers Initiative for the past few months ago, in an effort to re-architect the backend of order processing using the latest cloud technologies. We believe that by reducing this wait time, it will significantly boost overall shopping experience and enable immediate use of vouchers.
-  
+Since many of Gilt City’s offers are of impulsive nature and time-sensitive, long processing time becomes a clear bottleneck to user experience. Team Marconi in Gilt have been driving the work on the Instant Vouchers Initiative for the past few months ago, in an effort to re-architect the backend of order processing using the latest cloud technologies. We believe that by reducing this wait time, it will significantly boost overall shopping experience and enable immediate use of vouchers. Furthermore, the instantaneous user experience can unblock new features such as location-based push notifications.
 
 # An Event Driven, Serverless Architecture
 
@@ -36,7 +35,7 @@ The architecture leverages Lambda and Step Functions from the AWS Serverless sui
 
 As mentioned above, AWS Step Functions is an orchestration service that makes it easy to coordinate stateless Lambda applications by establishing a specification to transition application states. Behind the scenes, it is depicted as a state machine constructed with the JSON-based [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html). See below a sample execution from the order-processing step function.
 
-![alt text](https://i.imgur.com/xROzpZV.png "An successful Step Function execution example")
+![alt text](https://i.imgur.com/RWakgNC.png "An successful Step Function execution example")
 
 ### Inside Step Functions
 
@@ -187,7 +186,7 @@ function dispatch(orderJson) {
 
 We make the **order-notification-dispatcher** query our a/b test engine to have simple routing logic for each order notification, so that it can shift traffic to either the blue/green Step Function stack according to test/control group the order falls into. Also note that AWS recently released a nice [traffic shifting](https://docs.aws.amazon.com/lambda/latest/dg/lambda-traffic-shifting-using-aliases.html) feature for Lambda applications. However, we didn't use it as our a/b test engine provides finer-grain control which allows us to target certain groups such as HBC's internal employees. Here is a diagram depicting the partial rollout process for new Step Function resources:
 
-![alt text](https://i.imgur.com/pT48c3C.png "Partial Rollout Process")
+![alt text](https://i.imgur.com/ZSyvoJ1.png "Partial Rollout Process")
 
 # Conclusion
 
@@ -197,13 +196,13 @@ As of today all of Gilt City's orders have been directed to the instant processi
 
 ### Step Functions Limitations
 
-From our development exerience using AWS Step Functions we discovered some limitations of this service.
-
-First of all, it lacks of a feature like a `Map` state which would take a list of input objects and transform it to another list of result objects. In our case, an order object can be split into multiple order objects depending on the items in the original order. Unfortuntely SF does not offer a State type that can map a dynamic number of elements. We eventually made the workaround by creating a **order-pre-processing** Step Function and make it invoke the **order-processing** Step Function multiple times to process those 'split' orders.
+From our development exerience using AWS Step Functions we discovered some limitations of this service. First of all, it lacks of a feature like a `Map` state which would take a list of input objects and transform it to another list of result objects. A possible solution could be allowing invocation of a sub SF multiple times. In our case, an order object can be split into multiple order objects depending on the items in the original order. Unfortuntely SF does not offer a State type that can map a dynamic number of elements. We eventually made the workaround by creating a **order-pre-processing** SF and make it invoke the **order-processing** SF multiple times to process those 'split' orders.
 
 Secondly, we hope AWS can provide versioning/aliasing for Step Functions so we can gain immutability out of the box instead of forcing immutability on our side. Any support for blue/green deployment would be even better.
 
-Also, we expect AWS to provide better filtering/searching abilities on the Step Function dashboard so we can gain some fundamental data analytics from historical executions. This could be obtained by declaring some "searchable" fields and relative types in the SF definition.
+Also, we expect AWS to provide better filtering/searching abilities on the Step Functions dashboard so we can gain some fundamental data analytics from historical executions. This could be obtained by declaring some "searchable" fields and relative types in the SF definition.
+
+In the context of AWS Enterprise Support, we (Team Marconi) had a productive meeting directly with AWS Step Functions Product Manager during which we have suggested our list of improvements. It was gratifying to hear that most of these are already or will be included in their development roadmap.
 
 ### Future Work
 From an architecture perspective, we are trying to standardize a continous delivery process for our serverless components. At the moment, what we have is "poor man's CI/CD" - some bash/node scripts which use AWS CloudFormation SDK to provision resources. There are varioius tools available either from AWS or the serverless community such as [Terraform](https://www.terraform.io/), [CodePipeline](https://aws.amazon.com/documentation/codepipeline/) that we are trying to integrate with to provide a frictionless process to production.
