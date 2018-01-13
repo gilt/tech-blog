@@ -15,11 +15,11 @@ tags:
 
 # AWS Elastic Map Reduce on Sundial
 
-Today I want to talk about a recent improvement we implemented in [Sundial](https://github.com/gilt/sundial), an Open Source product launched in Gilt in early 2016. With [Sundial 2.0.0](Add link to github tag) it's now possible to schedule Aws Elastic Map Reduce jobs.
+Today I want to talk about a recent improvement we implemented in [Sundial](https://github.com/gilt/sundial), an Open Source product launched by Gilt in early 2016. With [Sundial 2.0.0](Add link to github tag) it's now possible to schedule AWS Elastic Map Reduce jobs.
 
 For those of you who are not familiar with it, [Sundial](https://github.com/gilt/sundial) is a batch job scheduler, developed by the Gilt Personalization Team, that works with Amazon ECS and Amazon Batch.
 
-Before jumping into the nitty gritty details of how to schedule Elastic Map Reduce jobs with Sundial, it's worth to dive deeper into the current batch job processing setup in Gilt and the challenges we have recently started to face. 
+Before jumping into the nitty gritty details of how to schedule Elastic Map Reduce jobs with Sundial, it's worth taking a deeper dive into the current batch job processing setup in Gilt and the challenges we have recently started to face. 
 
 We will quickly cover the following areas:
 
@@ -29,21 +29,21 @@ We will quickly cover the following areas:
 
 ## Batch processing today
 
-Every night, the Gilt Aster Datawarehouse (DW) is locked so to update it with the latest data coming from the relevant area of the business. The Extract-Transform-Load ([ETL](https://www.webopedia.com/TERM/E/ETL.html)) suites, or [ELT as we prefer to call it](https://www.ironsidegroup.com/2015/03/01/_ETL_-vs-elt-whats-the-big-difference/), are
+Every night, the Gilt Aster data warehouse (DW) is locked in order to update it with the latest data coming from the relevant area of the business. During this lock, Extract-Transform-Load ([ETL](https://www.webopedia.com/TERM/E/ETL.html)) suites, or [ELT as we prefer to call it](https://www.ironsidegroup.com/2015/03/01/_ETL_-vs-elt-whats-the-big-difference/), are
 run. 
 When all the jobs complete, the DW gets unlocked and the normal access to Aster is resumed. There are a number of client systems relying on the DW, most relevant are BI tools, i.e [Looker](https://looker.com/), and Sundial.
-Sundial in particular is used in personalization for scheduling additional jobs and build Machine Learning models. Since there is no synchronization between Aster and Sundial, when occasionally Aster takes longer to complete, Sundial jobs would fail because of the DW being still locked down or data being stale.  
+Sundial in particular is used in personalization for scheduling additional jobs and to build Machine Learning models. Since there is no synchronization between Aster and Sundial, occasionally when Aster takes longer to complete, Sundial jobs would fail because of the DW being still locked down or data being stale.  
 
 ## Performance degradation
     
 Because Aster is a shared resource, and the number of jobs relying on it is increasing day by day, in the past few weeks we've experienced significant performance degradation.
-This amplifies, in specific time of the week (monday mornings), when BI folks run their reports. The result is that batch jobs and reports are taking longer and longer to complete. 
-This is of course affecting user experience and productivity.
+This issue is particularly amplified at a specific time of the week, when BI folks run their reports. The result is that batch jobs and reports are taking longer and longer to complete. 
+This of course affects developers experience and productivity.
 
 ## EMR adoption
 
-Because of all the nuisances above, there is additional operational time spent from time to time to restart failed jobs. Furthermore when developing a new model 
-most of the time is spent (let's say 70%) to extracting and massaging data, rather than focusing on the actual job logic.
+Because of all the nuisances above, there is additional operational time spent to restart failed jobs. Furthermore, when developing a new model, 
+most of the time is spent (let's say 70%) extracting and massaging data, rather than focusing on the actual job logic.
 
 It's easy to understand that Aster wasn't a good candidate anymore for us and that we needed to migrate to a better and more [elastic](https://en.wikipedia.org/wiki/Elasticity_(cloud_computing)) platform.  
 
@@ -56,14 +56,14 @@ The solution we were looking for should:
 
 We didn't have to look far to find a great candidate to solve our problems: [AWS EMR (Elastic Map Reduce)](https://aws.amazon.com/emr/). 
 
-Aws EMR offers a very easy way to spin up an EMR cluster with a number of applications (or components) running on it. Further info can be found [here](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-release-components.html).
+AWS EMR offers a very easy way to spin up an EMR cluster with a number of applications (or components) running on it. Further info can be found [here](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-release-components.html).
 
-Aws EMR also offers a nice SDK to spin a new dynamic EMR cluster, run a job and tear down resources _on the fly_ and a cost per second billing system so to make the whole platform very cost efficient.
+AWS EMR also offers a nice SDK to spin a new dynamic EMR cluster, run a job and tear down resources _on the fly_ and a cost per second billing system so to make the whole platform very cost efficient.
 
-The last two perks of using Aws EMR are:
+The last two perks of using AWS EMR are:
 
-* [AWS Spot Instances](https://aws.amazon.com/ec2/spot/): running HW at a discounted price
-* [Large variety of HW](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-supported-instance-types.html): most of ELT jobs run on commodity HW, some ML require intensive GPU and EMR offers HW solutions for all of our use cases.       
+* [AWS Spot Instances](https://aws.amazon.com/ec2/spot/): running hardware at a discounted price
+* [Large variety of hardware](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-supported-instance-types.html): most of ELT jobs run on commodity hardware, some ML require intensive GPU and EMR offers hardware solutions for all of our use cases.       
 
 ## The Sundial EMR Integration
 
@@ -78,7 +78,7 @@ Features we've implemented are:
 
 The best way to explain details of a EMR job definition would be to show an example and discuss it section by section. 
 
-Below there are two job definition: the first one runs a job on a pre-existing cluster, the second runs on a cluster dynamically created:
+Below there are two job definitions: the first one runs a job on a pre-existing cluster, the second runs on a cluster dynamically created:
 
 ```json
 
@@ -223,9 +223,9 @@ The other properties are:
 
 #### EMR Logs 
 
-One nice feature of Sundial is the possibility of viewing job's live logs. While AWS Elastic Container Service (ECS) and Batch natively offer 
-a way to access live logs, EMR updates logs every five minutes on S3. Of course this is suboptimal. Since there isn't a straightforward way of implementing this, it is developers 
-responsibility to implement the code that streams job's log to [Aws Cloudwatch Logs](https://aws.amazon.com/cloudwatch/). One way of achieving this is via the [log4j-cloudwatch-appender](https://github.com/speedwing/log4j-cloudwatch-appender).
+One nice feature of Sundial is the possibility of viewing jobs' live logs. While AWS Elastic Container Service (ECS) and Batch natively offer 
+a way to access live logs, EMR updates logs every five minutes on S3. Of course this is suboptimal. Since there isn't a straightforward way of implementing this, it is developer's 
+responsibility to implement the code that streams job's log to [AWS Cloudwatch Logs](https://aws.amazon.com/cloudwatch/). One way of achieving this is via the [log4j-cloudwatch-appender](https://github.com/speedwing/log4j-cloudwatch-appender).
 
 The downside of having jobs running on _static_ AWS EMR clusters is that you will be paying for it even if no jobs are running. For this reason it would be ideal if we could spin up an EMR cluster _on-the-fly_, run a Spark job and then dispose all the resources. 
 
@@ -234,7 +234,7 @@ If you want to know more, well, keep reading!
 ### Running a job on a dynamic EMR Cluster
 
 The Sundial Task definition that uses a dynamic cluster is fairly more complex and gives you some fine grained control when provisioning your cluster. 
-At the same time though, if you're jobs don't require very specific configurations (e.g. permissions, aws market type), sensible default options have been provided so to simplify the 
+At the same time though, if your jobs don't require very specific configurations (e.g. permissions, aws market type), sensible default options have been provided so to simplify the 
 Task Definition where possible.
 
 Let's start to dig into the different sections of the json template.   
@@ -276,9 +276,9 @@ Let's start to dig into the different sections of the json template.
 
 The json object name for a `dynamic emr cluster` is `new_emr_cluster`. It is composed by the following attributes:
 
-* _name_: The name that will appear on the Aws EMR console
-* _release_label_: The EMR version of the cluster to create. Each EMR version maps to specific version of the applications that can run in the EMR cluster. Additional details are available on the [Aws EMR components page](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-release-components.html)
-* _applications_: The list of applications to launch on the cluster. For a comprehensive list of available applications, visit the [Aws EMR components page](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-release-components.html)
+* _name_: The name that will appear on the AWS EMR console
+* _release_label_: The EMR version of the cluster to create. Each EMR version maps to specific version of the applications that can run in the EMR cluster. Additional details are available on the [AWS EMR components page](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-release-components.html)
+* _applications_: The list of applications to launch on the cluster. For a comprehensive list of available applications, visit the [AWS EMR components page](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-release-components.html)
 * _s3_log_uri_: The s3 bucket where the EMR cluster put their log files. These are both cluster logs as well as `stdout` and `stderr` of the EMR job
 * _master_instance_: The master node hardware details (see below for more details.)
 * _core_instance_: The core node hardware details (see below for more details.)
@@ -290,15 +290,15 @@ The json object name for a `dynamic emr cluster` is `new_emr_cluster`. It is com
 
 #### Master, core and task instances
 
-An EMR cluster is composed by at least a master instance and then any combination of core and tasks instances.
+An EMR cluster is composed by exactly one master instance, at least one core instance and any number of tasks instances.
 
-A detailed explanation of the different instance types is available in the [Aws EMR plan instances page](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-instances.html). 
+A detailed explanation of the different instance types is available in the [AWS EMR plan instances page](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-instances.html). 
 
-For simplicity I'll paste a snippet of the Aws official documentation:
+For simplicity I'll paste a snippet of the AWS official documentation:
 
-* master node: The master node manages the cluster and typically runs master components of distributed applications. For example, the master node runs the YARN ResourceManager service to manage resources for applications, as well as the HDFS NameNode service. It also tracks the status of jobs submitted to the cluster and monitors the health of the instance groups. Because there is only one master node, the instance group or instance fleet consists of a single EC2 instance.
-* core node: Core nodes are managed by the master node. Core nodes run the Data Node daemon to coordinate data storage as part of the Hadoop Distributed File System (HDFS). They also run the Task Tracker daemon and perform other parallel computation tasks on data that installed applications require.
-* task node: Task nodes are optional. You can use them to add power to perform parallel computation tasks on data, such as Hadoop MapReduce tasks and Spark executors. Task nodes don't run the Data Node daemon, nor do they store data in HDFS.
+> * master node: The master node manages the cluster and typically runs master components of distributed applications. For example, the master node runs the YARN ResourceManager service to manage resources for applications, as well as the HDFS NameNode service. It also tracks the status of jobs submitted to the cluster and monitors the health of the instance groups. Because there is only one master node, the instance group or instance fleet consists of a single EC2 instance.
+> * core node: Core nodes are managed by the master node. Core nodes run the Data Node daemon to coordinate data storage as part of the Hadoop Distributed File System (HDFS). They also run the Task Tracker daemon and perform other parallel computation tasks on data that installed applications require.
+> * task node: Task nodes are optional. You can use them to add power to perform parallel computation tasks on data, such as Hadoop MapReduce tasks and Spark executors. Task nodes don't run the Data Node daemon, nor do they store data in HDFS.
 
 The json below describe configuration details of an EMR master instance:
 
@@ -313,7 +313,7 @@ The json below describe configuration details of an EMR master instance:
 ```
 
 Please note that there can only be exactly one master node, if a different values is specified in the `instance_count`, it is ignored. For other instance group types the 
-`instance_count` represents, as the name says, the number of EMR instances to launch
+value `instance_count` represents, as the name says, the number of EMR instances to launch.
 
 Other attributes are:
 
@@ -333,11 +333,11 @@ Where `bid_price` is the Spot bid price in dollars.
 
 ## Limitations
 
-Because of some Aws EMR implementation details, Sundial has two major limitations when it comes to EMR job scheduling.
+Because of some AWS EMR implementation details, Sundial has two major limitations when it comes to EMR job scheduling.
 
-Sundial s not able to stop EMR jobs running on pre-existing clusters. Since jobs on the EMR cluster are scheduled via `yarn` and that 
-Aws didn't build any api of top of it, once a job is scheduled on an existing EMR cluster, in order to kill it, it would be required to ssh on the ec2 instance where the master node is running, query `yarn` so to find out the
+Sundial is not able to stop EMR jobs running on pre-existing clusters. Since jobs on the EMR cluster are scheduled via `yarn` and since 
+AWS did not build any api on top of it, once a job is scheduled on an existing EMR cluster, in order to kill it, it would be required to ssh on the ec2 instance where the master node is running, query `yarn` so to find out the
 correct application id and issue a yarn kill command. We decided to not implement this feature because it would have greatly over complicated the job definition.
-Job running on dynamic cluster are affected by the same issue. We've managed to still implement this feature by simply killing the whole EMR cluster.
+Jobs running on dynamic cluster are affected by the same issue. We've managed to still implement this feature by simply killing the whole EMR cluster.
 
 The second limitation is about live logs. As previously mentioned live logs are not implemented out of the box. Developers require to stream logs to Cloudwatch Logs and set log group and log name in the task definition. 
