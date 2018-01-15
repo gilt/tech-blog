@@ -54,7 +54,7 @@ The solution we were looking for should:
 * be easy to integrate with our scheduling solution
 
 We didn't have to look far to find a great candidate to solve our problems: Spark running on [AWS EMR (Elastic Map Reduce)](https://aws.amazon.com/emr/). Amazon EMR provides a managed Hadoop framework that makes it easy, fast, and cost-effective to process vast amounts of data across dynamically scalable Amazon EC2 instances. 
-You can also run other popular distributed frameworks such as Apache Spark, HBase, Presto, and Flink in Amazon EMR, and interact with data in other AWS data stores such as Amazon S3 and Amazon DynamoDB. Among all the
+You can also run other popular distributed frameworks such as Apache Spark, HBase, Presto, and Flink in Amazon EMR, and interact with data in other AWS data stores such as Amazon S3 and Amazon DynamoDB.
 
 A complete list of open source applications (or components) running on AWS ERM can be found [here](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-release-components.html).
 
@@ -76,7 +76,7 @@ Features we've implemented are:
 * choose between `on_demand` vs `spot` instances
 * live logs
 
-In the next two paragraphs I will go through two Sundial EMR task definition examples: the first is a Spark EMR job running on a pre-existing cluster, the second is the same job but running on a dynamically created cluster this time.  
+In the next two paragraphs I will go through two Sundial EMR task definition examples: the first is a Spark EMR job running on a pre-existing cluster, the second is the same job but running on a dynamically created cluster instead.  
 
 ### Running a job on a pre-existing EMR Cluster
 
@@ -119,7 +119,7 @@ The other properties are:
 #### EMR Logs 
 
 One nice feature of Sundial is the possibility of viewing jobs' live logs. While AWS Elastic Container Service (ECS) and Batch natively offer 
-a way to access live logs, EMR updates logs only every five minutes on S3 and it cannot be used as feed for live logs. Since there isn't a straightforward way of implementing this, it is developer's 
+a way to access live logs, EMR updates logs only every five minutes on S3 and it cannot be used as feed for live logs. Since there isn't a straightforward way of fixing this, it is developer's 
 responsibility to implement the code that streams job's log to [AWS Cloudwatch Logs](https://aws.amazon.com/cloudwatch/). One way of achieving this is via the [log4j-cloudwatch-appender](https://github.com/speedwing/log4j-cloudwatch-appender).
 
 The downside of having jobs running on _static_ AWS EMR clusters is that you will be paying for it even if no jobs are running. For this reason it would be ideal if we could spin up an EMR cluster _on-the-fly_, run a Spark job and then dispose all the resources. 
@@ -132,7 +132,7 @@ The Sundial Task definition that uses a dynamic cluster is fairly more complex a
 At the same time though, if your jobs don't require very specific configurations (e.g. permissions, aws market type), sensible default options have been provided so to simplify the 
 Task Definition where possible.
 
-Let's start to dig into the different sections of the json template.   
+Let's dig into the different sections of the json template.   
 
 ```json
 "emr_cluster":{
@@ -230,7 +230,7 @@ Where `bid_price` is the Spot bid price in dollars.
 
 Because of some AWS EMR implementation details, Sundial has two major limitations when it comes to EMR job scheduling.
 
-Sundial is not able to stop EMR jobs running on pre-existing clusters. Since jobs on the EMR cluster are scheduled via `yarn` and since 
+The first limitation is that Sundial is not able to stop EMR jobs running on pre-existing clusters. Since jobs on the EMR cluster are scheduled via `yarn` and since 
 AWS did not build any api on top of it, once a job is scheduled on an existing EMR cluster, in order to kill it, it would be required to ssh on the EC2 instance where the master node is running, query `yarn` so to find out the
 correct application id and issue a yarn kill command. We decided to not implement this feature because it would have greatly over complicated the job definition.
 Jobs running on dynamic cluster are affected by the same issue. We've managed to still implement this feature by simply killing the whole EMR cluster.
