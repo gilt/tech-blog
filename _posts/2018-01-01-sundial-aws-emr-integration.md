@@ -24,7 +24,6 @@ Before jumping into the nitty gritty details of how to schedule Elastic Map Redu
 We will quickly cover the following areas:
 
 * the current batch jobs setup
-* emerging file data formats
 * batch job scalability 
 
 ## Batch processing today
@@ -77,7 +76,7 @@ Features we've implemented are:
 * choose between `on_demand` vs `spot` instances
 * live logs
 
-In the next two paragraphs I will go through two Sundial EMR task definitions: the first is a Spark EMR job running on a pre-existing cluster, the second is the same job but running on a dynamically created cluster this time.  
+In the next two paragraphs I will go through two Sundial EMR task definition examples: the first is a Spark EMR job running on a pre-existing cluster, the second is the same job but running on a dynamically created cluster this time.  
 
 ### Running a job on a pre-existing EMR Cluster
 
@@ -99,7 +98,7 @@ Launching an EMR job on a pre-existing cluster is really simple, all that you ne
           "spark.driver.extraJavaOptions=-Denvironment=production"
        ],
        "args":[
-          "com.gilt.cerebro.job.spark.elt.ProductStorePartialMapJob"
+          "arg1", "arg2"
        ],
        "s3_log_details":{
           "log_group_name":"spark-emr-log-group",
@@ -170,7 +169,7 @@ Let's start to dig into the different sections of the json template.
 }
 ```
 
-The json object name for a `dynamic emr cluster` is `new_emr_cluster`. It is composed by the following attributes:
+The json object name for a _dynamic emr cluster_ is `new_emr_cluster`. It is composed by the following attributes:
 
 * _name_: The name that will appear on the AWS EMR console
 * _release_label_: The EMR version of the cluster to create. Each EMR version maps to specific version of the applications that can run in the EMR cluster. Additional details are available on the [AWS EMR components page](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-release-components.html)
@@ -179,7 +178,7 @@ The json object name for a `dynamic emr cluster` is `new_emr_cluster`. It is com
 * _master_instance_: The master node hardware details (see below for more details.)
 * _core_instance_: The core node hardware details (see below for more details.)
 * _task_instance_: The task node hardware details (see below for more details.)
-* _emr_service_role: The IAM role that Amazon EMR assumes to access AWS resources on your behalf. For more information, see [Configure IAM Roles for Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-iam-roles.html)
+* _emr_service_role_: The IAM role that Amazon EMR assumes to access AWS resources on your behalf. For more information, see [Configure IAM Roles for Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-iam-roles.html)
 * _emr_job_flow_role_: (Also called instance profile and EC2 role.) Accepts an instance profile that's associated with the role that you want to use. All EC2 instances in the cluster assume this role. For more information, see [Create and Use IAM Roles for Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html) in the Amazon EMR Management Guide
 * _ec2_subnet_: The subnet where to spin the EMR cluster. (Optional if the account has only the standard VPC)
 * _visible_to_all_users_: Indicates whether the instances in the cluster are visible to all IAM users in the AWS account. If you specify true, all IAM users can view and (if they have permissions) manage the instances. If you specify false, only the IAM user that created the cluster can view and manage it
@@ -196,7 +195,7 @@ For simplicity I'll paste a snippet of the AWS official documentation:
 > * core node: Core nodes are managed by the master node. Core nodes run the Data Node daemon to coordinate data storage as part of the Hadoop Distributed File System (HDFS). They also run the Task Tracker daemon and perform other parallel computation tasks on data that installed applications require.
 > * task node: Task nodes are optional. You can use them to add power to perform parallel computation tasks on data, such as Hadoop MapReduce tasks and Spark executors. Task nodes don't run the Data Node daemon, nor do they store data in HDFS.
 
-The json below describe configuration details of an EMR master instance:
+The json below describes configuration details of an EMR master instance:
 
 ```json
  "master_instance":{
@@ -209,11 +208,11 @@ The json below describe configuration details of an EMR master instance:
 ```
 
 Please note that there can only be exactly one master node, if a different values is specified in the `instance_count`, it is ignored. For other instance group types the 
-value `instance_count` represents, as the name says, the number of EMR instances to launch.
+value `instance_count` represents, as the name says, the number of EC2 instances to launch for that instance type.
 
 Other attributes are:
 
-* _emr_instance_type_: the ec2 instance type to use when launching the EMR instance
+* _emr_instance_type_: the EC2 instance type to use when launching the EMR instance
 * _aws_market_: the marketplace to provision instances for this group. It can be either `on_demand` or `spot`
 
 An example of a EMR instance using spot is:
@@ -232,7 +231,7 @@ Where `bid_price` is the Spot bid price in dollars.
 Because of some AWS EMR implementation details, Sundial has two major limitations when it comes to EMR job scheduling.
 
 Sundial is not able to stop EMR jobs running on pre-existing clusters. Since jobs on the EMR cluster are scheduled via `yarn` and since 
-AWS did not build any api on top of it, once a job is scheduled on an existing EMR cluster, in order to kill it, it would be required to ssh on the ec2 instance where the master node is running, query `yarn` so to find out the
+AWS did not build any api on top of it, once a job is scheduled on an existing EMR cluster, in order to kill it, it would be required to ssh on the EC2 instance where the master node is running, query `yarn` so to find out the
 correct application id and issue a yarn kill command. We decided to not implement this feature because it would have greatly over complicated the job definition.
 Jobs running on dynamic cluster are affected by the same issue. We've managed to still implement this feature by simply killing the whole EMR cluster.
 
