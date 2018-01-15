@@ -19,7 +19,7 @@ Today I want to talk about a recent improvement we implemented in [Sundial](http
 
 For those of you who are not familiar with it, [Sundial](https://github.com/gilt/sundial) is a batch job scheduler, developed by the Gilt Personalization Team, that works with Amazon ECS and Amazon Batch.
 
-Before jumping into the nitty gritty details of how to schedule Elastic Map Reduce jobs with Sundial, it's worth taking a deeper dive into the current batch job processing setup in Gilt and the challenges we have recently started to face. 
+Before jumping into the nitty gritty details, it's worth taking a deeper dive into the current batch job processing setup in Gilt and the challenges we have recently started to face. 
 
 We will quickly cover the following areas:
 
@@ -28,7 +28,7 @@ We will quickly cover the following areas:
 
 ## Batch processing today
 
-Every night, the Gilt Aster data warehouse (DW) is locked in order to update it with the latest data coming from the relevant area of the business. During this lock, Extract-Transform-Load ([ETL](https://www.webopedia.com/TERM/E/ETL.html)) suites, or [ELT as we prefer to call it](https://www.ironsidegroup.com/2015/03/01/_ETL_-vs-elt-whats-the-big-difference/), are
+Every night, the Gilt Aster data warehouse (DW) is locked down in order to update it with the latest data coming from the relevant area of the business. During this lock, Extract-Transform-Load ([ETL](https://www.webopedia.com/TERM/E/ETL.html)) suites, or [ELT as we prefer to call it](https://www.ironsidegroup.com/2015/03/01/_ETL_-vs-elt-whats-the-big-difference/), are
 run. 
 When all the jobs complete, the DW gets unlocked and the normal access to Aster is resumed. There are a number of client systems relying on the DW, most relevant are BI tools, i.e [Looker](https://looker.com/), and Sundial.
 Sundial in particular is used in personalization for scheduling additional jobs and to build Machine Learning models. Since there is no synchronization between Aster and Sundial, occasionally when Aster takes longer to complete, Sundial jobs would fail because of the DW being still locked down or data being stale.  
@@ -36,13 +36,13 @@ Sundial in particular is used in personalization for scheduling additional jobs 
 ## Performance degradation
     
 Because Aster is a shared resource, and the number of jobs relying on it is increasing day by day, in the past few weeks we've experienced significant performance degradation.
-This issue is particularly amplified at a specific time of the week, when BI folks run their reports. The result is that batch jobs and reports are taking longer and longer to complete. 
+This issue is particularly amplified at a specific time of the week, when BI reports are generated. The result is that batch jobs and reports are taking longer and longer to complete. 
 This of course affects developers experience and productivity.
 
 ## EMR adoption
 
 Because of all the nuisances above, there is additional operational time spent to restart failed jobs. Furthermore, when developing a new model, 
-most of the time is spent (let's say 70%) extracting and massaging data, rather than focusing on the actual job logic.
+most of the time is spent extracting and massaging data, rather than focusing on the actual job logic.
 
 It's easy to understand that Aster wasn't a good candidate anymore for us and that we needed to migrate to a better and more [elastic](https://en.wikipedia.org/wiki/Elasticity_(cloud_computing)) platform.  
 
@@ -87,13 +87,13 @@ Launching an EMR job on a pre-existing cluster is really simple, all that you ne
     "emr_command":{
        "emr_cluster":{
           "existing_emr_cluster":{
-             "cluster_id":"j-2TY5FOBJ8XGY8"
+             "cluster_id":"j-123ABC456DEF9"
           }
        },
        "job_name":"MyJobName1",
        "region":"us-east-1",
        "class":"com.company.job.spark.core.MainClass",
-       "s3_jar_path":"s3://spark-jobs-releases/my-job-spark-v1-0-0.jar",
+       "s3_jar_path":"s3://my-spark-job-release-bucket/my-job-spark-v1-0-0.jar",
        "spark_conf":[
           "spark.driver.extraJavaOptions=-Denvironment=production"
        ],
@@ -111,15 +111,15 @@ Launching an EMR job on a pre-existing cluster is really simple, all that you ne
 The other properties are:
 
 * _class_: the fully qualified main class of the job, e.g. "com.company.job.spark.core.MainClass"
-* _s3_jar_path_: the s3 path to the job jar file e.g "s3://spark-jobs-releases/my-job-spark-v1-0-0.jar"
-* _spark_conf_: this is a **list** of attributes that you can pass to the spark driver, like memory or Java Opts (see example)
-* _args_: another list of params that will be passed to the **MainClass** as arguments (see example)
-* _s3_log_details_: Cloudwatch Log Group and Stream names for your job. See following paragraph for more details
+* _s3_jar_path_: the s3 path to the job jar file e.g "s3://my-spark-job-release-bucket/my-job-spark-v1-0-0.jar"
+* _spark_conf_: this is a **list** of attributes that you can pass to the spark driver, like memory or Java Opts (as per above example)
+* _args_: another list of params that will be passed to the **MainClass** as arguments (as per above example)
+* _s3_log_details_: Cloudwatch Log Group and Stream names for your job. See [EMR Logs paragraph](#emr-logs)
 
 #### EMR Logs 
 
 One nice feature of Sundial is the possibility of viewing jobs' live logs. While AWS Elastic Container Service (ECS) and Batch natively offer 
-a way to access live logs, EMR updates logs every five minutes on S3. Of course this is suboptimal. Since there isn't a straightforward way of implementing this, it is developer's 
+a way to access live logs, EMR updates logs only every five minutes on S3 and it cannot be used as feed for live logs. Since there isn't a straightforward way of implementing this, it is developer's 
 responsibility to implement the code that streams job's log to [AWS Cloudwatch Logs](https://aws.amazon.com/cloudwatch/). One way of achieving this is via the [log4j-cloudwatch-appender](https://github.com/speedwing/log4j-cloudwatch-appender).
 
 The downside of having jobs running on _static_ AWS EMR clusters is that you will be paying for it even if no jobs are running. For this reason it would be ideal if we could spin up an EMR cluster _on-the-fly_, run a Spark job and then dispose all the resources. 
