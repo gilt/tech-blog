@@ -54,9 +54,10 @@ The solution we were looking for should:
 * be owned by the team
 * be easy to integrate with our scheduling solution
 
-We didn't have to look far to find a great candidate to solve our problems: [AWS EMR (Elastic Map Reduce)](https://aws.amazon.com/emr/). 
+We didn't have to look far to find a great candidate to solve our problems: Spark running on [AWS EMR (Elastic Map Reduce)](https://aws.amazon.com/emr/). Amazon EMR provides a managed Hadoop framework that makes it easy, fast, and cost-effective to process vast amounts of data across dynamically scalable Amazon EC2 instances. 
+You can also run other popular distributed frameworks such as Apache Spark, HBase, Presto, and Flink in Amazon EMR, and interact with data in other AWS data stores such as Amazon S3 and Amazon DynamoDB. Among all the
 
-AWS EMR offers a very easy way to spin up an EMR cluster with a number of applications (or components) running on it. Further info can be found [here](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-release-components.html).
+A complete list of open source applications (or components) running on AWS ERM can be found [here](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-release-components.html).
 
 AWS EMR also offers a nice SDK to spin a new dynamic EMR cluster, run a job and tear down resources _on the fly_ and a cost per second billing system so to make the whole platform very cost efficient.
 
@@ -71,117 +72,12 @@ Since we were already using Sundial for most of our ETL and ML heavy lifting, we
 
 Features we've implemented are:
 
-* running a EMR job on a pre-existing cluster
-* running a EMR job on a new created-on-the-fly cluster (and automatic tear down of resources)
+* running a Spark EMR job on a pre-existing cluster
+* running a Spark EMR job on a new created-on-the-fly cluster (and automatic tear down of resources)
 * choose between `on_demand` vs `spot` instances
 * live logs
 
-The best way to explain details of a EMR job definition would be to show an example and discuss it section by section. 
-
-Below there are two job definitions: the first one runs a job on a pre-existing cluster, the second runs on a cluster dynamically created:
-
-```json
-
-{
-   "task_definitions":[
-      {
-         "task_definition_name":"my-amazing-task-1",
-         "dependencies":[
-
-         ],
-         "executable":{
-            "emr_command":{
-               "emr_cluster":{
-                  "existing_emr_cluster":{
-                     "cluster_id":"j-2TY5FOBJ8XGY8"
-                  }
-               },
-               "job_name":"MyJobName1",
-               "region":"us-east-1",
-               "class":"com.company.job.spark.core.MainClass",
-               "s3_jar_path":"s3://spark-jobs-releases/my-job-spark-v1-0-0.jar",
-               "spark_conf":[
-                  "spark.driver.extraJavaOptions=-Denvironment=production"
-               ],
-               "args":[
-                  "arg1", "arg2"
-               ],
-               "s3_log_details":{
-                  "log_group_name":"spark-emr-log-group",
-                  "log_stream_name":"spark-emr-log-stream"
-               }
-            }
-         },
-         "max_attempts":1,
-         "backoff_base_seconds":0,
-         "backoff_exponent":1,
-         "require_explicit_success":false
-      },
-      {
-         "task_definition_name":"my-amazing-task-2",
-         "dependencies":[
-
-         ],
-         "executable":{
-            "emr_command":{
-               "emr_cluster":{
-                  "new_emr_cluster":{
-                     "name":"My Cluster Name",
-                     "release_label":"emr-5.11.0",
-                     "applications":[
-                        "Spark"
-                     ],
-                     "s3_log_uri":"s3://cluster-log-bucket",
-                     "master_instance":{
-                        "emr_instance_type":"m4.large",
-                        "instance_count":1,
-                        "aws_market":{
-                           "on_demand":"on_demand"
-                        }
-                     },
-                     "core_instance":{
-                        "emr_instance_type":"m4.xlarge",
-                        "instance_count":2,
-                        "aws_market":{
-                           "on_demand":"on_demand"
-                        }
-                     },
-                     "emr_service_role":{
-                        "default_emr_service_role":"EMR_DefaultRole"
-                     },
-                     "emr_job_flow_role":{
-                        "custom_emr_job_flow_role":{
-                           "role_name":"EMR_DefaultInstanceRole"
-                        }
-                     },
-                     "ec2_subnet":"subnet-a123456b",
-                     "visible_to_all_users":true
-                  }
-               },
-               "job_name":"MyJobName",
-               "region":"us-east-1",
-               "class":"com.company.job.spark.core.MainClass",
-               "s3_jar_path":"s3://spark-jobs-releases/my-job-spark-v1-0-0.jar",
-               "spark_conf":[
-                  "spark.driver.extraJavaOptions=-Denvironment=production"
-               ],
-               "args":[
-                  "arg1", "arg2"
-               ],
-               "s3_log_details":{
-                  "log_group_name":"spark-emr-log-group",
-                  "log_stream_name":"spark-emr-log-stream"
-               }
-            }
-         },
-         "max_attempts":1,
-         "backoff_base_seconds":0,
-         "backoff_exponent":1,
-         "require_explicit_success":false
-      }
-   ]
-}
-```
+In the next two paragraphs I will go through two Sundial EMR task definitions: the first is a Spark EMR job running on a pre-existing cluster, the second is the same job but running on a dynamically created cluster this time.  
 
 ### Running a job on a pre-existing EMR Cluster
 
@@ -210,7 +106,7 @@ Launching an EMR job on a pre-existing cluster is really simple, all that you ne
           "log_stream_name":"spark-emr-log-stream"
        }
     }
- },
+ }
 ``` 
 
 The other properties are:
