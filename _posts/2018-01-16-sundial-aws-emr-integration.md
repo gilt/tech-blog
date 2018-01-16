@@ -17,7 +17,7 @@ tags:
 
 # AWS Elastic Map Reduce on Sundial
 
-Today I want to talk about a recent improvement we implemented in [Sundial](https://github.com/gilt/sundial), an Open Source product launched by Gilt in early 2016. With [Sundial 2.0.0](Add link to github tag) it's now possible to schedule AWS Elastic Map Reduce jobs.
+Today I want to talk about a recent improvement we implemented in [Sundial](https://github.com/gilt/sundial), an Open Source product launched by Gilt in early 2016. With [Sundial 2.0.0](https://github.com/gilt/sundial/releases/tag/v2.0.0) it's now possible to schedule AWS Elastic Map Reduce jobs.
 
 For those of you who are not familiar with it, [Sundial](https://github.com/gilt/sundial) is a batch job scheduler, developed by the Gilt Personalization Team, that works with Amazon ECS and Amazon Batch.
 
