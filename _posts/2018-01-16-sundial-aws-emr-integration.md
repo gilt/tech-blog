@@ -2,15 +2,17 @@
 layout: post
 title: "Sundial AWS EMR Integration"
 author: Giovanni Gargiulo
-date: '2018-01-01'
+date: '2018-01-16'
 categories: 
 - aws
-- emr
+- data
+- machine learning
 tags:
 - aws
 - sundial
 - etl
 - scheduling
+- machine learning
 ---
 
 # AWS Elastic Map Reduce on Sundial
@@ -63,7 +65,7 @@ AWS EMR also offers a nice SDK to spin a new dynamic EMR cluster, run a job and 
 The last two perks of using AWS EMR are:
 
 * [AWS Spot Instances](https://aws.amazon.com/ec2/spot/): running hardware at a discounted price
-* [Large variety of hardware](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-supported-instance-types.html): most of ELT jobs run on commodity hardware, some ML require intensive GPU and EMR offers hardware solutions for all of our use cases.       
+* [Large variety of hardware](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-supported-instance-types.html): most of ELT jobs run on commodity hardware, some ML require intensive GPU computation and EMR offers hardware solutions for all of our use cases.       
 
 ## The Sundial EMR Integration
 
