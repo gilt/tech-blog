@@ -74,17 +74,17 @@ This approach has all the qualities we were looking for: equality of levels, abi
 
 For each level, we worked out key indicators of what it means to be at that level. For example:
 
-* Level of knowledge: how much domain knowledge / expertise is required and expected at a particular level?
+* __Level of knowledge__: how much domain knowledge / expertise is required and expected at a particular level?
 
-* Job complexity
+* __Job complexity__
 
-* Supervision: how much supervision / hand-holding should we expect the individual to need at a particular level?
+* __Supervision__: how much supervision / hand-holding should we expect the individual to need at a particular level?
 
-* Experience.
+* __Experience__.
 
-* Sphere of influence. This is one of my favourite indicators: at early levels, the sphere of influence is really 'self'. As we get to subsequent levels, we expect individual contributors and leads to influence their teams, department, tech, the wider organisation, and the industry & community.
+* __Sphere of influence__. This is one of my favourite indicators: at early levels, the sphere of influence is really 'self'. As we get to subsequent levels, we expect individual contributors and leads to influence their teams, department, tech, the wider organisation, and the industry & community.
 
-* Team size (for leads). There's some good rules of thumb in terms of team size:
+* __Team size (for leads)__. There's some good rules of thumb in terms of team size:
 
 Lead Level  | Title                           | Team size
 ------------|---------------------------------|----------
@@ -95,7 +95,7 @@ Lead Level  | Title                           | Team size
 8           | VP Engineering                  | ~80 (e.g. an engineering site / office)
 9           | SVP Engineering                 | ~150 (a Dunbar)
 
-* Accountability: what are the systems that you own / are responsible for. How critical are they to the business?
+* __Accountability__: what are the systems that you own / are responsible for. How critical are they to the business?
 
 One big learning is that these indicators are only _guidelines_. I dislike the idea of career advancement being a box-ticking exercise: there is a qualitative judgement that we as leaders need to apply, and sometimes a candidate's excellence in one area may make up for a deficiency in another, or, make up for organisational blockers. For example, we once had a Director of Engineering with a small team of four or five reports; you could argue that this Director didn't have a large enough team to warrant the title. However, when we considered his technical ability, the scope of the role, the level of accountability, and, the fact that we would most likely never have a classroom size team in this area, we felt great about promoting.
 
