@@ -2,7 +2,7 @@
 layout: post
 title: "Career Structure. It doesn't matter. Until it matters."
 author: Adrian Trenaman
-date: '2017-12-15'
+date: '2018-01-24'
 categories: 'leadership'
 tags:
 - culture
