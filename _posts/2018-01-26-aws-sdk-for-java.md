@@ -28,8 +28,8 @@ The version 2.0 SDK is available as a developer preview. HBC is evaluating the n
 
 Our engineering team has already started incorporating the v2 SDK into our helper libraries:
 
-- gfc-aws-cloudwatch -- [pull request 8](https://github.com/gilt/gfc-aws-cloudwatch/pull/8/)
-- gfc-s3-cache -- [pull request 4](https://github.com/gilt/gfc-s3-cache/pull/4)
+- gfc-aws-cloudwatch -- [pull request](https://github.com/gilt/gfc-aws-cloudwatch/pull/8/)
+- gfc-s3-cache -- [pull request](https://github.com/gilt/gfc-s3-cache/pull/4)
 
 The v2 API uses  [java.util.concurrent.CompletableFuture](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html) to encapsulate the result of an AWS service call. HBC's Scala libraries need to use  [FutureConverters](https://github.com/scala/scala-java8-compat/blob/master/src/main/scala/scala/compat/java8/FutureConverters.scala) to convert the Java CompletableFuture object into a Scala Future object.
 
