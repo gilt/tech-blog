@@ -31,5 +31,10 @@ Our engineering team has already started incorporating the v2 SDK into our helpe
 
 The v2 API uses  [java.util.concurrent.CompletableFuture](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html) to encapsulate the result of an AWS service call. HBC's Scala libraries need to use  [FutureConverters](https://github.com/scala/scala-java8-compat/blob/master/src/main/scala/scala/compat/java8/FutureConverters.scala) to convert the Java CompletableFuture object into a Scala Future object.
 
+![aws-sdk-image](/assets/images/aws-sdk-for-java/aws-sdk-java-version-2_0-futureconverters.png)
 
-If you want to learn more about the v2 SDK, review my [slidedeck](https://speakerdeck.com/sullis/aws-sdk-for-java-version-2-dot-0-albany-ny-january-18-2018) or watch Kyle Thomson's presentation from [re:Invent 2017](https://www.youtube.com/watch?v=byRois3s5Yc)
+If you want to learn more about the v2 SDK, review my slidedeck or watch Kyle Thomson's re:invent 2017 presentation.
+
+[![aws-sdk-java-speakerdeck-albany-image](/assets/images/aws-sdk-for-java/AWS_SDK_for_Java-speakerdeck-albany.png)](https://speakerdeck.com/sullis/aws-sdk-for-java-version-2-dot-0-albany-ny-january-18-2018)
+
+[![aws-reinvent-2017-kyle-thomson-image](/assets/images/aws-sdk-for-java/aws-sdk-java-version-2_0-kyle-reinvent-youtube.png)](https://www.youtube.com/watch?v=byRois3s5Yc)
