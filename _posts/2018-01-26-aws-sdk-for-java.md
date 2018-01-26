@@ -14,7 +14,7 @@ tags:
 
 The Capital Region AWS User Group met on January 18th at the [Nanotech Complex](https://sunypoly.edu/research/albany-nanotech-complex.html) in Albany New York. [CommerceHub](https://www.commercehub.com/) hosted the meeting at their main office.
 
-The topic of this month's meetup was AWS SDK for Java. At HBC, our development teams use the SDK to access AWS services such as DynamoDB, S3, CloudWatch, and SNS. The v1 SDK has been a core building block at HBC since 2014.
+The topic of this month's meetup was the AWS SDK for Java. At HBC, our development teams use the SDK to access AWS services such as DynamoDB, S3, CloudWatch, and SNS. The v1 SDK has been a core building block at HBC since 2014.
 
 In June 2017, Amazon released a new implementation of the SDK for Java.
 
