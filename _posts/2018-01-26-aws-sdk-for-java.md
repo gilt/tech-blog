@@ -22,7 +22,7 @@ In June 2017, Amazon released a new implementation of the SDK for Java.
 
 ![aws-sdk-image](/assets/images/aws-sdk-for-java/aws-sdk-java-version-2_0-june-2017.png)
 
-The version 2.0 SDK is available as a developer preview. HBC is evaluating the new SDK and we look forward to using it production later this year.
+The version 2.0 SDK is available as a developer preview. HBC is evaluating the new SDK and we look forward to using it in production later this year.
 
 ![aws-sdk-image](/assets/images/aws-sdk-for-java/aws-sdk-java-version-2_0-github-v2-sdk.png)
 
