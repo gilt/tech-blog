@@ -6,6 +6,8 @@ date: '2018-01-26'
 categories: 'cloud'
 tags:
 - aws
+- java
+- scala
 - cloud
 - albany
 - newyork
