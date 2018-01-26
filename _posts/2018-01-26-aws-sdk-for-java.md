@@ -35,6 +35,4 @@ The v2 API uses  [java.util.concurrent.CompletableFuture](https://docs.oracle.co
 
 If you want to learn more about the v2 SDK, review my slidedeck or watch Kyle Thomson's re:invent 2017 presentation.
 
-[![aws-sdk-java-speakerdeck-albany-image](/assets/images/aws-sdk-for-java/AWS_SDK_for_Java-speakerdeck-albany.png)](https://speakerdeck.com/sullis/aws-sdk-for-java-version-2-dot-0-albany-ny-january-18-2018)
-
-[![aws-reinvent-2017-kyle-thomson-image](/assets/images/aws-sdk-for-java/aws-sdk-java-version-2_0-kyle-reinvent-youtube.png)](https://www.youtube.com/watch?v=byRois3s5Yc)
+[![aws-sdk-java-speakerdeck-albany-image](/assets/images/aws-sdk-for-java/AWS_SDK_for_Java-speakerdeck-albany-480.png)](https://speakerdeck.com/sullis/aws-sdk-for-java-version-2-dot-0-albany-ny-january-18-2018) [![aws-reinvent-2017-kyle-thomson-image](/assets/images/aws-sdk-for-java/aws-sdk-java-version-2_0-kyle-reinvent-youtube-480.png)](https://www.youtube.com/watch?v=byRois3s5Yc)
