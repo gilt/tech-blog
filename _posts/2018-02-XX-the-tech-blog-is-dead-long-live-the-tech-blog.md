@@ -1,3 +1,4 @@
+![Kuopio logs](/assets/images/the-tech-blog-is-dead-long-live-the-tech-blog/Kuopio_logs.jpg)
 ---
 layout: post
 title: "The Tech Blog is Dead. Long Live the Tech Blog"
@@ -10,7 +11,7 @@ tags:
 - culture
 - brand
 image:
-  feature: Kuopio_logs.jpg
+  feature: the-tech-blog-is-dead-long-live-the-tech-blog/Kuopio_logs.jpg
   credit: ~
   creditlink: ~
 ---
