@@ -9,6 +9,10 @@ tags:
 - blogging
 - culture
 - brand
+feature:
+  image: Kuopio_logs.jpg
+  credit: ~
+  creditlink: ~
 ---
 
 # The HBC Tech Blog: "You will never find a more wretched hive of tech and miscellany."
