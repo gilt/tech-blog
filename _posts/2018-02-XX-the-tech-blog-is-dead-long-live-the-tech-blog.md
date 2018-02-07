@@ -9,8 +9,8 @@ tags:
 - blogging
 - culture
 - brand
-feature:
-  image: Kuopio_logs.jpg
+image:
+  feature: Kuopio_logs.jpg
   credit: ~
   creditlink: ~
 ---
