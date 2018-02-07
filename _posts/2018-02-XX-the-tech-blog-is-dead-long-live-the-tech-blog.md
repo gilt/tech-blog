@@ -22,7 +22,7 @@ welcome, friends, to the *HBC Tech Blog*.
 
 You can continue to expect the same mix of insight, fun and tech miscellany
 since our first post on "tips of optimising iPhone applications" back in 2011.
-Since then, we've enjoyed insights like the "the rule of four"; contrite
+Since then, we've enjoyed insights like "the rule of four"; contrite
 apologies on unintended outages; notes on how to make the perfect overnight
 cold-brew; the art of delivering the weekly tech update via Haiku; and, the
 infamous infographic of US stiletto heel-size preference by-state.
