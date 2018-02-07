@@ -36,10 +36,10 @@ writing a tech blog at all, and how we go about about it.
 While our organisation's cell structure has changed over time, our core DNA
 remains the same: we've always taken joy in contributing to the wider tech
 community, be it through speaking, writing or coding in an open and transparent
-way. That said, it's good to take this opportunity to perform a
-retrospective: why bother writing a tech blog? How do we know it's working? And,
-if you're a tech team considering creating your own blog, how should you go
-about doing it?
+way. That said, it's good to take this opportunity to perform a retrospective
+and ask some key questions: why bother writing a tech blog? How do we know it's
+working? And, if you're a tech team considering creating your own blog, how
+should you go about doing it?
 
 The Gilt Tech Blog started as an experiment in freedom of expression: we granted
 everyone in Gilt Tech access to publish to the blog (then hosted in Tumblr),
