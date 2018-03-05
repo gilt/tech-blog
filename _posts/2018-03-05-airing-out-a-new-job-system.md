@@ -51,19 +51,22 @@ We outlined that a new job system should at minimum support a number of features
 
 We were able to whittle down the numerous possibilities to three possible solutions. 
 The first being Spotify's Luigi system, available [here](https://github.com/spotify/luigi) which is a really great solution and was ticking most of our boxes. 
-We decided it was worthwhile to generate a proof of concept approach to really trial the solution.
+We decided it was worthwhile to generate a proof of concept approach to really trial the solution. Luigi has been around for a long time and has rich user base which was a positive factor for us when considering it as our solution. 
+It was a really close call between Luigi and the solution that we picked mainly because Luigi provides a lot of the features we are looking for. 
 
-Need Daniels notes here…..
-
-The second solution we investigated was Azkaban’s workflow manager, available [here](https://github.com/azkaban/azkaban).
+The second solution we investigated was LinkedIn's Azkaban workflow manager, available [here](https://github.com/azkaban/azkaban).
 Being based in java was probably closer to our comfort zone which was a plus for this project.
 
-Need more Daniels notes ….
+What we found out was that although it satisfied our needs with regards rich visualization of the jobs and their dependencies there was some drawbacks to the solution. 
+It seems to be solely focused on orchestrating hadoop based jobs while we require a solution that allows us to interact with a number of possible executors, namely AWS Batch and EMR. 
+It’s feature list is expansive and could prove a perfect solution for those interested in running only hadoop based jobs. 
 
 The final solution was AirBnB’s Airflow solution which at the time was just picked up by the [Apache Foundation](https://github.com/apache/incubator-airflow). 
 Airflow was known to some of the people here in HBC but when they investigated it, it was still in its infancy and was missing a lot of features. 
 We decided to see what progress was made since the last time it was looked at and we were pleased with the improvements. 
 It was ticking all the boxes and after one of the engineers here did a proof of concept we decided it was the way forward for us.
+
+For a quick reference between Luigi vs Airflow, this is a great [link](http://bytepawn.com/luigi-airflow-pinball.html)
 
 ## The first attempt…
 
