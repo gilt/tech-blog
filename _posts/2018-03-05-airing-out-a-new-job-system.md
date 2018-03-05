@@ -107,7 +107,7 @@ We are eagerly awaiting the improved DAG deployment system thats coming to Airfl
 The Data teams roadmap has multiple exciting challenges to solve from ingestion, transformation to loading. 
 Having our Airflow setup, we feel we are in a good position now to tackle these problems.
 
-A big callout to [Daniel Matheus Pires](https://github.com/dmateusp) who acted as our go to person in all things Airflow flow.
+A big callout to [Daniel Mateus Pires](https://github.com/dmateusp) who acted as our go to person in all things Airflow flow.
 
 Over the new month or so we are really going to ramp up and if you’re interested in helping us solve these problems, take a look at our careers page [here](https://www.linkedin.com/jobs/search/?f_C=167354%2C1453743&locationId=OTHERS.worldwide) and get in touch.
 
