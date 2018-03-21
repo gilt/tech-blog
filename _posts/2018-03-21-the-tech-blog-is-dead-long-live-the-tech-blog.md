@@ -1,9 +1,8 @@
-![Kuopio logs](/assets/images/the-tech-blog-is-dead-long-live-the-tech-blog/Kuopio_logs.jpg)
 ---
 layout: post
 title: "The Tech Blog is Dead. Long Live the Tech Blog"
 author: Adrian Trenaman
-date: '2018-02-XX'
+date: '2018-03-21'
 categories:
 - culture
 tags:
@@ -12,9 +11,9 @@ tags:
 - brand
 image:
   feature: the-tech-blog-is-dead-long-live-the-tech-blog/Kuopio_logs.jpg
-  credit: ~
-  creditlink: ~
 ---
+
+![Kuopio logs](/assets/images/the-tech-blog-is-dead-long-live-the-tech-blog/Kuopio_logs.jpg)
 
 # The HBC Tech Blog: "You will never find a more wretched hive of tech and miscellany."
 
@@ -26,11 +25,11 @@ after seven years of tech.gilt.com, we're reinventing the Gilt Tech Blog:
 welcome, friends, to the *HBC Tech Blog*.
 
 You can continue to expect the same mix of insight, fun and tech miscellany
-since our first post on "tips of optimising iPhone applications" back in 2011.
+since our first post on [tips of optimising iPhone applications](http://tech.hbc.com/2011-02-08-tips-for-optimizing-iphone-ipad-applications.html) back in 2011.
 Since then, we've enjoyed insights like "the rule of four"; contrite
 apologies on unintended outages; notes on how to make the perfect overnight
 cold-brew; the art of delivering the weekly tech update via Haiku; and, the
-infamous infographic of US stiletto heel-size preference by-state.
+infamous [infographic of US stiletto heel-size preference by-state](http://tech.hbc.com/2014-10-29-stilettos-by-state-a-gilt-infographic-while.html).
 
 We hope you like the new look and new layout; big thanks to our in-house design
 team! Now, if we still have your attention, read on to learn why we bother
@@ -59,7 +58,7 @@ engineering, product, data, UX and product teams of very high quality.
 
 When we moved the blog to Github Pages, our publication process matured
 to a 'pull request' model. Authors write articles using Markdown, and can
-commit h-pages' branch to publish immediately, or, seek critical
+commit 'gh-pages' branch to publish immediately, or, seek critical
 review first through Github's review mechanism. Generally, our approach to
 reviewing either code or content is to give transparent and constructive
 feedback, that the author can choose to ignore or take on board. More often than
@@ -73,7 +72,7 @@ into the tech culture.
 
 _Encourage_: most likely, if you're still reading, you've already got an
 interest in setting up your own blog. That means you have a few ideas
-for your first articles, and an initial seed-group of authors.  Get stuck
+for your first articles, and an initial seed-group of authors. Get stuck
 in and get your first articles out there.
 
 _Celebrate_; as articles get shared, posted and liked, share that feedback with
