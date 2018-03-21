@@ -12,6 +12,8 @@ tags:
 - docker
 - adrian trenaman
 - heather fleming
+redirect_to:
+- http://tech.hbc.com/2016-10-24-qcon-new-york-talks.html
 ---
 
 <p align="center">

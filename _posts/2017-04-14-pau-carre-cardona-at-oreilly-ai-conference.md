@@ -11,6 +11,8 @@ tags:
 - AI
 - gilt
 - conferences
+redirect_to:
+- http://tech.hbc.com/2017-04-12-pau-carre-cardona-at-oreilly-ai-conference.html
 ---
 
 The [O'Reilly Artificial Intelligence Conference](https://conferences.oreilly.com/artificial-intelligence/ai-ny) is coming to New York City in June. From June 27-29, the top minds in AI will be meeting for "a deep dive into emerging AI techniques and technologies with a focus on how to use it in real-world implementations." 

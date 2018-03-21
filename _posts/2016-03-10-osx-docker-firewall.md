@@ -9,6 +9,8 @@ tags:
 - osx
 - nfs
 - firewall
+redirect_to:
+- http://tech.hbc.com/2016-03-10-osx-docker-firewall.html
 ---
 
 The Mobile Services team at Gilt uses Docker to both build and run software. In addition to the usual Docker benefits for software deployments moving toolchains to Docker has a few advantages:

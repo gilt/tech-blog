@@ -11,6 +11,8 @@ tag:
 - open source
 - vue.js
 - webpack
+redirect_to:
+- http://tech.hbc.com/2016-11-04-running-with-koa-vuejs.html
 ---
 
 We love [Koa](http://koajs.com/) at Gilt. (Hell, *I* love Koa.) Embarking on a new

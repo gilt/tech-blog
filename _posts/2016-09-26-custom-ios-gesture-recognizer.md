@@ -9,6 +9,8 @@ tags:
 - ios
 - gesture recognizer
 - paul lee
+redirect_to:
+- http://tech.hbc.com/2016-09-26-custom-ios-gesture-recognizer.html
 ---
 
 ## Developing New Product Photo Gallery

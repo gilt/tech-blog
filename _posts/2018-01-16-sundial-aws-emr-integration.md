@@ -13,6 +13,8 @@ tags:
 - etl
 - scheduling
 - machine learning
+redirect_to:
+- http://tech.hbc.com/2018-01-16-sundial-aws-emr-integration.html
 ---
 
 # AWS Elastic Map Reduce on Sundial

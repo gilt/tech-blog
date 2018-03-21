@@ -11,6 +11,8 @@ tags:
 - image detection
 - torch
 - Pau Carré Cardona
+redirect_to:
+- http://tech.hbc.com/2016-05-18-fully-connected-to-convolutional-conversion.html
 ---
 
 ## The Problem

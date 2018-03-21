@@ -9,6 +9,8 @@ tags:
 - agile
 - retrospective
 - scaling
+redirect_to:
+- http://tech.hbc.com/2017-07-27-large-scale-retro.html
 ---
 Can you recall the size and length of your typical retrospective?
 If your team operates by [The Scrum Guide](http://www.scrumguides.org/docs/scrumguide/v2016/2016-Scrum-Guide-US.pdf), your retrospectives likely have less than ten people in one room and last about an hour for a two-weeks Sprint.

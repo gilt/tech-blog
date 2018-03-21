@@ -10,6 +10,8 @@ tags:
 - aws
 - scala
 - emerson louriero
+redirect_to:
+- http://tech.hbc.com/2016-12-13-emerson-louriero-at-aws-reinvent.html
 ---
 
 # Watch Emerson Louriero's talk from AWS re:Invent 2016

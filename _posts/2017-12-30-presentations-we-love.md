@@ -11,6 +11,8 @@ tags:
 - aws
 - cloud
 - 2017
+redirect_to:
+- http://tech.hbc.com/2017-12-30-presentations-we-love.html
 ---
 
 2017 was a year of growth and learning at HBC Tech. Our organization embraced new technologies and new ways of building application software.

@@ -9,6 +9,8 @@ tags:
 - office space
 - culture
 - john coghlan
+redirect_to:
+- http://tech.hbc.com/2016-08-29-new-gilt-hq.html
 ---
 
 

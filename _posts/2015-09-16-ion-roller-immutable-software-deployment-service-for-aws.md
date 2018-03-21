@@ -11,6 +11,8 @@ tags:
 - aws
 - docker
 - deployment
+redirect_to:
+- http://tech.hbc.com/2015-09-16-ion-roller-immutable-software-deployment-service-for-aws.html
 ---
 
 Gilt has been at the forefront of the wave of microservice architecture. With the advantage of many individual services that do one thing well comes increased complexity of service management.

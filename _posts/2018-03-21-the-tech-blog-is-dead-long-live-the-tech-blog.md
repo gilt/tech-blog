@@ -11,6 +11,8 @@ tags:
 - brand
 image:
   feature: the-tech-blog-is-dead-long-live-the-tech-blog/Kuopio_logs.jpg
+redirect_to:
+- http://tech.hbc.com/2018-03-21-the-tech-blog-is-dead-long-live-the-tech-blog.html
 ---
 
 ![Kuopio logs](/assets/images/the-tech-blog-is-dead-long-live-the-tech-blog/Kuopio_logs.jpg)

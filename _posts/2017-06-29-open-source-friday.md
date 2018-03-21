@@ -9,6 +9,8 @@ tags:
 - open source
 - culture
 - community
+redirect_to:
+- http://tech.hbc.com/2017-06-29-open-source-friday.html
 ---
 
 <img class="center" src="http://i.imgur.com/GYQx8ds.png">

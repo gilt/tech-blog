@@ -11,6 +11,8 @@ tags:
 - stream processing
 - data
 - qcon
+redirect_to:
+- http://tech.hbc.com/2017-06-12-hbc-at-qcon.html
 ---
 
 Heading to QCon? Don't miss these two sessions! If you can't make it, stay tuned here for slides and recordings from the conference.

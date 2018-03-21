@@ -12,6 +12,8 @@ tags:
 - albany
 - newyork
 - 2018
+redirect_to:
+- http://tech.hbc.com/2018-01-26-aws-sdk-for-java.html
 ---
 
 The Capital Region AWS User Group met on January 18th at the [Nanotech Complex](https://sunypoly.edu/research/albany-nanotech-complex.html) in Albany New York. [CommerceHub](https://www.commercehub.com/) hosted the meeting at their main office.

@@ -9,6 +9,8 @@ tags:
 - aws
 - sundial
 - pagerduty
+redirect_to:
+- http://tech.hbc.com/2017-02-06-sundial-pagerduty-integration.html
 ---
 
 # Sundial

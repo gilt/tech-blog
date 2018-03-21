@@ -10,6 +10,8 @@ tag:
 - node.js
 - open source
 - travis ci
+redirect_to:
+- http://tech.hbc.com/2016-11-16-increasing-build-iq-travis-ci.html
 ---
 
 Continuous Integration is a must these days. And for social, open source

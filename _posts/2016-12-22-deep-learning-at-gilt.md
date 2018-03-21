@@ -10,6 +10,8 @@ tags:
 - Pau Carré Cardona
 - machine learning
 - computer vision
+redirect_to:
+- http://tech.hbc.com/2016-12-22-deep-learning-at-gilt.html
 ---
 
 # Cognitive Fashion Industry Challenges

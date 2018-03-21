@@ -11,6 +11,8 @@ tags:
 - tools
 - rake
 - gulp
+redirect_to:
+- http://tech.hbc.com/2015-08-03-gilt-private-npm-modules-npmjsorg.html
 ---
 
 Grab a coffee or pop and a snack, this is a read.

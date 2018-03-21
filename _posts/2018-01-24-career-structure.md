@@ -8,6 +8,8 @@ tags:
 - culture
 - career path
 - titles
+redirect_to:
+- http://tech.hbc.com/2018-01-24-career-structure.html
 ---
 
 In this article, I'm going to talk about career structure, career development, and career titles in a tech organisation. This post is more about organisational development than it is about technology; however, on the grounds that the health of your architecture and technology choices will be somewhat isomorphic to the health of your organisation, I believe this to be a worthwhile read for any engineering leader. I'm also writing this for anyone who is considering joining HBC Tech, so that they can understand our approach, and the meaning we give to our titles.

@@ -11,6 +11,8 @@ tags:
 - culture
 - community
 - meetups
+redirect_to:
+- http://saksdirect.github.io/hbc-tech-blog/2017-09-11-dublin-scala-spree.html
 ---
 
 ### Dublin Scala Spree

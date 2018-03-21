@@ -10,6 +10,8 @@ tags:
 - agile
 - self-selection
 - leadership
+redirect_to:
+- http://tech.hbc.com/2017-05-31-self-selection-hbc.html
 ---
 
 ![Self-selection](http://i.imgur.com/DGJx44J.png)

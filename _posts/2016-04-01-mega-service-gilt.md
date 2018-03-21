@@ -12,8 +12,9 @@ tags:
 - notifications
 - micro-services
 - april-fool
+redirect_to:
+- http://tech.hbc.com/2016-04-01-mega-service-gilt.html
 ---
-
 
 Today we announce a novel approach to software and system architecture that we’ve been experimenting with for the last while at Gilt: internally, we’ve been referring to it ‘mega-service’ architecture, and, the name seems to have stuck. We’re pretty excited about it, as it represents a real paradigm shift for us.
 

@@ -8,6 +8,8 @@ categories:
 tags:
 - meetups
 - agile
+redirect_to:
+- http://tech.hbc.com/2017-01-11-nyc-scrum-user-group-meetup.html
 ---
 
 We'll be hosting our first meetup of 2017 in partnership with the [NYC Scrum User Group](https://www.meetup.com/NYC-Scrum-User-Group/events/232541163/) on Thursday, January 19th. This is our first time hosting this group and we're off to a great start: Ken Rubin will be joining us to lead a talk on Agile. 

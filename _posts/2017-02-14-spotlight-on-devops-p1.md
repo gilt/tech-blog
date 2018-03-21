@@ -9,6 +9,8 @@ tags:
 - culture
 - devops
 - Spotlight on DevOps
+redirect_to:
+- http://tech.hbc.com/2017-02-14-spotlight-on-devops-p1.html
 ---
 
 # Don’t just read about DevOps culture, play-test it!

@@ -12,6 +12,8 @@ tags:
 - step function
 - gilt city
 - order processing
+redirect_to:
+- http://tech.hbc.com/2018-01-03-instant-voucher-serverless.html
 ---
 
 # Instant Vouchers Initiative
