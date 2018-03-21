@@ -10,7 +10,7 @@ tags:
 - sundial
 - pagerduty
 redirect_to:
-- https://tech.hbc.com/2017-02-06-sundial-pagerduty-integration.html
+- http://tech.hbc.com/2017-02-06-sundial-pagerduty-integration.html
 ---
 
 # Sundial

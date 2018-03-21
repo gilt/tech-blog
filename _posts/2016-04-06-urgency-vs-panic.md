@@ -11,7 +11,7 @@ tags:
 - panic
 - shopping
 redirect_to:
-- https://tech.hbc.com/2016-04-06-urgency-vs-panic.html
+- http://tech.hbc.com/2016-04-06-urgency-vs-panic.html
 ---
 
 ## Urgency vs. Panic

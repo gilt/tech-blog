@@ -10,7 +10,7 @@ tag:
 - node.js
 - open source
 redirect_to:
-- https://tech.hbc.com/2016-11-09-linting-npm-version-conflicts.html
+- http://tech.hbc.com/2016-11-09-linting-npm-version-conflicts.html
 ---
 
 Say you had the need for shared front-end assets (scripts, stylesheets, images,

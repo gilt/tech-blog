@@ -10,7 +10,7 @@ tags:
 - mobile
 - team rookie
 redirect_to:
-- https://tech.hbc.com/2016-08-12-rookie-summer.html
+- http://tech.hbc.com/2016-08-12-rookie-summer.html
 ---
 
 # The Summer Internship #TeamRookie

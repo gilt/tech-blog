@@ -13,7 +13,7 @@ tags:
 - Ryan Caloras
 - John Coghlan
 redirect_to:
-- https://tech.hbc.com/2016-08-21-scala-fedex.html
+- http://tech.hbc.com/2016-08-21-scala-fedex.html
 ---
 <p align="center">
   <img src="http://code.scottshipp.com/wp-content/uploads/2016/05/scala-logo-small.png"/>

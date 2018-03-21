@@ -9,7 +9,7 @@ tags:
 - tech
 - conferences
 redirect_to:
-- https://tech.hbc.com/2017-04-25-hbc-digital-sponsoring-bang-bang-con.html
+- http://tech.hbc.com/2017-04-25-hbc-digital-sponsoring-bang-bang-con.html
 ---
 
 ![](http://i.imgur.com/oOwcZoe.png)

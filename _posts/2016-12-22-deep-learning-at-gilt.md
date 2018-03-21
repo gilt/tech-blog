@@ -11,7 +11,7 @@ tags:
 - machine learning
 - computer vision
 redirect_to:
-- https://tech.hbc.com/2016-12-22-deep-learning-at-gilt.html
+- http://tech.hbc.com/2016-12-22-deep-learning-at-gilt.html
 ---
 
 # Cognitive Fashion Industry Challenges

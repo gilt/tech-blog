@@ -10,7 +10,7 @@ tag:
 - scala
 - postgresql
 redirect_to:
-- https://tech.hbc.com/2016-12-07-december-meetups.html
+- http://tech.hbc.com/2016-12-07-december-meetups.html
 ---
 
 We're closing out 2016 with two more meetups at our offices in Brookfied Place.

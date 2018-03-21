@@ -10,7 +10,7 @@ tags:
 - akka http
 - scala
 redirect_to:
-- https://tech.hbc.com/2016-04-07-akka-http-talk-with-cake-solutions.html
+- http://tech.hbc.com/2016-04-07-akka-http-talk-with-cake-solutions.html
 ---
 
 We are thrilled to be hosting Aleksandr Ivanov of Cake Solutions on Tuesday, April 12th. He'll be presenting an excellent talk on [Akka HTTP](http://doc.akka.io/docs/akka/2.4.3/scala/http/index.html). Who is Aleksandr? We're glad you asked:

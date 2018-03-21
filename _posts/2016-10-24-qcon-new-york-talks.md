@@ -13,7 +13,7 @@ tags:
 - adrian trenaman
 - heather fleming
 redirect_to:
-- https://tech.hbc.com/2016-10-24-qcon-new-york-talks.html
+- http://tech.hbc.com/2016-10-24-qcon-new-york-talks.html
 ---
 
 <p align="center">

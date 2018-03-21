@@ -10,7 +10,7 @@ tags:
 - happiness
 - productivity
 redirect_to:
-- https://tech.hbc.com/2017-05-18-pops-up-plant-shop.html
+- http://tech.hbc.com/2017-05-18-pops-up-plant-shop.html
 ---
 
 <img class="center" src="http://i.imgur.com/8MCigGa.jpg"/>

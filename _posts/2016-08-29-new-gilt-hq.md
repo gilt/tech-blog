@@ -10,7 +10,7 @@ tags:
 - culture
 - john coghlan
 redirect_to:
-- https://tech.hbc.com/2016-08-29-new-gilt-hq.html
+- http://tech.hbc.com/2016-08-29-new-gilt-hq.html
 ---
 
 

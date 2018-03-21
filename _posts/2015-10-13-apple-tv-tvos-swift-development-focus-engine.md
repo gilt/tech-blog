@@ -11,7 +11,7 @@ tags:
 - Swift
 - Focus Engine
 redirect_to:
-- https://tech.hbc.com/2015-10-13-apple-tv-tvos-swift-development-focus-engine.html
+- http://tech.hbc.com/2015-10-13-apple-tv-tvos-swift-development-focus-engine.html
 ---
 
 At the Apple product launch event in September, Gilt demonstrated its upcoming “Gilt on TV” app for the Apple TV. (If you missed the demo and would like to see it, [Apple has the video available on their website](http://www.apple.com/apple-events/september-2015/). Eddy Cue's introduction of Gilt begins at the 74:20 mark.)

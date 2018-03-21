@@ -12,7 +12,7 @@ tags:
 - community
 - meetups
 redirect_to:
-- https://saksdirect.github.io/hbc-tech-blog/2017-09-11-dublin-scala-spree.html
+- http://saksdirect.github.io/hbc-tech-blog/2017-09-11-dublin-scala-spree.html
 ---
 
 ### Dublin Scala Spree

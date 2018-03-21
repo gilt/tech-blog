@@ -10,7 +10,7 @@ tags:
 - culture
 - community
 redirect_to:
-- https://tech.hbc.com/2017-06-29-open-source-friday.html
+- http://tech.hbc.com/2017-06-29-open-source-friday.html
 ---
 
 <img class="center" src="http://i.imgur.com/GYQx8ds.png">

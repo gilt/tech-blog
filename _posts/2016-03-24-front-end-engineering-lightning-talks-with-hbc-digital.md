@@ -12,7 +12,7 @@ tags:
 - react
 - javascript
 redirect_to:
-- https://tech.hbc.com/2016-03-24-front-end-engineering-lightning-talks-with-hbc-digital.html
+- http://tech.hbc.com/2016-03-24-front-end-engineering-lightning-talks-with-hbc-digital.html
 ---
 
 Join us for an evening of lightning talks by 4 of HBC Digital's Front End Engineers and an introduction by Steve Jacobs, SVP, Digital Technology and Demand Marketing.

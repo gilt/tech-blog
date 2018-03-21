@@ -13,7 +13,7 @@ tags:
 - gilt city
 - order processing
 redirect_to:
-- https://tech.hbc.com/2018-01-03-instant-voucher-serverless.html
+- http://tech.hbc.com/2018-01-03-instant-voucher-serverless.html
 ---
 
 # Instant Vouchers Initiative

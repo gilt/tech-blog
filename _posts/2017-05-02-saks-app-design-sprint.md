@@ -12,7 +12,7 @@ tags:
 - design
 - ux
 redirect_to:
-- https://tech.hbc.com/2017-05-02-saks-app-design-sprint.html
+- http://tech.hbc.com/2017-05-02-saks-app-design-sprint.html
 ---
 
 <img class="center" src="http://i.imgur.com/isnWMvv.jpg"/>

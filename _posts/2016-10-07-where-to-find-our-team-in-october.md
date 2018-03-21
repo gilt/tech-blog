@@ -11,7 +11,7 @@ tags:
 - data
 - john coghlan
 redirect_to:
-- https://tech.hbc.com/2016-10-07-where-to-find-our-team-in-october.html
+- http://tech.hbc.com/2016-10-07-where-to-find-our-team-in-october.html
 ---
 
 Here's where to find Gilt and HBC Digital this month: 

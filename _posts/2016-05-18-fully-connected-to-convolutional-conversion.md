@@ -12,7 +12,7 @@ tags:
 - torch
 - Pau Carré Cardona
 redirect_to:
-- https://tech.hbc.com/2016-05-18-fully-connected-to-convolutional-conversion.html
+- http://tech.hbc.com/2016-05-18-fully-connected-to-convolutional-conversion.html
 ---
 
 ## The Problem

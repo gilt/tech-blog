@@ -10,7 +10,7 @@ tags:
 - push notifications
 - notification service extension
 redirect_to:
-- https://tech.hbc.com/2017-07-07-ios-notifciation-service-extension-tips.html
+- http://tech.hbc.com/2017-07-07-ios-notifciation-service-extension-tips.html
 ---
 
 [//]: # (Image References)

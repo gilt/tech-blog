@@ -10,7 +10,7 @@ tags:
 - github
 - blogging
 redirect_to:
-- https://tech.hbc.com/2015-06-29-gilt-tech-plus-jekyll-equals-love.html
+- http://tech.hbc.com/2015-06-29-gilt-tech-plus-jekyll-equals-love.html
 ---
 
 ## Gilt Tech Blog Moves to Github

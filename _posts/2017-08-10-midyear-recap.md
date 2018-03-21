@@ -10,7 +10,7 @@ tags:
 - conferences
 - evangelism
 redirect_to:
-- https://saksdirect.github.io/hbc-tech-blog/2017-08-10-midyear-recap.html
+- http://saksdirect.github.io/hbc-tech-blog/2017-08-10-midyear-recap.html
 ---
 
 <img class="center" src="http://i.imgur.com/zkRer6r.png">
