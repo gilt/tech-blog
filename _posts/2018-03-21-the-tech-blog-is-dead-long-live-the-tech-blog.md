@@ -25,11 +25,11 @@ after seven years of tech.gilt.com, we're reinventing the Gilt Tech Blog:
 welcome, friends, to the *HBC Tech Blog*.
 
 You can continue to expect the same mix of insight, fun and tech miscellany
-since our first post on [tips of optimising iPhone applications](http://tech.hbc.com/2011-02-08-tips-for-optimizing-iphone-ipad-applications.html) back in 2011.
-Since then, we've enjoyed insights like "the rule of four"; contrite
-apologies on unintended outages; notes on how to make the perfect overnight
-cold-brew; the art of delivering the weekly tech update via Haiku; and, the
-infamous [infographic of US stiletto heel-size preference by-state](http://tech.hbc.com/2014-10-29-stilettos-by-state-a-gilt-infographic-while.html).
+since our first post on [tips of optimising iPhone applications](http://tech.hbc.com/2011-02-08-tips-for-optimizing-iphone-ipad-applications.html){:target="_blank"} back in 2011.
+Since then, we've enjoyed insights like [the rule of four](http://tech.hbc.com/2011-03-02-the-rule-of-4.html){:target="_blank"}; [contrite
+apologies on unintended outages](http://tech.hbc.com/2013-03-26-26-3-13-todays-noon-outage-and-what-were-doing.html){:target="_blank"}; [notes on how to make the perfect overnight
+cold-brew](http://tech.hbc.com/2017-01-25-perfect-overnight-cold-brew.html){:target="_blank"}; [the art of delivering the weekly tech update via Haiku](http://tech.hbc.com/2014-10-17-haiku-by-the-gilt-tech-team-in-japan.html){:target="_blank"}; and, the
+infamous [infographic of US stiletto heel-size preference by-state](http://tech.hbc.com/2014-10-29-stilettos-by-state-a-gilt-infographic-while.html){:target="_blank"}.
 
 We hope you like the new look and new layout; big thanks to our in-house design
 team! Now, if we still have your attention, read on to learn why we bother
